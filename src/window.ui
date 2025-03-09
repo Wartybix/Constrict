@@ -6,6 +6,9 @@
     <property name="title" translatable="yes">Constrict</property>
     <property name="default-width">800</property>
     <property name="default-height">600</property>
+    <style>
+      <class name="devel"/>
+    </style>
     <property name="content">
       <object class="AdwToolbarView">
         <child type="top">
@@ -21,11 +24,21 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkLabel" id="label">
-            <property name="label" translatable="yes">Hello, World!</property>
-            <style>
-              <class name="title-1"/>
-            </style>
+          <object class="AdwStatusPage">
+            <property name="icon-name">emblem-videos-symbolic</property>
+            <property name="title" translatable="yes">Compress Videos</property>
+            <property name="description">Drag and drop videos here</property>
+            <property name="child">
+              <object class="GtkButton">
+                <property name="label">Open</property>
+                <property name="can-shrink">True</property>
+                <property name="halign">GTK_ALIGN_CENTER</property>
+                <style>
+                  <class name="pill"/>
+                  <class name="suggested-action"/>
+                </style>
+              </object>
+            </property>
           </object>
         </property>
       </object>
