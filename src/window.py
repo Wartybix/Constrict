@@ -18,7 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gtk, Gio
-from constrict.constrict_utils import compress
+from constrict.constrict_utils import compress, preview
 
 @Gtk.Template(resource_path='/com/github/wartybix/Constrict/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):
@@ -152,8 +152,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
             # TODO: Add thumbnail -- I think Nautilus generates one from a
             # frame 1/3 through the video
 
+            target_size = int(self.target_size_input.get_value())
+            fps_mode = self.get_fps_mode()
+
             action_row = Adw.ActionRow()
             action_row.set_title(display_name)
+
+            subtitle = preview(video_path, target_size, fps_mode)
+            action_row.set_subtitle(subtitle)
 
             self.video_queue.add(action_row)
             self.staged_videos.append(video.get_path())
