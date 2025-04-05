@@ -20,6 +20,11 @@
 from gi.repository import Adw, Gtk, Gio
 from constrict.constrict_utils import compress, preview
 
+class StagedVideo:
+    def __init__(self, filepath, row):
+        self.filepath = filepath
+        self.row = row
+
 @Gtk.Template(resource_path='/com/github/wartybix/Constrict/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'ConstrictWindow'
@@ -60,7 +65,12 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.smooth_check_button.connect("activate", self.refresh_previews)
 
     def refresh_previews(self, _):
-        print(f"Previews refreshed")
+        for video in self.staged_videos:
+            target_size = int(self.target_size_input.get_value())
+            fps_mode = self.get_fps_mode()
+
+            subtitle = preview(video.filepath, target_size, fps_mode)
+            video.row.set_subtitle(subtitle)
 
     def get_fps_mode(self):
         if self.auto_check_button.get_active():
@@ -162,7 +172,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
             action_row.set_subtitle(subtitle)
 
             self.video_queue.add(action_row)
-            self.staged_videos.append(video.get_path())
+
+            staged_video = StagedVideo(video.get_path(), action_row)
+            self.staged_videos.append(staged_video)
 
         self.video_queue.add(self.add_videos_button)
 
