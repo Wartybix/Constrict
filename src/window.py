@@ -18,12 +18,18 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gtk, Gio
-from constrict.constrict_utils import compress, preview
+from constrict.constrict_utils import compress, preview, get_resolution, get_framerate, get_duration
 
 class StagedVideo:
-    def __init__(self, filepath, row):
+    def __init__(self, filepath, row, width, height, fps, duration):
         self.filepath = filepath
         self.row = row
+        self.width, self.height = width, height
+        self.fps = fps
+        self.duration = duration
+
+    def __string__(self):
+        return f'{self.filepath} - {self.width}×{self.height}@{self.fps} ({self.duration}s)'
 
 @Gtk.Template(resource_path='/com/github/wartybix/Constrict/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):
@@ -69,7 +75,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
             target_size = int(self.target_size_input.get_value())
             fps_mode = self.get_fps_mode()
 
-            subtitle = preview(video.filepath, target_size, fps_mode)
+            subtitle = preview(
+                target_size,
+                fps_mode,
+                video.width,
+                video.height,
+                video.fps,
+                video.duration
+            )
             video.row.set_subtitle(subtitle)
 
     def get_fps_mode(self):
@@ -117,7 +130,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         for video in self.staged_videos:
             compress(
-                video,
+                video.filepath,
                 target_size,
                 fps_mode,
                 extra_quality,
@@ -148,11 +161,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.video_queue.remove(self.add_videos_button)
 
+        existing_paths = list(map(lambda x: x.filepath, self.staged_videos))
+        print(existing_paths)
+
         for video in files:
             # TODO: make async query?
             video_path = video.get_path()
 
-            if video_path in self.staged_videos:
+            if video_path in existing_paths:
                 continue
 
             info = video.query_info('standard::display-name', Gio.FileQueryInfoFlags.NONE)
@@ -168,12 +184,17 @@ class ConstrictWindow(Adw.ApplicationWindow):
             action_row = Adw.ActionRow()
             action_row.set_title(display_name)
 
-            subtitle = preview(video_path, target_size, fps_mode)
+            # cache metadata
+            width, height = get_resolution(video)
+            fps = get_framerate(video)
+            duration = get_duration(video)
+
+            subtitle = preview(target_size, fps_mode, width, height, fps, duration)
             action_row.set_subtitle(subtitle)
 
             self.video_queue.add(action_row)
 
-            staged_video = StagedVideo(video.get_path(), action_row)
+            staged_video = StagedVideo(video.get_path(), action_row, width, height, fps, duration)
             self.staged_videos.append(staged_video)
 
         self.video_queue.add(self.add_videos_button)

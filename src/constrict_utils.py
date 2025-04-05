@@ -352,20 +352,16 @@ def table(data):
     return msg
 
 
-def preview(input_file, target_size_MiB, fps_mode):
+def preview(target_size_MiB, fps_mode, width, height, fps, duration):
     # TODO: this is very inefficient... use some kind of caching and whatnot
     # to not fetch/calculate resolution, framerate, bitrate etc. more than
     # once. Lots of redundant code with compress function.
 
-    src_width, src_height = get_resolution(input_file)
-    src_fps = get_framerate(input_file)
-
     target_size_KiB = target_size_MiB * 1024
     target_size_bytes = target_size_KiB * 1024
     target_size_bits = target_size_bytes * 8
-    duration_seconds = get_duration(input_file)
 
-    target_bitrate = round(target_size_bits / duration_seconds)
+    target_bitrate = round(target_size_bits / duration)
 
     crush_mode = (target_bitrate / 1000) < 150 + 96
     target_audio_bitrate = 6000 if crush_mode else 96000
@@ -375,7 +371,7 @@ def preview(input_file, target_size_MiB, fps_mode):
     target_video_bitrate = round(target_video_bitrate * 0.99)
 
     if target_video_bitrate < 1000:
-        return 'Video bitrate too low'
+        return ''
 
     preset_height = None
     max_fps = None
@@ -389,14 +385,14 @@ def preview(input_file, target_size_MiB, fps_mode):
     elif fps_mode == 'auto':
         preset_height_30fps = get_res_preset(
             target_video_bitrate,
-            src_width,
-            src_height,
+            width,
+            height,
             30
         )
         preset_height_60fps = get_res_preset(
             target_video_bitrate,
-            src_width,
-            src_height,
+            width,
+            height,
             60
         )
 
@@ -404,20 +400,20 @@ def preview(input_file, target_size_MiB, fps_mode):
         heights_match = preset_height_30fps == preset_height_60fps
         max_fps = 60 if heights_match and preset_height >= 720 else 30
 
-    target_fps = src_fps if src_fps <= max_fps else max_fps
+    target_fps = fps if fps <= max_fps else max_fps
 
     if preset_height is None:
         preset_height = get_res_preset(
             target_video_bitrate,
-            src_width,
-            src_height,
+            width,
+            height,
             target_fps
         )
 
-    if src_height > src_width:
-        src_height = src_width
+    if height > width:
+        height = width
 
-    return f'{src_height}p@{src_fps} → {preset_height}p@{target_fps}'
+    return f'{height}p@{fps} → {preset_height}p@{target_fps}'
 
 
 """ TODO:
