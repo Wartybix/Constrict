@@ -33,6 +33,7 @@ constrict_sources = [
   'constrict_utils.py',
   'enums.py',
   'queued_video_row.py',
+  'video_sources_list_box.py',
   'shared.py'
 ]
 

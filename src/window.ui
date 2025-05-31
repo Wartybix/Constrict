@@ -266,7 +266,7 @@
                                     <child>
                                       <object class="AdwClamp">
                                         <child>
-                                          <object class="AdwPreferencesGroup" id="video_queue">
+                                          <object class="AdwPreferencesGroup">
                                             <property name="title" translatable="yes">Video Sources</property>
                                             <child type="header-suffix">
                                               <object class="GtkButton" id="clear_all_button">
@@ -279,12 +279,7 @@
                                               </object>
                                             </child>
                                             <child>
-                                              <object class="AdwButtonRow" id="add_videos_button">
-                                                <property name="start-icon-name">list-add-symbolic</property>
-                                                <!-- TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language -->
-                                                <property name="title" translatable="yes">Add Videos…</property>
-                                                <property name="action-name">win.open</property>
-                                              </object>
+                                              <object class="VideoSourcesListBox" id="video_sources_list_box"/>
                                             </child>
                                           </object>
                                         </child>

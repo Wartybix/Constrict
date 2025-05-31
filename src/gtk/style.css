@@ -1,0 +1,11 @@
+/* Drag handle style is taken from GNOME Settings */
+/* https://gitlab.gnome.org/GNOME/gnome-control-center/-/blob/34e55bdfc7c56250889d69ae00bfd40ab8645fa0/shell/style.css */
+
+.drag-handle {
+  color: color-mix(in srgb, var(--window-fg-color) 40%, transparent);
+}
+
+.drag-handle:backdrop {
+  color: color-mix(in srgb, var(--window-fg-color) 40%, transparent);
+}
+

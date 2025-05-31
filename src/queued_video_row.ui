@@ -13,6 +13,14 @@
         </style>
       </object>
     </child>
+    <child type="prefix">
+      <object class="GtkImage">
+        <property name="icon_name">list-drag-handle-symbolic</property>
+        <style>
+          <class name="drag-handle"/>
+        </style>
+      </object>
+    </child>
     <child type="suffix">
       <object class="GtkProgressBar" id="progress_bar">
         <property name="valign">center</property>
@@ -42,6 +50,16 @@
     </child>
   </template>
   <menu id="row_actions">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Move Up</attribute>
+        <attribute name="action">row.move-up</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Move Down</attribute>
+        <attribute name="action">row.move-down</attribute>
+      </item>
+    </section>
     <section>
       <item>
         <attribute name="label" translatable="yes">_Remove</attribute>

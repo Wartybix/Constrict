@@ -17,11 +17,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, Gdk, Gio, GLib
+from gi.repository import Adw, Gtk, Gdk, Gio, GLib, GObject
 from constrict.constrict_utils import compress, get_resolution, get_framerate, get_duration
 from constrict.shared import get_tmp_dir
 from constrict.enums import FpsMode, VideoCodec, QueuedVideoState
 from constrict.queued_video_row import QueuedVideoRow
+from constrict.video_sources_list_box import VideoSourcesListBox
 import threading
 import subprocess
 from pathlib import Path
@@ -37,8 +38,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
     export_button = Gtk.Template.Child()
     cancel_bar = Gtk.Template.Child()
     cancel_button = Gtk.Template.Child()
-    video_queue = Gtk.Template.Child()
-    add_videos_button = Gtk.Template.Child()
+    video_sources_list_box = Gtk.Template.Child()
     target_size_row = Gtk.Template.Child()
     target_size_input = Gtk.Template.Child()
     auto_row = Gtk.Template.Child()
@@ -56,6 +56,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        # GObject.type_ensure(VideoSourcesListBox)
+
+        # self.sources_pref_group.add(self.video_queue)
 
         self.staged_videos = []
         self.cancelled = False
@@ -239,7 +243,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
     def delist_all(self, action, _):
         for video in self.staged_videos:
-            self.video_queue.remove(video)
+            self.video_sources_list_box.remove(video)
 
         self.staged_videos = []
 
@@ -365,7 +369,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
     def remove_row(self, widget, action_name, parameter):
         self.staged_videos.remove(widget)
-        self.video_queue.remove(widget)
+        self.video_sources_list_box.remove(widget)
 
         if not self.staged_videos:
             self.view_stack.set_visible_child_name('status_page')
@@ -375,7 +379,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
         # TODO: better error handling
         # ie. corrupt files etc.
         # TODO: merge staged video list with UI?
-        self.video_queue.remove(self.add_videos_button)
 
         existing_paths = list(map(lambda x: x.video_path, self.staged_videos))
         print(f'existing: {existing_paths}')
@@ -417,9 +420,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             staged_video.install_action('row.remove', None, self.remove_row)
 
             self.staged_videos.append(staged_video)
-            self.video_queue.add(staged_video)
-
-        self.video_queue.add(self.add_videos_button)
+            self.video_sources_list_box.add_source(staged_video)
 
         if self.staged_videos:
             self.view_stack.set_visible_child_name('queue_page')
