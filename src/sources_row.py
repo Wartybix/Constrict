@@ -43,7 +43,7 @@ class SourcesRow(Adw.ActionRow):
 
     thumbnail = Gtk.Template.Child()
     progress_bar = Gtk.Template.Child()
-    status_label = Gtk.Template.Child()
+    complete_button = Gtk.Template.Child()
     menu_button = Gtk.Template.Child()
     drag_source = Gtk.Template.Child()
     error_icon = Gtk.Template.Child()
@@ -338,7 +338,7 @@ class SourcesRow(Adw.ActionRow):
             GLib.idle_add(self.warning_action, True)
 
         GLib.idle_add(self.progress_button.set_visible, is_compressing)
-        GLib.idle_add(self.status_label.set_visible, is_complete)
+        GLib.idle_add(self.complete_button.set_visible, is_complete)
         GLib.idle_add(self.error_icon.set_visible, is_error)
         GLib.idle_add(self.video_broken_button.set_visible, is_broken)
         GLib.idle_add(self.incompatible_button.set_visible, is_incompatible)

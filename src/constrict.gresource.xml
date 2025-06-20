@@ -10,6 +10,7 @@
     <file alias="icons/scalable/actions/error-outline-symbolic.svg">../data/icons/scalable/actions/error-outline-symbolic.svg</file>
     <file alias="icons/scalable/actions/broken-video-symbolic.svg">../data/icons/scalable/actions/broken-video-symbolic.svg</file>
     <file alias="icons/scalable/actions/exclamation-mark-symbolic.svg">../data/icons/scalable/actions/exclamation-mark-symbolic.svg</file>
+    <file alias="icons/scalable/actions/check-plain-symbolic.svg">../data/icons/scalable/actions/check-plain-symbolic.svg</file>
     <file alias="style.css">gtk/style.css</file>
   </gresource>
 </gresources>

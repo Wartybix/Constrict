@@ -137,11 +137,51 @@
       </object>
     </child>
     <child type="suffix">
-      <object class="GtkLabel" id="status_label">
-        <property name="label" translatable="true">Complete</property>
-        <property name="visible">false</property>
+      <object class="GtkMenuButton" id="complete_button">
+        <property name="icon-name">check-plain-symbolic</property>
+        <property name="tooltip-text" translatable="yes">More Details</property>
+        <property name="valign">center</property>
+        <property name="visible">true</property> <!-- TODO: change back to false -->
+        <property name="popover">
+          <object class="GtkPopover">
+            <child>
+              <object class="GtkBox">
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="yes">Video Compressed</property>
+                    <property name="wrap">True</property>
+                    <property name="max-width-chars">50</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="margin-top">3</property>
+                    <property name="homogeneous">true</property>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">Open</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">Locate</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
         <style>
           <class name="success"/>
+          <class name="flat"/>
         </style>
       </object>
     </child>
