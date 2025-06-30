@@ -5,6 +5,7 @@
     <file preprocess="xml-stripblanks">sources_row.ui</file>
     <file preprocess="xml-stripblanks">sources_list_box.ui</file>
     <file preprocess="xml-stripblanks">error_dialog.ui</file>
+    <file preprocess="xml-stripblanks">preferences_dialog.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file alias="icons/scalable/actions/video-encoder-symbolic.svg">../data/icons/scalable/actions/video-encoder-symbolic.svg</file>
     <file alias="icons/scalable/actions/error-outline-symbolic.svg">../data/icons/scalable/actions/error-outline-symbolic.svg</file>

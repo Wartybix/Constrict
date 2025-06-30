@@ -36,7 +36,8 @@ constrict_sources = [
   'sources_list_box.py',
   'shared.py',
   'error_dialog.py',
-  'progress_pie.py'
+  'progress_pie.py',
+  'preferences_dialog.py'
 ]
 
 install_data(constrict_sources, install_dir: moduledir)

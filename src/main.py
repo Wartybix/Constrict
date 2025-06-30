@@ -26,8 +26,10 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, GLib
 from .window import ConstrictWindow
+from constrict.preferences_dialog import PreferencesDialog
 
 # FIXME: icon doesn't show in all contexts on the flatpak version.
+# TODO: improve code documentation.
 
 class ConstrictApplication(Adw.Application):
     """The main application singleton class."""
@@ -49,7 +51,7 @@ class ConstrictApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         # self.create_action('close-window', self.close_window, ['<primary>w'])
         self.create_action('about', self.on_about_action)
-        self.create_action('preferences', self.on_preferences_action)
+        self.create_action('preferences', self.on_preferences_action, ['<primary>comma'])
 
         self.open_dir_action = Gio.SimpleAction(
             name="open-dir",
@@ -163,6 +165,10 @@ class ConstrictApplication(Adw.Application):
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
+
+        dialog = PreferencesDialog()
+        dialog.present(self.props.active_window)
+
         print('app.preferences action activated')
 
     def create_action(self, name, callback, shortcuts=None):

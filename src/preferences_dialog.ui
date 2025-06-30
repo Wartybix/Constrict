@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="PreferencesDialog" parent="AdwPreferencesDialog">
+    <property name="title" translatable="true">Preferences</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="title" translatable="true">Export Settings</property>
+        <child>
+          <object class="AdwEntryRow">
+            <property name="show-apply-button">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
