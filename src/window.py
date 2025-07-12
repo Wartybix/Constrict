@@ -30,6 +30,7 @@ import threading
 import subprocess
 from pathlib import Path
 import os
+import datetime
 
 # TODO: future feature -- add pause button?
 
@@ -527,6 +528,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
             progress_box = CurrentAttemptBox()
             video.initiate_popover_box(progress_box, daemon)
 
+            start_time = datetime.datetime.now().replace(microsecond=0)
+
             def update_progress(fraction, seconds_left):
                 if fraction == 0.0 and codec == VideoCodec.VP9:
                     # TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
@@ -539,6 +542,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
                     video.enable_spinner(False, daemon)
                     progress_box.set_progress(fraction, seconds_left, daemon)
                     update_ui(video.progress_pie.set_fraction, fraction, daemon)
+
+                this_time = datetime.datetime.now().replace(microsecond=0) - start_time
+                print(f'time now: {this_time}')
 
             def set_attempt_details(
                 attempt,

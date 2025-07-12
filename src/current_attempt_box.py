@@ -85,6 +85,8 @@ class CurrentAttemptBox(Gtk.Box):
         progress_percent = int(round(fraction * 100, 0))
         progress_text = ''
 
+        # TODO: add hours + minutes
+
         if seconds_left is not None:
             time_left = seconds_left
             unit_label = ngettext('second', 'seconds', time_left)

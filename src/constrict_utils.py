@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# constrict.py
+# constrict_utils.py
 #
 # Copyright 2025 Wartybix
 #
@@ -26,7 +26,11 @@ import argparse
 import datetime
 import re
 from pathlib import Path
-from constrict.enums import FpsMode, VideoCodec
+try:
+    from constrict.enums import FpsMode, VideoCodec
+except ModuleNotFoundError:
+    from enums import FpsMode, VideoCodec
+
 
 # Module responsible for compression logic. This script can be packaged
 # on its own to provide a CLI compressor *only*. The GTK wrapper depends on
@@ -622,6 +626,7 @@ check for reading permissions of input, writing permissions of output
 # Returns None if compression went smoothly.
 # If there's an error while compressing, it'll return compression details.
 # TODO: change return values to passed functions -- makes more sense
+# TODO: make error msgs translatable
 def compress(
     file_input,
     file_output,
@@ -790,84 +795,3 @@ def compress(
 
     return (file_output, after_size_bytes, None)
 
-if __name__ == '__main__':
-    arg_parser = argparse.ArgumentParser("constrict")
-    arg_parser.add_argument(
-        'file_path',
-        help='Location of the video file to be compressed',
-        type=str
-    )
-    arg_parser.add_argument(
-        'target_size',
-        help='Desired size of the compressed video in MB',
-        type=int
-    )
-    arg_parser.add_argument(
-        '-t',
-        dest='tolerance',
-        type=int,
-        default=10,
-        help='Tolerance of end file size under target in percent (default 10)'
-    )
-    arg_parser.add_argument(
-        '-o',
-        dest='output',
-        type=str,
-        help='Destination path of the compressed video file'
-    )
-    arg_parser.add_argument(
-        '--framerate',
-        dest='framerate_option',
-        choices=['auto', 'prefer-clear', 'prefer-smooth'],
-        default='auto',
-        help=(
-            'The maximum framerate to apply to the output file. NOTE: this '
-            'option has no bearing on source videos at 30 FPS or below, and '
-            'the output will be the same regardless of the option set. '
-            'Additionally, videos compressed to very low bitrates will have '
-            'their framerate capped to 24 FPS regardless of the option '
-            'set.\n\n'
-            'auto: auto-apply a 60 FPS maximum framerate in cases where the '
-            'percieved reduction in image clarity from 30 FPS is '
-            'negligable.\n\n'
-            'prefer-clear: apply a 30 FPS framerate cap, ensuring higher '
-            'image clarity in fewer frames.\n\n'
-            'prefer-smooth: apply a 60 FPS framerate cap, ensuring smoothness '
-            'at a cost to image clarity and sometimes resolution'
-        )
-    )
-    arg_parser.add_argument(
-        '--extra-quality',
-        action='store_true',
-        help='Increase image quality at the cost of much longer encoding times'
-    )
-    arg_parser.add_argument(
-        '--codec',
-        dest='codec',
-        choices=['h264', 'hevc', 'av1', 'vp9'],
-        default='h264',
-        help=(
-            'The codec used to encode the compressed video.\n'
-            'h264: uses the H.264 codec. Compatible with most devices and '
-            'services, but with relatively low compression efficiency.\n'
-            'hevc: uses the H.265 (HEVC) codec. Less compatible with devices '
-            'and services, and is slower to encode, but has higher '
-            'compression efficiency.\n'
-            'av1: uses the AV1 codec. High compression efficiency, and is '
-            'open source and royalty free. However, it is less widely '
-            'supported, and may not embed properly on some services.\n'
-            'vp9: uses the VP9 codec.'
-        )
-    )
-    args = arg_parser.parse_args()
-
-    compress(
-        args.file_path,
-        args.target_size,
-        args.framerate_option,
-        args.extra_quality,
-        args.codec,
-        args.tolerance,
-        args.output,
-        lambda x: print(x)
-    )
