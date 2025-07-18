@@ -494,7 +494,8 @@ def get_encode_settings(
     height: int,
     fps: float,
     duration: float,
-    factor: float = 1.0
+    factor: float = 1.0,
+    force_crush: bool = False
 ) -> Tuple[int, int, int, float]:
     """ Return recommended encode settings for a given video and user
     preferences, in order to meet the target file size """
@@ -533,7 +534,7 @@ def get_encode_settings(
     Therefore, video bitrate is 104Kbps
     This is *below* 150Kbps, therefore preset resolution is 144p@?
     '''
-    crush_mode = (target_bitrate / 1000) < 150 + 96
+    crush_mode = ((target_bitrate / 1000) < 150 + 96) or force_crush
     target_audio_bitrate = 6000 if crush_mode else 96000
     target_video_bitrate = target_bitrate - target_audio_bitrate
 
@@ -647,6 +648,7 @@ def compress(
     factor = 1.0
     attempt = 0
     percent_of_target = 200.0
+    force_crush = False
 
     target_video_bitrate = 0
     target_audio_bitrate = 0
@@ -675,12 +677,16 @@ def compress(
             height,
             source_fps,
             duration_seconds,
-            factor
+            factor,
+            force_crush
         )
 
         target_video_bitrate, target_audio_bitrate, target_height, target_fps = encode_settings
 
         is_hq_audio = target_audio_bitrate > 48000
+
+        if not is_hq_audio:
+            force_crush = True
 
         on_new_attempt(
             attempt,
