@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, GLib
+from gi.repository import Adw, Gtk, GLib, Gio
 from constrict.shared import update_ui
 from constrict import PREFIX
 from typing import Any
@@ -30,6 +30,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
     suffix_info_label = Gtk.Template.Child()
     suffix_entry_row = Gtk.Template.Child()
+    gpu_encoding_row = Gtk.Template.Child()
 
     # TODO: Maybe do add a megabyte/mebibyte preference.
 
@@ -43,6 +44,13 @@ class PreferencesDialog(Adw.PreferencesDialog):
         )
 
         self.settings = application.get_settings()
+
+        self.settings.bind(
+            'use-gpu-encoding',
+            self.gpu_encoding_row,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
 
         export_suffix_value = self.settings.get_string('custom-export-suffix')
         self.suffix_entry_row.set_text(export_suffix_value)

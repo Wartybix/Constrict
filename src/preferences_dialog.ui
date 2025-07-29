@@ -8,6 +8,17 @@
       <object class="AdwPreferencesPage">
         <child>
           <object class="AdwPreferencesGroup">
+            <property name="title" translatable="true">Hardware Acceleration</property>
+            <child>
+              <object class="AdwSwitchRow" id="gpu_encoding_row">
+                <!-- TRANSLATORS: GPU as in 'graphics processing unit' -->
+                <property name="title" translatable="true">GPU Encoding</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
             <property name="title" translatable="true">Exported Video Suffix</property>
             <property name="header-suffix">
               <object class="GtkMenuButton">

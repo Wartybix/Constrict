@@ -52,6 +52,9 @@
 		<key name="export-initial-folder" type="s">
 			<default>""</default>
 		</key>
+		<key name="use-gpu-encoding" type="b">
+			<default>true</default>
+		</key>
 	  <key name="custom-export-suffix" type="s">
 	    <default>""</default>
 	  </key>

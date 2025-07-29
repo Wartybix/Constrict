@@ -273,6 +273,7 @@ def transcode(
     rotation: int,
     framerate: float,
     codec: int,
+    use_ha: bool,
     extra_quality: bool,
     output_fn: Callable[[float, Optional[int]], None],
     frame_count: int,
@@ -292,23 +293,31 @@ def transcode(
     preset_name = '-cpu-used' if codec == VideoCodec.VP9 else '-preset'
     preset = get_encoding_speed(frame_height, codec, extra_quality)
 
+    gpu_filters = ',format=nv12,hwupload' if use_ha else ''
+
     cv_params = {
-        VideoCodec.H264: 'libx264',
-        VideoCodec.HEVC: 'libx265',
-        VideoCodec.AV1: 'libsvtav1',
-        VideoCodec.VP9: 'libvpx-vp9'
+        VideoCodec.H264: 'h264_vaapi' if use_ha else 'libx264',
+        VideoCodec.HEVC: 'hevc_vaapi' if use_ha else 'libx265',
+        VideoCodec.AV1: 'av1_vaapi' if use_ha else 'libsvtav1',
+        VideoCodec.VP9: 'vp9_vaapi' if use_ha else 'libvpx-vp9'
     }
 
     pass1_cmd = [
         'ffmpeg',
         '-y',
         '-progress', '-',
+    ]
+
+    if use_ha:
+        pass1_cmd.extend(['-vaapi_device', '/dev/dri/renderD128'])
+
+    pass1_cmd.extend([
         '-display_rotation', f'{rotation}',
         '-noautorotate',
         '-i', f'{file_input}',
         f'{preset_name}', f'{"4" if codec == VideoCodec.VP9 else preset}',
-        '-vf', f'scale={width}:{height}',
-    ]
+        '-vf', f'scale={width}:{height}{gpu_filters}',
+    ])
 
     if log_path is not None:
         pass1_cmd.extend(['-passlogfile', f'{log_path}'])
@@ -358,12 +367,18 @@ def transcode(
         'ffmpeg',
         '-y',
         '-progress', '-',
+    ]
+
+    if use_ha:
+        pass2_cmd.extend(['-vaapi_device', '/dev/dri/renderD128'])
+
+    pass2_cmd.extend([
         '-display_rotation', f'{rotation}',
         '-noautorotate',
         '-i', f'{file_input}',
         f'{preset_name}', f'{preset}',
-        '-vf', f'scale={width}:{height}'
-    ]
+        '-vf', f'scale={width}:{height}{gpu_filters}',
+    ])
 
     if log_path is not None:
         pass2_cmd.extend(['-passlogfile', f'{log_path}'])
@@ -603,6 +618,7 @@ def compress(
     framerate_option: int,
     extra_quality: bool,
     codec: int,
+    use_ha: bool,
     tolerance: int,
     output_fn: Callable[[float, Optional[int]], None],
     log_path: str,
@@ -736,6 +752,7 @@ def compress(
             rotation,
             target_fps,
             codec,
+            use_ha,
             extra_quality,
             output_fn,
             dest_frame_count,

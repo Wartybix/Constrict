@@ -31,6 +31,7 @@ import subprocess
 from pathlib import Path
 import os
 from typing import Any, List
+from datetime import datetime
 
 # TODO: future feature -- add pause button?
 
@@ -606,6 +607,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
         )
 
         for i in range(len(source_list)):
+            start = datetime.now()
+
             self.set_compressing_title(i, dest_display_name)
 
             video = source_list[i]
@@ -617,6 +620,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             progress_box = CurrentAttemptBox()
             video.initiate_popover_box(progress_box, daemon)
+
+            use_ha = self.settings.get_boolean('use-gpu-encoding')
 
             def update_progress(fraction, seconds_left):
                 if fraction == 0.0 and codec == VideoCodec.VP9:
@@ -692,6 +697,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 fps_mode,
                 extra_quality,
                 codec,
+                use_ha,
                 tolerance,
                 update_progress,
                 log_path,
@@ -742,6 +748,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 end_size_bytes = compression_result
                 end_size_mb = round(end_size_bytes / 1024 / 1024, 1)
                 video.set_complete(output_path_unique, end_size_mb, daemon)
+
+            end = datetime.now()
+            print(f'I took {end - start}')
 
         self.set_controls_lock(False, daemon)
         self.show_cancel_button(False, daemon)
