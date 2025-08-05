@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-08-04 11:32+0100\n"
-"PO-Revision-Date: 2025-08-04 10:43+0100\n"
+"POT-Creation-Date: 2025-08-05 17:31+0100\n"
+"PO-Revision-Date: 2025-08-05 17:34+0100\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.desktop.in:3
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
 #: src/window.py:318 src/window.ui:6
 msgid "Constrict"
 msgstr "Constrict"
 
-#: data/io.github.wartybix.Constrict.desktop.in:3
+#: data/io.github.wartybix.Constrict.desktop.in:4
 msgid "Video Compressor"
 msgstr "Видеокомпрессор"
 
-#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.desktop.in:5
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:9
 msgid "Compress videos to target sizes"
 msgstr "Сжимайте видео до целевых размеров"
 
-#: data/io.github.wartybix.Constrict.desktop.in:10
+#: data/io.github.wartybix.Constrict.desktop.in:11
 msgid "Compress;Video;Movie;Film;Clip;"
 msgstr "Сжать;Видео;Ролик;Фильм;Клип;"
 
-#: data/io.github.wartybix.Constrict.desktop.in:20
+#: data/io.github.wartybix.Constrict.desktop.in:21
 msgid "New Window"
 msgstr "Новое окно"
 
@@ -561,17 +561,17 @@ msgstr "Настройки"
 
 #: src/preferences_dialog.ui:11
 msgid "Hardware Acceleration"
-msgstr ""
+msgstr "Аппаратное ускорение"
 
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:15
 msgid "GPU Encoding"
-msgstr ""
+msgstr "GPU Кодирование"
 
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:17
 msgid "Use the GPU to speed up encoding when available"
-msgstr ""
+msgstr "Использовать GPU для ускорения, когда доступно"
 
 #: src/preferences_dialog.ui:24
 msgid "Exported Video Suffix"
@@ -718,40 +718,51 @@ msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr ""
+"Constrict: Не удалось прочитать входной файл. Он был перемещен или удален "
+"перед сжатием?"
 
 #: src/constrict_utils.py:682
 msgid "Constrict: File already meets the target size."
-msgstr ""
+msgstr "Constrict: Файл уже соответствует целевому размеру."
 
 #: src/constrict_utils.py:691
-#, fuzzy
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
-msgstr "Не удаётся загрузить видео. Возможно, оно отсутствует или повреждено."
+msgstr ""
+"Constrict: Не удалось получить свойства видео. Исходное видео может "
+"отсутствовать или быть повреждено."
 
 #: src/constrict_utils.py:698
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr ""
+"Constrict: Не удалось создать экспортированный файл. Файл с "
+"зарезервированным именем уже существует."
 
 #: src/constrict_utils.py:700
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
+"Constrict: Не удалось создать экспортированный файл. Недостаточно прав для "
+"создания файла по указанному пути экспорта."
 
 #: src/constrict_utils.py:764
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr ""
+"Constrict: Битрейт видео слишком низкий (<5 кбит/с). Целевой размер может "
+"быть слишком мал для этого файла."
 
 #: src/constrict_utils.py:803
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
+"Constrict: Не удаётся прочитать выходной файл. Он был перемещён или удалён в "
+"процессе сжатия?"
 
 #~ msgid "GApplication local option handling by"
 #~ msgstr "Обработка локальных опций GApplication"
