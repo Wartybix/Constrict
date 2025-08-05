@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-08-04 11:32+0100\n"
-"PO-Revision-Date: 2025-08-04 10:44+0100\n"
+"PO-Revision-Date: 2025-08-05 12:46+0300\n"
 "Last-Translator: Erdem Uygun <uygun.erdem@proton.me>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
@@ -562,17 +562,17 @@ msgstr "Tercihler"
 
 #: src/preferences_dialog.ui:11
 msgid "Hardware Acceleration"
-msgstr ""
+msgstr "Donanım Hızlandırma"
 
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:15
 msgid "GPU Encoding"
-msgstr ""
+msgstr "GPU ile Kodlama"
 
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:17
 msgid "Use the GPU to speed up encoding when available"
-msgstr ""
+msgstr "Mümkün olduğunda kodlamayı hızlandırmak için GPU kullanın"
 
 #: src/preferences_dialog.ui:24
 msgid "Exported Video Suffix"
