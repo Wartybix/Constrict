@@ -83,8 +83,9 @@
             ],
             "sources" : [
                 {
-                    "type" : "dir",
-                    "path" : "."
+                    "type" : "git",
+                    "url" : "https://github.com/Wartybix/Constrict.git",
+                    "branch" : "main"
                 }
             ]
         }
