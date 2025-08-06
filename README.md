@@ -19,7 +19,7 @@ The app attempts to retain as much audiovisual quality as possible for the file 
 ## Dependencies
 - Python
 - FFmpeg (full)
-- Totem (particularly `totem-video-thumbnailer`)
+- Totem (particularly `totem-video-thumbnailer`) -- Optional
 - `libva-utils` (for `vainfo`)
 - drivers specific to GPUs to allow VA-API encoding. 
 
