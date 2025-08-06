@@ -621,7 +621,11 @@ def will_ha_work(codec):
 
     cmd = ['vainfo', '--display', 'drm']
 
-    vainfo_bytes = subprocess.check_output(cmd)
+    try:
+        vainfo_bytes = subprocess.check_output(cmd)
+    except subprocess.CalledProcessError:
+        return False
+
     vainfo_str = vainfo_bytes.decode('utf-8')
     vainfo_list = vainfo_str.replace(' ', '').replace('\t', '').split('\n')
 
