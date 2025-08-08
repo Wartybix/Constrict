@@ -623,7 +623,7 @@ def will_ha_work(codec):
 
     try:
         vainfo_bytes = subprocess.check_output(cmd)
-    except subprocess.CalledProcessError:
+    except (FileNotFoundError, subprocess.CalledProcessError):
         return False
 
     vainfo_str = vainfo_bytes.decode('utf-8')
