@@ -271,6 +271,7 @@ def transcode(
     width: int,
     height: int,
     rotation: int,
+    subtitle_streams: List[int],
     framerate: float,
     codec: int,
     use_ha: bool,
@@ -341,6 +342,7 @@ def transcode(
         '-pix_fmt', 'yuv420p',
         '-pass', '1',
         '-an',
+        '-sn',
         '-f', 'null',
         '/dev/null'
     ])
@@ -396,6 +398,9 @@ def transcode(
     if framerate != -1:
         pass2_cmd.extend(['-r', f'{framerate}'])
 
+    # TODO: check videos with no audio
+    # FIXME: matroska -> mp4 duration weirdness
+
     pass2_cmd.extend([
         '-c:v', f'{cv_params[codec]}',
         '-b:v', str(video_bitrate) + '',
@@ -404,6 +409,18 @@ def transcode(
         '-c:a', 'libopus',
         '-b:a', f'{audio_bitrate}',
         '-ac', f'{audio_channels}',
+        '-map', '0:v:0',
+        '-map', '0:a:0?',
+    ])
+
+    # TODO: transfer 'forced' sub metadata
+
+    for index in subtitle_streams:
+        pass2_cmd.extend(['-map', f'0:{index}'])
+
+    pass2_cmd.extend([
+        '-c:s', 'mov_text',
+        '-f', 'mp4',
         file_output
     ])
 
@@ -643,6 +660,33 @@ def will_ha_work(codec):
 
     return False
 
+def get_subtitle_streams(file_input: str) -> List[int]:
+    cmd = [
+        'ffprobe',
+        '-loglevel', 'error',
+        '-select_streams', 's',
+        '-show_entries', 'stream=index,codec_name',
+        '-of', 'csv=p=0',
+        f'{file_input}'
+    ]
+
+    input_streams_str = subprocess.check_output(cmd).decode('utf-8').strip()
+    input_streams_list = input_streams_str.split('\n')
+
+    compatible_codecs = ['subrip', 'webvtt', 'ass', 'mov_text']
+    accepted_streams = []
+
+    for stream in input_streams_list:
+        try:
+            id, codec = stream.split(',')
+            if codec in compatible_codecs:
+                accepted_streams.append(int(id))
+        except ValueError:
+            continue
+
+    return accepted_streams
+
+
 
 def compress(
     file_input: str,
@@ -691,6 +735,7 @@ def compress(
         width, height = get_resolution(file_input)
         source_frame_count = get_frame_count(file_input)
         rotation = get_rotation(file_input)
+        sub_streams = get_subtitle_streams(file_input)
     except subprocess.CalledProcessError:
         return _("Constrict: Could not retrieve video properties. Source video may be missing or corrupted.")
 
@@ -785,6 +830,7 @@ def compress(
             target_width,
             target_height,
             rotation,
+            sub_streams,
             target_fps,
             codec,
             can_ha,
