@@ -399,7 +399,6 @@ def transcode(
         pass2_cmd.extend(['-r', f'{framerate}'])
 
     # TODO: check videos with no audio
-    # FIXME: matroska -> mp4 duration weirdness
 
     pass2_cmd.extend([
         '-c:v', f'{cv_params[codec]}',
@@ -411,6 +410,7 @@ def transcode(
         '-ac', f'{audio_channels}',
         '-map', '0:v:0',
         '-map', '0:a:0?',
+        '-map_chapters', '-1'
     ])
 
     # TODO: transfer 'forced' sub metadata
