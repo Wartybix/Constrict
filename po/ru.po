@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-08-05 17:31+0100\n"
-"PO-Revision-Date: 2025-08-05 17:34+0100\n"
+"POT-Creation-Date: 2025-08-13 08:56+0100\n"
+"PO-Revision-Date: 2025-08-13 09:12+0100\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Gtranslator 48.0\n"
 
-#: data/io.github.wartybix.Constrict.desktop.in:3
+#: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
 #: src/window.py:318 src/window.ui:6
 msgid "Constrict"
 msgstr "Constrict"
 
-#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.desktop.in:3
 msgid "Video Compressor"
 msgstr "Видеокомпрессор"
 
-#: data/io.github.wartybix.Constrict.desktop.in:5
+#: data/io.github.wartybix.Constrict.desktop.in:4
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:9
 msgid "Compress videos to target sizes"
 msgstr "Сжимайте видео до целевых размеров"
 
-#: data/io.github.wartybix.Constrict.desktop.in:11
+#: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
 msgstr "Сжать;Видео;Ролик;Фильм;Клип;"
 
-#: data/io.github.wartybix.Constrict.desktop.in:21
+#: data/io.github.wartybix.Constrict.desktop.in:20
 msgid "New Window"
 msgstr "Новое окно"
 
@@ -147,16 +147,16 @@ msgstr "сжато"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #. Please use ‘’ characters instead of '', if applicable to your language.
-#: src/main.py:172
+#: src/main.py:173
 #, python-brace-format
 msgid "‘{}’ repository by"
 msgstr "‘{}’ репозиторий"
 
-#: src/main.py:179
+#: src/main.py:180
 msgid "Circular progress indicator (C version) by"
 msgstr "Круговой индикатор прогресса (версия C)"
 
-#: src/main.py:183
+#: src/main.py:184
 msgid "translator-credits"
 msgstr "Anton Palgunov https://github.com/Toxblh/"
 
@@ -472,7 +472,7 @@ msgstr "Показать Настройки"
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MB'. Please use U+202F
 #. narrow no-break space (' ') between size and unit.
-#: src/sources_row.py:408
+#: src/sources_row.py:418
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr "Видео сжато до {size} {unit}."
@@ -481,7 +481,7 @@ msgstr "Видео сжато до {size} {unit}."
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'. Please use U+202F Narrow no-break
 #. space (' ') between values and units.
-#: src/sources_row.py:434
+#: src/sources_row.py:444
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -494,7 +494,7 @@ msgstr ""
 #. a file size unit like 'MB'.
 #. Please use U+202F Narrow no-break space (' ') between value
 #. and unit.
-#: src/sources_row.py:454
+#: src/sources_row.py:464
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "Целевой размер ({size} {unit}) слишком мал для этого файла."
@@ -606,37 +606,45 @@ msgid "Copy Details"
 msgstr "Копировать детали"
 
 #. TRANSLATORS: {} represents the attempt number.
-#: src/attempt_fail_box.py:51 src/current_attempt_box.py:42
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
 #: src/current_attempt_box.py:66
 #, python-brace-format
 msgid "Attempt {}"
 msgstr "Попытка {}"
 
 #. TRANSLATORS: this is an abbreviation of 'High Quality'
-#: src/attempt_fail_box.py:54 src/current_attempt_box.py:70
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
 msgid "HQ"
 msgstr "HQ"
 
 #. TRANSLATORS: this is an abbreviation of 'Low Quality'
-#: src/attempt_fail_box.py:57 src/current_attempt_box.py:73
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
 msgid "LQ"
 msgstr "LQ"
 
-#. TRANSLATORS: {vid_br} represents an integer.
-#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. TRANSLATORS:
 #. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
 #. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, {audio_quality} аудио"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
 #. Please use U+202F Narrow no-break space (' ') between video bitrate
 #. and unit.
-#: src/attempt_fail_box.py:65
+#: src/attempt_fail_box.py:80
 #, python-brace-format
-msgid "{vid_br} {vid_br_unit} ({res_fps}, {audio_quality} audio)"
-msgstr "{vid_br} {vid_br_unit} ({res_fps}, {audio_quality} аудио)"
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
 #. (' ') between size and unit.
-#: src/attempt_fail_box.py:80
+#: src/attempt_fail_box.py:94
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
 msgstr "Размер сжатого файла слишком большой ({size} {unit})"
@@ -644,27 +652,26 @@ msgstr "Размер сжатого файла слишком большой ({s
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
 #. (' ') between size and unit.
-#: src/attempt_fail_box.py:90
+#: src/attempt_fail_box.py:104
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "Размер сжатого файла слишком мал ({size} {unit})"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
-#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
-#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
 #. Please use U+202F Narrow no-break space (' ') between video bitrate
 #. and unit.
-#: src/current_attempt_box.py:81
+#: src/current_attempt_box.py:94
 #, python-brace-format
-msgid ""
-"Compressing to {vid_br} {vid_br_unit} ({res_fps}, {audio_quality} audio)"
-msgstr "Сжатие в {vid_br} {vid_br_unit} ({res_fps}, {audio_quality} аудио)"
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Сжатие в {vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
 #. '5% -- About 30 seconds left'
-#: src/current_attempt_box.py:117
+#: src/current_attempt_box.py:129
 #, python-brace-format
 msgid "{} second"
 msgid_plural "{} seconds"
@@ -678,7 +685,7 @@ msgstr[2] "{} секунд"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:125 src/current_attempt_box.py:138
+#: src/current_attempt_box.py:137 src/current_attempt_box.py:150
 #, python-brace-format
 msgid "{} minute"
 msgid_plural "{} minutes"
@@ -689,7 +696,7 @@ msgstr[2] "{} минут"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:133 src/current_attempt_box.py:147
+#: src/current_attempt_box.py:145 src/current_attempt_box.py:159
 #, python-brace-format
 msgid "{} hour"
 msgid_plural "{} hours"
@@ -703,7 +710,7 @@ msgstr[2] "{} часов"
 #. Please use U+202F Narrow no-break space (' ') between {percent}
 #. and '%'.
 #. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:156
+#: src/current_attempt_box.py:168
 #, python-brace-format
 msgid "{percent} % — About {time_shown} left"
 msgstr "{percent} % — осталось около {time_shown}"
@@ -713,7 +720,7 @@ msgstr "{percent} % — осталось около {time_shown}"
 msgid "Initializing…"
 msgstr "Инициализация…"
 
-#: src/constrict_utils.py:675
+#: src/constrict_utils.py:754
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
@@ -721,11 +728,11 @@ msgstr ""
 "Constrict: Не удалось прочитать входной файл. Он был перемещен или удален "
 "перед сжатием?"
 
-#: src/constrict_utils.py:682
+#: src/constrict_utils.py:761
 msgid "Constrict: File already meets the target size."
 msgstr "Constrict: Файл уже соответствует целевому размеру."
 
-#: src/constrict_utils.py:691
+#: src/constrict_utils.py:772
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -733,7 +740,7 @@ msgstr ""
 "Constrict: Не удалось получить свойства видео. Исходное видео может "
 "отсутствовать или быть повреждено."
 
-#: src/constrict_utils.py:698
+#: src/constrict_utils.py:779
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
@@ -741,7 +748,7 @@ msgstr ""
 "Constrict: Не удалось создать экспортированный файл. Файл с "
 "зарезервированным именем уже существует."
 
-#: src/constrict_utils.py:700
+#: src/constrict_utils.py:781
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
@@ -749,7 +756,7 @@ msgstr ""
 "Constrict: Не удалось создать экспортированный файл. Недостаточно прав для "
 "создания файла по указанному пути экспорта."
 
-#: src/constrict_utils.py:764
+#: src/constrict_utils.py:846
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
@@ -757,7 +764,7 @@ msgstr ""
 "Constrict: Битрейт видео слишком низкий (<5 кбит/с). Целевой размер может "
 "быть слишком мал для этого файла."
 
-#: src/constrict_utils.py:803
+#: src/constrict_utils.py:886
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
