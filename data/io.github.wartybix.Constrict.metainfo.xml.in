@@ -89,6 +89,20 @@
   </screenshots>
 
   <releases>
+    <release version="25.8" date="2025-08-13">
+      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8</url>
+      <description translate="no">
+        <p>Lots of new features and improvements in this one:</p>
+        <ul>
+          <li>Added hardware acceleration for significantly faster compression speeds. Only works if your GPU supports VA-API encoding for your chosen video codec, otherwise it'll fall back to regular software encoding. 'Extra Quality' mode will still use software encoding regardless.</li>
+          <li>Added new app icon from the GNOME Design Team.</li>
+          <li>Compressed videos now keep all their subtitle streams/languages, if the subtitles from video sources use compatible, text-only codecs.</li>
+          <li>Fixed an issue where some trimmed video sources had much longer durations when compressed.</li>
+          <li>Added Turkish translation.</li>
+          <li>Updated existing translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.7.3" date="2025-07-24">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.7.3</url>
       <description translate="no">
