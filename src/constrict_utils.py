@@ -278,7 +278,7 @@ def transcode(
     extra_quality: bool,
     output_fn: Callable[[float, Optional[int]], None],
     frame_count: int,
-    log_path: str,
+    log_path: Optional[str],
     cancel_event: Callable[[], bool]
 ) -> Optional[str]:
     """
@@ -398,8 +398,6 @@ def transcode(
     if framerate != -1:
         pass2_cmd.extend(['-r', f'{framerate}'])
 
-    # TODO: check videos with no audio
-
     pass2_cmd.extend([
         '-c:v', f'{cv_params[codec]}',
         '-b:v', str(video_bitrate) + '',
@@ -412,8 +410,6 @@ def transcode(
         '-map', '0:a:0?',
         '-map_chapters', '-1'
     ])
-
-    # TODO: transfer 'forced' sub metadata
 
     for index in subtitle_streams:
         pass2_cmd.extend(['-map', f'0:{index}'])
@@ -525,6 +521,34 @@ def get_frame_count(file_input: str) -> int:
 
     return frame_count
 
+def get_audio_bitrate(file_input: str) -> int:
+    """ Gets the audio bitrate of the input file """
+    cmd = [
+        'ffprobe',
+        '-loglevel', 'error',
+        '-select_streams', 'a:0',
+        '-show_entries', 'stream=bit_rate',
+        '-of', 'csv=p=0',
+        file_input
+    ]
+
+    bitrate_str = subprocess.check_output(cmd).decode('utf-8').strip()
+
+    if bitrate_str == "":
+        # No audio stream found
+        return 0
+    elif bitrate_str == "N/A":
+        # Audio stream is using variable bitrate.
+        # Return a high bitrate to be safe.
+        return 96000
+    else:
+        try:
+            return int(bitrate_str)
+        except ValueError:
+            # Error converting the bitrate to an integer.
+            # Return a high bitrate to be safe.
+            return 96000
+
 def get_encode_settings(
     target_size_MiB: int,
     fps_mode: int,
@@ -532,6 +556,7 @@ def get_encode_settings(
     height: int,
     fps: float,
     duration: float,
+    audio_bitrate: int,
     factor: float = 1.0,
     force_crush: bool = False,
     locked_in_height: Optional[int] = None
@@ -574,7 +599,10 @@ def get_encode_settings(
     This is *below* 150kbps, therefore preset resolution is 144p@?
     '''
     crush_mode = (target_bitrate / 1000) < 150 + 96 or force_crush
-    target_audio_bitrate = 6000 if crush_mode else 96000
+
+    max_bitrate = 6000 if crush_mode else 96000
+    target_audio_bitrate = min(audio_bitrate, max_bitrate)
+
     target_video_bitrate = target_bitrate - target_audio_bitrate
 
     preset_height = None
@@ -629,6 +657,9 @@ def get_encode_settings(
     )
 
 def will_ha_work(codec):
+    """ Returns whether hardware acceleration for the given codec is supported
+    by the GPU
+    """
     profiles = {
         VideoCodec.H264: 'VAProfileH264Main',
         VideoCodec.HEVC: 'VAProfileHEVCMain',
@@ -698,10 +729,10 @@ def compress(
     use_ha: bool,
     tolerance: int,
     output_fn: Callable[[float, Optional[int]], None],
-    log_path: str,
+    log_path: Optional[str],
     cancel_event: Callable,
-    on_new_attempt: Callable[[int, int, bool, int, float], None],
-    on_attempt_fail: Callable[[int, int, bool, int, float, int, int], None]
+    on_new_attempt: Callable[[int, int, Optional[bool], int, float], None],
+    on_attempt_fail: Callable[[int, int, Optional[bool], int, float, int, int], None]
 ) -> Optional[int | str]:
     """
     Iteratively transcode a given video to the passed destination file path,
@@ -736,6 +767,7 @@ def compress(
         source_frame_count = get_frame_count(file_input)
         rotation = get_rotation(file_input)
         sub_streams = get_subtitle_streams(file_input)
+        audio_bitrate = get_audio_bitrate(file_input)
     except subprocess.CalledProcessError:
         return _("Constrict: Could not retrieve video properties. Source video may be missing or corrupted.")
 
@@ -757,7 +789,7 @@ def compress(
     target_audio_bitrate = 0
     displayed_res = 0
     target_fps = 0.0
-    is_hq_audio = False
+    is_hq_audio = None
 
     force_crush = False
     lowest_res = None
@@ -785,6 +817,7 @@ def compress(
             height,
             source_fps,
             duration_seconds,
+            audio_bitrate,
             factor,
             force_crush,
             lowest_res
@@ -792,7 +825,7 @@ def compress(
 
         target_video_bitrate, target_audio_bitrate, target_height, target_fps, res_reduction_applied = encode_settings
 
-        is_hq_audio = target_audio_bitrate > 48000
+        is_hq_audio = target_audio_bitrate > 6000 if target_audio_bitrate > 0 else None
 
         if not is_hq_audio:
             force_crush = True

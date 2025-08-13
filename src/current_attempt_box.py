@@ -72,21 +72,33 @@ class CurrentAttemptBox(Gtk.Box):
         # TRANSLATORS: this is an abbreviation of 'Low Quality'
         lq_label = _('LQ')
 
+        res_fps = f'{vid_height}p@{int(round(vid_fps, 0))}'
+
+        if is_hq_audio is None:
+            extra_details = res_fps
+        else:
+            # TRANSLATORS:
+            # {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+            # {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+            extra_details = _("{res_fps}, {audio_quality} audio").format(
+                res_fps = res_fps,
+                audio_quality = hq_label if is_hq_audio else lq_label
+            )
+
         # TRANSLATORS: {vid_br} represents an integer.
         # {vid_br_unit} represents a bitrate unit, like 'kbps'.
-        # {res_fps} represents a resolution + framerate (e.g. '1080p@30').
-        # {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+        # {extra_details} will either display resolution/FPS and audio quality
+        # details, or just resolution/FPS if the video has no audio streams.
         # Please use U+202F Narrow no-break space (' ') between video bitrate
         # and unit.
-        target_details_label = _('Compressing to {vid_br} {vid_br_unit} ({res_fps}, {audio_quality} audio)').format(
+        target_str = _('Compressing to {vid_br} {vid_br_unit} ({extra_details})').format(
             vid_br = f'{vid_bitrate // 1000}',
             vid_br_unit = 'kbps',
-            res_fps = f'{vid_height}p@{int(round(vid_fps, 0))}',
-            audio_quality = hq_label if is_hq_audio else lq_label
+            extra_details = extra_details
         )
         update_ui(
             self.target_details_label.set_label,
-            target_details_label,
+            target_str,
             daemon
         )
 

@@ -28,7 +28,7 @@
 from gi.repository import Adw, Gtk, Gio, GLib, Gdk
 from pathlib import Path
 from constrict.shared import get_tmp_dir, update_ui
-from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration
+from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration, get_audio_bitrate
 from constrict.enums import SourceState, Thumbnailer
 from constrict.progress_pie import ProgressPie
 from constrict.attempt_fail_box import AttemptFailBox
@@ -83,6 +83,7 @@ class SourcesRow(Adw.ActionRow):
         self.width = None
         self.fps = None
         self.duration = None
+        self.audio_bitrate = None
         self.state = SourceState.PENDING
         self.error_details = ""
         self.error_action = error_action
@@ -313,6 +314,15 @@ class SourcesRow(Adw.ActionRow):
 
         return self.duration
 
+    def get_audio_bitrate(self) -> int:
+        """ Get the audio bitrate of the video represented by the row. This
+        value is cached within the object after first fetching it.
+        """
+        if self.audio_bitrate is None:
+            self.audio_bitrate = get_audio_bitrate(self.video_path)
+
+        return self.audio_bitrate
+
     def set_thumbnail(self, file_hash: int, daemon: bool) -> None:
         """ Set a thumbnail for the row, by running a thumbnailer on the video
         this row represents, and storing it named with the video's file hash
@@ -475,6 +485,7 @@ class SourcesRow(Adw.ActionRow):
             width, height = self.get_resolution()
             fps = self.get_fps()
             duration = self.get_duration()
+            audio_bitrate = self.get_audio_bitrate()
         except subprocess.CalledProcessError:
             self.set_state(SourceState.BROKEN, daemon)
             return
@@ -488,7 +499,8 @@ class SourcesRow(Adw.ActionRow):
             width,
             height,
             fps,
-            duration
+            duration,
+            audio_bitrate
         )
 
         video_bitrate, _, target_pixels, target_fps, _ = encode_settings

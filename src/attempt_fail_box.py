@@ -20,6 +20,7 @@
 from gi.repository import Adw, Gtk, GLib
 from constrict.shared import update_ui
 from constrict import PREFIX
+from typing import Optional
 
 
 @Gtk.Template(resource_path=f'{PREFIX}/attempt_fail_box.ui')
@@ -38,7 +39,7 @@ class AttemptFailBox(Gtk.Box):
         self,
         attempt_no: int,
         vid_bitrate: int,
-        is_hq_audio: bool,
+        is_hq_audio: Optional[bool],
         vid_height: int,
         vid_fps: float,
         compressed_size_bytes: int,
@@ -56,17 +57,30 @@ class AttemptFailBox(Gtk.Box):
         # TRANSLATORS: this is an abbreviation of 'Low Quality'
         lq_label = _('LQ')
 
+        res_fps = f'{vid_height}p@{int(round(vid_fps, 0))}'
+
+        if is_hq_audio is None:
+            extra_details = res_fps
+        else:
+            # TRANSLATORS:
+            # {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+            # {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+            extra_details = _("{res_fps}, {audio_quality} audio").format(
+                res_fps = res_fps,
+                audio_quality = hq_label if is_hq_audio else lq_label
+            )
+
+
         # TRANSLATORS: {vid_br} represents an integer.
         # {vid_br_unit} represents a bitrate unit, like 'kbps'.
-        # {res_fps} represents a resolution + framerate (e.g. '1080p@30').
-        # {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+        # {extra_details} will either display resolution/FPS and audio quality
+        # details, or just resolution/FPS if the video has no audio streams.
         # Please use U+202F Narrow no-break space (' ') between video bitrate
         # and unit.
-        target_str = _("{vid_br} {vid_br_unit} ({res_fps}, {audio_quality} audio)").format(
+        target_str = _("{vid_br} {vid_br_unit} ({extra_details})").format(
             vid_br = f'{str(vid_bitrate // 1000)}',
             vid_br_unit = 'kbps',
-            res_fps = f'{vid_height}p@{int(round(vid_fps, 0))}',
-            audio_quality = hq_label if is_hq_audio else lq_label
+            extra_details = extra_details
         )
         self.target_label.set_label(target_str)
 

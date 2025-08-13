@@ -23,8 +23,7 @@ import argparse
 from constrict_utils import compress
 from enums import FpsMode, VideoCodec
 import datetime
-
-# TODO: force container?
+from typing import Optional
 
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser("constrict-cli")
@@ -131,7 +130,7 @@ if __name__ == '__main__':
 
         return VideoCodec.H264
 
-    def print_progress(fraction: float, seconds_left: int) -> None:
+    def print_progress(fraction: float, seconds_left: Optional[int]) -> None:
         percent = int(round(fraction * 100, 0))
 
         if seconds_left is None:
@@ -150,16 +149,19 @@ if __name__ == '__main__':
     def show_attempt_details(
         attempt: int,
         vid_bitrate: int,
-        audio_bitrate: int,
+        audio_bitrate: Optional[int],
         height: int,
         fps: float
     ) -> None:
-        print(f'Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_bitrate // 1000}kbps audio)')
+        if audio_bitrate:
+            print(f'Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_bitrate // 1000}kbps audio)')
+        else:
+            print(f'Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))})')
 
     def show_attempt_fail(
         attempt: int,
         vid_bitrate: int,
-        audio_bitrate: int,
+        audio_bitrate: Optional[int],
         height: int,
         fps: float,
         after_size_bytes: int,

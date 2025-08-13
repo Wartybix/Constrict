@@ -635,14 +635,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
             def set_attempt_details(
                 attempt,
                 target_vid_bitrate,
-                target_audio_bitrate,
+                hq_audio,
                 target_height,
                 target_fps
             ):
                 progress_box.set_attempt_details(
                     attempt,
                     target_vid_bitrate,
-                    target_audio_bitrate,
+                    hq_audio,
                     target_height,
                     target_fps,
                     daemon
@@ -651,7 +651,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             def add_attempt_fail(
                 attempt,
                 target_vid_bitrate,
-                target_audio_bitrate,
+                hq_audio,
                 target_height,
                 target_fps,
                 after_size_bytes,
@@ -660,7 +660,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 video.add_attempt_fail(
                     attempt,
                     target_vid_bitrate,
-                    target_audio_bitrate,
+                    hq_audio,
                     target_height,
                     target_fps,
                     after_size_bytes,
