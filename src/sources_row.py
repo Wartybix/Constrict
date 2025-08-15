@@ -52,14 +52,16 @@ class SourcesRow(Adw.ActionRow):
     progress_pie = Gtk.Template.Child()
     progress_spinner = Gtk.Template.Child()
     progress_button = Gtk.Template.Child()
+    broken_popover = Gtk.Template.Child()
     video_broken_button = Gtk.Template.Child()
+    incompatible_popover = Gtk.Template.Child()
     incompatible_button = Gtk.Template.Child()
     incompatible_label = Gtk.Template.Child()
     complete_button = Gtk.Template.Child()
     complete_label = Gtk.Template.Child()
     complete_popover = Gtk.Template.Child()
     drag_handle_revealer = Gtk.Template.Child()
-    popover = Gtk.Template.Child()
+    progress_popover = Gtk.Template.Child()
     popover_scrolled_window = Gtk.Template.Child()
 
     def __init__(
@@ -104,6 +106,23 @@ class SourcesRow(Adw.ActionRow):
         )
         self.install_action('row.remove', None, self.on_remove)
 
+        self.broken_popover.connect(
+            'show',
+            self.read_broken_popover
+        )
+        self.incompatible_popover.connect(
+            'show',
+            self.read_incompatible_popover
+        )
+        self.complete_popover.connect(
+            'show',
+            self.read_complete_popover
+        )
+        self.progress_popover.connect(
+            'show',
+            self.read_progress_popover
+        )
+
         if file_hash:
             thumb_thread = threading.Thread(
                 target=self.set_thumbnail,
@@ -124,6 +143,42 @@ class SourcesRow(Adw.ActionRow):
 
         self.popover_box = None
 
+    def read_broken_popover(self, widget: Gtk.Widget, *args: Any):
+        message = self.broken_label.get_text()
+
+        Gtk.Accessible.announce(
+            self,
+            message,
+            Gtk.AccessibleAnnouncementPriority.MEDIUM
+        )
+
+    def read_incompatible_popover(self, widget: Gtk.Widget, *args: Any):
+        message = self.incompatible_label.get_text()
+
+        Gtk.Accessible.announce(
+            self,
+            message,
+            Gtk.AccessibleAnnouncementPriority.MEDIUM
+        )
+
+    def read_complete_popover(self, widget: Gtk.Widget, *args: Any):
+        message = self.complete_label.get_text()
+
+        Gtk.Accessible.announce(
+            self,
+            message,
+            Gtk.AccessibleAnnouncementPriority.MEDIUM
+        )
+
+    def read_progress_popover(self, widget: Gtk.Widget, *args: Any):
+        pass
+
+    # def read_progress_popover(self):
+    #     if not self.popover_box:
+    #         return
+
+    #     progress_message = self.popover_box.
+
     def initiate_popover_box(
         self,
         top_widget: Gtk.Widget,
@@ -136,17 +191,6 @@ class SourcesRow(Adw.ActionRow):
             self.popover_box,
             daemon
         )
-
-    def set_popover_top_widget(
-        self,
-        top_widget: Gtk.Widget,
-        daemon: bool
-    ) -> None:
-        """ Set the top widget of the source row's popover box """
-        if not self.popover_box:
-            return
-
-        self.popover_box.set_top_widget(top_widget, daemon)
 
     def add_attempt_fail(
         self,
@@ -422,6 +466,8 @@ class SourcesRow(Adw.ActionRow):
             daemon
         )
         self.compressed_path = compressed_video_path
+
+        self.progress_popover.popdown()
         self.set_state(SourceState.COMPLETE, daemon)
 
     def refresh_state(

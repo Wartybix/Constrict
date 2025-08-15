@@ -27,7 +27,7 @@
                 <property name="tooltip-text" translatable="true">More Information</property>
                 <property name="icon-name">help-about-symbolic</property>
                 <property name="popover">
-                  <object class="GtkPopover">
+                  <object class="GtkPopover" id="suffix_info_popover">
                     <property name="child">
                       <object class="GtkLabel" id="suffix_info_label">
                         <property name="halign">center</property>

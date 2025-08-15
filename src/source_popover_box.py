@@ -19,6 +19,7 @@
 
 from gi.repository import Adw, Gtk, GLib
 from constrict.shared import update_ui
+from constrict.current_attempt_box import CurrentAttemptBox
 from constrict import PREFIX
 from typing import Any
 
@@ -35,7 +36,7 @@ class SourcePopoverBox(Gtk.Box):
         self.top_widget = top_widget
         self.prepend(self.top_widget)
 
-    def set_top_widget(self, widget: Gtk.Widget, daemon: bool) -> None:
+    def set_top_widget(self, widget: CurrentAttemptBox, daemon: bool) -> None:
         """ Sets the widget to be shown at the top of the popover """
         update_ui(self.remove, self.top_widget, daemon)
         update_ui(self.prepend, widget, daemon)

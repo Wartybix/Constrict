@@ -81,9 +81,9 @@
                                 <property name="icon-name">help-about-symbolic</property>
                                 <property name="tooltip-text" translatable="yes">More Information</property>
                                 <property name="popover">
-                                  <object class="GtkPopover">
+                                  <object class="GtkPopover" id="fps_help_popover">
                                     <child>
-                                      <object class="GtkLabel" id="fps_limit_help_label">
+                                      <object class="GtkLabel" id="fps_help_label">
                                         <property name="halign">center</property>
                                         <property name="margin-start">6</property>
                                         <property name="margin-end">6</property>
@@ -193,7 +193,7 @@
                                 <property name="icon-name">help-about-symbolic</property>
                                 <property name="tooltip-text" translatable="yes">More Information</property>
                                 <property name="popover">
-                                  <object class="GtkPopover">
+                                  <object class="GtkPopover" id="adv_options_help_popover">
                                     <child>
                                       <object class="GtkLabel" id="adv_options_help_label">
                                         <property name="halign">center</property>
@@ -288,7 +288,9 @@
                                                   </object>
                                                 </child>
                                                 <child>
-                                                  <object class="SourcesListBox" id="sources_list_box"/>
+                                                  <object class="SourcesListBox" id="sources_list_box">
+                                                    <property name="vexpand">False</property>
+                                                  </object>
                                                 </child>
                                               </object>
                                             </child>
