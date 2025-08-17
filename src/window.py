@@ -63,7 +63,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
     warning_banner = Gtk.Template.Child()
     window_title = Gtk.Template.Child()
     adv_options_help_label = Gtk.Template.Child()
-    fps_limit_help_label = Gtk.Template.Child()
+    adv_options_help_popover = Gtk.Template.Child()
+    fps_help_label = Gtk.Template.Child()
+    fps_help_popover = Gtk.Template.Child()
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -108,6 +110,12 @@ class ConstrictWindow(Adw.ApplicationWindow):
             self.refresh_previews
         )
         self.tolerance_input.connect("value-changed", self.refresh_previews)
+
+        self.fps_help_popover.connect("show", self.read_fps_popover)
+        self.adv_options_help_popover.connect(
+            "show",
+            self.read_adv_options_popover
+        )
 
         self.settings = self.get_application().get_settings()
         self.settings.bind(
@@ -168,7 +176,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.clear_row.set_title(fps_label.format('_30'))
         self.smooth_row.set_title(fps_label.format('_60'))
 
-        self.fps_limit_help_label.set_label(
+        self.fps_help_label.set_label(
             # TRANSLATORS: FPS meaning 'frames per second'. {} represents an
             # integer. Please use U+202F narrow no-break space (' ') between
             # the {} and translated equivalent of 'FPS'.
@@ -188,6 +196,21 @@ class ConstrictWindow(Adw.ApplicationWindow):
         # TRANSLATORS: {} represents a file size unit (e.g. 'MB')
         self.target_size_row.set_title(_('Target _Size ({})').format('MiB'))
 
+    def read_fps_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'FPS limit help' popover.
+        """
+        message = self.fps_help_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
+    def read_adv_options_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'advanced options help' popover.
+        """
+        message = self.adv_options_help_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
 
     def on_drop(
         self,
@@ -246,6 +269,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """
         update_ui(self.export_action.set_enabled, not is_error, daemon)
         update_ui(self.warning_banner.set_revealed, is_error, daemon)
+
+        if is_error:
+            message = self.warning_banner.get_title()
+            self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
 
     def refresh_can_export(self, daemon: bool) -> None:
         """ Set whether the export action is enabled or not based on the states

@@ -54,7 +54,7 @@ constrict_sources = [
   'progress_pie.py',
   'preferences_dialog.py',
   'attempt_fail_box.py',
-  'source_popover_box.py',
+  'progress_popover_box.py',
   'current_attempt_box.py'
 ]
 

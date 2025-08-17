@@ -31,6 +31,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
     suffix_info_label = Gtk.Template.Child()
     suffix_entry_row = Gtk.Template.Child()
     gpu_encoding_row = Gtk.Template.Child()
+    suffix_info_popover = Gtk.Template.Child()
 
     # TODO: Maybe do add a megabyte/mebibyte preference.
 
@@ -52,10 +53,20 @@ class PreferencesDialog(Adw.PreferencesDialog):
             Gio.SettingsBindFlags.DEFAULT
         )
 
+        self.suffix_info_popover.connect('show', self.read_suffix_info_popover)
+
         export_suffix_value = self.settings.get_string('custom-export-suffix')
         self.suffix_entry_row.set_text(export_suffix_value)
 
         self.suffix_entry_row.connect('apply', self.update_custom_suffix)
+
+    def read_suffix_info_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'suffix info' popover.
+        """
+        message = self.suffix_info_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
 
     def update_custom_suffix(self, widget: Gtk.Widget) -> None:
         """ Set a new exported file suffix to the application's settings """

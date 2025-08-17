@@ -6,6 +6,7 @@
     <property name="title-lines">2</property>
     <property name="subtitle-lines">1</property>
     <property name="use-markup">false</property>
+    <property name="selectable">false</property>
     <child type="prefix">
       <object class="GtkImage" id="thumbnail">
         <property name="icon-name">image-loading</property>
@@ -50,9 +51,9 @@
         <property name="valign">center</property>
         <property name="visible">false</property>
         <property name="popover">
-          <object class="GtkPopover">
+          <object class="GtkPopover" id="broken_popover">
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="broken_label">
                 <property name="label" translatable="yes">Cannot load video. It may be missing or corrupted.</property>
                 <property name="margin-start">6</property>
                 <property name="margin-end">6</property>
@@ -79,7 +80,7 @@
         <property name="valign">center</property>
         <property name="visible">false</property>
         <property name="popover">
-          <object class="GtkPopover">
+          <object class="GtkPopover" id="incompatible_popover">
             <child>
               <object class="GtkLabel" id="incompatible_label">
                 <property name="margin-start">6</property>
@@ -123,7 +124,7 @@
         </property>
         <property name="valign">center</property>
         <property name="popover">
-          <object class="GtkPopover" id="popover">
+          <object class="GtkPopover" id="progress_popover">
             <child>
               <object class="GtkScrolledWindow" id="popover_scrolled_window">
                 <property name="propagate-natural-height">true</property>

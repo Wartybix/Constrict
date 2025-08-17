@@ -32,7 +32,7 @@ from constrict.constrict_utils import get_encode_settings, get_resolution, get_f
 from constrict.enums import SourceState, Thumbnailer
 from constrict.progress_pie import ProgressPie
 from constrict.attempt_fail_box import AttemptFailBox
-from constrict.source_popover_box import SourcePopoverBox
+from constrict.progress_popover_box import ProgressPopoverBox
 from constrict import PREFIX
 import threading
 import subprocess
@@ -52,14 +52,17 @@ class SourcesRow(Adw.ActionRow):
     progress_pie = Gtk.Template.Child()
     progress_spinner = Gtk.Template.Child()
     progress_button = Gtk.Template.Child()
+    broken_popover = Gtk.Template.Child()
+    broken_label = Gtk.Template.Child()
     video_broken_button = Gtk.Template.Child()
+    incompatible_popover = Gtk.Template.Child()
     incompatible_button = Gtk.Template.Child()
     incompatible_label = Gtk.Template.Child()
     complete_button = Gtk.Template.Child()
     complete_label = Gtk.Template.Child()
     complete_popover = Gtk.Template.Child()
     drag_handle_revealer = Gtk.Template.Child()
-    popover = Gtk.Template.Child()
+    progress_popover = Gtk.Template.Child()
     popover_scrolled_window = Gtk.Template.Child()
 
     def __init__(
@@ -104,6 +107,23 @@ class SourcesRow(Adw.ActionRow):
         )
         self.install_action('row.remove', None, self.on_remove)
 
+        self.broken_popover.connect(
+            'show',
+            self.read_broken_popover
+        )
+        self.incompatible_popover.connect(
+            'show',
+            self.read_incompatible_popover
+        )
+        self.complete_popover.connect(
+            'show',
+            self.read_complete_popover
+        )
+        self.progress_popover.connect(
+            'show',
+            self.read_progress_popover
+        )
+
         if file_hash:
             thumb_thread = threading.Thread(
                 target=self.set_thumbnail,
@@ -124,29 +144,50 @@ class SourcesRow(Adw.ActionRow):
 
         self.popover_box = None
 
+    def read_broken_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'video broken' popover.
+        """
+        message = self.broken_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
+    def read_incompatible_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'video incompatible' popover.
+        """
+        message = self.incompatible_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
+    def read_complete_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'compression complete' popover.
+        """
+        message = self.complete_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
+    def read_progress_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'compression in progress' popover.
+        """
+        message = self.popover_box.get_message()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
     def initiate_popover_box(
         self,
         top_widget: Gtk.Widget,
         daemon: bool
     ) -> None:
         """ Add a popover box to the sources row """
-        self.popover_box = SourcePopoverBox(top_widget)
+        self.popover_box = ProgressPopoverBox(top_widget)
         update_ui(
             self.popover_scrolled_window.set_child,
             self.popover_box,
             daemon
         )
-
-    def set_popover_top_widget(
-        self,
-        top_widget: Gtk.Widget,
-        daemon: bool
-    ) -> None:
-        """ Set the top widget of the source row's popover box """
-        if not self.popover_box:
-            return
-
-        self.popover_box.set_top_widget(top_widget, daemon)
 
     def add_attempt_fail(
         self,
@@ -422,6 +463,8 @@ class SourcesRow(Adw.ActionRow):
             daemon
         )
         self.compressed_path = compressed_video_path
+
+        self.progress_popover.popdown()
         self.set_state(SourceState.COMPLETE, daemon)
 
     def refresh_state(
