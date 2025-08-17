@@ -1,2 +1,11 @@
 .idea
 /test/
+/repo/
+*.mo
+*.po~
+__pycache__
+/.flatpak-builder/
+*.log
+/build/
+/builddir/
+.mypy_cache/
