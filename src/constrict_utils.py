@@ -240,7 +240,13 @@ def get_progress(
                         if seconds_left < 0:
                             seconds_left = 0
 
-                    output_fn(progress_fraction, seconds_left)
+                    if frame > frame_count:
+                        if pass_num == 0:
+                            output_fn(0.5, seconds_left)
+                        else:
+                            output_fn(1.0, seconds_left)
+                    else:
+                        output_fn(progress_fraction, seconds_left)
 
                 if cancel_event() == True:
                     proc.kill()
