@@ -828,7 +828,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             if not content_type:
                 continue
 
-            is_video = content_type.startswith('video/')
+            is_video = content_type.startswith('video/') or content_type == 'image/gif'
 
             if not is_video:
                 continue
@@ -838,6 +838,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             staged_row = SourcesRow(
                 video.get_path(),
                 display_name,
+                content_type,
                 video.hash(),
                 self.get_target_size,
                 self.get_fps_mode,
@@ -869,6 +870,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
         video_filter = Gtk.FileFilter()
 
         video_filter.add_mime_type('video/*')
+        video_filter.add_mime_type('image/gif')
+
         video_filter.set_name(_('Videos'))
 
         native.set_default_filter(video_filter)

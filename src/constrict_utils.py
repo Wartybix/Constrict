@@ -827,7 +827,7 @@ def compress(
 
         is_hq_audio = target_audio_bitrate > 6000 if target_audio_bitrate > 0 else None
 
-        if not is_hq_audio:
+        if is_hq_audio == False:
             force_crush = True
 
         displayed_res = target_height
@@ -854,6 +854,10 @@ def compress(
             target_width = int(((width / scaling_factor + 1) // 2) * 2)
 
         dest_frame_count = int(source_frame_count // (source_fps / target_fps)) or 1
+
+        # TODO: fix progress bar going above what it should
+        # TODO: change dest frame count for GIF
+        # TODO: res reduction applied not working?
 
         transcode_error = transcode(
             file_input,

@@ -69,6 +69,7 @@ class SourcesRow(Adw.ActionRow):
         self,
         video_path: str,
         display_name: str,
+        mime_type: Optional[str] = None,
         file_hash: Optional[int] = None,
         target_size_getter: Optional[Callable[[], int]] = None,
         fps_mode_getter: Optional[Callable[[], int]] = None,
@@ -81,6 +82,7 @@ class SourcesRow(Adw.ActionRow):
 
         self.video_path = video_path
         self.display_name = display_name
+        self.mime_type = mime_type
 
         self.height = None
         self.width = None
@@ -372,6 +374,8 @@ class SourcesRow(Adw.ActionRow):
         bin_totem = 'totem-video-thumbnailer'
         bin_ffmpeg = 'ffmpegthumbnailer'
 
+        generic_icon = 'image-x-generic' if self.mime_type == 'image/gif' else 'video-x-generic'
+
         # Check Totem thumbnailer is installed.
         # Use FFMPEG thumbnailer as a fallback.
         # Use video-x-generic icon as the fallback's fallback.
@@ -386,7 +390,7 @@ class SourcesRow(Adw.ActionRow):
             if not ffmpeg_exists:
                 update_ui(
                     self.thumbnail.set_from_icon_name,
-                    'video-x-generic',
+                    generic_icon,
                     daemon
                 )
                 return
@@ -397,7 +401,7 @@ class SourcesRow(Adw.ActionRow):
         if not tmp_dir:
             update_ui(
                 self.thumbnail.set_from_icon_name,
-                'video-x-generic',
+                generic_icon,
                 daemon
             )
             return
@@ -464,7 +468,7 @@ class SourcesRow(Adw.ActionRow):
         )
         self.compressed_path = compressed_video_path
 
-        self.progress_popover.popdown()
+        update_ui(self.progress_popover.popdown, None, daemon)
         self.set_state(SourceState.COMPLETE, daemon)
 
     def refresh_state(
