@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-08-18 13:31-0700\n"
-"PO-Revision-Date: 2025-08-18 14:19-0700\n"
+"PO-Revision-Date: 2025-08-19 10:16+0100\n"
 "Last-Translator: Felicitas Pojtinger <felicitas@pojtinger.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -129,8 +129,8 @@ msgstr "Framerate-Begrenzung"
 msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
 msgstr ""
-"Begrenzt Framerates komprimierter Videos automatisch oder auf 30 FPS oder 60 "
-"FPS."
+"Begrenzt Framerates komprimierter Videos automatisch oder auf 30 FPS oder "
+"60 FPS."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
@@ -165,7 +165,7 @@ msgstr "Felicitas Pojtinger <felicitas@pojtinger.com>"
 #. Please use U+202F Narrow no-break space (' ') between value and unit.
 #: src/window.py:166
 msgid "{} FPS"
-msgstr "{} FPS"
+msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer. Please use U+202F narrow no-break space (' ') between
@@ -176,7 +176,7 @@ msgid ""
 "option set."
 msgstr ""
 "Videos, die auf niedrige Bitraten komprimiert werden, können unabhängig von "
-"der eingestellten Option auf {} FPS begrenzt werden."
+"der eingestellten Option auf {} FPS begrenzt werden."
 
 #. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
 #. no-break space (' ') between {} and '%'.
@@ -191,8 +191,8 @@ msgstr ""
 "Das Verringern der Toleranz maximiert die Bildqualität, indem reduziert "
 "wird, wie weit komprimierte Dateigrößen unter dem Ziel liegen können. Dies "
 "kann jedoch die Anzahl der benötigten Versuche erhöhen, um das Ziel zu "
-"erreichen, und somit die Komprimierungszeit verlängern. Eine Toleranz von {} "
-"% oder mehr wird empfohlen."
+"erreichen, und somit die Komprimierungszeit verlängern. Eine Toleranz von "
+"{} % oder mehr wird empfohlen."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MB')
 #: src/window.py:189
@@ -466,7 +466,7 @@ msgstr "Einstellungen anzeigen"
 #: src/sources_row.py:418
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
-msgstr "Video auf {size} {unit} komprimiert."
+msgstr "Video auf {size} {unit} komprimiert."
 
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
@@ -478,8 +478,8 @@ msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
 "size ({target_size} {unit_target})."
 msgstr ""
-"Videodateigröße ({original_size} {unit_original}) entspricht bereits der "
-"Zielgröße ({target_size} {unit_target})."
+"Videodateigröße ({original_size} {unit_original}) entspricht bereits der "
+"Zielgröße ({target_size} {unit_target})."
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
@@ -488,7 +488,7 @@ msgstr ""
 #: src/sources_row.py:464
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
-msgstr "Zielgröße ({size} {unit}) ist zu niedrig für diese Datei."
+msgstr "Zielgröße ({size} {unit}) ist zu niedrig für diese Datei."
 
 #: src/sources_row.ui:36 src/sources_row.ui:49 src/sources_row.ui:78
 msgid "View Error Details"
@@ -576,6 +576,7 @@ msgstr "Benutzerdefiniertes Suffix"
 #. error. Please use “” instead of "", if applicable to your
 #. language.
 #: src/error_dialog.py:48
+#, fuzzy
 msgid "There was a problem compressing “{}”"
 msgstr "Es gab ein Problem beim Komprimieren von \\„{}\\\""
 
@@ -628,7 +629,7 @@ msgstr "{res_fps}, {audio_quality} Audio"
 #: src/attempt_fail_box.py:80
 #, python-brace-format
 msgid "{vid_br} {vid_br_unit} ({extra_details})"
-msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
@@ -636,7 +637,7 @@ msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 #: src/attempt_fail_box.py:94
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
-msgstr "Komprimierte Dateigröße war zu groß ({size} {unit})"
+msgstr "Komprimierte Dateigröße war zu groß ({size} {unit})"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
@@ -644,7 +645,7 @@ msgstr "Komprimierte Dateigröße war zu groß ({size} {unit})"
 #: src/attempt_fail_box.py:104
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
-msgstr "Komprimierte Dateigröße war zu klein ({size} {unit})"
+msgstr "Komprimierte Dateigröße war zu klein ({size} {unit})"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
@@ -655,7 +656,7 @@ msgstr "Komprimierte Dateigröße war zu klein ({size} {unit})"
 #: src/current_attempt_box.py:94
 #, python-brace-format
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
-msgstr "Komprimierung auf {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Komprimierung auf {vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
@@ -696,7 +697,7 @@ msgstr[1] "{} Stunden"
 #: src/current_attempt_box.py:168
 #, python-brace-format
 msgid "{percent} % — About {time_shown} left"
-msgstr "{percent} % — Etwa {time_shown} verbleibend"
+msgstr "{percent} % — Etwa {time_shown} verbleibend"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.ui:26
