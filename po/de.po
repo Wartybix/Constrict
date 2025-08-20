@@ -576,7 +576,6 @@ msgstr "Benutzerdefiniertes Suffix"
 #. error. Please use “” instead of "", if applicable to your
 #. language.
 #: src/error_dialog.py:48
-#, fuzzy
 msgid "There was a problem compressing “{}”"
 msgstr "Es gab ein Problem beim Komprimieren von „{}“"
 
