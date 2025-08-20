@@ -86,7 +86,7 @@ msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
 msgstr ""
-"Auswahl verschiedener Codecs zur Kodierung der Ausgabedateien, "
+"Auswahl verschiedener Codecs zur Codierung der Ausgabedateien, "
 "einschließlich H.264, HEVC, AV1 und VP9."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
@@ -138,7 +138,7 @@ msgstr "Video-Codec"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:39
 msgid "The codec used to encode with during compression"
-msgstr "Der zur Kodierung während der Komprimierung verwendete Codec"
+msgstr "Der zur Codierung während der Komprimierung verwendete Codec"
 
 #. TRANSLATORS: used in parentheses for the default suffix of exported
 #. files.
@@ -337,7 +337,7 @@ msgstr "Flüssigere Bewegung gewährleisten"
 
 #: src/window.ui:145
 msgid "Encoding Options"
-msgstr "Kodierungsoptionen"
+msgstr "Codierungsoptionen"
 
 #: src/window.ui:148
 msgid "_Video Codec"
@@ -557,12 +557,12 @@ msgstr "Hardware-Beschleunigung"
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:15
 msgid "GPU Encoding"
-msgstr "GPU-Kodierung"
+msgstr "GPU-Codierung"
 
 #. TRANSLATORS: GPU as in 'graphics processing unit'
 #: src/preferences_dialog.ui:17
 msgid "Use the GPU to speed up encoding when available"
-msgstr "GPU zur Beschleunigung der Kodierung verwenden, wenn verfügbar"
+msgstr "GPU zur Beschleunigung der Codierung verwenden, wenn verfügbar"
 
 #: src/preferences_dialog.ui:24
 msgid "Exported Video Suffix"
@@ -578,7 +578,7 @@ msgstr "Benutzerdefiniertes Suffix"
 #: src/error_dialog.py:48
 #, fuzzy
 msgid "There was a problem compressing “{}”"
-msgstr "Es gab ein Problem beim Komprimieren von \\„{}\\\""
+msgstr "Es gab ein Problem beim Komprimieren von „{}“"
 
 #: src/error_dialog.py:70
 msgid "Details copied to clipboard"
