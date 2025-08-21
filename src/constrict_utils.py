@@ -727,6 +727,7 @@ def get_subtitle_streams(file_input: str) -> List[int]:
 
 def compress(
     file_input: str,
+    input_mime_type: str,
     file_output: str,
     target_size_MiB: int,
     framerate_option: int,
@@ -859,7 +860,12 @@ def compress(
             scaling_factor = height / target_height
             target_width = int(((width / scaling_factor + 1) // 2) * 2)
 
-        dest_frame_count = int(source_frame_count // (source_fps / target_fps)) or 1
+        if input_mime_type == "image/gif":
+            dest_frame_count = source_frame_count
+        else:
+            dest_frame_count = int(source_frame_count // (source_fps / target_fps))
+
+        dest_frame_count = dest_frame_count or 1
 
         # TODO: fix progress bar going above what it should
         # TODO: change dest frame count for GIF

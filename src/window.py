@@ -716,6 +716,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             compression_result = compress(
                 video.video_path,
+                video.mime_type,
                 output_path_unique,
                 target_size,
                 fps_mode,

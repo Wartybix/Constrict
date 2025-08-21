@@ -24,6 +24,7 @@ from constrict_utils import compress
 from enums import FpsMode, VideoCodec
 import datetime
 from typing import Optional
+import mimetypes
 
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser("constrict-cli")
@@ -169,8 +170,12 @@ if __name__ == '__main__':
     ) -> None:
         print(f'Attempt fail: compressed size is {after_size_bytes / 1024 // 1024}MiB')
 
+    mime_type, encoder = mimetypes.guess_type(args.file_path)
+    mime_type = mime_type or ""
+
     compression_result = compress(
         args.file_path,
+        mime_type,
         args.output,
         args.target_size,
         get_fps_mode(),
