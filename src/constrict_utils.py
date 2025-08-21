@@ -650,7 +650,7 @@ def get_encode_settings(
 
     res_reduction_applied = False
 
-    if locked_in_height and preset_height > locked_in_height:
+    if locked_in_height and preset_height >= locked_in_height:
         preset_height = locked_in_height
         res_reduction_applied = True
 
@@ -867,10 +867,6 @@ def compress(
 
         dest_frame_count = dest_frame_count or 1
 
-        # TODO: fix progress bar going above what it should
-        # TODO: change dest frame count for GIF
-        # TODO: res reduction applied not working?
-
         transcode_error = transcode(
             file_input,
             file_output,
@@ -909,7 +905,7 @@ def compress(
 
         if percent_of_target > 50:
             # Don't transcode to higher resolutions in future attempts
-            lowest_res = target_height
+            lowest_res = target_height if height < width else target_width
 
         # We multiply by 0.98 to prevent lots of attempts with sizes just
         # bordering above the target.

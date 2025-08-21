@@ -168,7 +168,7 @@ if __name__ == '__main__':
         after_size_bytes: int,
         target_size_bytes: int
     ) -> None:
-        print(f'Attempt fail: compressed size is {after_size_bytes / 1024 // 1024}MiB')
+        print(f'Attempt fail: compressed size is {round(after_size_bytes / 1024 / 1024, 1)}MiB')
 
     mime_type, encoder = mimetypes.guess_type(args.file_path)
     mime_type = mime_type or ""
