@@ -23,5 +23,8 @@ The app attempts to retain as much audiovisual quality as possible for the file 
 - `libva-utils` (for `vainfo`) -- Optional
 - drivers specific to GPUs to allow VA-API encoding. -- Optional
 
+## Code of Conduct
+This project follows [GNOME's Code of Conduct](https://conduct.gnome.org/).
+
 ## Acknowledgements
 Thanks to Matthew Baggett for creating the original ['8mb' repository](https://github.com/matthewbaggett/8mb) which this project used as its foundation.
