@@ -89,6 +89,19 @@
   </screenshots>
 
   <releases>
+    <release version="25.8.1" date="2025-08-22">
+      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8.1</url>
+      <description translate="no">
+        <p>Some quality of life improvements and fixes in this release:</p>
+        <ul>
+          <li>Improved screen reader support when opening popovers in the app.</li>
+          <li>Added support for GIFs as video sources.</li>
+          <li>Fixed some instances where compression progress would sometimes 'jump back' or go over 100 %.</li>
+          <li>Added German translation.</li>
+          <li>Fixed an issue where the wrong resolution would be applied to portrait videos in subsequent attempts after going under target, potentially causing numerous attempt failures.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.8" date="2025-08-13">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8</url>
       <description translate="no">
