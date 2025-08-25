@@ -1,0 +1,53 @@
+using Gtk 4.0;
+
+template $AttemptFailBox: Box {
+  orientation: vertical;
+  hexpand: true;
+
+  Separator {
+    margin-top: 4;
+  }
+
+  Box {
+    margin-top: 6;
+    margin-end: 6;
+    margin-bottom: 6;
+    margin-start: 6;
+    orientation: vertical;
+
+    Label attempt_label {
+      xalign: 0;
+      margin-top: 4;
+      margin-bottom: 6;
+
+      styles [
+        "heading",
+      ]
+    }
+
+    Label target_label {
+      xalign: 0;
+      margin-bottom: 12;
+
+      styles [
+        "dimmed",
+      ]
+    }
+
+    Box {
+      orientation: horizontal;
+      width-request: 300;
+
+      Image failure_icon {
+        icon-size: normal;
+        margin-end: 10;
+      }
+
+      Label failure_details_label {
+        wrap: true;
+        wrap-mode: word_char;
+        max-width-chars: 40;
+      }
+    }
+  }
+}
