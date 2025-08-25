@@ -1,0 +1,56 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $ErrorDialog: Adw.Dialog {
+  title: _("Compression Error");
+  content-width: 600;
+  content-height: 450;
+
+  child: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.ToastOverlay toast_overlay {
+      child: Adw.PreferencesPage preference_page {
+        Adw.PreferencesGroup {
+          title: _("Details");
+
+          header-suffix: Button copy_button {
+            tooltip-text: _("Copy Details");
+            icon-name: "edit-copy-symbolic";
+            valign: center;
+            action-name: "dialog.copy-details";
+
+            styles [
+              "flat",
+            ]
+          };
+
+          ScrolledWindow {
+            vexpand: true;
+            overflow: hidden;
+
+            styles [
+              "card",
+            ]
+
+            TextView text_view {
+              editable: false;
+              wrap-mode: word_char;
+              top-margin: 12;
+              bottom-margin: 12;
+              left-margin: 12;
+              right-margin: 12;
+              monospace: true;
+
+              styles [
+                "monospace",
+                "inline",
+              ]
+            }
+          }
+        }
+      };
+    };
+  };
+}
