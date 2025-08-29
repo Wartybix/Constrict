@@ -1,0 +1,50 @@
+using Gtk 4.0;
+
+// Acknowledgement: much of the progress bar (and surrounding text) design is
+// taken from Nautilus
+// https://gitlab.gnome.org/GNOME/nautilus/-/blob/375797b9bba6071f1399c71ef0bbef36967520aa/src/resources/ui/nautilus-progress-info-widget.ui
+
+template $CurrentAttemptBox: Box {
+  margin-start: 6;
+  margin-end: 6;
+  margin-top: 6;
+  margin-bottom: 6;
+  hexpand: true;
+  orientation: vertical;
+
+  Label attempt_label {
+    xalign: 0;
+    margin-bottom: 6;
+
+    styles ["heading"]
+  }
+
+  Label target_details_label {
+    // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+    label: _("Initializing…");
+    width-request: 300;
+    margin-bottom: 6;
+    hexpand: true;
+    ellipsize: start;
+    max-width-chars: 40;
+    xalign: 0;
+  }
+
+  ProgressBar progress_bar {
+    valign: center;
+    width-request: 300;
+    hexpand: true;
+    margin-bottom: 4;
+    margin-start: 2;
+  }
+
+  Label progress_details_label {
+    wrap: true;
+    wrap-mode: word_char;
+    ellipsize: end;
+    xalign: 0;
+    label: "0 %";
+
+    styles ["dim-label", "numeric"]
+  }
+}

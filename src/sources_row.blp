@@ -1,0 +1,182 @@
+using Gtk 4.0;
+using Adw 1;
+
+menu row_actions {
+  section {
+    item (_("Move _Up"), "row.move-up")
+    item (_("Move _Down"), "row.move-down")
+  }
+  section {
+    item (_("_Remove"), "row.remove")
+  }
+}
+
+template $SourcesRow: Adw.ActionRow {
+  title-lines: 2;
+  subtitle-lines: 1;
+  use-markup: false;
+  selectable: false;
+
+  [prefix]
+  Image thumbnail {
+    icon-name: "image-loading";
+    icon-size: large;
+    valign: center;
+
+    styles ["icon-dropshadow"]
+  }
+
+  [prefix]
+  Revealer drag_handle_revealer {
+    transition-type: slide_right;
+    reveal-child: true;
+
+    child: Image {
+      icon-name: "list-drag-handle-symbolic";
+
+      styles ["drag-handle"]
+    };
+  }
+
+  [suffix]
+  Button error_icon {
+    icon-name: "error-outline-symbolic";
+    tooltip-text: _("View Error Details");
+    valign: center;
+    visible: false;
+    action-name: "row.on-error";
+
+    styles ["error", "flat"]
+  }
+
+  [suffix]
+  MenuButton video_broken_button {
+    icon-name: "broken-video-symbolic";
+    tooltip-text: _("View Error Details");
+    valign: center;
+    visible: false;
+
+    popover: Popover broken_popover {
+      child: Label broken_label {
+        label: _("Cannot load video. It may be missing or corrupted.");
+        margin-start: 6;
+        margin-end: 6;
+        margin-top: 6;
+        margin-bottom: 6;
+        wrap: true;
+        max-width-chars: 50;
+        valign: center;
+        halign: center;
+      };
+    };
+
+    styles ["error", "flat"]
+  }
+
+  [suffix]
+  MenuButton incompatible_button {
+    icon-name: "exclamation-mark-symbolic";
+    tooltip-text: _("View Error Details");
+    valign: center;
+    visible: false;
+
+    popover: Popover incompatible_popover {
+      child: Label incompatible_label {
+        margin-start: 6;
+        margin-end: 6;
+        margin-top: 6;
+        margin-bottom: 6;
+        wrap: true;
+        max-width-chars: 50;
+        valign: center;
+        halign: center;
+      };
+    };
+
+    styles ["error", "flat"]
+  }
+
+  [suffix]
+  MenuButton progress_button {
+    visible: false;
+    tooltip-text: _("View Compression Progress");
+    valign: center;
+
+    child: Box {
+      $ProgressPie progress_pie {
+        width-request: 16;
+        height-request: 16;
+      }
+      Adw.Spinner progress_spinner {
+        visible: false;
+        width-request: 16;
+        height-request: 16;
+      }
+    };
+
+    popover: Popover progress_popover {
+      child: ScrolledWindow popover_scrolled_window {
+        propagate-natural-height: true;
+        propagate-natural-width: true;
+      };
+    };
+
+    styles ["flat"]
+  }
+
+  [suffix]
+  MenuButton complete_button {
+    icon-name: "check-plain-symbolic";
+    tooltip-text: _("More Details");
+    valign: center;
+    visible: false;
+
+    popover: Popover complete_popover {
+      child: Box {
+        margin-start: 6;
+        margin-end: 6;
+        margin-top: 6;
+        margin-bottom: 6;
+        orientation: vertical;
+
+        Label complete_label {
+          wrap: true;
+          max-width-chars: 50;
+        }
+
+        Button {
+          margin-top: 9;
+          label: _("Show File Location");
+          action-name: "row.find-compressed-file";
+        }
+      };
+    };
+
+    styles ["success", "flat"]
+  }
+
+  [suffix]
+  MenuButton menu_button {
+    icon-name: "view-more-symbolic";
+    tooltip-text: _("View More");
+    valign: center;
+    menu-model: row_actions;
+
+    styles ["flat"]
+  }
+
+  DragSource drag_source {
+    actions: move;
+    propagation-phase: none;
+    prepare => $on_drag_prepare() not-swapped;
+    drag-begin => $on_drag_begin() not-swapped;
+  }
+
+  DropTarget {
+    actions: move;
+    formats: SourcesRow;
+    preload: true;
+    motion => $on_motion() not-swapped;
+    drop => $on_drop() not-swapped;
+  }
+}
