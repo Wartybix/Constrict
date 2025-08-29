@@ -5,6 +5,22 @@ gnome = import('gnome')
 gresource_conf = configuration_data()
 gresource_conf.set('PREFIX', PREFIX)
 
+blueprints = custom_target('blueprints',
+  input: files(
+    'attempt_fail_box.blp',
+    'error_dialog.blp',
+    'sources_list_box.blp',
+    'progress_popover_box.blp',
+    'preferences_dialog.blp',
+    'gtk/help-overlay.blp',
+    'window.blp',
+    'sources_row.blp',
+    'current_attempt_box.blp'
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
 gnome.compile_resources(
   'constrict',
   configure_file(
@@ -13,6 +29,7 @@ gnome.compile_resources(
     configuration: gresource_conf
   ),
   gresource_bundle: true,
+  dependencies: blueprints,
   install: true,
   install_dir: pkgdatadir,
 )

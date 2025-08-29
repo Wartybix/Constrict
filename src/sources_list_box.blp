@@ -1,0 +1,17 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SourcesListBox: ListBox {
+  selection-mode: none;
+
+  Adw.ButtonRow add_videos_button {
+    start-icon-name: "list-add-symbolic";
+    title: _("Add Vide_os…");
+    use-underline: true;
+    action-name: "win.open";
+  }
+
+  styles [
+    "boxed-list",
+  ]
+}

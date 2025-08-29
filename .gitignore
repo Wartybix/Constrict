@@ -9,3 +9,4 @@ __pycache__
 /build/
 /builddir/
 .mypy_cache/
+/subprojects/blueprint-compiler
