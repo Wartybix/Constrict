@@ -16,6 +16,8 @@ xgettext --msgid-bugs-address="34974060+Wartybix@users.noreply.github.com" \
          --files-from="po/POTFILES.in" \
          --from-code=UTF-8 \
          --add-comments="TRANSLATORS:" \
+         --keyword=_ \
+         --keyword=C_:1c,2 \
          --output="$POTFILE"
 
 # Refresh the po files if desired. Do this always when run in a GitHub Action.
