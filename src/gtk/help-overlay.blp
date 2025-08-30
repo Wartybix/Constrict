@@ -1,53 +1,47 @@
 using Gtk 4.0;
+using Adw 1;
 
-ShortcutsWindow help_overlay {
-  modal: true;
+Adw.ShortcutsDialog help_overlay {
+  Adw.ShortcutsSection {
+    title: C_("shortcut window", "Video Management");
 
-  ShortcutsSection {
-    section-name: "shortcuts";
-    max-height: 10;
-
-    ShortcutsGroup {
-      title: C_("shortcut window", "Video Management");
-
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Open");
-        action-name: "win.open";
-      }
-
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Export");
-        action-name: "win.export";
-      }
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Open");
+      action-name: "win.open";
     }
 
-    ShortcutsGroup {
-      title: C_("shortcut window", "General");
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Export");
+      action-name: "win.export";
+    }
+  }
 
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Toggle Settings Pane");
-        action-name: "win.toggle-sidebar";
-      }
+  Adw.ShortcutsSection {
+    title: C_("shortcut window", "General");
 
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Show Shortcuts");
-        action-name: "win.show-help-overlay";
-      }
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Toggle Settings Pane");
+      action-name: "win.toggle-sidebar";
+    }
 
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Close Window");
-        action-name: "win.close";
-      }
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Show Shortcuts");
+      action-name: "win.show-help-overlay";
+    }
 
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Quit");
-        action-name: "app.quit";
-      }
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Close Window");
+      action-name: "win.close";
+    }
 
-      ShortcutsShortcut {
-        title: C_("shortcut window", "Show Preferences");
-        action-name: "app.preferences";
-      }
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Quit");
+      action-name: "app.quit";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Show Preferences");
+      action-name: "app.preferences";
     }
   }
 }
