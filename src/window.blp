@@ -18,10 +18,10 @@ template $ConstrictWindow: Adw.ApplicationWindow {
   default-height: 700;
 
   Adw.Breakpoint {
-    condition ("max-width: 800sp")
-
+    condition ("max-width: 700sp")
     setters {
       split_view.collapsed: true;
+      sidebar_button.visible: true;
     }
   }
 
@@ -30,13 +30,15 @@ template $ConstrictWindow: Adw.ApplicationWindow {
 
     [top]
     Adw.HeaderBar {
-      title-widget: Adw.WindowTitle window_title {};
+      [title]
+      Adw.WindowTitle window_title {}
 
       [start]
-      ToggleButton show_sidebar_button {
+      ToggleButton sidebar_button {
         icon-name: "sidebar-show-symbolic";
-        tooltip-text: _("Toggle Settings Pane");
+        tooltip-text: _("Show compression settings");
         active: true;
+        visible: false;
       }
 
       [end]
@@ -50,7 +52,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
 
     content: Adw.ToastOverlay toast_overlay {
       child: Adw.OverlaySplitView split_view {
-        show-sidebar: bind show_sidebar_button.active bidirectional;
+        show-sidebar: bind sidebar_button.active bidirectional;
         min-sidebar-width: 300;
         max-sidebar-width: 400;
 
@@ -84,6 +86,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
               MenuButton {
                 icon-name: "help-about-symbolic";
                 tooltip-text: _("More Information");
+                styles ["flat"]
                 popover: Popover fps_help_popover {
                   child: Label fps_help_label {
                     halign: center;
@@ -96,10 +99,6 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                     valign: center;
                   };
                 };
-
-                styles [
-                  "flat"
-                ]
               }
 
               Adw.ActionRow auto_row {
@@ -162,6 +161,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
               MenuButton {
                 icon-name: "help-about-symbolic";
                 tooltip-text: _("More Information");
+                styles ["flat"]
                 popover: Popover adv_options_help_popover {
                   child: Label adv_options_help_label {
                     halign: center;
@@ -174,10 +174,6 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                     valign: center;
                   };
                 };
-
-                styles [
-                  "flat"
-                ]
               }
 
               Adw.SpinRow tolerance_row {
@@ -213,11 +209,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 action-name: "win.open";
                 can-shrink: true;
                 halign: center;
-
-                styles [
-                  "pill",
-                  "suggested-action"
-                ]
+                styles ["pill", "suggested-action"]
               };
             };
           }
@@ -254,10 +246,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                           use-underline: true;
                           action-name: "win.clear_all";
                           valign: center;
-
-                          styles [
-                            "flat"
-                          ]
+                          styles ["flat"]
                         }
 
                         $SourcesListBox sources_list_box {
@@ -280,10 +269,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                   halign: center;
                   margin-top: 6;
                   margin-bottom: 6;
-
-                  styles [
-                    "pill", "suggested-action"
-                  ]
+                  styles ["pill", "suggested-action"]
                 }
               }
 
@@ -300,10 +286,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                   halign: center;
                   margin-top: 6;
                   margin-bottom: 6;
-
-                  styles [
-                    "pill"
-                  ]
+                  styles ["pill"]
                 }
               }
             };
