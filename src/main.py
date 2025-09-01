@@ -161,7 +161,10 @@ class ConstrictApplication(Adw.Application):
                                 application_icon=self.get_application_id(),
                                 developer_name='Wartybix',
                                 version=VERSION,
-                                developers=['Wartybix https://github.com/Wartybix/'],
+                                developers=[
+                                    'Wartybix https://github.com/Wartybix/',
+                                    'Philipp Kosarev https://github.com/PhilippKosarev'
+                                ],
                                 artists=['Jakub Steiner <jimmac@gmail.com>'],
                                 website='https://github.com/Wartybix/Constrict',
                                 issue_url='https://github.com/Wartybix/Constrict/issues',
