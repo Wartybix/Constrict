@@ -17,11 +17,12 @@ template $ConstrictWindow: Adw.ApplicationWindow {
   default-width: 1000;
   default-height: 700;
 
-  Adw.Breakpoint {
+  Adw.Breakpoint window_breakpoint {
     condition ("max-width: 800sp")
 
     setters {
       split_view.collapsed: true;
+      show_sidebar_button.visible: true;
     }
   }
 
@@ -37,6 +38,7 @@ template $ConstrictWindow: Adw.ApplicationWindow {
         icon-name: "sidebar-show-symbolic";
         tooltip-text: _("Toggle Settings Pane");
         active: true;
+        visible: false;
       }
 
       [end]

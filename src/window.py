@@ -66,6 +66,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
     adv_options_help_popover = Gtk.Template.Child()
     fps_help_label = Gtk.Template.Child()
     fps_help_popover = Gtk.Template.Child()
+    window_breakpoint = Gtk.Template.Child()
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -76,7 +77,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.toggle_sidebar_action = Gio.SimpleAction(name="toggle-sidebar")
         self.toggle_sidebar_action.connect("activate", self.toggle_sidebar)
+        self.toggle_sidebar_action.set_enabled(False)
         self.add_action(self.toggle_sidebar_action)
+
+        self.window_breakpoint.add_setter(
+            self.toggle_sidebar_action,
+            "enabled",
+            True
+        )
 
         self.open_action = Gio.SimpleAction(name="open")
         self.open_action.connect("activate", self.open_file_dialog)
