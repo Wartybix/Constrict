@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-06 17:25+0100\n"
+"POT-Creation-Date: 2025-09-06 23:01+0100\n"
 "PO-Revision-Date: 2025-08-13 09:12+0100\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
@@ -543,7 +543,7 @@ msgstr "Добавить видео…"
 #: src/preferences_dialog.py:45
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality“ is disabled."
+"selected video codec, and “Extra Quality” is disabled."
 msgstr ""
 
 #. TRANSLATORS: {} represents the value of the default suffix.

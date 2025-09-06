@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-06 17:25+0100\n"
-"PO-Revision-Date: 2025-09-06 18:13+0100\n"
+"POT-Creation-Date: 2025-09-06 23:01+0100\n"
+"PO-Revision-Date: 2025-09-06 23:01+0100\n"
 "Last-Translator: Wartybix <34974060+Wartybix@users.noreply.github.com>\n"
 "Language-Team: English\n"
 "Language: en_GB\n"
@@ -540,10 +540,10 @@ msgstr "Add Vide_os…"
 #: src/preferences_dialog.py:45
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality“ is disabled."
+"selected video codec, and “Extra Quality” is disabled."
 msgstr ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality“ is disabled."
+"selected video codec, and “Extra Quality” is disabled."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-06 17:25+0100\n"
+"POT-Creation-Date: 2025-09-06 23:01+0100\n"
 "PO-Revision-Date: 2025-08-13 09:13+0100\n"
 "Last-Translator: Erdem Uygun <uygun.erdem@proton.me>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -545,7 +545,7 @@ msgstr "_Video Ekle…"
 #: src/preferences_dialog.py:45
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality“ is disabled."
+"selected video codec, and “Extra Quality” is disabled."
 msgstr ""
 
 #. TRANSLATORS: {} represents the value of the default suffix.
