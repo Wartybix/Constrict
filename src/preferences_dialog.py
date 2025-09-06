@@ -42,7 +42,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
 
         self.hw_accel_info_label.set_label(
             # Please use “” instead of "", if applicable to your language.
-            _("Hardware acceleration is only used if your GPU supports encoding with the selected video codec, and “Extra Quality“ is disabled.")
+            _("Hardware acceleration is only used if your GPU supports encoding with the selected video codec, and “Extra Quality” is disabled.")
         )
 
         self.suffix_info_label.set_label(
