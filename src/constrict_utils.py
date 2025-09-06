@@ -244,6 +244,7 @@ def get_progress(
                         if pass_num == 0:
                             output_fn(0.5, seconds_left)
                         else:
+                            seconds_left = -1
                             output_fn(1.0, seconds_left)
                     else:
                         output_fn(progress_fraction, seconds_left)

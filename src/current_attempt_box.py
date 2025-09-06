@@ -119,7 +119,14 @@ class CurrentAttemptBox(Gtk.Box):
         # the 4 hour mark where minutes should no longer be displayed.
         # https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 
-        if seconds_left is not None:
+        if seconds_left is None:
+            progress_text = f'{progress_percent} %'
+        elif seconds_left == -1:
+            # TRANSLATORS: {} represents the progress percentage value.
+            # Please use U+202F Narrow no-break space (' ') between {} and '%'.
+            # Please use U+2014 em dash ('—'), if applicable to your language.
+            progress_text = _('{} % — Almost done').format(progress_percent)
+        else:
             time_shown = ''
 
             if seconds_left < 60:
@@ -169,7 +176,5 @@ class CurrentAttemptBox(Gtk.Box):
                 percent = progress_percent,
                 time_shown = time_shown
             )
-        else:
-            progress_text = f'{progress_percent} %'
 
         update_ui(self.progress_details_label.set_label, progress_text, daemon)
