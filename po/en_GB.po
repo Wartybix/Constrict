@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-06 23:01+0100\n"
-"PO-Revision-Date: 2025-09-06 23:01+0100\n"
+"POT-Creation-Date: 2025-09-10 15:18+0100\n"
+"PO-Revision-Date: 2025-09-10 16:45+0100\n"
 "Last-Translator: Wartybix <34974060+Wartybix@users.noreply.github.com>\n"
 "Language-Team: English\n"
 "Language: en_GB\n"
@@ -672,17 +672,24 @@ msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {} represents the progress percentage value.
-#. Please use U+202F Narrow no-break space (' ') between {} and '%'.
-#. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:128
+#. Please use U+202F Narrow no-break space (' ') between {} and %, if
+#. applicable to your language.
+#: src/current_attempt_box.py:125
 #, python-brace-format
-msgid "{} % — Almost done"
-msgstr "{} % — Almost done"
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#. Please use U+2014 em dash ('—'), if applicable to your language.
+#: src/current_attempt_box.py:132
+#, python-brace-format
+msgid "{} — Almost done"
+msgstr "{} — Almost done"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
 #. '5% -- About 30 seconds left'
-#: src/current_attempt_box.py:136
+#: src/current_attempt_box.py:140
 #, python-brace-format
 msgid "{} second"
 msgid_plural "{} seconds"
@@ -695,7 +702,7 @@ msgstr[1] "{} seconds"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:144 src/current_attempt_box.py:157
+#: src/current_attempt_box.py:148 src/current_attempt_box.py:161
 #, python-brace-format
 msgid "{} minute"
 msgid_plural "{} minutes"
@@ -705,23 +712,21 @@ msgstr[1] "{} minutes"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:152 src/current_attempt_box.py:166
+#: src/current_attempt_box.py:156 src/current_attempt_box.py:170
 #, python-brace-format
 msgid "{} hour"
 msgid_plural "{} hours"
 msgstr[0] "{} hour"
 msgstr[1] "{} hours"
 
-#. TRANSLATORS: {percent} represents the progress percentage value.
+#. TRANSLATORS: {percentage} represents the progress percentage.
 #. {time_shown} represents a string showing the estimated time to
 #. completion (like '50 minutes').
-#. Please use U+202F Narrow no-break space (' ') between {percent}
-#. and '%'.
 #. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:175
+#: src/current_attempt_box.py:177
 #, python-brace-format
-msgid "{percent} % — About {time_shown} left"
-msgstr "{percent} % — About {time_shown} left"
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — About {time_shown} left"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
