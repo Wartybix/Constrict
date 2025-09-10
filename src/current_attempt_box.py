@@ -119,13 +119,17 @@ class CurrentAttemptBox(Gtk.Box):
         # the 4 hour mark where minutes should no longer be displayed.
         # https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 
+        # TRANSLATORS: {} represents the progress percentage value.
+        # Please use U+202F Narrow no-break space (' ') between {} and %, if
+        # applicable to your language.
+        percentage_text = _('{} %').format(progress_percent)
+
         if seconds_left is None:
-            progress_text = f'{progress_percent} %'
+            progress_text = percentage_text
         elif seconds_left == -1:
-            # TRANSLATORS: {} represents the progress percentage value.
-            # Please use U+202F Narrow no-break space (' ') between {} and '%'.
+            # TRANSLATORS: {} represents the progress percentage.
             # Please use U+2014 em dash ('—'), if applicable to your language.
-            progress_text = _('{} % — Almost done').format(progress_percent)
+            progress_text = _('{} — Almost done').format(percentage_text)
         else:
             time_shown = ''
 
@@ -166,14 +170,12 @@ class CurrentAttemptBox(Gtk.Box):
                 time_shown = ngettext('{} hour', '{} hours', hours).format(hours)
 
 
-            # TRANSLATORS: {percent} represents the progress percentage value.
+            # TRANSLATORS: {percentage} represents the progress percentage.
             # {time_shown} represents a string showing the estimated time to
             # completion (like '50 minutes').
-            # Please use U+202F Narrow no-break space (' ') between {percent}
-            # and '%'.
             # Please use U+2014 em dash ('—'), if applicable to your language.
-            progress_text = _('{percent} % — About {time_shown} left').format(
-                percent = progress_percent,
+            progress_text = _('{percentage} — About {time_shown} left').format(
+                percentage = percentage_text,
                 time_shown = time_shown
             )
 
