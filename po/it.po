@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-09-10 15:18+0100\n"
-"PO-Revision-Date: 2025-09-10 18:24+0100\n"
+"PO-Revision-Date: 2025-09-10 21:24+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -555,6 +555,8 @@ msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled."
 msgstr ""
+"L'accelerazione hardware viene utilizzata solo se la GPU supporta la codifica con "
+"il codec video selezionato e “Qualità extra” è disabilitata."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.
@@ -698,7 +700,7 @@ msgstr "{} %"
 #: src/current_attempt_box.py:132
 #, python-brace-format
 msgid "{} — Almost done"
-msgstr ""
+msgstr "{} — Quasi finito"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
