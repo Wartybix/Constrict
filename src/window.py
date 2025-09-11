@@ -201,8 +201,11 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 .format(default_tolerance)
         )
 
-        # TRANSLATORS: {} represents a file size unit (e.g. 'MB')
-        self.target_size_row.set_title(_('Target _Size ({})').format('MiB'))
+        # TRANSLATORS: this is the SI unit for 'mebibyte'.
+        unit = _('MiB')
+
+        # TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+        self.target_size_row.set_title(_('Target _Size ({})').format(unit))
 
     def read_fps_popover(self, widget: Gtk.Widget, *args: Any):
         """ Use the screen reader to announce the contents of the

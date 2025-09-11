@@ -93,7 +93,8 @@ class CurrentAttemptBox(Gtk.Box):
         # and unit.
         target_str = _('Compressing to {vid_br} {vid_br_unit} ({extra_details})').format(
             vid_br = f'{vid_bitrate // 1000}',
-            vid_br_unit = 'kbps',
+            # TRANSLATORS: This is the SI unit for 'kilobits per second'.
+            vid_br_unit = _('kbps'),
             extra_details = extra_details
         )
         update_ui(

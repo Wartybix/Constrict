@@ -79,7 +79,8 @@ class AttemptFailBox(Gtk.Box):
         # and unit.
         target_str = _("{vid_br} {vid_br_unit} ({extra_details})").format(
             vid_br = f'{str(vid_bitrate // 1000)}',
-            vid_br_unit = 'kbps',
+            # TRANSLATORS: This is the SI unit for 'kilobits per second'.
+            vid_br_unit = _('kbps'),
             extra_details = extra_details
         )
         self.target_label.set_label(target_str)
@@ -93,7 +94,8 @@ class AttemptFailBox(Gtk.Box):
             # (' ') between size and unit.
             fail_msg = _('Compressed file size was too large ({size} {unit})').format(
                 size = f'{compressed_size_mb}',
-                unit = 'MiB'
+                # TRANSLATORS: this is the SI unit for 'mebibyte'.
+                unit = _('MiB')
             )
             self.failure_details_label.set_label(fail_msg)
         else:
@@ -103,6 +105,7 @@ class AttemptFailBox(Gtk.Box):
             # (' ') between size and unit.
             fail_msg = _('Compressed file size was too small ({size} {unit})').format(
                 size = f'{compressed_size_mb}',
-                unit = 'MiB'
+                # TRANSLATORS: this is the SI unit for 'mebibyte'.
+                unit = _('MiB')
             )
             self.failure_details_label.set_label(fail_msg)
