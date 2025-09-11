@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-10 15:18+0100\n"
+"POT-Creation-Date: 2025-09-11 20:14+0100\n"
 "PO-Revision-Date: 2025-09-10 21:24+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
-#: src/window.py:353 src/window.blp:16
+#: src/window.py:356 src/window.blp:16
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -200,8 +200,15 @@ msgstr ""
 "necessari per raggiungere l'obiettivo, aumentando il tempo di compressione. "
 "Si raccomanda una tolleranza del {} % o superiore."
 
-#. TRANSLATORS: {} represents a file size unit (e.g. 'MB')
-#: src/window.py:205
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/window.py:205 src/sources_row.py:466 src/sources_row.py:496
+#: src/sources_row.py:499 src/sources_row.py:516 src/attempt_fail_box.py:98
+#: src/attempt_fail_box.py:109
+msgid "MiB"
+msgstr ""
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:208
 #, python-brace-format
 msgid "Target _Size ({})"
 msgstr "_Dimensione Obiettivo ({})"
@@ -209,7 +216,7 @@ msgstr "_Dimensione Obiettivo ({})"
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:326
+#: src/window.py:329
 #, python-brace-format
 msgid "Processing “{}”"
 msgstr "Elaborazione di “{}”"
@@ -217,7 +224,7 @@ msgstr "Elaborazione di “{}”"
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:332
+#: src/window.py:335
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Video Elaborati"
@@ -225,7 +232,7 @@ msgstr "{index}/{total} Video Elaborati"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to. Please use “” instead of "", if applicable to your
 #. language.
-#: src/window.py:343
+#: src/window.py:346
 #, python-brace-format
 msgid "Exporting to “{}”"
 msgstr "Esportazione in “{}”"
@@ -233,93 +240,93 @@ msgstr "Esportazione in “{}”"
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued. Please use “” instead of '', if applicable to your
 #. language.
-#: src/window.py:359
+#: src/window.py:362
 #, python-brace-format
 msgid "“{}” Queued"
 msgstr "“{}” In Coda"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:363
+#: src/window.py:366
 #, python-brace-format
 msgid "{} Videos Queued"
 msgstr "{} Video In Coda"
 
-#: src/window.py:494
+#: src/window.py:497
 msgid "Stop Compression?"
 msgstr "Interrompere la compressione?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:498
+#: src/window.py:501
 #, python-brace-format
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr ""
 "I progressi compiuti nella compressione di “{}” andranno persi "
 "definitivamente"
 
-#: src/window.py:504
+#: src/window.py:507
 msgid "_Cancel"
 msgstr "_Annulla"
 
-#: src/window.py:505
+#: src/window.py:508
 msgid "_Stop"
 msgstr "_Interrompi"
 
-#: src/window.py:559 src/window.py:799
+#: src/window.py:562 src/window.py:802
 msgid "Compression Complete"
 msgstr "Compressione Completata"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
 #. Please use “” instead of "", if applicable to your language.
-#: src/window.py:567
+#: src/window.py:570
 #, python-brace-format
 msgid "“{}” processed"
 msgstr "“{}” elaborato"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:572
+#: src/window.py:575
 #, python-brace-format
 msgid "{} files processed"
 msgstr "{} file elaborati"
 
-#: src/window.py:583
+#: src/window.py:586
 msgid "Open Export Directory"
 msgstr "Apri Directory di Esportazione"
 
-#: src/window.py:640
+#: src/window.py:643
 msgid "Videos are being compressed"
 msgstr "I video sono in fase di compressione"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
 #. instead of '...', if applicable to your language
-#: src/window.py:662
+#: src/window.py:665
 msgid "Analyzing…"
 msgstr "Analisi in corso…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:758
+#: src/window.py:761
 #, python-brace-format
 msgid "Error compressing “{}”"
 msgstr "Errore durante la compressione di “{}”"
 
-#: src/window.py:761
+#: src/window.py:764
 msgid "View _Details"
 msgstr "Visualizza _Dettagli"
 
-#: src/window.py:795
+#: src/window.py:798
 msgid "Compression Canceled"
 msgstr "Compressione Annullata"
 
-#: src/window.py:884
+#: src/window.py:887
 msgid "Videos"
 msgstr "Video"
 
-#: src/window.py:887
+#: src/window.py:890
 msgid "Pick Videos"
 msgstr "Scegli Video"
 
@@ -491,7 +498,7 @@ msgstr "Video compresso a {size} {unit}."
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'. Please use U+202F Narrow no-break
 #. space (' ') between values and units.
-#: src/sources_row.py:491
+#: src/sources_row.py:492
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -504,7 +511,7 @@ msgstr ""
 #. a file size unit like 'MB'.
 #. Please use U+202F Narrow no-break space (' ') between value
 #. and unit.
-#: src/sources_row.py:511
+#: src/sources_row.py:514
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr ""
@@ -555,8 +562,8 @@ msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled."
 msgstr ""
-"L'accelerazione hardware viene utilizzata solo se la GPU supporta la codifica con "
-"il codec video selezionato e “Qualità extra” è disabilitata."
+"L'accelerazione hardware viene utilizzata solo se la GPU supporta la "
+"codifica con il codec video selezionato e “Qualità extra” è disabilitata."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.
@@ -660,10 +667,15 @@ msgstr "{res_fps}, audio {audio_quality}"
 msgid "{vid_br} {vid_br_unit} ({extra_details})"
 msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
+msgid "kbps"
+msgstr ""
+
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
 #. (' ') between size and unit.
-#: src/attempt_fail_box.py:94
+#: src/attempt_fail_box.py:95
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
 msgstr "La dimensione del file compresso era troppo grande ({size} {unit})"
@@ -671,7 +683,7 @@ msgstr "La dimensione del file compresso era troppo grande ({size} {unit})"
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
 #. (' ') between size and unit.
-#: src/attempt_fail_box.py:104
+#: src/attempt_fail_box.py:106
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "La dimensione del file compresso era troppo piccola ({size} {unit})"
@@ -690,14 +702,14 @@ msgstr "Compressione a {vid_br} {vid_br_unit} ({extra_details})"
 #. TRANSLATORS: {} represents the progress percentage value.
 #. Please use U+202F Narrow no-break space (' ') between {} and %, if
 #. applicable to your language.
-#: src/current_attempt_box.py:125
+#: src/current_attempt_box.py:126
 #, python-brace-format
 msgid "{} %"
 msgstr "{} %"
 
 #. TRANSLATORS: {} represents the progress percentage.
 #. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:132
+#: src/current_attempt_box.py:133
 #, python-brace-format
 msgid "{} — Almost done"
 msgstr "{} — Quasi finito"
@@ -705,7 +717,7 @@ msgstr "{} — Quasi finito"
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
 #. '5% -- About 30 seconds left'
-#: src/current_attempt_box.py:140
+#: src/current_attempt_box.py:141
 #, python-brace-format
 msgid "{} second"
 msgid_plural "{} seconds"
@@ -718,7 +730,7 @@ msgstr[1] "{} secondi"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:148 src/current_attempt_box.py:161
+#: src/current_attempt_box.py:149 src/current_attempt_box.py:162
 #, python-brace-format
 msgid "{} minute"
 msgid_plural "{} minutes"
@@ -728,7 +740,7 @@ msgstr[1] "{} minuti"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:156 src/current_attempt_box.py:170
+#: src/current_attempt_box.py:157 src/current_attempt_box.py:171
 #, python-brace-format
 msgid "{} hour"
 msgid_plural "{} hours"
@@ -739,7 +751,7 @@ msgstr[1] "{} ore"
 #. {time_shown} represents a string showing the estimated time to
 #. completion (like '50 minutes').
 #. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:177
+#: src/current_attempt_box.py:178
 #, python-brace-format
 msgid "{percentage} — About {time_shown} left"
 msgstr "{percentage} — Circa {time_shown} rimanenti"
