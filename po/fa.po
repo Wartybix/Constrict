@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-09-11 20:14+0100\n"
-"PO-Revision-Date: 2025-09-11 10:02+0330\n"
+"PO-Revision-Date: 2025-09-12 14:05+0330\n"
 "Last-Translator: آوید <avds@disroot.org>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -43,15 +43,15 @@ msgstr "پنجرهٔ جدید"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:11
 msgid ""
-"Constrict compresses your videos to your chosen file size — useful for "
-"uploading to services with specific file size limits. No more relying on "
-"online services for video compression, or the manual trial-and-error of re-"
-"encoding at various bitrates yourself."
+"Constrict compresses your videos to your chosen file size — useful for uploading "
+"to services with specific file size limits. No more relying on online services "
+"for video compression, or the manual trial-and-error of re-encoding at various "
+"bitrates yourself."
 msgstr ""
 "هم‌فشردن ویدیوهای شما را به اندازهٔ پروندهٔ برگزیده فشرده می‌کند — کارآمد برای "
-"بارگذاری به خدمت‌هایی با کرانهٔ مشخص اندازهٔ پرونده. دیگر نیازی به اتکا بر "
-"خدمت‌های برخط برای فشرده‌سازی ویدیو یا آزمون‌وخطای دستی کدگذاری دوباره با آهنگ "
-"بیت‌های گوناگون به دست خودتان نیست."
+"بارگذاری به خدمت‌هایی با کرانهٔ مشخص اندازهٔ پرونده. دیگر نیازی به اتکا بر خدمت‌های "
+"برخط برای فشرده‌سازی ویدیو یا آزمون‌وخطای دستی کدگذاری دوباره با آهنگ بیت‌های "
+"گوناگون به دست خودتان نیست."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:12
 msgid "Features include:"
@@ -63,41 +63,39 @@ msgstr "رابط شهودی با کاربری آسان."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:15
 msgid ""
-"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
-"audio quality each video is re-encoded with to meet the target file size."
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and audio "
+"quality each video is re-encoded with to meet the target file size."
 msgstr ""
-"برآورد خودکار میانگین آهنگ بیت، تفکیک‌پذیری، آهنگ قاب و کیفیت صدا که هر ویدیو "
-"با آن کدگذاری دوباره می‌شود تا به اندازه پروندهٔ هدف برسد."
+"برآورد خودکار میانگین آهنگ بیت، تفکیک‌پذیری، آهنگ قاب و کیفیت صدا که هر ویدیو با "
+"آن کدگذاری دوباره می‌شود تا به اندازه پروندهٔ هدف برسد."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:16
 msgid "Bulk compression of multiple videos to one output directory."
 msgstr "فشرده‌سازی انبوه چندین ویدیو به یک شاخهٔ خروجی."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:17
-msgid ""
-"Customization of framerate limits, to ensure a clearer or smoother image."
+msgid "Customization of framerate limits, to ensure a clearer or smoother image."
 msgstr "سفارشی‌سازی کرانهٔ آهنگ قاب، برای اطمینان از تصویر واضح‌تر یا روان‌تر."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:18
 msgid ""
-"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
-"and VP9."
-msgstr ""
-"گزینش رمزینه برای رمزگذاری پرونده‌های خروجی، شامل H.264، HEVC، AV1 و VP9."
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, and "
+"VP9."
+msgstr "گزینش رمزینه برای رمزگذاری پرونده‌های خروجی، شامل H.264، HEVC، AV1 و VP9."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
 msgid ""
-"The app attempts to retain as much audiovisual quality as possible for the "
-"file size given. However, extremely steep reductions in file size can cause "
-"significant loss of quality in the output file, and sometimes compression "
-"may not be possible at all. All processing is done locally — and as such, "
-"compression speeds are only as fast as your hardware allows."
+"The app attempts to retain as much audiovisual quality as possible for the file "
+"size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression may not "
+"be possible at all. All processing is done locally — and as such, compression "
+"speeds are only as fast as your hardware allows."
 msgstr ""
-"برنامه تلاش می‌کند تا جای ممکن کیفیت صوتی و تصویری را برای اندازهٔ پروندهٔ "
-"داده‌شده نگه دارد. بااین‌حال، کاهش بسیار شدید اندازهٔ پرونده می‌تواند دست‌آویز "
-"ازدست‌رفتن چشمگیر کیفیت در پروندهٔ خروجی شود و گاهی فشرده‌سازی شاید هرگز شدنی "
-"نباشد. تمام پردازش به‌صورت محلی انجام می‌شود — بنابراین سرعت فشرده‌سازی تنها به "
-"سرعتی است که سخت‌افزار شما اجازه می‌دهد."
+"برنامه تلاش می‌کند تا جای ممکن کیفیت صوتی و تصویری را برای اندازهٔ پروندهٔ داده‌شده "
+"نگه دارد. بااین‌حال، کاهش بسیار شدید اندازهٔ پرونده می‌تواند دست‌آویز ازدست‌رفتن "
+"چشمگیر کیفیت در پروندهٔ خروجی شود و گاهی فشرده‌سازی شاید هرگز شدنی نباشد. تمام "
+"پردازش به‌صورت محلی انجام می‌شود — بنابراین سرعت فشرده‌سازی تنها به سرعتی است که "
+"سخت‌افزار شما اجازه می‌دهد."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:75
 msgid "Source videos queued for compression"
@@ -171,30 +169,30 @@ msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr ""
-"ویدیوهای فشرده‌شده به آهنگ بیت پایین شاید با چشم‌پوشی از گزینهٔ تنظیم‌شده، به "
-"{} ق‌د‌ث محدود شوند."
+"ویدیوهای فشرده‌شده به آهنگ بیت پایین شاید با چشم‌پوشی از گزینهٔ تنظیم‌شده، به {} ق‌د‌ث "
+"محدود شوند."
 
 #. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
 #. no-break space (' ') between {} and '%'.
 #: src/window.py:200
 #, python-brace-format
 msgid ""
-"Decreasing the tolerance maximizes image quality by reducing how much "
-"compressed file sizes can be under target. However, this can increase the "
-"number of attempts needed to meet the target, increasing compression time. A "
-"tolerance of {} % or more is recommended."
+"Decreasing the tolerance maximizes image quality by reducing how much compressed "
+"file sizes can be under target. However, this can increase the number of attempts "
+"needed to meet the target, increasing compression time. A tolerance of {} % or "
+"more is recommended."
 msgstr ""
-"کاهش تاب‌آوری با کاستن از این‌که اندازهٔ پروندهٔ فشرده تا چه میزان می‌تواند "
-"پایین‌تر از هدف باشد، کیفیت تصویر را به بیشینه می‌رساند. بااین‌حال، این کار "
-"می‌تواند شمار تلاش‌های موردنیاز برای رسیدن به هدف و زمان فشرده‌سازی را افزایش "
-"دهد. تاب‌آوری ٪ {} یا بیشتر سفارش می‌شود."
+"کاهش تاب‌آوری با کاستن از این‌که اندازهٔ پروندهٔ فشرده تا چه میزان می‌تواند پایین‌تر از "
+"هدف باشد، کیفیت تصویر را به بیشینه می‌رساند. بااین‌حال، این کار می‌تواند شمار "
+"تلاش‌های موردنیاز برای رسیدن به هدف و زمان فشرده‌سازی را افزایش دهد. تاب‌آوری ٪ {} "
+"یا بیشتر سفارش می‌شود."
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/window.py:205 src/sources_row.py:466 src/sources_row.py:496
 #: src/sources_row.py:499 src/sources_row.py:516 src/attempt_fail_box.py:98
 #: src/attempt_fail_box.py:109
 msgid "MiB"
-msgstr ""
+msgstr "می‌ب"
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:208
@@ -486,8 +484,8 @@ msgstr "ویدیو به {size} {unit} فشرده شد."
 #: src/sources_row.py:492
 #, python-brace-format
 msgid ""
-"Video file size ({original_size} {unit_original}) already meets the target "
-"size ({target_size} {unit_target})."
+"Video file size ({original_size} {unit_original}) already meets the target size "
+"({target_size} {unit_target})."
 msgstr ""
 "اندازهٔ پروندهٔ ویدیو ({original_size} {unit_original}) هم‌اکنون با اندازهٔ هدف "
 "({target_size} {unit_target}) هم‌خوانی دارد."
@@ -546,20 +544,19 @@ msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled."
 msgstr ""
-"شتاب‌دهی سخت‌افزاری تنها در صورتی به کار می‌رود که پردازندهٔ گرافیکی شما از "
-"کدگذاری با رمزینهٔ ویدیویی برگزیده پشتیبانی کند و «کیفیت اضافی» از کار افتاده "
-"باشد."
+"شتاب‌دهی سخت‌افزاری تنها در صورتی به کار می‌رود که پردازندهٔ گرافیکی شما از کدگذاری "
+"با رمزینهٔ ویدیویی برگزیده پشتیبانی کند و «کیفیت اضافی» از کار افتاده باشد."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.
 #: src/preferences_dialog.py:51
 #, python-brace-format
 msgid ""
-"Used in file names for exported videos, between the base name and extension. "
-"If the custom suffix is left empty, the default suffix of “{}” will be used."
+"Used in file names for exported videos, between the base name and extension. If "
+"the custom suffix is left empty, the default suffix of “{}” will be used."
 msgstr ""
-"در نام پرونده ویدیوهای برون‌ریخته، بین نام پایه و پسوند به کار می‌رود. اگر "
-"پسوند سفارشی خالی باشد، پسوند پیش‌گزیدهٔ «{}» به کار خواهد رفت."
+"در نام پرونده ویدیوهای برون‌ریخته، بین نام پایه و پسوند به کار می‌رود. اگر پسوند "
+"سفارشی خالی باشد، پسوند پیش‌گزیدهٔ «{}» به کار خواهد رفت."
 
 #: src/preferences_dialog.py:95
 msgid "Changes applied"
@@ -652,7 +649,7 @@ msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
 msgid "kbps"
-msgstr ""
+msgstr "کیلوبیت بر ثانیه"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
@@ -679,7 +676,7 @@ msgstr "اندازهٔ پروندهٔ فشرده خیلی کوچک بود ({size
 #: src/current_attempt_box.py:94
 #, python-brace-format
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
-msgstr "در حال فشرده‌سازی به  {vid_br_unit}{vid_br} ({extra_details})"
+msgstr "در حال فشرده‌سازی به {vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {} represents the progress percentage value.
 #. Please use U+202F Narrow no-break space (' ') between {} and %, if
@@ -745,11 +742,10 @@ msgstr "در حال راه‌اندازی…"
 
 #: src/constrict_utils.py:762
 msgid ""
-"Constrict: Could not read input file. Was it moved or deleted before "
-"compression?"
+"Constrict: Could not read input file. Was it moved or deleted before compression?"
 msgstr ""
-"هم‌فشردن: نمی‌تواند پروندهٔ ورودی را بخواند. آیا پیش از فشرده‌سازی جابه‌جا یا حذف "
-"شده است؟"
+"هم‌فشردن: نمی‌تواند پروندهٔ ورودی را بخواند. آیا پیش از فشرده‌سازی جابه‌جا یا حذف شده "
+"است؟"
 
 #: src/constrict_utils.py:769
 msgid "Constrict: File already meets the target size."
@@ -757,39 +753,38 @@ msgstr "هم‌فشردن: پرونده هم‌اکنون با اندازهٔ ه
 
 #: src/constrict_utils.py:780
 msgid ""
-"Constrict: Could not retrieve video properties. Source video may be missing "
-"or corrupted."
+"Constrict: Could not retrieve video properties. Source video may be missing or "
+"corrupted."
 msgstr ""
-"هم‌فشردن: نتوانست ویژگی‌های ویدیو را دریافت کند. ویدیوی مبدأ شاید گم شده یا "
-"خراب باشد."
+"هم‌فشردن: نتوانست ویژگی‌های ویدیو را دریافت کند. ویدیوی مبدأ شاید گم شده یا خراب "
+"باشد."
 
 #: src/constrict_utils.py:787
 msgid ""
-"Constrict: Could not create exported file. A file with the reserved name "
-"already exists."
+"Constrict: Could not create exported file. A file with the reserved name already "
+"exists."
 msgstr ""
-"هم‌فشردن: نتوانست پروندهٔ برون‌ریخته را بسازد. فایلی با نام گزیده‌شده از پیش "
-"وجود دارد."
+"هم‌فشردن: نتوانست پروندهٔ برون‌ریخته را بسازد. فایلی با نام گزیده‌شده از پیش وجود "
+"دارد."
 
 #: src/constrict_utils.py:789
 msgid ""
-"Constrict: Could not create exported file. There are insufficient "
-"permissions to create a file at the requested export path."
+"Constrict: Could not create exported file. There are insufficient permissions to "
+"create a file at the requested export path."
 msgstr ""
-"هم‌فشردن: نتوانست پروندهٔ برون‌ریخته را بسازد. مجوزهای کافی برای ساختن پرونده "
-"در مسیر برون‌ریزی درخواست‌شده وجود ندارد."
+"هم‌فشردن: نتوانست پروندهٔ برون‌ریخته را بسازد. مجوزهای کافی برای ساختن پرونده در "
+"مسیر برون‌ریزی درخواست‌شده وجود ندارد."
 
 #: src/constrict_utils.py:854
 msgid ""
-"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
-"low for this file."
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too low "
+"for this file."
 msgstr ""
-"هم‌فشردن: آهنگ بیت ویدئو خیلی کم شد (<۵ ک‌ب‌ث). اندازه هدف شاید برای این پرونده "
-"خیلی کم باشد."
+"هم‌فشردن: آهنگ بیت ویدئو خیلی کم شد (<۵ ک‌ب‌ث). اندازه هدف شاید برای این پرونده خیلی "
+"کم باشد."
 
 #: src/constrict_utils.py:899
-msgid ""
-"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgid "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
-"هم‌فشردن: نمی‌توان پرونده خروجی را خواند. آیا در میان فشرده‌سازی جابه‌جا یا حذف "
-"شده است؟"
+"هم‌فشردن: نمی‌توان پرونده خروجی را خواند. آیا در میان فشرده‌سازی جابه‌جا یا حذف شده "
+"است؟"
