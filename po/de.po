@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-09-11 20:14+0100\n"
-"PO-Revision-Date: 2025-09-10 16:46+0100\n"
+"PO-Revision-Date: 2025-09-12 14:29+0200\n"
 "Last-Translator: Felicitas Pojtinger <felicitas@pojtinger.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -202,7 +202,7 @@ msgstr ""
 #: src/sources_row.py:499 src/sources_row.py:516 src/attempt_fail_box.py:98
 #: src/attempt_fail_box.py:109
 msgid "MiB"
-msgstr ""
+msgstr "MiB"
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:208
@@ -556,6 +556,9 @@ msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled."
 msgstr ""
+"Hardware-Beschleunigung wird nur verwendet, wenn Ihre GPU die Codierung mit "
+"dem ausgewählten Video-Codec unterstützt und „Extra Qualität“ deaktiviert "
+"ist."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.
@@ -660,7 +663,7 @@ msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
 msgid "kbps"
-msgstr ""
+msgstr "kbps"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
@@ -702,7 +705,7 @@ msgstr "{} %"
 #: src/current_attempt_box.py:133
 #, python-brace-format
 msgid "{} — Almost done"
-msgstr ""
+msgstr "{} — Beinahe fertig"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
