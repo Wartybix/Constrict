@@ -448,6 +448,7 @@ def transcode(
 
 def get_framerate(file_input: str) -> float:
     """ Gets the framerate of a video at the passed file path. """
+    """ Returns -1 if no valid framerate is found """
     cmd = [
         'ffprobe',
         '-v', '0',
@@ -463,6 +464,10 @@ def get_framerate(file_input: str) -> float:
     fps_fraction_split = fps_fraction.split('/')
     fps_numerator = int(fps_fraction_split[0])
     fps_denominator = int(fps_fraction_split[1])
+
+    if fps_denominator == 0:
+        return -1
+
     fps_float = fps_numerator / fps_denominator
     return fps_float
 
@@ -771,6 +776,10 @@ def compress(
     try:
         duration_seconds = get_duration(file_input)
         source_fps = get_framerate(file_input)
+
+        if source_fps == -1:
+            source_fps = 60
+
         width, height = get_resolution(file_input)
         source_frame_count = get_frame_count(file_input)
         rotation = get_rotation(file_input)

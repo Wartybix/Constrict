@@ -541,6 +541,8 @@ class SourcesRow(Adw.ActionRow):
             self.set_state(SourceState.BROKEN, daemon)
             return
 
+        assumed_fps = fps if fps != -1 else 60
+
         target_size = target_size_getter()
         fps_mode = fps_mode_getter()
 
@@ -549,7 +551,7 @@ class SourcesRow(Adw.ActionRow):
             fps_mode,
             width,
             height,
-            fps,
+            assumed_fps,
             duration,
             audio_bitrate
         )
@@ -563,8 +565,9 @@ class SourcesRow(Adw.ActionRow):
             return
 
         src_pixels = self.height if self.height < self.width else self.width
+        src_fps = int(round(self.fps, 0)) if self.fps != -1 else '?'
 
-        src_label = f'{src_pixels}p@{int(round(self.fps, 0))}'
+        src_label = f'{src_pixels}p@{src_fps}'
         dest_label = f'{target_pixels}p@{int(round(target_fps, 0))}'
 
         subtitle = f'{dest_label} ← {src_label}' if (
