@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-09-11 20:14+0100\n"
-"PO-Revision-Date: 2025-09-10 16:48+0100\n"
+"PO-Revision-Date: 2025-09-12 23:08+0300\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Poedit 3.7\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
@@ -552,6 +552,9 @@ msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled."
 msgstr ""
+"Аппаратное ускорение используется только в том случае, если ваш графический "
+"процессор поддерживает кодирование с выбранным видеокодеком, а опция "
+"«Дополнительное качество» отключена."
 
 #. TRANSLATORS: {} represents the value of the default suffix.
 #. Please use “” instead of "", if applicable to your language.
@@ -656,7 +659,7 @@ msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
 msgid "kbps"
-msgstr ""
+msgstr "кбит/с"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MB'. Please use U+202F Narrow no-break space
@@ -698,7 +701,7 @@ msgstr "{} %"
 #: src/current_attempt_box.py:133
 #, python-brace-format
 msgid "{} — Almost done"
-msgstr ""
+msgstr "{} — Почти готово"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
