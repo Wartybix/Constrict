@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-12 23:05+0300\n"
+"POT-Creation-Date: 2025-09-11 20:14+0100\n"
 "PO-Revision-Date: 2025-09-12 23:08+0300\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
@@ -15,30 +15,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.7\n"
 
-#: data/io.github.wartybix.Constrict.desktop.in:3
+#: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
 #: src/window.py:356 src/window.blp:16
 msgid "Constrict"
 msgstr "Constrict"
 
-#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.desktop.in:3
 msgid "Video Compressor"
 msgstr "Видеокомпрессор"
 
-#: data/io.github.wartybix.Constrict.desktop.in:5
+#: data/io.github.wartybix.Constrict.desktop.in:4
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:9
 msgid "Compress videos to target sizes"
 msgstr "Сжимайте видео до целевых размеров"
 
-#: data/io.github.wartybix.Constrict.desktop.in:11
+#: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
 msgstr "Сжать;Видео;Ролик;Фильм;Клип;"
 
-#: data/io.github.wartybix.Constrict.desktop.in:21
+#: data/io.github.wartybix.Constrict.desktop.in:20
 msgid "New Window"
 msgstr "Новое окно"
 
@@ -138,6 +138,12 @@ msgstr "Видеокодек"
 #: data/io.github.wartybix.Constrict.gschema.xml.in:39
 msgid "The codec used to encode with during compression"
 msgstr "Кодек, используемый для кодирования во время сжатия"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:81
+msgid "compressed"
+msgstr "сжато"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #. Please use ‘’ characters instead of '', if applicable to your language.
@@ -797,9 +803,6 @@ msgid ""
 msgstr ""
 "Constrict: Не удаётся прочитать выходной файл. Он был перемещён или удалён в "
 "процессе сжатия?"
-
-#~ msgid "compressed"
-#~ msgstr "сжато"
 
 #~ msgid "GApplication local option handling by"
 #~ msgstr "Обработка локальных опций GApplication"
