@@ -18,7 +18,7 @@
     <file preprocess="xml-stripblanks">attempt_fail_box.ui</file>
     <file preprocess="xml-stripblanks">progress_popover_box.ui</file>
     <file preprocess="xml-stripblanks">current_attempt_box.ui</file>
-    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks" alias="shortcuts-dialog.ui">gtk/shortcuts-dialog.ui</file>
     <file alias="style.css">gtk/style.css</file>
   </gresource>
 </gresources>

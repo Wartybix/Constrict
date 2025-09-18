@@ -1,0 +1,47 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ShortcutsDialog shortcuts_dialog {
+  Adw.ShortcutsSection {
+    title: C_("shortcut window", "Video Management");
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Open");
+      action-name: "win.open";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Export");
+      action-name: "win.export";
+    }
+  }
+
+  Adw.ShortcutsSection {
+    title: C_("shortcut window", "General");
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Toggle Settings Pane");
+      action-name: "win.toggle-sidebar";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Show Shortcuts");
+      action-name: "app.shortcuts";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Close Window");
+      action-name: "win.close";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Quit");
+      action-name: "app.quit";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Show Preferences");
+      action-name: "app.preferences";
+    }
+  }
+}

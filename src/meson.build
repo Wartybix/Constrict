@@ -12,7 +12,7 @@ blueprints = custom_target('blueprints',
     'sources_list_box.blp',
     'progress_popover_box.blp',
     'preferences_dialog.blp',
-    'gtk/help-overlay.blp',
+    'gtk/shortcuts-dialog.blp',
     'window.blp',
     'sources_row.blp',
     'current_attempt_box.blp'
