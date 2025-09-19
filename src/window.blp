@@ -16,11 +16,14 @@ template $ConstrictWindow: Adw.ApplicationWindow {
   title: _("Constrict");
   default-width: 1000;
   default-height: 650;
+  width-request: 360;
+  height-request: 294;
 
   Adw.Breakpoint {
     condition ("max-width: 700sp")
     setters {
       split_view.collapsed: true;
+      split_view.max-sidebar-width: 300;
     }
   }
 
