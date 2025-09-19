@@ -61,7 +61,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
     tolerance_input = Gtk.Template.Child()
     toast_overlay = Gtk.Template.Child()
     warning_banner = Gtk.Template.Child()
-    window_title = Gtk.Template.Child()
+    main_view_title = Gtk.Template.Child()
     adv_options_help_label = Gtk.Template.Child()
     adv_options_help_popover = Gtk.Template.Child()
     fps_help_label = Gtk.Template.Child()
@@ -72,7 +72,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.compressing = False
         self.currently_processed = ''
-        self.window_title.set_title(self.get_title())
+        self.main_view_title.set_title(self.get_title())
 
         self.toggle_sidebar_action = Gio.SimpleAction(name="toggle-sidebar")
         self.toggle_sidebar_action.connect("activate", self.toggle_sidebar)
@@ -327,8 +327,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 )
             )
 
-        self.window_title.set_title(self.get_title())
-        self.window_title.set_subtitle(
+        self.main_view_title.set_title(self.get_title())
+        self.main_view_title.set_subtitle(
             # TRANSLATORS: {} represents the path of the directory being
             # exported to. Please use “” instead of "", if applicable to your
             # language.
@@ -354,8 +354,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
             # TRANSLATORS: {} represents the number of files queued.
             self.set_title(_('{} Videos Queued').format(vid_count))
 
-        update_ui(self.window_title.set_title, self.get_title(), daemon)
-        update_ui(self.window_title.set_subtitle, '', daemon)
+        update_ui(self.main_view_title.set_title, self.get_title(), daemon)
+        update_ui(self.main_view_title.set_subtitle, '', daemon)
 
     def refresh_previews(self, widget: Gtk.Widget, *args: Any) -> None:
         """ Refresh the previews of all source rows in the sources list box.
