@@ -38,6 +38,14 @@ template $ConstrictWindow: Adw.ApplicationWindow {
         Adw.WindowTitle {
           title: _("Constrict");
         }
+
+        [end]
+        MenuButton {
+          primary: true;
+          icon-name: "open-menu-symbolic";
+          tooltip-text: _("Main Menu");
+          menu-model: primary_menu;
+        }
       }
 
       content: ScrolledWindow {
@@ -196,14 +204,6 @@ template $ConstrictWindow: Adw.ApplicationWindow {
           icon-name: "sidebar-show-symbolic";
           tooltip-text: _("Toggle sidebar");
           active: true;
-        }
-
-        [end]
-        MenuButton {
-          primary: true;
-          icon-name: "open-menu-symbolic";
-          tooltip-text: _("Main Menu");
-          menu-model: primary_menu;
         }
       }
 
