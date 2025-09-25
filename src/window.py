@@ -299,6 +299,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 'status_page',
                 daemon
             )
+            if (self.split_view.get_collapsed()):
+                update_ui(self.split_view.set_show_sidebar, False, daemon)
             return
 
         complete_count = 0
@@ -434,9 +436,11 @@ class ConstrictWindow(Adw.ApplicationWindow):
         return int(self.tolerance_input.get_value())
 
     def toggle_sidebar(self, action: Gio.Action, _) -> None:
-        """ Toggle whether the compression settings sidebar is shown """
-        sidebar_shown = self.split_view.get_show_sidebar()
-        self.split_view.set_show_sidebar(not sidebar_shown)
+        """ Toggle whether the compression settings sidebar is shown when queue
+        page is open. """
+        if self.view_stack.get_visible_child_name() == "queue_page":
+            sidebar_shown = self.split_view.get_show_sidebar()
+            self.split_view.set_show_sidebar(not sidebar_shown)
 
     def delist_all(self, action: Gio.Action, _) -> None:
         """ Remove all source rows from the window's source list box. Disable
