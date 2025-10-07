@@ -49,6 +49,8 @@ template $SourcesRow: Adw.ActionRow {
     styles ["error", "flat"]
   }
 
+  // TODO: Fix these boilerplate code icon buttons
+
   [suffix]
   MenuButton video_broken_button {
     icon-name: "broken-video-symbolic";
@@ -75,8 +77,6 @@ template $SourcesRow: Adw.ActionRow {
 
   [suffix]
   MenuButton incompatible_button {
-    icon-name: "exclamation-mark-symbolic";
-    tooltip-text: _("View Error Details");
     valign: center;
     visible: false;
 
@@ -92,8 +92,6 @@ template $SourcesRow: Adw.ActionRow {
         halign: center;
       };
     };
-
-    styles ["error", "flat"]
   }
 
   [suffix]

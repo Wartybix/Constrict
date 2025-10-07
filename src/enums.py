@@ -39,6 +39,7 @@ class SourceState:
     ERROR = 3
     BROKEN = 4
     INCOMPATIBLE = 5
+    WARN = 6
 
 
 class Thumbnailer:

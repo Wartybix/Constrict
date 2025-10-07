@@ -269,6 +269,15 @@ def get_progress(
 
         return (avg, None)
 
+def get_video_encoder(codec, use_ha):
+    cv_params = {
+        VideoCodec.H264: 'h264_vaapi' if use_ha else 'libx264',
+        VideoCodec.HEVC: 'hevc_vaapi' if use_ha else 'libx265',
+        VideoCodec.AV1: 'av1_vaapi' if use_ha else 'libsvtav1',
+        VideoCodec.VP9: 'vp9_vaapi' if use_ha else 'libvpx-vp9'
+    }
+
+    return cv_params[codec]
 
 def transcode(
     file_input: str,
@@ -303,12 +312,7 @@ def transcode(
 
     gpu_filters = ',format=nv12,hwupload' if use_ha else ''
 
-    cv_params = {
-        VideoCodec.H264: 'h264_vaapi' if use_ha else 'libx264',
-        VideoCodec.HEVC: 'hevc_vaapi' if use_ha else 'libx265',
-        VideoCodec.AV1: 'av1_vaapi' if use_ha else 'libsvtav1',
-        VideoCodec.VP9: 'vp9_vaapi' if use_ha else 'libvpx-vp9'
-    }
+    video_encoder = get_video_encoder(codec, use_ha)
 
     pass1_cmd = [
         'ffmpeg',
@@ -344,7 +348,7 @@ def transcode(
         pass1_cmd.extend(['-r', f'{framerate}'])
 
     pass1_cmd.extend([
-        '-c:v', f'{cv_params[codec]}',
+        '-c:v', f'{video_encoder}',
         '-b:v', str(video_bitrate) + '',
         '-pix_fmt', 'yuv420p',
         '-pass', '1',
@@ -406,7 +410,7 @@ def transcode(
         pass2_cmd.extend(['-r', f'{framerate}'])
 
     pass2_cmd.extend([
-        '-c:v', f'{cv_params[codec]}',
+        '-c:v', f'{video_encoder}',
         '-b:v', str(video_bitrate) + '',
         '-pix_fmt', 'yuv420p',
         '-pass', '2',
@@ -562,7 +566,7 @@ def get_audio_bitrate(file_input: str) -> int:
             return 96000
 
 def get_encode_settings(
-    target_size_MiB: int,
+    target_size_MiB: float,
     fps_mode: int,
     width: int,
     height: int,
@@ -766,12 +770,13 @@ def compress(
     if not file_input_path.is_file():
         return _("Constrict: Could not read input file. Was it moved or deleted before compression?")
 
-    target_size_bytes = target_size_MiB * 1024 * 1024
+    target_bytes_limit = target_size_MiB * 1024 * 1024
     before_size_bytes = os.stat(file_input).st_size
     after_size_bytes = 0
 
-    if before_size_bytes <= target_size_bytes:
-        return _("Constrict: File already meets the target size.")
+    do_basic_transcode = before_size_bytes <= target_bytes_limit
+
+    target_bytes = before_size_bytes if do_basic_transcode else target_bytes_limit
 
     try:
         duration_seconds = get_duration(file_input)
@@ -822,13 +827,13 @@ def compress(
                 displayed_res,
                 target_fps,
                 after_size_bytes,
-                target_size_bytes
+                target_bytes_limit
             )
 
         attempt += 1
 
         encode_settings = get_encode_settings(
-            target_size_MiB,
+            target_bytes / 1024 / 1024,
             framerate_option,
             width,
             height,
@@ -906,9 +911,9 @@ def compress(
             after_size_bytes = os.stat(file_output).st_size
         except FileNotFoundError:
             return _("Constrict: Cannot read output file. Was it moved or deleted mid-compression?")
-        percent_of_target = (100 / target_size_bytes) * after_size_bytes
+        percent_of_target = (100 / target_bytes_limit) * after_size_bytes
 
-        if res_reduction_applied and percent_of_target < 100:
+        if percent_of_target < 100 and (do_basic_transcode or res_reduction_applied):
             # The quality's not likely to get better than this, so quit now.
             # Another attempt would be pointless.
             break

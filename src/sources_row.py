@@ -252,6 +252,9 @@ class SourcesRow(Adw.ActionRow):
         drag_row.set_subtitle(self.get_subtitle())
         drag_row.set_state(self.state, False)
 
+        if self.state == SourceState.WARN:
+            drag_row.set_warning('', False)
+
         thumb_storage_type = self.thumbnail.get_storage_type()
         if thumb_storage_type == Gtk.ImageType.ICON_NAME:
             icon_name = self.thumbnail.get_icon_name()
@@ -439,8 +442,47 @@ class SourcesRow(Adw.ActionRow):
         """ Show a message indicating there's a problem with the set target
         size in relation to the video
         """
+        update_ui(
+            self.incompatible_button.set_icon_name,
+            "exclamation-mark-symbolic",
+            daemon
+        )
+        update_ui(
+            self.incompatible_button.set_css_classes,
+            ["flat", "error"],
+            daemon
+        )
+        update_ui(
+            self.incompatible_button.set_tooltip_text,
+            _("View Error Details"),
+            daemon
+        )
+
         update_ui(self.incompatible_label.set_label, incompatible_msg, daemon)
         self.set_state(SourceState.INCOMPATIBLE, daemon)
+
+    def set_warning(self, warning_msg: str, daemon: bool) -> None:
+        """ Show a message indicating there's a problem with the set target
+        size in relation to the video. This warning does not block exporting.
+        """
+        update_ui(
+            self.incompatible_button.set_icon_name,
+            "warning-outline-symbolic",
+            daemon
+        )
+        update_ui(
+            self.incompatible_button.set_css_classes,
+            ["flat", "warning"],
+            daemon
+        )
+        update_ui(
+            self.incompatible_button.set_tooltip_text,
+            _("More Information"),
+            daemon
+        )
+
+        update_ui(self.incompatible_label.set_label, warning_msg, daemon)
+        self.set_state(SourceState.WARN, daemon)
 
     def set_error(self, error_details: str, daemon: bool) -> None:
         """ Put the row into an error state, as a result of an error while
@@ -484,7 +526,7 @@ class SourcesRow(Adw.ActionRow):
             return
         elif self.get_size() < target_size * 1024 * 1024:
             size_mb = round(self.get_size() / 1024 / 1024, 1)
-            self.set_incompatible(
+            self.set_warning(
                 # TRANSLATORS: {original_size} and {target_size} represent
                 # integers. {unit_original} and {unit_target} represent file
                 # size units, like 'MB'. Please use U+202F Narrow no-break
@@ -534,6 +576,7 @@ class SourcesRow(Adw.ActionRow):
 
         try:
             width, height = self.get_resolution()
+            original_size_mib = self.get_size() / 1024 / 1024
             fps = self.get_fps()
             duration = self.get_duration()
             audio_bitrate = self.get_audio_bitrate()
@@ -543,11 +586,13 @@ class SourcesRow(Adw.ActionRow):
 
         assumed_fps = fps if fps != -1 else 60
 
-        target_size = target_size_getter()
+        target_size_mib = target_size_getter()
         fps_mode = fps_mode_getter()
 
+        target_size_cap_mib = target_size_mib if original_size_mib > target_size_mib else original_size_mib
+
         encode_settings = get_encode_settings(
-            target_size,
+            target_size_cap_mib,
             fps_mode,
             width,
             height,
@@ -558,7 +603,7 @@ class SourcesRow(Adw.ActionRow):
 
         video_bitrate, _, target_pixels, target_fps, _ = encode_settings
 
-        self.refresh_state(video_bitrate, target_size, daemon)
+        self.refresh_state(video_bitrate, target_size_mib, daemon)
 
         if self.state == SourceState.INCOMPATIBLE:
             update_ui(self.set_subtitle, '', daemon)
@@ -587,6 +632,9 @@ class SourcesRow(Adw.ActionRow):
         is_error = state == SourceState.ERROR
         is_broken = state == SourceState.BROKEN
         is_incompatible = state == SourceState.INCOMPATIBLE
+        is_warn = state == SourceState.WARN
+
+        # TODO: refactor 'warning action'... too confusing now...
 
         if (is_broken or is_incompatible) and self.warning_action:
             self.warning_action(True, daemon)
@@ -597,7 +645,7 @@ class SourcesRow(Adw.ActionRow):
         update_ui(self.video_broken_button.set_visible, is_broken, daemon)
         update_ui(
             self.incompatible_button.set_visible,
-            is_incompatible,
+            is_incompatible or is_warn,
             daemon
         )
 
