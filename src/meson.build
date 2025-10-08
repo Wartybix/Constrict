@@ -4,6 +4,7 @@ gnome = import('gnome')
 
 gresource_conf = configuration_data()
 gresource_conf.set('PREFIX', PREFIX)
+gresource_conf.set('APP_ID', APPLICATION_ID)
 
 blueprints = custom_target('blueprints',
   input: files(

@@ -27,7 +27,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Adw, GLib
 from .window import ConstrictWindow
 from constrict.preferences_dialog import PreferencesDialog
-from constrict import APPLICATION_ID, VERSION
+from constrict import APPLICATION_ID, VERSION, PREFIX
 from typing import List, Sequence, Callable, Any
 
 # FIXME: occasional segmentation fault on compression completion? No idea what
@@ -157,19 +157,21 @@ class ConstrictApplication(Adw.Application):
 
     def on_about_action(self, *args: Any) -> None:
         """Callback for the app.about action."""
-        about = Adw.AboutDialog(application_name=_('Constrict'),
-                                application_icon=self.get_application_id(),
-                                developer_name='Wartybix',
-                                version=VERSION,
-                                developers=[
-                                    'Wartybix https://github.com/Wartybix/',
-                                    'Philipp Kosarev https://github.com/PhilippKosarev'
-                                ],
-                                artists=['Jakub Steiner <jimmac@gmail.com>'],
-                                website='https://github.com/Wartybix/Constrict',
-                                issue_url='https://github.com/Wartybix/Constrict/issues',
-                                license_type='GTK_LICENSE_GPL_3_0',
-                                copyright='© 2025 Wartybix')
+        about = Adw.AboutDialog.new_from_appdata(
+            f"{PREFIX}/{APPLICATION_ID}.metainfo.xml", VERSION
+        )
+
+        about.set_version(VERSION)
+
+        about.set_developers([
+            'Wartybix https://github.com/Wartybix/',
+            'Philipp Kosarev https://github.com/PhilippKosarev'
+        ])
+
+        about.set_artists(['Jakub Steiner <jimmac@gmail.com>'])
+
+        about.set_copyright('© 2025 Wartybix')
+
         about.add_acknowledgement_section(
             # TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
             # Please use ‘’ characters instead of '', if applicable to your language.

@@ -34,6 +34,7 @@ from typing import Any, List
 
 # TODO: future feature -- add pause button?
 
+# TODO: Improve DND border
 
 @Gtk.Template(resource_path=f'{PREFIX}/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):

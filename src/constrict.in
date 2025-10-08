@@ -26,6 +26,7 @@ import locale
 import gettext
 
 VERSION = '@VERSION@'
+PREFIX = '@PREFIX@'
 pkgdatadir = '@pkgdatadir@'
 localedir = '@localedir@'
 
