@@ -51,18 +51,32 @@ template $ConstrictWindow: Adw.ApplicationWindow {
             }
           }
 
-          content: Adw.StatusPage status_page {
-            icon-name: "video-encoder-symbolic";
-            title: _("Compress Videos");
-            description: _("Drag and drop videos here");
-            child: Button {
-              // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-              label: _("_Open…");
-              use-underline: true;
-              action-name: "win.open";
-              can-shrink: true;
-              halign: center;
-              styles ["pill", "suggested-action"]
+          content: $DragOverlay {
+            styles ['no-dnd-border']
+
+            drop_target: drop_target;
+
+            child: Adw.StatusPage status_page {
+              styles ["drop-widget"]
+
+              DropTarget drop_target {
+                formats: "GdkFileList";
+                actions: copy;
+                drop => $on_drop();
+              }
+
+              icon-name: "video-encoder-symbolic";
+              title: _("Compress Videos");
+              description: _("Drag and drop videos here");
+              child: Button {
+                // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+                label: _("_Open…");
+                use-underline: true;
+                action-name: "win.open";
+                can-shrink: true;
+                halign: center;
+                styles ["pill", "suggested-action"]
+              };
             };
           };
         };
@@ -260,37 +274,48 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                   // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
                   title: _("Issues with video sources — fix before compressing");
                 }
-                ScrolledWindow {
-                  child: Viewport {
-                    vexpand: true;
-                    child: Box {
-                      spacing: 12;
-                      margin-top: 24;
-                      margin-bottom: 24;
-                      margin-start: 12;
-                      margin-end: 12;
-                      orientation: vertical;
-                      Adw.Clamp {
-                        child: Adw.PreferencesGroup {
-                          title: _("Video Sources");
 
-                          [header-suffix]
-                          Button clear_all_button {
-                            label: _("_Clear All");
-                            use-underline: true;
-                            action-name: "win.clear_all";
-                            valign: center;
+                $DragOverlay {
+                  drop_target: drop_target_queue;
 
-                            styles [
-                              "flat"
-                            ]
-                          }
+                  child: ScrolledWindow {
+                    styles ["drop-widget"]
 
-                          $SourcesListBox sources_list_box {
-                            vexpand: false;
-                          }
-                        };
-                      }
+                    DropTarget drop_target_queue {
+                      formats: "GdkFileList";
+                      actions: copy;
+                      drop => $on_drop();
+                    }
+
+                    child: Viewport {
+                      vexpand: true;
+                      child: Box {
+                        spacing: 12;
+                        margin-top: 24;
+                        margin-bottom: 24;
+                        margin-start: 12;
+                        margin-end: 12;
+                        orientation: vertical;
+                        Adw.Clamp {
+                          child: Adw.PreferencesGroup {
+                            title: _("Video Sources");
+
+                            [header-suffix]
+                            Button clear_all_button {
+                              label: _("_Clear All");
+                              use-underline: true;
+                              action-name: "win.clear_all";
+                              valign: center;
+
+                              styles ["flat"]
+                            }
+
+                            $SourcesListBox sources_list_box {
+                              vexpand: false;
+                            }
+                          };
+                        }
+                      };
                     };
                   };
                 }

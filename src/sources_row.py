@@ -525,6 +525,8 @@ class SourcesRow(Adw.ActionRow):
         if self.state == SourceState.BROKEN:
             return
         elif self.get_size() < target_size * 1024 * 1024:
+            # TODO: don't show ".0" for consistency
+
             size_mb = round(self.get_size() / 1024 / 1024, 1)
             self.set_warning(
                 # TRANSLATORS: {original_size} and {target_size} represent

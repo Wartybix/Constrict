@@ -16,7 +16,8 @@ blueprints = custom_target('blueprints',
     'gtk/shortcuts-dialog.blp',
     'window.blp',
     'sources_row.blp',
-    'current_attempt_box.blp'
+    'current_attempt_box.blp',
+    'drag_overlay.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
@@ -73,7 +74,8 @@ constrict_sources = [
   'preferences_dialog.py',
   'attempt_fail_box.py',
   'progress_popover_box.py',
-  'current_attempt_box.py'
+  'current_attempt_box.py',
+  'drag_overlay.py'
 ]
 
 install_data(constrict_sources, install_dir: moduledir)

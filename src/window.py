@@ -25,6 +25,7 @@ from constrict.sources_row import SourcesRow
 from constrict.sources_list_box import SourcesListBox
 from constrict.error_dialog import ErrorDialog
 from constrict.current_attempt_box import CurrentAttemptBox
+from constrict.drag_overlay import DragOverlay
 from constrict import PREFIX
 import threading
 import subprocess
@@ -33,8 +34,6 @@ import os
 from typing import Any, List
 
 # TODO: future feature -- add pause button?
-
-# TODO: Improve DND border
 
 @Gtk.Template(resource_path=f'{PREFIX}/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):
@@ -170,13 +169,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.set_fps_mode(fps_mode)
         self.set_video_codec(video_codec)
 
-        content = Gdk.ContentFormats.new_for_gtype(Gdk.FileList)
-        target = Gtk.DropTarget(formats=content, actions=Gdk.DragAction.COPY)
-        target.connect('drop', self.on_drop)
-        target.connect('enter', self.on_enter)
-
-        self.view_stack.add_controller(target)
-
         # TRANSLATORS: 'FPS' meaning 'frames per second'.
         # {} represents the FPS value, for example 30 or 60.
         # Please use U+202F Narrow no-break space (' ') between value and unit.
@@ -224,6 +216,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
 
+    @Gtk.Template.Callback()
     def on_drop(
         self,
         drop_target: Gtk.DropTarget,
@@ -238,16 +231,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
         files: List[Gio.File] = value.get_files()
 
         self.stage_videos(files)
-
-    def on_enter(
-        self,
-        drop_target: Gtk.DropTarget,
-        x: int,
-        y: int
-    ) -> int:
-        # Custom code...
-        # Tell the callee to continue
-        return Gdk.DragAction.COPY
 
     def set_controls_lock(self, is_locked: bool, daemon: bool) -> None:
         """ Set whether to make most of the window's controls like compression

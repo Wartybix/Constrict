@@ -182,8 +182,15 @@ class ConstrictApplication(Adw.Application):
             ]
         )
         about.add_acknowledgement_section(
-            _('Circular progress indicator (C version) by'),
+            _('Circular progress indicator design by'),
             ['Christian Hergert https://gitlab.gnome.org/chergert']
+        )
+        about.add_acknowledgement_section(
+            _('Drag overlay design by'),
+            [
+                'Sophie Herold https://gitlab.gnome.org/sophie-h',
+                'Sam Hewitt https://gitlab.gnome.org/snwh'
+            ]
         )
         # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
         about.set_translator_credits(_('translator-credits'))

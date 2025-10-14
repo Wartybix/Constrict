@@ -9,3 +9,22 @@
   color: color-mix(in srgb, var(--window-fg-color) 40%, transparent);
 }
 
+/* Drag overlay, from Loupe */
+/* https://gitlab.gnome.org/GNOME/loupe/-/blob/b59a69b2cce84aff2d43221d7b8771d2104e9e7e/data/resources/style.css */
+.overlay-status {
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-bg-color) 8%, transparent);
+  /* Same color for border as for icon and label */
+  /* Probably due to a GTK bug, this currently does not give the exact same color */
+  border: 2px dashed color-mix(in srgb, currentColor var(--dim-opacity), transparent);
+  border-radius: 2px;
+  margin: 12px;
+}
+
+.overlay-status label {
+  opacity: var(--dim-opacity);
+}
+
+.drop-widget {
+  box-shadow: none;
+}

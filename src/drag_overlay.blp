@@ -1,0 +1,24 @@
+using Gtk 4.0;
+using Adw 1;
+
+// TODO: Don't show icon when window is too small?
+
+template $DragOverlay: Adw.Bin {
+  Overlay overlay {
+    [overlay]
+    Revealer revealer {
+      [child]
+      Adw.Bin {
+        styles ["background"]
+
+        [child]
+        Adw.StatusPage {
+          title: _("Drop Videos to Import");
+          icon-name: "video-x-generic-symbolic";
+
+          styles ["overlay-status"]
+        }
+      }
+    }
+  }
+}

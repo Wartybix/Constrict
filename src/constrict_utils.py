@@ -565,6 +565,8 @@ def get_audio_bitrate(file_input: str) -> int:
             # Return a high bitrate to be safe.
             return 96000
 
+# FIXME: Some resolutions shrunk unfairly?
+
 def get_encode_settings(
     target_size_MiB: float,
     fps_mode: int,
