@@ -19,8 +19,6 @@ class DragOverlay(Adw.Bin):
 
     __gtype_name__ = "DragOverlay"
 
-    # _drop_target: Gtk.DropTarget | None = None
-
     drop_target = Gtk.Template.Child()
     overlay = Gtk.Template.Child()
     revealer = Gtk.Template.Child()
