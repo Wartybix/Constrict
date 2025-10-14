@@ -852,6 +852,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
             staged_rows.append(staged_row)
 
         for mime in unsupported_mimes:
+            # TRANSLATORS: {desc} is the description of a mime type.
+            # {mime} is the mime type itself.
             label = Gtk.Label.new(_("{desc} ({mime}) is not supported").format(
                 mime = mime,
                 desc = Gio.content_type_get_description(mime)

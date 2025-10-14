@@ -6,7 +6,7 @@ data/io.github.wartybix.Constrict.gschema.xml.in
 src/main.py
 src/window.py
 src/window.blp
-src/gtk/help-overlay.blp
+src/gtk/shortcuts-dialog.blp
 src/sources_row.py
 src/sources_row.blp
 src/sources_list_box.blp
@@ -18,3 +18,4 @@ src/attempt_fail_box.py
 src/current_attempt_box.py
 src/current_attempt_box.blp
 src/constrict_utils.py
+src/drag_overlay.blp

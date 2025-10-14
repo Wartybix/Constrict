@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-09-11 20:14+0100\n"
+"POT-Creation-Date: 2025-10-14 11:39+0100\n"
 "PO-Revision-Date: 2025-09-12 23:08+0300\n"
 "Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
 "Language-Team: \n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Poedit 3.7\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/main.py:160
-#: src/window.py:356 src/window.blp:16
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.py:342
+#: src/window.blp:16 src/window.blp:42 src/window.blp:97
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -121,7 +121,7 @@ msgstr "Удобный для мобильных устройств пользо
 msgid "Compression settings in the mobile friendly UI"
 msgstr "Удобный для мобильных устройств пользовательский интерфейс"
 
-#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:83
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:125
 msgid "Framerate Limit"
 msgstr "Предел частоты кадров"
 
@@ -147,23 +147,28 @@ msgstr "сжато"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #. Please use ‘’ characters instead of '', if applicable to your language.
-#: src/main.py:176
+#: src/main.py:178
 #, python-brace-format
 msgid "‘{}’ repository by"
 msgstr "‘{}’ репозиторий"
 
-#: src/main.py:183
-msgid "Circular progress indicator (C version) by"
+#: src/main.py:185
+#, fuzzy
+msgid "Circular progress indicator design by"
 msgstr "Круговой индикатор прогресса (версия C)"
 
-#: src/main.py:187
+#: src/main.py:189
+msgid "Drag overlay design by"
+msgstr ""
+
+#: src/main.py:196
 msgid "translator-credits"
 msgstr "Anton Palgunov https://github.com/Toxblh/"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
 #. Please use U+202F Narrow no-break space (' ') between value and unit.
-#: src/window.py:182
+#: src/window.py:175
 #, python-brace-format
 msgid "{} FPS"
 msgstr "{} FPS"
@@ -171,7 +176,7 @@ msgstr "{} FPS"
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer. Please use U+202F narrow no-break space (' ') between
 #. the {} and translated equivalent of 'FPS'.
-#: src/window.py:191
+#: src/window.py:184
 #, python-brace-format
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
@@ -182,7 +187,7 @@ msgstr ""
 
 #. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
 #. no-break space (' ') between {} and '%'.
-#: src/window.py:200
+#: src/window.py:193
 #, python-brace-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -196,14 +201,14 @@ msgstr ""
 "значения, что увеличит время сжатия. Рекомендуется допуск {} % или более."
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
-#: src/window.py:205 src/sources_row.py:466 src/sources_row.py:496
-#: src/sources_row.py:499 src/sources_row.py:516 src/attempt_fail_box.py:98
+#: src/window.py:198 src/sources_row.py:508 src/sources_row.py:540
+#: src/sources_row.py:543 src/sources_row.py:560 src/attempt_fail_box.py:98
 #: src/attempt_fail_box.py:109
 msgid "MiB"
 msgstr ""
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:208
+#: src/window.py:201
 #, python-brace-format
 msgid "Target _Size ({})"
 msgstr "Целевой _Размер ({})"
@@ -211,7 +216,7 @@ msgstr "Целевой _Размер ({})"
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:329
+#: src/window.py:315
 #, python-brace-format
 msgid "Processing “{}”"
 msgstr "Обработка “{}”"
@@ -219,7 +224,7 @@ msgstr "Обработка “{}”"
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:335
+#: src/window.py:321
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Обработано видео"
@@ -227,7 +232,7 @@ msgstr "{index}/{total} Обработано видео"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to. Please use “” instead of "", if applicable to your
 #. language.
-#: src/window.py:346
+#: src/window.py:332
 #, python-brace-format
 msgid "Exporting to “{}”"
 msgstr "Экспорт в “{}”"
@@ -235,91 +240,98 @@ msgstr "Экспорт в “{}”"
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued. Please use “” instead of '', if applicable to your
 #. language.
-#: src/window.py:362
+#: src/window.py:348
 #, python-brace-format
 msgid "“{}” Queued"
 msgstr "“{}” В очереди"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:366
+#: src/window.py:352
 #, python-brace-format
 msgid "{} Videos Queued"
 msgstr "{} Видео в очереди"
 
-#: src/window.py:497
+#: src/window.py:485
 msgid "Stop Compression?"
 msgstr "Остановить сжатие?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:501
+#: src/window.py:489
 #, python-brace-format
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Достигнутый прогресс сжатия “{}” будет безвозвратно утерян."
 
-#: src/window.py:507
+#: src/window.py:495
 msgid "_Cancel"
 msgstr "_Отмена"
 
-#: src/window.py:508
+#: src/window.py:496
 msgid "_Stop"
 msgstr "_Стоп"
 
-#: src/window.py:562 src/window.py:802
+#: src/window.py:550 src/window.py:790
 msgid "Compression Complete"
 msgstr "Сжатие завершено"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
 #. Please use “” instead of "", if applicable to your language.
-#: src/window.py:570
+#: src/window.py:558
 #, python-brace-format
 msgid "“{}” processed"
 msgstr "“{}” обработано"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:575
+#: src/window.py:563
 #, python-brace-format
 msgid "{} files processed"
 msgstr "{} файлов обработано"
 
-#: src/window.py:586
+#: src/window.py:574
 msgid "Open Export Directory"
 msgstr "Открыть каталог Экспорта"
 
-#: src/window.py:643
+#: src/window.py:631
 msgid "Videos are being compressed"
 msgstr "Видео сжимаются"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
 #. instead of '...', if applicable to your language
-#: src/window.py:665
+#: src/window.py:653
 msgid "Analyzing…"
 msgstr "Анализ…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:761
+#: src/window.py:749
 #, python-brace-format
 msgid "Error compressing “{}”"
 msgstr "Ошибка сжатия “{}”"
 
-#: src/window.py:764
+#: src/window.py:752
 msgid "View _Details"
 msgstr "Посмотреть _Детали"
 
-#: src/window.py:798
+#: src/window.py:786
 msgid "Compression Canceled"
 msgstr "Сжатие отменено"
 
-#: src/window.py:887
+#. TRANSLATORS: {desc} is the description of a mime type.
+#. {mime} is the mime type itself.
+#: src/window.py:857
+#, python-brace-format
+msgid "{desc} ({mime}) is not supported"
+msgstr ""
+
+#: src/window.py:892
 msgid "Videos"
 msgstr "Видео"
 
-#: src/window.py:890
+#: src/window.py:895
 msgid "Pick Videos"
 msgstr "Выберите видео"
 
@@ -339,148 +351,152 @@ msgstr "_Горячие клавиши"
 msgid "_About Constrict"
 msgstr "О Constrict"
 
-#: src/window.blp:39
-msgid "Toggle Settings Pane"
-msgstr "Переключить панель настроек"
-
-#: src/window.blp:48
+#: src/window.blp:49 src/window.blp:264
 msgid "Main Menu"
 msgstr "Основное Меню"
 
-#: src/window.blp:88 src/window.blp:166 src/preferences_dialog.blp:13
-#: src/preferences_dialog.blp:42
-msgid "More Information"
-msgstr "Больше информации"
-
-#: src/window.blp:109
-msgid "_Automatic"
-msgstr "_Автоматически"
-
-#: src/window.blp:111
-msgid "Use the highest framerate without sacrificing resolution"
-msgstr "Используйте самую высокую частоту кадров, не жертвуя разрешением"
-
-#: src/window.blp:122
-msgid "Ensure higher image clarity"
-msgstr "Обеспечить более высокую четкость изображения"
-
-#: src/window.blp:133
-msgid "Ensure smoother motion"
-msgstr "Обеспечить более плавное движение"
-
-#: src/window.blp:143
-msgid "Encoding Options"
-msgstr "Параметры кодирования"
-
-#: src/window.blp:146
-msgid "_Video Codec"
-msgstr "_Видео кодек"
-
-#: src/window.blp:154
-msgid "Extra _Quality"
-msgstr "Экстра _Качество"
-
-#: src/window.blp:156
-msgid "Increase image quality at the cost of compression time"
-msgstr "Повышение качества изображения за счет времени сжатия"
-
-#: src/window.blp:161
-msgid "Advanced Options"
-msgstr "Расширенные параметры"
-
-#: src/window.blp:186
-msgid "_Tolerance (%)"
-msgstr "_Допуск (%)"
-
-#: src/window.blp:188
-msgid "How far end file sizes can be below target"
-msgstr "Насколько конечные размеры файлов могут быть ниже целевого значения"
-
-#: src/window.blp:208
+#: src/window.blp:67
 msgid "Compress Videos"
 msgstr "Сжатие видео"
 
-#: src/window.blp:209
+#: src/window.blp:68
 msgid "Drag and drop videos here"
 msgstr "Перетащите видео сюда"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:213
+#: src/window.blp:71
 msgid "_Open…"
 msgstr "_Открыть…"
 
+#: src/window.blp:130 src/window.blp:208 src/sources_row.py:480
+#: src/preferences_dialog.blp:13 src/preferences_dialog.blp:42
+msgid "More Information"
+msgstr "Больше информации"
+
+#: src/window.blp:151
+msgid "_Automatic"
+msgstr "_Автоматически"
+
+#: src/window.blp:153
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Используйте самую высокую частоту кадров, не жертвуя разрешением"
+
+#: src/window.blp:164
+msgid "Ensure higher image clarity"
+msgstr "Обеспечить более высокую четкость изображения"
+
+#: src/window.blp:175
+msgid "Ensure smoother motion"
+msgstr "Обеспечить более плавное движение"
+
+#: src/window.blp:185
+msgid "Encoding Options"
+msgstr "Параметры кодирования"
+
+#: src/window.blp:188
+msgid "_Video Codec"
+msgstr "_Видео кодек"
+
+#: src/window.blp:196
+msgid "Extra _Quality"
+msgstr "Экстра _Качество"
+
+#: src/window.blp:198
+msgid "Increase image quality at the cost of compression time"
+msgstr "Повышение качества изображения за счет времени сжатия"
+
+#: src/window.blp:203
+msgid "Advanced Options"
+msgstr "Расширенные параметры"
+
+#: src/window.blp:228
+msgid "_Tolerance (%)"
+msgstr "_Допуск (%)"
+
+#: src/window.blp:230
+msgid "How far end file sizes can be below target"
+msgstr "Насколько конечные размеры файлов могут быть ниже целевого значения"
+
+#: src/window.blp:255
+msgid "Toggle Settings Pane"
+msgstr "Переключить панель настроек"
+
 #. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-#: src/window.blp:234
+#: src/window.blp:273
 msgid "Issues with video sources — fix before compressing"
 msgstr "Проблемы с некоторыми видео — исправьте перед сжатием"
 
-#: src/window.blp:251
+#: src/window.blp:299
 msgid "Video Sources"
 msgstr "Источники видео"
 
-#: src/window.blp:255
+#: src/window.blp:303
 msgid "_Clear All"
 msgstr "Сброс"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:279
+#: src/window.blp:326
 msgid "_Export To…"
 msgstr "_Экспорт в…"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:299
+#: src/window.blp:343
 msgid "_Cancel…"
 msgstr "_Отмена…"
 
-#: src/gtk/help-overlay.blp:11
+#: src/gtk/shortcuts-dialog.blp:6
 msgctxt "shortcut window"
 msgid "Video Management"
 msgstr "Управление видео"
 
-#: src/gtk/help-overlay.blp:14
+#: src/gtk/shortcuts-dialog.blp:9
 msgctxt "shortcut window"
 msgid "Open"
 msgstr "Открыть"
 
-#: src/gtk/help-overlay.blp:19
+#: src/gtk/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Export"
 msgstr "Экспорт"
 
-#: src/gtk/help-overlay.blp:25
+#: src/gtk/shortcuts-dialog.blp:20
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Общие"
 
-#: src/gtk/help-overlay.blp:28
+#: src/gtk/shortcuts-dialog.blp:23
 msgctxt "shortcut window"
 msgid "Toggle Settings Pane"
 msgstr "Переключить панель настроек"
 
-#: src/gtk/help-overlay.blp:33
+#: src/gtk/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Горячие клавиши"
 
-#: src/gtk/help-overlay.blp:38
+#: src/gtk/shortcuts-dialog.blp:33
 msgctxt "shortcut window"
 msgid "Close Window"
 msgstr "Закрыть окно"
 
-#: src/gtk/help-overlay.blp:43
+#: src/gtk/shortcuts-dialog.blp:38
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выход"
 
-#: src/gtk/help-overlay.blp:48
+#: src/gtk/shortcuts-dialog.blp:43
 msgctxt "shortcut window"
 msgid "Show Preferences"
 msgstr "Показать Настройки"
 
+#: src/sources_row.py:457 src/sources_row.blp:44 src/sources_row.blp:57
+msgid "View Error Details"
+msgstr "Просмотреть подробности ошибки"
+
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MB'. Please use U+202F
 #. narrow no-break space (' ') between size and unit.
-#: src/sources_row.py:463
+#: src/sources_row.py:505
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr "Видео сжато до {size} {unit}."
@@ -489,7 +505,7 @@ msgstr "Видео сжато до {size} {unit}."
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'. Please use U+202F Narrow no-break
 #. space (' ') between values and units.
-#: src/sources_row.py:492
+#: src/sources_row.py:536
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -502,7 +518,7 @@ msgstr ""
 #. a file size unit like 'MB'.
 #. Please use U+202F Narrow no-break space (' ') between value
 #. and unit.
-#: src/sources_row.py:514
+#: src/sources_row.py:558
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "Целевой размер ({size} {unit}) слишком мал для этого файла."
@@ -519,27 +535,23 @@ msgstr "Передвинуть _вниз"
 msgid "_Remove"
 msgstr "_Удалить"
 
-#: src/sources_row.blp:44 src/sources_row.blp:55 src/sources_row.blp:79
-msgid "View Error Details"
-msgstr "Просмотреть подробности ошибки"
-
-#: src/sources_row.blp:61
+#: src/sources_row.blp:63
 msgid "Cannot load video. It may be missing or corrupted."
 msgstr "Не удаётся загрузить видео. Возможно, оно отсутствует или повреждено."
 
-#: src/sources_row.blp:102
+#: src/sources_row.blp:100
 msgid "View Compression Progress"
 msgstr "Просмотр хода сжатия"
 
-#: src/sources_row.blp:130
+#: src/sources_row.blp:128
 msgid "More Details"
 msgstr "Больше информации"
 
-#: src/sources_row.blp:149
+#: src/sources_row.blp:147
 msgid "Show File Location"
 msgstr "Показать расположение файла"
 
-#: src/sources_row.blp:161
+#: src/sources_row.blp:159
 msgid "View More"
 msgstr "Больше информации"
 
@@ -753,7 +765,7 @@ msgstr "{percentage} — осталось около {time_shown}"
 msgid "Initializing…"
 msgstr "Инициализация…"
 
-#: src/constrict_utils.py:762
+#: src/constrict_utils.py:773
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
@@ -761,11 +773,7 @@ msgstr ""
 "Constrict: Не удалось прочитать входной файл. Он был перемещен или удален "
 "перед сжатием?"
 
-#: src/constrict_utils.py:769
-msgid "Constrict: File already meets the target size."
-msgstr "Constrict: Файл уже соответствует целевому размеру."
-
-#: src/constrict_utils.py:780
+#: src/constrict_utils.py:796
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -773,7 +781,7 @@ msgstr ""
 "Constrict: Не удалось получить свойства видео. Исходное видео может "
 "отсутствовать или быть повреждено."
 
-#: src/constrict_utils.py:787
+#: src/constrict_utils.py:803
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
@@ -781,7 +789,7 @@ msgstr ""
 "Constrict: Не удалось создать экспортированный файл. Файл с "
 "зарезервированным именем уже существует."
 
-#: src/constrict_utils.py:789
+#: src/constrict_utils.py:805
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
@@ -789,7 +797,7 @@ msgstr ""
 "Constrict: Не удалось создать экспортированный файл. Недостаточно прав для "
 "создания файла по указанному пути экспорта."
 
-#: src/constrict_utils.py:854
+#: src/constrict_utils.py:870
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
@@ -797,12 +805,19 @@ msgstr ""
 "Constrict: Битрейт видео слишком низкий (<5 кбит/с). Целевой размер может "
 "быть слишком мал для этого файла."
 
-#: src/constrict_utils.py:899
+#: src/constrict_utils.py:915
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
 "Constrict: Не удаётся прочитать выходной файл. Он был перемещён или удалён в "
 "процессе сжатия?"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr ""
+
+#~ msgid "Constrict: File already meets the target size."
+#~ msgstr "Constrict: Файл уже соответствует целевому размеру."
 
 #~ msgid "GApplication local option handling by"
 #~ msgstr "Обработка локальных опций GApplication"
