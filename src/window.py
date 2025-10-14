@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, Gdk, Gio, GLib, GObject
+from gi.repository import Adw, Gtk, Gdk, Gio, GLib, GObject, Pango
 from constrict.constrict_utils import compress
 from constrict.shared import get_tmp_dir, update_ui
 from constrict.enums import FpsMode, VideoCodec, SourceState
@@ -812,6 +812,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         ))
 
         staged_rows = []
+        unsupported_mimes = set()
 
         for video in video_list:
             video_path = video.get_path()
@@ -823,14 +824,15 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 'standard::display-name,standard::content-type',
                 Gio.FileQueryInfoFlags.NONE
             )
-            content_type = info.get_content_type()
+            mime_type = info.get_content_type()
 
-            if not content_type:
+            if not mime_type:
                 continue
 
-            is_video = content_type.startswith('video/') or content_type == 'image/gif'
+            is_video = mime_type.startswith('video/') or mime_type == 'image/gif'
 
             if not is_video:
+                unsupported_mimes.add(mime_type)
                 continue
 
             display_name = info.get_display_name() if info else video.get_basename()
@@ -838,7 +840,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             staged_row = SourcesRow(
                 video.get_path(),
                 display_name,
-                content_type,
+                mime_type,
                 video.hash(),
                 self.get_target_size,
                 self.get_fps_mode,
@@ -848,6 +850,19 @@ class ConstrictWindow(Adw.ApplicationWindow):
             )
 
             staged_rows.append(staged_row)
+
+        for mime in unsupported_mimes:
+            label = Gtk.Label.new(_("{desc} ({mime}) is not supported").format(
+                mime = mime,
+                desc = Gio.content_type_get_description(mime)
+            ))
+            label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
+            label.add_css_class('heading')
+
+            toast = Adw.Toast()
+            toast.set_custom_title(label)
+
+            self.toast_overlay.add_toast(toast)
 
         self.sources_list_box.add_sources(staged_rows)
 
