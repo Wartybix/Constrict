@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-10-14 11:39+0100\n"
-"PO-Revision-Date: 2025-09-10 21:24+0100\n"
+"PO-Revision-Date: 2025-10-16 20:24+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -157,13 +157,12 @@ msgid "‘{}’ repository by"
 msgstr "Repository ‘{}’ di"
 
 #: src/main.py:185
-#, fuzzy
 msgid "Circular progress indicator design by"
-msgstr "Indicatore di avanzamento circolare (versione C) di"
+msgstr "Indicatore di avanzamento circolare progettato da"
 
 #: src/main.py:189
 msgid "Drag overlay design by"
-msgstr ""
+msgstr "Sovrapposizione di trascinamento progettato da"
 
 #: src/main.py:196
 msgid "translator-credits"
@@ -332,7 +331,7 @@ msgstr "Compressione Annullata"
 #: src/window.py:857
 #, python-brace-format
 msgid "{desc} ({mime}) is not supported"
-msgstr ""
+msgstr "{desc} ({mime}) non è supportato"
 
 #: src/window.py:892
 msgid "Videos"
@@ -822,7 +821,7 @@ msgstr ""
 
 #: src/drag_overlay.blp:14
 msgid "Drop Videos to Import"
-msgstr ""
+msgstr "Trascina i video da importare"
 
 #~ msgid "Constrict: File already meets the target size."
 #~ msgstr "Constrict: il file raggiunge già la dimensione obbiettivo."
