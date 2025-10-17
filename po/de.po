@@ -160,7 +160,7 @@ msgstr "Kreisförmiger Fortschrittsanzeiger (C-Version) von"
 
 #: src/main.py:189
 msgid "Drag overlay design by"
-msgstr ""
+msgstr "Drag-Overlay-Design von"
 
 #: src/main.py:196
 msgid "translator-credits"
@@ -328,7 +328,7 @@ msgstr "Komprimierung abgebrochen"
 #: src/window.py:857
 #, python-brace-format
 msgid "{desc} ({mime}) is not supported"
-msgstr ""
+msgstr "{desc} ({mime}) wird nicht unterstützt"
 
 #: src/window.py:892
 msgid "Videos"
@@ -816,7 +816,7 @@ msgstr ""
 
 #: src/drag_overlay.blp:14
 msgid "Drop Videos to Import"
-msgstr ""
+msgstr "Videos zum Importieren ablegen"
 
 #~ msgid "Constrict: File already meets the target size."
 #~ msgstr "Constrict: Datei entspricht bereits der Zielgröße."
