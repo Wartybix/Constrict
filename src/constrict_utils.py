@@ -50,6 +50,7 @@ def get_duration(file_input: str) -> float:
         ])[:-1]
     )
 
+# TODO: Fix kbps calculation?
 
 def get_res_preset(
     bitrate: int,
@@ -64,6 +65,8 @@ def get_res_preset(
     function should not return a resolution preset larger than the source
     resolution (i.e. an upscaled or stretched resolution).
     """
+
+    # TODO: Always keep resolution on basic transcode mode.
 
     source_pixels = source_width * source_height  # Get pixel count
     bitrate_kbps = bitrate / 1000  # Convert to kilobits
@@ -99,11 +102,12 @@ def get_res_preset(
     for bitrate_lower_bound, res_preset in bitrate_res_map.items():
         preset_width, preset_height = res_preset[0], res_preset[1]
         preset_pixels = preset_width * preset_height
-        if (
-            bitrate_kbps >= bitrate_lower_bound and
-            source_pixels >= preset_pixels
-        ):
-            return preset_height
+
+        if bitrate_kbps >= bitrate_lower_bound:
+            if source_pixels >= preset_pixels:
+                return preset_height
+            else:
+                break
 
     portrait = source_height > source_width
     return source_width if portrait else source_height
