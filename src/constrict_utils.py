@@ -66,8 +66,6 @@ def get_res_preset(
     resolution (i.e. an upscaled or stretched resolution).
     """
 
-    # TODO: Always keep resolution on basic transcode mode.
-
     source_pixels = source_width * source_height  # Get pixel count
     bitrate_kbps = bitrate / 1000  # Convert to kilobits
     """
@@ -581,7 +579,8 @@ def get_encode_settings(
     audio_bitrate: int,
     factor: float = 1.0,
     force_crush: bool = False,
-    locked_in_height: Optional[int] = None
+    locked_in_height: Optional[int] = None,
+    basic_transcode: bool = False
 ) -> Tuple[int, int, int, float, bool]:
     """ Return recommended encode settings for a given video and user
     preferences, in order to meet the target file size """
@@ -629,6 +628,17 @@ def get_encode_settings(
 
     preset_height = None
     max_fps = 60.0
+
+    # TODO: reverse bitrate calculation based on input res on basic transcode?
+
+    if basic_transcode:
+        return (
+            target_video_bitrate,
+            target_audio_bitrate,
+            width if height > width else height,
+            fps,
+            False
+        )
 
     if crush_mode:
         max_fps = 24.0
@@ -848,7 +858,8 @@ def compress(
             audio_bitrate,
             factor,
             force_crush,
-            lowest_res
+            lowest_res,
+            do_basic_transcode
         )
 
         target_video_bitrate, target_audio_bitrate, target_height, target_fps, res_reduction_applied = encode_settings
@@ -918,19 +929,26 @@ def compress(
         except FileNotFoundError:
             return _("Constrict: Cannot read output file. Was it moved or deleted mid-compression?")
         percent_of_target = (100 / target_bytes_limit) * after_size_bytes
+        percent_of_original = (100 / before_size_bytes) * after_size_bytes
 
         if percent_of_target < 100 and (do_basic_transcode or res_reduction_applied):
-            # The quality's not likely to get better than this, so quit now.
-            # Another attempt would be pointless.
-            break
+            if do_basic_transcode:
+                if percent_of_original >= 100 - tolerance:
+                    break
+            else:
+                # The quality's not likely to get better than this, so quit
+                # now. Another attempt would be pointless.
+                break
 
         if percent_of_target > 50:
             # Don't transcode to higher resolutions in future attempts
             lowest_res = target_height if height < width else target_width
 
+        # TODO: BT: change factor based on surpassing size limit or not meeting original size enough?
+
         # We multiply by 0.98 to prevent lots of attempts with sizes just
         # bordering above the target.
-        factor *= 0.98 * (100 / percent_of_target)
+        factor *= 0.98 * (100 / (percent_of_original if do_basic_transcode else percent_of_target))
 
     return after_size_bytes
 
