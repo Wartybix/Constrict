@@ -50,8 +50,6 @@ def get_duration(file_input: str) -> float:
         ])[:-1]
     )
 
-# TODO: Fix kbps calculation?
-
 def get_res_preset(
     bitrate: int,
     source_width: int,
