@@ -66,8 +66,6 @@ def get_res_preset(
     resolution (i.e. an upscaled or stretched resolution).
     """
 
-    # TODO: Always keep resolution on basic transcode mode.
-
     source_pixels = source_width * source_height  # Get pixel count
     bitrate_kbps = bitrate / 1000  # Convert to kilobits
     """
@@ -569,8 +567,6 @@ def get_audio_bitrate(file_input: str) -> int:
             # Return a high bitrate to be safe.
             return 96000
 
-# FIXME: Some resolutions shrunk unfairly?
-
 def get_encode_settings(
     target_size_MiB: float,
     fps_mode: int,
@@ -581,7 +577,8 @@ def get_encode_settings(
     audio_bitrate: int,
     factor: float = 1.0,
     force_crush: bool = False,
-    locked_in_height: Optional[int] = None
+    locked_in_height: Optional[int] = None,
+    basic_transcode: bool = False
 ) -> Tuple[int, int, int, float, bool]:
     """ Return recommended encode settings for a given video and user
     preferences, in order to meet the target file size """
@@ -629,6 +626,15 @@ def get_encode_settings(
 
     preset_height = None
     max_fps = 60.0
+
+    if basic_transcode:
+        return (
+            target_video_bitrate,
+            target_audio_bitrate,
+            width if height > width else height,
+            fps,
+            False
+        )
 
     if crush_mode:
         max_fps = 24.0
@@ -848,7 +854,8 @@ def compress(
             audio_bitrate,
             factor,
             force_crush,
-            lowest_res
+            lowest_res,
+            do_basic_transcode
         )
 
         target_video_bitrate, target_audio_bitrate, target_height, target_fps, res_reduction_applied = encode_settings
@@ -920,9 +927,17 @@ def compress(
         percent_of_target = (100 / target_bytes_limit) * after_size_bytes
 
         if percent_of_target < 100 and (do_basic_transcode or res_reduction_applied):
-            # The quality's not likely to get better than this, so quit now.
-            # Another attempt would be pointless.
-            break
+            if do_basic_transcode:
+                percent_of_original = (100 / before_size_bytes) * after_size_bytes
+                if percent_of_original >= 100 - tolerance or attempt > 1:
+                    break
+
+                # Try to increase bitrate for 1 more attempt only.
+                percent_of_target = percent_of_original
+            else:
+                # The quality's not likely to get better than this, so quit
+                # now. Another attempt would be pointless.
+                break
 
         if percent_of_target > 50:
             # Don't transcode to higher resolutions in future attempts

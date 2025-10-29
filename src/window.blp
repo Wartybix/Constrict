@@ -29,6 +29,8 @@ template $ConstrictWindow: Adw.ApplicationWindow {
     }
   }
 
+  // TODO: Switch to AdwPreferencePages more?
+
   [content]
   Adw.ToastOverlay toast_overlay {
     Adw.ViewStack view_stack {
@@ -272,6 +274,8 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                   // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
                   title: _("Issues with video sources — fix before compressing");
                 }
+
+                // TODO: Remove AdwClamp?
 
                 $DragOverlay {
                   drop_target: drop_target_queue;
