@@ -67,6 +67,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
     fps_help_label = Gtk.Template.Child()
     fps_help_popover = Gtk.Template.Child()
     window_breakpoint = Gtk.Template.Child()
+    drop_target_queue = Gtk.Template.Child()
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -253,6 +254,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.export_action.set_enabled(not is_locked)
 
         self.sources_list_box.set_locked(is_locked, daemon)
+
+        drag_action = Gdk.DragAction.NONE if is_locked else Gdk.DragAction.COPY
+        self.drop_target_queue.set_actions(drag_action)
 
     def is_unchecked_checkbox(self, widget: Gtk.Widget) -> bool:
         """ Return whether the passed widget is an unchecked GtkCheckButton """
