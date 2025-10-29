@@ -71,24 +71,41 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/Wartybix/Constrict/blob/995809268a0f1a7428f448811098dadeb4fbfb13/screenshots/queued.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/queued.png?raw=true</image>
       <caption>Source videos queued for compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/995809268a0f1a7428f448811098dadeb4fbfb13/screenshots/compressing.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/compressing.png?raw=true</image>
       <caption>The application mid-compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/209eb5d8e275aaf49cc412c557fd568a123d7aa7/screenshots/queued_mobile.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/queued_mobile.png?raw=true</image>
       <caption>A mobile friendly UI</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/995809268a0f1a7428f448811098dadeb4fbfb13/screenshots/settings_mobile.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/settings_mobile.png?raw=true</image>
       <caption>Compression settings in the mobile friendly UI</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="25.10" date="2025-10-29">
+      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.10</url>
+      <description translate="no">
+        <p>Some new features and UI improvements:</p>
+        <ul>
+          <li>Update to GNOME 49 runtime.</li>
+          <li>Updated the UI to use a split view sidebar layout, in line with other GNOME apps.</li>
+          <li>Introduced the ability to set a target size above or equal to the original file target size without the app refusing the export. In this case, the app will just transcode the video while attempting to retain quality at the original file size. This is by no means “lossless” though.</li>
+          <li>Added Persian translation.</li>
+          <li>Fixed videos with unconventional resolutions having their resolutions reduced unnecessarily.</li>
+          <li>Fixed a crash when the framerate of a video source couldn't be determined.</li>
+          <li>Will now display a toast when attempting to import unsupported files either through drag-and-drop or the ‘Open With…’ dialog.</li>
+          <li>Added a drag-and-drop overlay to match that of Loupe.</li>
+          <li>Added an information popover to the ‘Hardware Acceleration’ section of the preferences, to better clarify cases where it won’t be used despite being enabled.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.8.1" date="2025-08-22">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8.1</url>
       <description translate="no">
