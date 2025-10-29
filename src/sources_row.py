@@ -525,8 +525,6 @@ class SourcesRow(Adw.ActionRow):
         if self.state == SourceState.BROKEN:
             return
         elif self.get_size() < target_size * 1024 * 1024:
-            # TODO: don't show ".0" for consistency
-
             size_mb = round(self.get_size() / 1024 / 1024, 1)
             self.set_warning(
                 # TRANSLATORS: {original_size} and {target_size} represent
@@ -591,7 +589,8 @@ class SourcesRow(Adw.ActionRow):
         target_size_mib = target_size_getter()
         fps_mode = fps_mode_getter()
 
-        target_size_cap_mib = target_size_mib if original_size_mib > target_size_mib else original_size_mib
+        basic_transcode = target_size_mib > original_size_mib
+        target_size_cap_mib = original_size_mib if basic_transcode else target_size_mib
 
         encode_settings = get_encode_settings(
             target_size_cap_mib,
@@ -600,7 +599,11 @@ class SourcesRow(Adw.ActionRow):
             height,
             assumed_fps,
             duration,
-            audio_bitrate
+            audio_bitrate,
+            1.0,
+            False,
+            None,
+            basic_transcode
         )
 
         video_bitrate, _, target_pixels, target_fps, _ = encode_settings
