@@ -29,8 +29,6 @@ template $ConstrictWindow: Adw.ApplicationWindow {
     }
   }
 
-  // TODO: Switch to AdwPreferencePages more?
-
   [content]
   Adw.ToastOverlay toast_overlay {
     Adw.ViewStack view_stack {
@@ -100,145 +98,136 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 }
               }
 
-              content: ScrolledWindow {
-                Box {
-                  orientation: vertical;
-                  spacing: 12;
-                  margin-bottom: 12;
-                  margin-top: 12;
-                  margin-start: 12;
-                  margin-end: 12;
+              content: Adw.PreferencesPage {
+                Adw.PreferencesGroup {
+                  Adw.SpinRow target_size_row {
+                    use-underline: true;
+                    numeric: true;
+                    adjustment: Adjustment target_size_input {
+                      lower: 1;
+                      upper: 999999;
+                      value: 10;
+                      page-increment: 10;
+                      step-increment: 1;
+                    };
+                  }
+                }
 
-                  Adw.PreferencesGroup {
-                    Adw.SpinRow target_size_row {
-                      use-underline: true;
-                      numeric: true;
-                      adjustment: Adjustment target_size_input {
-                        lower: 1;
-                        upper: 999999;
-                        value: 10;
-                        page-increment: 10;
-                        step-increment: 1;
+                Adw.PreferencesGroup {
+                  title: _("Framerate Limit");
+
+                  [header-suffix]
+                  MenuButton {
+                    icon-name: "help-about-symbolic";
+                    tooltip-text: _("More Information");
+                    popover: Popover fps_help_popover {
+                      child: Label fps_help_label {
+                        halign: center;
+                        margin-start: 6;
+                        margin-end: 6;
+                        margin-top: 6;
+                        margin-bottom: 6;
+                        wrap: true;
+                        max-width-chars: 50;
+                        valign: center;
                       };
+                    };
+
+                    styles [
+                      "flat"
+                    ]
+                  }
+
+                  Adw.ActionRow auto_row {
+                    activatable-widget: auto_check_button;
+                    title: _("_Automatic");
+                    use-underline: true;
+                    subtitle: _("Use the highest framerate without sacrificing resolution");
+
+                    [prefix]
+                    CheckButton auto_check_button {
+                      active: true;
                     }
                   }
 
-                  Adw.PreferencesGroup {
-                    title: _("Framerate Limit");
+                  Adw.ActionRow clear_row {
+                    activatable-widget: clear_check_button;
+                    use-underline: true;
+                    subtitle: _("Ensure higher image clarity");
 
-                    [header-suffix]
-                    MenuButton {
-                      icon-name: "help-about-symbolic";
-                      tooltip-text: _("More Information");
-                      popover: Popover fps_help_popover {
-                        child: Label fps_help_label {
-                          halign: center;
-                          margin-start: 6;
-                          margin-end: 6;
-                          margin-top: 6;
-                          margin-bottom: 6;
-                          wrap: true;
-                          max-width-chars: 50;
-                          valign: center;
-                        };
-                      };
-
-                      styles [
-                        "flat"
-                      ]
-                    }
-
-                    Adw.ActionRow auto_row {
-                      activatable-widget: auto_check_button;
-                      title: _("_Automatic");
-                      use-underline: true;
-                      subtitle: _("Use the highest framerate without sacrificing resolution");
-
-                      [prefix]
-                      CheckButton auto_check_button {
-                        active: true;
-                      }
-                    }
-
-                    Adw.ActionRow clear_row {
-                      activatable-widget: clear_check_button;
-                      use-underline: true;
-                      subtitle: _("Ensure higher image clarity");
-
-                      [prefix]
-                      CheckButton clear_check_button {
-                        group: auto_check_button;
-                      }
-                    }
-
-                    Adw.ActionRow smooth_row {
-                      activatable-widget: smooth_check_button;
-                      use-underline: true;
-                      subtitle: _("Ensure smoother motion");
-
-                      [prefix]
-                      CheckButton smooth_check_button {
-                        group: auto_check_button;
-                      }
+                    [prefix]
+                    CheckButton clear_check_button {
+                      group: auto_check_button;
                     }
                   }
 
-                  Adw.PreferencesGroup {
-                    title: _("Encoding Options");
+                  Adw.ActionRow smooth_row {
+                    activatable-widget: smooth_check_button;
+                    use-underline: true;
+                    subtitle: _("Ensure smoother motion");
 
-                    Adw.ComboRow codec_dropdown {
-                      title: _("_Video Codec");
-                      use-underline: true;
-                      model: StringList {
-                        strings ["H.264", "H.265 (HEVC)", "AV1", "VP9"]
-                      };
-                    }
-
-                    Adw.SwitchRow extra_quality_toggle {
-                      title: _("Extra _Quality");
-                      use-underline: true;
-                      subtitle: _("Increase image quality at the cost of compression time");
+                    [prefix]
+                    CheckButton smooth_check_button {
+                      group: auto_check_button;
                     }
                   }
+                }
 
-                  Adw.PreferencesGroup {
-                    title: _("Advanced Options");
+                Adw.PreferencesGroup {
+                  title: _("Encoding Options");
 
-                    [header-suffix]
-                    MenuButton {
-                      icon-name: "help-about-symbolic";
-                      tooltip-text: _("More Information");
-                      popover: Popover adv_options_help_popover {
-                        child: Label adv_options_help_label {
-                          halign: center;
-                          margin-start: 6;
-                          margin-end: 6;
-                          margin-top: 6;
-                          margin-bottom: 6;
-                          wrap: true;
-                          max-width-chars: 50;
-                          valign: center;
-                        };
+                  Adw.ComboRow codec_dropdown {
+                    title: _("_Video Codec");
+                    use-underline: true;
+                    model: StringList {
+                      strings ["H.264", "H.265 (HEVC)", "AV1", "VP9"]
+                    };
+                  }
+
+                  Adw.SwitchRow extra_quality_toggle {
+                    title: _("Extra _Quality");
+                    use-underline: true;
+                    subtitle: _("Increase image quality at the cost of compression time");
+                  }
+                }
+
+                Adw.PreferencesGroup {
+                  title: _("Advanced Options");
+
+                  [header-suffix]
+                  MenuButton {
+                    icon-name: "help-about-symbolic";
+                    tooltip-text: _("More Information");
+                    popover: Popover adv_options_help_popover {
+                      child: Label adv_options_help_label {
+                        halign: center;
+                        margin-start: 6;
+                        margin-end: 6;
+                        margin-top: 6;
+                        margin-bottom: 6;
+                        wrap: true;
+                        max-width-chars: 50;
+                        valign: center;
                       };
+                    };
 
-                      styles [
-                        "flat"
-                      ]
-                    }
+                    styles [
+                      "flat"
+                    ]
+                  }
 
-                    Adw.SpinRow tolerance_row {
-                      title: _("_Tolerance (%)");
-                      use-underline: true;
-                      subtitle: _("How far end file sizes can be below target");
-                      numeric: true;
-                      adjustment: Adjustment tolerance_input {
-                        lower: 5;
-                        upper: 100;
-                        value: 10;
-                        page-increment: 10;
-                        step-increment: 1;
-                      };
-                    }
+                  Adw.SpinRow tolerance_row {
+                    title: _("_Tolerance (%)");
+                    use-underline: true;
+                    subtitle: _("How far end file sizes can be below target");
+                    numeric: true;
+                    adjustment: Adjustment tolerance_input {
+                      lower: 5;
+                      upper: 100;
+                      value: 10;
+                      page-increment: 10;
+                      step-increment: 1;
+                    };
                   }
                 }
               };
@@ -275,50 +264,35 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                   title: _("Issues with video sources — fix before compressing");
                 }
 
-                // TODO: Remove AdwClamp?
-
                 $DragOverlay {
+                  DropTarget drop_target_queue {
+                    formats: "GdkFileList";
+                    actions: copy;
+                    drop => $on_drop();
+                  }
+
+                  styles ["drop-widget"]
+
                   drop_target: drop_target_queue;
 
-                  child: ScrolledWindow {
-                    styles ["drop-widget"]
+                  child: Adw.PreferencesPage {
+                    Adw.PreferencesGroup {
+                      title: _("Video Sources");
 
-                    DropTarget drop_target_queue {
-                      formats: "GdkFileList";
-                      actions: copy;
-                      drop => $on_drop();
+                      [header-suffix]
+                      Button clear_all_button {
+                        label: _("_Clear All");
+                        use-underline: true;
+                        action-name: "win.clear_all";
+                        valign: center;
+
+                        styles ["flat"]
+                      }
+
+                      $SourcesListBox sources_list_box {
+                        vexpand: false;
+                      }
                     }
-
-                    child: Viewport {
-                      vexpand: true;
-                      child: Box {
-                        spacing: 12;
-                        margin-top: 24;
-                        margin-bottom: 24;
-                        margin-start: 12;
-                        margin-end: 12;
-                        orientation: vertical;
-                        Adw.Clamp {
-                          child: Adw.PreferencesGroup {
-                            title: _("Video Sources");
-
-                            [header-suffix]
-                            Button clear_all_button {
-                              label: _("_Clear All");
-                              use-underline: true;
-                              action-name: "win.clear_all";
-                              valign: center;
-
-                              styles ["flat"]
-                            }
-
-                            $SourcesListBox sources_list_box {
-                              vexpand: false;
-                            }
-                          };
-                        }
-                      };
-                    };
                   };
                 }
 
