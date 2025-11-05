@@ -191,6 +191,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.adv_options_help_label.set_label(
             # TRANSLATORS: {} represents an integer. Please use U+202F Narrow
             # no-break space (' ') between {} and '%'.
+            # xgettext:no-python-format
             _('Decreasing the tolerance maximizes image quality by reducing how much compressed file sizes can be under target. However, this can increase the number of attempts needed to meet the target, increasing compression time. A tolerance of {} % or more is recommended.')
                 .format(default_tolerance)
         )
