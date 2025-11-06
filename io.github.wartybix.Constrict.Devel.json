@@ -80,7 +80,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/totem-video-thumbnailer.git",
-                    "commit" : "d295d9db51955f824bba83e15cabbdfa5c6d1bf7"
+                    "commit" : "6cb399918571a97591ff5a4a5a41d8e46b11027a"
                 }
             ]
         },
