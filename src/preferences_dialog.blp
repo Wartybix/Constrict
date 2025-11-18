@@ -3,31 +3,11 @@ using Adw 1;
 
 template $PreferencesDialog: Adw.PreferencesDialog {
   title: _("Preferences");
-  content-width: 610;
 
   Adw.PreferencesPage {
-    Adw.PreferencesGroup {
+    Adw.PreferencesGroup hw_accel_group {
       title: _("Hardware Acceleration");
-
-      header-suffix: MenuButton {
-        tooltip-text: _("More Information");
-        icon-name: "help-about-symbolic";
-
-        popover: Popover hw_accel_info_popover {
-          child: Label hw_accel_info_label {
-            halign: center;
-            margin-start: 6;
-            margin-end: 6;
-            margin-top: 6;
-            margin-bottom: 6;
-            wrap: true;
-            max-width-chars: 50;
-            valign: center;
-          };
-        };
-
-        styles ["flat"]
-      };
+      description: _("Hardware acceleration is only used if your GPU supports encoding with the selected video codec, and “Extra Quality” is disabled.");
 
       Adw.SwitchRow gpu_encoding_row {
         title: _("GPU Encoding");
@@ -35,30 +15,8 @@ template $PreferencesDialog: Adw.PreferencesDialog {
       }
     }
 
-    Adw.PreferencesGroup {
+    Adw.PreferencesGroup suffix_group {
       title: _("Exported Video Suffix");
-
-      header-suffix: MenuButton {
-        tooltip-text: _("More Information");
-        icon-name: "help-about-symbolic";
-
-        popover: Popover suffix_info_popover {
-          child: Label suffix_info_label {
-            halign: center;
-            margin-start: 6;
-            margin-end: 6;
-            margin-top: 6;
-            margin-bottom: 6;
-            wrap: true;
-            max-width-chars: 50;
-            valign: center;
-          };
-        };
-
-        styles [
-          "flat",
-        ]
-      };
 
       Adw.EntryRow suffix_entry_row {
         title: _("Custom Suffix");
