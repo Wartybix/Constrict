@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-11-18 20:19+0000\n"
-"PO-Revision-Date: 2025-11-03 03:46+0000\n"
+"PO-Revision-Date: 2025-11-23 20:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -423,14 +423,13 @@ msgid "Hardware Acceleration"
 msgstr "Aceleración por hardware"
 
 #: src/preferences_dialog.blp:10
-#, fuzzy
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "La aceleración por hardware solo se utiliza si la GPU es compatible con la "
 "codificación con el códec de vídeo seleccionado y la opción ”Calidad extra” "
-"está desactivada."
+"está desactivada"
 
 #: src/preferences_dialog.blp:13
 msgid "GPU Encoding"

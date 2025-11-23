@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-11-18 20:19+0000\n"
-"PO-Revision-Date: 2025-10-16 20:24+0200\n"
+"PO-Revision-Date: 2025-11-23 20:35+0000\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -428,13 +428,12 @@ msgid "Hardware Acceleration"
 msgstr "Accelerazione hardware"
 
 #: src/preferences_dialog.blp:10
-#, fuzzy
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "L'accelerazione hardware viene utilizzata solo se la GPU supporta la "
-"codifica con il codec video selezionato e “Qualità extra” è disabilitata."
+"codifica con il codec video selezionato e “Qualità extra” è disabilitata"
 
 #: src/preferences_dialog.blp:13
 msgid "GPU Encoding"

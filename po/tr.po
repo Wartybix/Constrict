@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-11-18 20:19+0000\n"
-"PO-Revision-Date: 2025-11-05 18:14+0300\n"
+"PO-Revision-Date: 2025-11-23 20:36+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -422,13 +422,12 @@ msgid "Hardware Acceleration"
 msgstr "Donanım Hızlandırma"
 
 #: src/preferences_dialog.blp:10
-#, fuzzy
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Donanım hızlandırma, yalnızca ekran kartınız seçilen video kodlayıcı ile "
-"kodlamayı destekliyorsa ve “Ek Kalite” devre dışı bırakılmışsa kullanılır."
+"kodlamayı destekliyorsa ve “Ek Kalite” devre dışı bırakılmışsa kullanılır"
 
 #: src/preferences_dialog.blp:13
 msgid "GPU Encoding"
