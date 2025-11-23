@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-05 17:45+0300\n"
+"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
+"POT-Creation-Date: 2025-11-18 20:19+0000\n"
 "PO-Revision-Date: 2025-11-05 18:14+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -221,8 +221,6 @@ msgstr ""
 "Constrict: Video özellikleri alınamadı. Kaynak video eksik ya da bozuk "
 "olabilir."
 
-#. This should never happen if a unique file name has been passed to
-#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -270,10 +268,6 @@ msgstr "Başlatılıyor…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "{vid_br} {vid_br_unit} ({extra_details}) olarak sıkıştırılıyor"
 
-#. Acknowledgements: thank you to Nautilus for the ideas on where to set
-#. different thresholds for which time unit(s) to display. Particularly
-#. the 4 hour mark where minutes should no longer be displayed.
-#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #. Please use U+202F Narrow no-break space (' ') between {} and %, if
 #. applicable to your language.
@@ -415,7 +409,6 @@ msgstr "Dairesel ilerleme göstergesini tasarlayan"
 msgid "Drag overlay design by"
 msgstr "Sürükle genel tasarımı"
 
-#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:196
 msgid "translator-credits"
 msgstr "erdem uygun <uygun.erdem@proton.me>"
@@ -424,43 +417,36 @@ msgstr "erdem uygun <uygun.erdem@proton.me>"
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/preferences_dialog.blp:10
+#: src/preferences_dialog.blp:9
 msgid "Hardware Acceleration"
 msgstr "Donanım Hızlandırma"
 
-#: src/preferences_dialog.blp:13 src/preferences_dialog.blp:42
-#: src/sources_row.py:480 src/window.blp:121 src/window.blp:199
-msgid "More Information"
-msgstr "Daha Çok Bilgi"
-
-#: src/preferences_dialog.blp:33
-msgid "GPU Encoding"
-msgstr "Ekran Kartı İle Kodlama"
-
-#: src/preferences_dialog.blp:34
-msgid "Use the GPU to speed up encoding when available"
-msgstr "Mümkün olduğunda kodlamayı hızlandırmak için ekran kartı kullan"
-
-#: src/preferences_dialog.blp:39
-msgid "Exported Video Suffix"
-msgstr "Dışa Aktarılan Video Son Eki"
-
-#: src/preferences_dialog.blp:64
-msgid "Custom Suffix"
-msgstr "Özel Son Ek"
-
-#. Please use “” instead of "", if applicable to your language.
-#: src/preferences_dialog.py:45
+#: src/preferences_dialog.blp:10
+#, fuzzy
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality” is disabled."
+"selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Donanım hızlandırma, yalnızca ekran kartınız seçilen video kodlayıcı ile "
 "kodlamayı destekliyorsa ve “Ek Kalite” devre dışı bırakılmışsa kullanılır."
 
-#. TRANSLATORS: {} represents the value of the default suffix.
-#. Please use “” instead of "", if applicable to your language.
-#: src/preferences_dialog.py:51
+#: src/preferences_dialog.blp:13
+msgid "GPU Encoding"
+msgstr "Ekran Kartı İle Kodlama"
+
+#: src/preferences_dialog.blp:14
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Mümkün olduğunda kodlamayı hızlandırmak için ekran kartı kullan"
+
+#: src/preferences_dialog.blp:19
+msgid "Exported Video Suffix"
+msgstr "Dışa Aktarılan Video Son Eki"
+
+#: src/preferences_dialog.blp:22
+msgid "Custom Suffix"
+msgstr "Özel Son Ek"
+
+#: src/preferences_dialog.py:42
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
@@ -468,7 +454,7 @@ msgstr ""
 "Dışa aktarılan videoların dosya adlarında, ana ad ile uzantı arasında "
 "kullanılır. Özel son ek boş bırakılırsa, “{}” öntanımlı son eki kullanılır."
 
-#: src/preferences_dialog.py:95
+#: src/preferences_dialog.py:64
 msgid "Changes applied"
 msgstr "Değişiklikler uygulandı"
 
@@ -511,6 +497,10 @@ msgstr "Dosya Konumunu Göster"
 #: src/sources_row.blp:159
 msgid "View More"
 msgstr "Daha Çok Göster"
+
+#: src/sources_row.py:480 src/window.blp:121 src/window.blp:202
+msgid "More Information"
+msgstr "Daha Çok Bilgi"
 
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MB'. Please use U+202F
@@ -558,7 +548,7 @@ msgstr "_Klavye Kısayolları"
 msgid "_About Constrict"
 msgstr "Constrict _Hakkında"
 
-#: src/window.blp:49 src/window.blp:254
+#: src/window.blp:49 src/window.blp:257
 msgid "Main Menu"
 msgstr "Ana Menü"
 
@@ -583,66 +573,66 @@ msgstr "_Kendiliğinden"
 msgid "Use the highest framerate without sacrificing resolution"
 msgstr "Çözünürlükten ödün vermeden en yüksek kare hızını kullan"
 
-#: src/window.blp:155
+#: src/window.blp:156
 msgid "Ensure higher image clarity"
 msgstr "Daha yüksek görüntü netliği sağla"
 
-#: src/window.blp:166
+#: src/window.blp:168
 msgid "Ensure smoother motion"
 msgstr "Daha akıcı hareketler sağla"
 
-#: src/window.blp:176
+#: src/window.blp:179
 msgid "Encoding Options"
 msgstr "Kodlama Seçenekleri"
 
-#: src/window.blp:179
+#: src/window.blp:182
 msgid "_Video Codec"
 msgstr "_Video Kodlayıcı"
 
-#: src/window.blp:187
+#: src/window.blp:190
 msgid "Extra _Quality"
 msgstr "Ek _Kalite"
 
-#: src/window.blp:189
+#: src/window.blp:192
 msgid "Increase image quality at the cost of compression time"
 msgstr "Sıkıştırma süresi pahasına görüntü kalitesini artır"
 
-#: src/window.blp:194
+#: src/window.blp:197
 msgid "Advanced Options"
 msgstr "Gelişmiş Seçenekler"
 
-#: src/window.blp:219
+#: src/window.blp:222
 msgid "_Tolerance (%)"
 msgstr "_Tolerans (%)"
 
-#: src/window.blp:221
+#: src/window.blp:224
 msgid "How far end file sizes can be below target"
 msgstr "Son dosya boyutlarının hedefin ne kadar altında kalabileceği"
 
-#: src/window.blp:245
+#: src/window.blp:248
 msgid "Toggle Settings Pane"
 msgstr "Ayarlar Bölmesini Aç/Kapa"
 
 #. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-#: src/window.blp:262
+#: src/window.blp:265
 msgid "Issues with video sources — fix before compressing"
 msgstr "Video kaynaklarıyla ilgili sorunlar, sıkıştırmadan önce düzeltin"
 
-#: src/window.blp:278
+#: src/window.blp:281
 msgid "Video Sources"
 msgstr "Video Kaynakları"
 
-#: src/window.blp:282
+#: src/window.blp:285
 msgid "_Clear All"
 msgstr "Tümünü _Temizle"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:302
+#: src/window.blp:305
 msgid "_Export To…"
 msgstr "Dışa _Aktar…"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:319
+#: src/window.blp:322
 msgid "_Cancel…"
 msgstr "İ_ptal…"
 
