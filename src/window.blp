@@ -95,6 +95,14 @@ template $ConstrictWindow: Adw.ApplicationWindow {
               Adw.WindowTitle {
                 title: _("Constrict");
               }
+
+              [end]
+              MenuButton {
+                primary: true;
+                icon-name: "open-menu-symbolic";
+                tooltip-text: _("Main Menu");
+                menu-model: primary_menu;
+              }
             }
 
             content: Adw.PreferencesPage {
@@ -248,14 +256,6 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 tooltip-text: _("Toggle Settings Pane");
                 active: true;
                 visible: false;
-              }
-
-              [end]
-              MenuButton {
-                primary: true;
-                icon-name: "open-menu-symbolic";
-                tooltip-text: _("Main Menu");
-                menu-model: primary_menu;
               }
             }
 
