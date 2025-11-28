@@ -432,14 +432,23 @@ class SourcesRow(Adw.ActionRow):
             raise Exception('Unknown thumbnailer set. Whoopsie daisies.')
 
         thumb_file = Gio.File.new_for_path(thumb_filepath)
-        loader = Gly.Loader.new(thumb_file)
-        image = loader.load()
 
-        if image:
-            frame = image.next_frame()
-            if frame:
-                texture = GlyGtk4.frame_get_texture(frame)
-                update_ui(self.thumbnail.set_from_paintable, texture, daemon)
+        if thumb_file.query_exists():
+            loader = Gly.Loader.new(thumb_file)
+            image = loader.load()
+
+            if image:
+                frame = image.next_frame()
+                if frame:
+                    texture = GlyGtk4.frame_get_texture(frame)
+                    update_ui(
+                        self.thumbnail.set_from_paintable,
+                        texture,
+                        daemon
+                    )
+                    return
+
+        update_ui(self.thumbnail.set_from_icon_name, generic_icon, daemon)
 
     def get_size(self) -> int:
         """ Get the file size of the input video this row represents """
