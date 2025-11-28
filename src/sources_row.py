@@ -25,7 +25,10 @@
 # - https://gitlab.gnome.org/GNOME/gnome-music/-/blob/a79f46a5d81cd48d26c55a6bf10fcd48c16e63ab/data/ui/SongWidget.ui
 # - https://gitlab.gnome.org/GNOME/gnome-music/-/blob/a79f46a5d81cd48d26c55a6bf10fcd48c16e63ab/gnomemusic/widgets/songwidget.py
 
-from gi.repository import Adw, Gtk, Gio, GLib, Gdk
+import gi
+gi.require_version('Gly', '2')
+gi.require_version('GlyGtk4', '2')
+from gi.repository import Adw, Gtk, Gio, GLib, Gdk, Gly, GlyGtk4
 from pathlib import Path
 from constrict.shared import get_tmp_dir, update_ui
 from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration, get_audio_bitrate
@@ -409,13 +412,13 @@ class SourcesRow(Adw.ActionRow):
             )
             return
 
-        thumb_file = str(tmp_dir / f'{file_hash}.jpg')
+        thumb_filepath = str(tmp_dir / f'{file_hash}.jpg')
 
         if thumbnailer == Thumbnailer.TOTEM:
             subprocess.run([
                 bin_totem,
                 self.video_path,
-                thumb_file
+                thumb_filepath
             ])
         elif thumbnailer == Thumbnailer.FFMPEG:
             subprocess.run([
@@ -423,12 +426,20 @@ class SourcesRow(Adw.ActionRow):
                 '-i',
                 self.video_path,
                 '-o',
-                thumb_file
+                thumb_filepath
             ])
         else:
             raise Exception('Unknown thumbnailer set. Whoopsie daisies.')
 
-        update_ui(self.thumbnail.set_from_file, thumb_file, daemon)
+        thumb_file = Gio.File.new_for_path(thumb_filepath)
+        loader = Gly.Loader.new(thumb_file)
+        image = loader.load()
+
+        if image:
+            frame = image.next_frame()
+            if frame:
+                texture = GlyGtk4.frame_get_texture(frame)
+                update_ui(self.thumbnail.set_from_paintable, texture, daemon)
 
     def get_size(self) -> int:
         """ Get the file size of the input video this row represents """
