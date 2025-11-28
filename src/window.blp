@@ -268,50 +268,54 @@ template $ConstrictWindow: Adw.ApplicationWindow {
               }
             }
 
-            [top] // TODO: fix weird banner
-            Adw.Banner warning_banner {
-              // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-              title: _("Issues with video sources — fix before compressing");
-            }
+            content: Box {
+              orientation: vertical;
 
-            content: Overlay {
-              [overlay]
-              ProgressBar queue_page_loading_bar {
-                valign: start;
-
-                styles ["osd"]
+              [start]
+              Adw.Banner warning_banner {
+                // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
+                title: _("Issues with video sources — fix before compressing");
               }
 
-              $DragOverlay {
-                DropTarget drop_target_queue {
-                  formats: "GdkFileList";
-                  actions: copy;
-                  drop => $on_drop();
+              Overlay {
+                [overlay]
+                ProgressBar queue_page_loading_bar {
+                  valign: start;
+
+                  styles ["osd"]
                 }
 
-                styles ["drop-widget"]
-
-                drop_target: drop_target_queue;
-
-                child: Adw.PreferencesPage {
-                  Adw.PreferencesGroup {
-                    title: _("Video Sources");
-
-                    [header-suffix]
-                    Button clear_all_button {
-                      label: _("_Clear All");
-                      use-underline: true;
-                      action-name: "win.clear_all";
-                      valign: center;
-
-                      styles ["flat"]
-                    }
-
-                    $SourcesListBox sources_list_box {
-                      vexpand: false;
-                    }
+                $DragOverlay {
+                  DropTarget drop_target_queue {
+                    formats: "GdkFileList";
+                    actions: copy;
+                    drop => $on_drop();
                   }
-                };
+
+                  styles ["drop-widget"]
+
+                  drop_target: drop_target_queue;
+
+                  child: Adw.PreferencesPage {
+                    Adw.PreferencesGroup {
+                      title: _("Video Sources");
+
+                      [header-suffix]
+                      Button clear_all_button {
+                        label: _("_Clear All");
+                        use-underline: true;
+                        action-name: "win.clear_all";
+                        valign: center;
+
+                        styles ["flat"]
+                      }
+
+                      $SourcesListBox sources_list_box {
+                        vexpand: false;
+                      }
+                    }
+                  };
+                }
               }
             };
 
