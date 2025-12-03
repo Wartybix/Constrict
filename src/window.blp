@@ -51,40 +51,31 @@ template $ConstrictWindow: Adw.ApplicationWindow {
             }
           }
 
-          content: Overlay {
-            [overlay]
-            ProgressBar status_page_loading_bar {
-              valign: start;
+          content: $DragOverlay {
+            drop_target: drop_target;
 
-              styles ["osd"]
-            }
+            child: Adw.StatusPage status_page {
+              styles ["drop-widget"]
 
-            $DragOverlay {
-              drop_target: drop_target;
+              DropTarget drop_target {
+                formats: "GdkFileList";
+                actions: copy;
+                drop => $on_drop();
+              }
 
-              child: Adw.StatusPage status_page {
-                styles ["drop-widget"]
-
-                DropTarget drop_target {
-                  formats: "GdkFileList";
-                  actions: copy;
-                  drop => $on_drop();
-                }
-
-                icon-name: "video-encoder-symbolic";
-                title: _("Compress Videos");
-                description: _("Drag and drop videos here");
-                child: Button {
-                  // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-                  label: _("_Open…");
-                  use-underline: true;
-                  action-name: "win.open";
-                  can-shrink: true;
-                  halign: center;
-                  styles ["pill", "suggested-action"]
-                };
+              icon-name: "video-encoder-symbolic";
+              title: _("Compress Videos");
+              description: _("Drag and drop videos here");
+              child: Button {
+                // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+                label: _("_Open…");
+                use-underline: true;
+                action-name: "win.open";
+                can-shrink: true;
+                halign: center;
+                styles ["pill", "suggested-action"]
               };
-            }
+            };
           };
         };
       }
@@ -267,56 +258,42 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 visible: false;
               }
             }
+            [top]
+            Adw.Banner warning_banner {
+              // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
+              title: _("Issues with video sources — fix before compressing");
+            }
 
-            content: Box {
-              orientation: vertical;
-
-              [start]
-              Adw.Banner warning_banner {
-                // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-                title: _("Issues with video sources — fix before compressing");
+            content: $DragOverlay {
+              DropTarget drop_target_queue {
+                formats: "GdkFileList";
+                actions: copy;
+                drop => $on_drop();
               }
 
-              Overlay {
-                [overlay]
-                ProgressBar queue_page_loading_bar {
-                  valign: start;
+              styles ["drop-widget"]
 
-                  styles ["osd"]
-                }
+              drop_target: drop_target_queue;
 
-                $DragOverlay {
-                  DropTarget drop_target_queue {
-                    formats: "GdkFileList";
-                    actions: copy;
-                    drop => $on_drop();
+              child: Adw.PreferencesPage {
+                Adw.PreferencesGroup {
+                  title: _("Video Sources");
+
+                  [header-suffix]
+                  Button clear_all_button {
+                    label: _("_Clear All");
+                    use-underline: true;
+                    action-name: "win.clear_all";
+                    valign: center;
+
+                    styles ["flat"]
                   }
 
-                  styles ["drop-widget"]
-
-                  drop_target: drop_target_queue;
-
-                  child: Adw.PreferencesPage {
-                    Adw.PreferencesGroup {
-                      title: _("Video Sources");
-
-                      [header-suffix]
-                      Button clear_all_button {
-                        label: _("_Clear All");
-                        use-underline: true;
-                        action-name: "win.clear_all";
-                        valign: center;
-
-                        styles ["flat"]
-                      }
-
-                      $SourcesListBox sources_list_box {
-                        vexpand: false;
-                      }
-                    }
-                  };
+                  $SourcesListBox sources_list_box {
+                    vexpand: false;
+                  }
                 }
-              }
+              };
             };
 
             [bottom]

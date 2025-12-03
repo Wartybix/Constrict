@@ -68,8 +68,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
     fps_help_popover = Gtk.Template.Child()
     window_breakpoint = Gtk.Template.Child()
     drop_target_queue = Gtk.Template.Child()
-    status_page_loading_bar = Gtk.Template.Child()
-    queue_page_loading_bar = Gtk.Template.Child()
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -234,12 +232,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """
         files: List[Gio.File] = value.get_files()
 
-        thread = threading.Thread(
-            target=self.stage_videos,
-            args=[files]
-        )
-        thread.daemon = True
-        thread.start()
+        self.stage_videos(files)
 
     def set_controls_lock(self, is_locked: bool, daemon: bool) -> None:
         """ Set whether to make most of the window's controls like compression
@@ -814,40 +807,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.refresh_can_export(False)
         self.set_queued_title(False)
 
-    def show_mime_toast(self, mime):
-        """ Show a toast saying the given mime is unsupported. """
-
-        # TRANSLATORS: {desc} is the description of a mime type.
-        # {mime} is the mime type itself.
-        label = Gtk.Label.new(_("{desc} ({mime}) is not supported").format(
-            mime = mime,
-            desc = Gio.content_type_get_description(mime)
-        ))
-        label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
-        label.add_css_class('heading')
-
-        toast = Adw.Toast()
-        toast.set_custom_title(label)
-
-        self.toast_overlay.add_toast(toast)
-
-    def display_queue_page(self) -> None:
-        """ Display the queue page. """
-        self.view_stack.set_visible_child_name('queue_page')
-        self.refresh_can_export(False)
-        self.export_button.grab_focus()
-        self.set_queued_title(False)
-
-    def set_loading_progress(self, fraction):
-        """ Set progress displayed by the loading progress bar. """
-        self.status_page_loading_bar.set_fraction(fraction)
-        self.queue_page_loading_bar.set_fraction(fraction)
-
     def stage_videos(self, video_list: List[Gio.File]) -> None:
         """ Add passed video files to the window's sources list box as
         sources rows.
-
-        To be run asynchronously.
         """
         existing_paths = list(map(
             lambda x: x.video_path,
@@ -856,11 +818,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         staged_rows = []
         unsupported_mimes = set()
-        total_videos = len(video_list)
 
-        for i in range(total_videos):
-            video = video_list[i]
-
+        for video in video_list:
             video_path = video.get_path()
 
             if video_path in existing_paths:
@@ -897,17 +856,28 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             staged_rows.append(staged_row)
 
-            GLib.idle_add(self.set_loading_progress, (i + 1) / total_videos)
-
-        GLib.idle_add(self.set_loading_progress, 0.0)
-
         for mime in unsupported_mimes:
-            GLib.idle_add(self.show_mime_toast, mime)
+            # TRANSLATORS: {desc} is the description of a mime type.
+            # {mime} is the mime type itself.
+            label = Gtk.Label.new(_("{desc} ({mime}) is not supported").format(
+                mime = mime,
+                desc = Gio.content_type_get_description(mime)
+            ))
+            label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
+            label.add_css_class('heading')
 
-        GLib.idle_add(self.sources_list_box.add_sources, staged_rows)
+            toast = Adw.Toast()
+            toast.set_custom_title(label)
 
-        if staged_rows:
-            GLib.idle_add(self.display_queue_page)
+            self.toast_overlay.add_toast(toast)
+
+        self.sources_list_box.add_sources(staged_rows)
+
+        if self.sources_list_box.any():
+            self.view_stack.set_visible_child_name('queue_page')
+            self.refresh_can_export(False)
+            self.export_button.grab_focus()
+            self.set_queued_title(False)
 
     def open_file_dialog(
         self,
@@ -954,12 +924,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             new_initial_folder_path
         )
 
-        thread = threading.Thread(
-            target=self.stage_videos,
-            args=[files]
-        )
-        thread.daemon = True
-        thread.start()
+        self.stage_videos(files)
 
     def save_window_state(self) -> None:
         """ Write the window's various states and compression settings to the
