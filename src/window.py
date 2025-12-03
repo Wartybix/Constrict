@@ -475,7 +475,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         thread = threading.Thread(
             target=self.bulk_compress,
-            args=[folder_path, True]
+            args=[folder_path]
         )
         thread.daemon = True
         thread.start()
@@ -606,10 +606,15 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         return final_path
 
-    def bulk_compress(self, destination_dir: str, daemon: bool) -> None:
+    # TODO: get rid of all this daemon argument stuff and write some code that
+    # makes a bit more sense?
+
+    def bulk_compress(self, destination_dir: str) -> None:
         """ Compress all videos in the sources list box, exporting to the
-        passed destination directory
+        passed destination directory. To be run in a separate thread.
         """
+        daemon = True
+
         self.set_controls_lock(True, daemon)
         self.show_cancel_button(True, daemon)
         self.compressing = True
@@ -778,26 +783,30 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 end_size_mb = round(end_size_bytes / 1024 / 1024, 1)
                 video.set_complete(output_path_unique, end_size_mb, daemon)
 
-        self.set_controls_lock(False, daemon)
-        self.show_cancel_button(False, daemon)
-        self.refresh_can_export(daemon)
+        def finish():
+            self.set_controls_lock(False, False)
+            self.show_cancel_button(False, False)
+            self.refresh_can_export(False)
 
-        if inhibit_cookie != 0:
-            self.get_application().uninhibit(inhibit_cookie)
+            if inhibit_cookie != 0:
+                self.get_application().uninhibit(inhibit_cookie)
 
-        self.set_queued_title(daemon)
+            self.set_queued_title(False)
 
-        if not self.compressing:
-            toast = Adw.Toast.new(_('Compression Canceled'))
-            toast.set_priority(Adw.ToastPriority.HIGH)
-            update_ui(self.toast_overlay.add_toast, toast, daemon)
-        else:
-            toast = Adw.Toast.new(_('Compression Complete'))
-            update_ui(self.toast_overlay.add_toast, toast, daemon)
+            if not self.compressing:
+                toast = Adw.Toast.new(_('Compression Canceled'))
+                toast.set_priority(Adw.ToastPriority.HIGH)
+                self.toast_overlay.add_toast(toast)
+            else:
+                toast = Adw.Toast.new(_('Compression Complete'))
+                self.toast_overlay.add_toast(toast)
 
-            self.send_complete_notification(source_list, destination_dir)
+                self.send_complete_notification(source_list, destination_dir)
 
-        self.compressing = False
+            self.compressing = False
+
+        GLib.idle_add(finish)
+
 
     def remove_row(self, row: SourcesRow) -> None:
         """ Remove a row from the window's sources list box. Refresh the
