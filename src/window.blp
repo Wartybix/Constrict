@@ -258,42 +258,48 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 visible: false;
               }
             }
-            [top]
-            Adw.Banner warning_banner {
-              // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-              title: _("Issues with video sources — fix before compressing");
-            }
 
-            content: $DragOverlay {
-              DropTarget drop_target_queue {
-                formats: "GdkFileList";
-                actions: copy;
-                drop => $on_drop();
+            content: Box {
+              orientation: vertical;
+
+              Adw.Banner warning_banner {
+                // TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
+                title: _("Issues with video sources — fix before compressing");
               }
 
-              styles ["drop-widget"]
+              $DragOverlay {
+                vexpand: true;
 
-              drop_target: drop_target_queue;
-
-              child: Adw.PreferencesPage {
-                Adw.PreferencesGroup {
-                  title: _("Video Sources");
-
-                  [header-suffix]
-                  Button clear_all_button {
-                    label: _("_Clear All");
-                    use-underline: true;
-                    action-name: "win.clear_all";
-                    valign: center;
-
-                    styles ["flat"]
-                  }
-
-                  $SourcesListBox sources_list_box {
-                    vexpand: false;
-                  }
+                DropTarget drop_target_queue {
+                  formats: "GdkFileList";
+                  actions: copy;
+                  drop => $on_drop();
                 }
-              };
+
+                styles ["drop-widget"]
+
+                drop_target: drop_target_queue;
+
+                child: Adw.PreferencesPage {
+                  Adw.PreferencesGroup {
+                    title: _("Video Sources");
+
+                    [header-suffix]
+                    Button clear_all_button {
+                      label: _("_Clear All");
+                      use-underline: true;
+                      action-name: "win.clear_all";
+                      valign: center;
+
+                      styles ["flat"]
+                    }
+
+                    $SourcesListBox sources_list_box {
+                      vexpand: false;
+                    }
+                  }
+                };
+              }
             };
 
             [bottom]
