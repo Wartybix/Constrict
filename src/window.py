@@ -869,17 +869,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
             staged_rows.append(staged_row)
 
         for mime in unsupported_mimes:
-            # TRANSLATORS: {desc} is the description of a mime type.
-            # {mime} is the mime type itself.
-            label = Gtk.Label.new(_("{desc} ({mime}) is not supported").format(
-                mime = mime,
-                desc = Gio.content_type_get_description(mime)
+            # TRANSLATORS: {} is the description of a mime type.
+            toast = Adw.Toast.new(_("Unknown video format “{}”").format(
+                Gio.content_type_get_description(mime)
             ))
-            label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
-            label.add_css_class('heading')
-
-            toast = Adw.Toast()
-            toast.set_custom_title(label)
 
             self.toast_overlay.add_toast(toast)
 
