@@ -834,6 +834,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
             if video_path in existing_paths:
                 continue
 
+            if not video.query_exists():
+                continue
+
             info = video.query_info(
                 'standard::display-name,standard::content-type',
                 Gio.FileQueryInfoFlags.NONE
