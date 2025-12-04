@@ -793,11 +793,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             self.set_queued_title(False)
 
-            if not self.compressing:
-                toast = Adw.Toast.new(_('Compression Canceled'))
-                toast.set_priority(Adw.ToastPriority.HIGH)
-                self.toast_overlay.add_toast(toast)
-            else:
+            if self.compressing:
                 toast = Adw.Toast.new(_('Compression Complete'))
                 self.toast_overlay.add_toast(toast)
 
