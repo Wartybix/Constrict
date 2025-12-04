@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-11-18 20:19+0000\n"
+"POT-Creation-Date: 2025-12-04 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 
-#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:116
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:124
 msgid "Framerate Limit"
 msgstr ""
 
@@ -123,6 +123,7 @@ msgstr ""
 #. TRANSLATORS: {} represents the attempt number.
 #: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
 #: src/current_attempt_box.py:66
+#, python-brace-format
 msgid "Attempt {}"
 msgstr ""
 
@@ -170,8 +171,8 @@ msgstr ""
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:98 src/attempt_fail_box.py:109
-#: src/sources_row.py:508 src/sources_row.py:538 src/sources_row.py:541
-#: src/sources_row.py:558 src/window.py:200
+#: src/sources_row.py:528 src/sources_row.py:558 src/sources_row.py:561
+#: src/sources_row.py:578 src/window.py:200
 msgid "MiB"
 msgstr ""
 
@@ -238,12 +239,14 @@ msgstr ""
 #. Please use U+202F Narrow no-break space (' ') between {} and %, if
 #. applicable to your language.
 #: src/current_attempt_box.py:126
+#, python-brace-format
 msgid "{} %"
 msgstr ""
 
 #. TRANSLATORS: {} represents the progress percentage.
 #. Please use U+2014 em dash ('—'), if applicable to your language.
 #: src/current_attempt_box.py:133
+#, python-brace-format
 msgid "{} — Almost done"
 msgstr ""
 
@@ -251,6 +254,7 @@ msgstr ""
 #. Used as part of a larger string, like:
 #. '5% -- About 30 seconds left'
 #: src/current_attempt_box.py:141
+#, python-brace-format
 msgid "{} second"
 msgid_plural "{} seconds"
 msgstr[0] ""
@@ -263,6 +267,7 @@ msgstr[1] ""
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
 #: src/current_attempt_box.py:149 src/current_attempt_box.py:162
+#, python-brace-format
 msgid "{} minute"
 msgid_plural "{} minutes"
 msgstr[0] ""
@@ -272,6 +277,7 @@ msgstr[1] ""
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
 #: src/current_attempt_box.py:157 src/current_attempt_box.py:171
+#, python-brace-format
 msgid "{} hour"
 msgid_plural "{} hours"
 msgstr[0] ""
@@ -306,6 +312,7 @@ msgstr ""
 #. error. Please use “” instead of "", if applicable to your
 #. language.
 #: src/error_dialog.py:48
+#, python-brace-format
 msgid "There was a problem compressing “{}”"
 msgstr ""
 
@@ -367,6 +374,7 @@ msgstr ""
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #. Please use ‘’ characters instead of '', if applicable to your language.
 #: src/main.py:178
+#, python-brace-format
 msgid "‘{}’ repository by"
 msgstr ""
 
@@ -386,33 +394,34 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: src/preferences_dialog.blp:9
+#: src/preferences_dialog.blp:10
 msgid "Hardware Acceleration"
 msgstr ""
 
-#: src/preferences_dialog.blp:10
+#: src/preferences_dialog.blp:11
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 
-#: src/preferences_dialog.blp:13
+#: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
 msgstr ""
 
-#: src/preferences_dialog.blp:14
+#: src/preferences_dialog.blp:15
 msgid "Use the GPU to speed up encoding when available"
 msgstr ""
 
-#: src/preferences_dialog.blp:19
+#: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
 msgstr ""
 
-#: src/preferences_dialog.blp:22
+#: src/preferences_dialog.blp:23
 msgid "Custom Suffix"
 msgstr ""
 
 #: src/preferences_dialog.py:42
+#, python-brace-format
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
@@ -438,7 +447,7 @@ msgstr ""
 msgid "_Remove"
 msgstr ""
 
-#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:457
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:477
 msgid "View Error Details"
 msgstr ""
 
@@ -462,14 +471,14 @@ msgstr ""
 msgid "View More"
 msgstr ""
 
-#: src/sources_row.py:480 src/window.blp:121 src/window.blp:202
+#: src/sources_row.py:500 src/window.blp:129 src/window.blp:210
 msgid "More Information"
 msgstr ""
 
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MB'. Please use U+202F
 #. narrow no-break space (' ') between size and unit.
-#: src/sources_row.py:505
+#: src/sources_row.py:525
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr ""
@@ -478,7 +487,7 @@ msgstr ""
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'. Please use U+202F Narrow no-break
 #. space (' ') between values and units.
-#: src/sources_row.py:534
+#: src/sources_row.py:554
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -489,7 +498,7 @@ msgstr ""
 #. a file size unit like 'MB'.
 #. Please use U+202F Narrow no-break space (' ') between value
 #. and unit.
-#: src/sources_row.py:556
+#: src/sources_row.py:576
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr ""
@@ -510,7 +519,7 @@ msgstr ""
 msgid "_About Constrict"
 msgstr ""
 
-#: src/window.blp:49 src/window.blp:257
+#: src/window.blp:49 src/window.blp:103
 msgid "Main Menu"
 msgstr ""
 
@@ -527,74 +536,74 @@ msgstr ""
 msgid "_Open…"
 msgstr ""
 
-#: src/window.blp:142
+#: src/window.blp:150
 msgid "_Automatic"
 msgstr ""
 
-#: src/window.blp:144
+#: src/window.blp:152
 msgid "Use the highest framerate without sacrificing resolution"
 msgstr ""
 
-#: src/window.blp:156
+#: src/window.blp:164
 msgid "Ensure higher image clarity"
 msgstr ""
 
-#: src/window.blp:168
+#: src/window.blp:176
 msgid "Ensure smoother motion"
 msgstr ""
 
-#: src/window.blp:179
+#: src/window.blp:187
 msgid "Encoding Options"
 msgstr ""
 
-#: src/window.blp:182
+#: src/window.blp:190
 msgid "_Video Codec"
 msgstr ""
 
-#: src/window.blp:190
+#: src/window.blp:198
 msgid "Extra _Quality"
 msgstr ""
 
-#: src/window.blp:192
+#: src/window.blp:200
 msgid "Increase image quality at the cost of compression time"
 msgstr ""
 
-#: src/window.blp:197
+#: src/window.blp:205
 msgid "Advanced Options"
 msgstr ""
 
-#: src/window.blp:222
+#: src/window.blp:230
 msgid "_Tolerance (%)"
 msgstr ""
 
-#: src/window.blp:224
+#: src/window.blp:232
 msgid "How far end file sizes can be below target"
 msgstr ""
 
-#: src/window.blp:248
+#: src/window.blp:256
 msgid "Toggle Settings Pane"
 msgstr ""
 
 #. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-#: src/window.blp:265
+#: src/window.blp:267
 msgid "Issues with video sources — fix before compressing"
 msgstr ""
 
-#: src/window.blp:281
+#: src/window.blp:285
 msgid "Video Sources"
 msgstr ""
 
-#: src/window.blp:285
+#: src/window.blp:289
 msgid "_Clear All"
 msgstr ""
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:305
+#: src/window.blp:310
 msgid "_Export To…"
 msgstr ""
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:322
+#: src/window.blp:327
 msgid "_Cancel…"
 msgstr ""
 
@@ -602,6 +611,7 @@ msgstr ""
 #. {} represents the FPS value, for example 30 or 60.
 #. Please use U+202F Narrow no-break space (' ') between value and unit.
 #: src/window.py:176
+#, python-brace-format
 msgid "{} FPS"
 msgstr ""
 
@@ -609,6 +619,7 @@ msgstr ""
 #. integer. Please use U+202F narrow no-break space (' ') between
 #. the {} and translated equivalent of 'FPS'.
 #: src/window.py:185
+#, python-brace-format
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -617,7 +628,7 @@ msgstr ""
 #. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
 #. no-break space (' ') between {} and '%'.
 #: src/window.py:195
-#, no-python-format
+#, no-python-format, python-brace-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
 "compressed file sizes can be under target. However, this can increase the "
@@ -627,6 +638,7 @@ msgstr ""
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:203
+#, python-brace-format
 msgid "Target _Size ({})"
 msgstr ""
 
@@ -634,6 +646,7 @@ msgstr ""
 #. being processed. Please use “” instead of "", if applicable to
 #. your language.
 #: src/window.py:320
+#, python-brace-format
 msgid "Processing “{}”"
 msgstr ""
 
@@ -649,6 +662,7 @@ msgstr ""
 #. exported to. Please use “” instead of "", if applicable to your
 #. language.
 #: src/window.py:337
+#, python-brace-format
 msgid "Exporting to “{}”"
 msgstr ""
 
@@ -656,11 +670,13 @@ msgstr ""
 #. queued. Please use “” instead of '', if applicable to your
 #. language.
 #: src/window.py:353
+#, python-brace-format
 msgid "“{}” Queued"
 msgstr ""
 
 #. TRANSLATORS: {} represents the number of files queued.
 #: src/window.py:357
+#, python-brace-format
 msgid "{} Videos Queued"
 msgstr ""
 
@@ -672,6 +688,7 @@ msgstr ""
 #. being compressed. Please use “” instead of "", if applicable to
 #. your language.
 #: src/window.py:494
+#, python-brace-format
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr ""
 
@@ -683,7 +700,7 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/window.py:555 src/window.py:795
+#: src/window.py:555
 msgid "Compression Complete"
 msgstr ""
 
@@ -691,12 +708,14 @@ msgstr ""
 #. been processed.
 #. Please use “” instead of "", if applicable to your language.
 #: src/window.py:563
+#, python-brace-format
 msgid "“{}” processed"
 msgstr ""
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
 #: src/window.py:568
+#, python-brace-format
 msgid "{} files processed"
 msgstr ""
 
@@ -704,42 +723,42 @@ msgstr ""
 msgid "Open Export Directory"
 msgstr ""
 
-#: src/window.py:636
+#: src/window.py:641
 msgid "Videos are being compressed"
 msgstr ""
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
 #. instead of '...', if applicable to your language
-#: src/window.py:658
+#: src/window.py:663
 msgid "Analyzing…"
 msgstr ""
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error. Please use “” instead of "", if applicable to
 #. your language.
-#: src/window.py:754
+#: src/window.py:759
+#, python-brace-format
 msgid "Error compressing “{}”"
 msgstr ""
 
-#: src/window.py:757
+#: src/window.py:762
 msgid "View _Details"
 msgstr ""
 
-#: src/window.py:791
-msgid "Compression Canceled"
+#: src/window.py:797
+msgid "Compression complete"
 msgstr ""
 
-#. TRANSLATORS: {desc} is the description of a mime type.
-#. {mime} is the mime type itself.
-#: src/window.py:862
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:869
 #, python-brace-format
-msgid "{desc} ({mime}) is not supported"
+msgid "Unknown video format “{}”"
 msgstr ""
 
-#: src/window.py:897
+#: src/window.py:898
 msgid "Videos"
 msgstr ""
 
-#: src/window.py:900
+#: src/window.py:901
 msgid "Pick Videos"
 msgstr ""
