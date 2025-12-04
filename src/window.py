@@ -794,7 +794,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             self.set_queued_title(False)
 
             if self.compressing:
-                toast = Adw.Toast.new(_('Compression Complete'))
+                toast = Adw.Toast.new(_('Compression complete'))
                 self.toast_overlay.add_toast(toast)
 
                 self.send_complete_notification(source_list, destination_dir)
