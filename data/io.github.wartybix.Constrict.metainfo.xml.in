@@ -89,6 +89,23 @@
   </screenshots>
 
   <releases>
+    <release version="25.12" date="2025-12-04">
+      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12</url>
+      <description translate="no">
+        <p>UI adjustments, bug fixes, and more translations.</p>
+        <ul>
+          <li>Added Spanish translation.</li>
+          <li>Now using Glycin to load video thumbnails in their own sandboxes before displaying them, improving security.</li>
+          <li>Hopefully fixed an application crash that sometimes occurs after compression completes. I’m not certain though, as the problem is very inconsistent to reproduce. We will have to see…</li>
+          <li>Fixed an application crash when attempting to import a file that doesn't exist.</li>
+          <li>Fixed strange radio button focus highlights.</li>
+          <li>Reduced the width of some popover messages.</li>
+          <li>Moved text from popovers to section descriptions in the preferences dialog. </li>
+          <li>Moved primary menu to the sidebar, for better consistency with the wider GNOME ecosystem.</li>
+          <li>Fixed appearance of the ‘Cannot Export’ banner.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.10" date="2025-10-29">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.10</url>
       <description translate="no">

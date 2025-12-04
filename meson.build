@@ -1,5 +1,5 @@
 project('constrict',
-          version: '25.10',
+          version: '25.12',
     meson_version: '>= 1.0.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
