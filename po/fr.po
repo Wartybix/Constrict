@@ -1,15 +1,12 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Wartybix
-# This file is distributed under the same license as the Constrict package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+#  <>, YEAR-2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-12-06 16:06+0100\n"
+"PO-Revision-Date: 2025-12-06 22:27+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -17,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -317,7 +314,7 @@ msgstr[1] "{} minutes"
 msgid "{} hour"
 msgid_plural "{} hours"
 msgstr[0] "{} heure"
-msgstr[1] "heures"
+msgstr[1] "{} heures"
 
 #. TRANSLATORS: {percentage} represents the progress percentage.
 #. {time_shown} represents a string showing the estimated time to
