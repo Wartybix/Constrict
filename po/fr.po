@@ -420,6 +420,7 @@ msgid "Drag overlay design by"
 msgstr "Conception du glisser-déposer par"
 
 #: src/main.py:196
+#, fuzzy
 msgid "translator-credits"
 msgstr "crédits traducteurs"
 
