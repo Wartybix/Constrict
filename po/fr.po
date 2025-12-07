@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-12-06 22:27+0000\n"
+"PO-Revision-Date: 2025-12-07 09:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -107,7 +107,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:75
 msgid "Source videos queued for compression"
-msgstr "Vidéos sources en attente de compression"
+msgstr "Sources vidéos en attente de compression"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:79
 msgid "The application mid-compression"
@@ -146,7 +146,7 @@ msgstr "Le codec utilisé pour l'encodage lors de la compression"
 #: src/current_attempt_box.py:66
 #, python-brace-format
 msgid "Attempt {}"
-msgstr "Tenter {}"
+msgstr "Essai {}"
 
 #. TRANSLATORS: this is an abbreviation of 'High Quality'
 #: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
@@ -376,7 +376,7 @@ msgstr "Général"
 #: src/gtk/shortcuts-dialog.blp:23
 msgctxt "shortcut window"
 msgid "Toggle Settings Pane"
-msgstr "Basculer le volet Paramètres"
+msgstr "Activer/Désactiver le volet Paramètres"
 
 #: src/gtk/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
@@ -409,7 +409,7 @@ msgstr "compressé"
 #: src/main.py:178
 #, python-brace-format
 msgid "‘{}’ repository by"
-msgstr "‘{}’ référentiel par"
+msgstr "‘{}’ répertoire par"
 
 #: src/main.py:185
 msgid "Circular progress indicator design by"
@@ -420,9 +420,8 @@ msgid "Drag overlay design by"
 msgstr "Conception du glisser-déposer par"
 
 #: src/main.py:196
-#, fuzzy
 msgid "translator-credits"
-msgstr "crédits traducteurs"
+msgstr "jpiebrig"
 
 #: src/preferences_dialog.blp:5
 msgid "Preferences"
@@ -594,7 +593,7 @@ msgstr "Assurer une meilleure clarté de l'image"
 
 #: src/window.blp:176
 msgid "Ensure smoother motion"
-msgstr "Assurez des mouvements plus fluides"
+msgstr "Assurer des mouvements plus fluides"
 
 #: src/window.blp:187
 msgid "Encoding Options"
@@ -606,7 +605,7 @@ msgstr "_Codec vidéo"
 
 #: src/window.blp:198
 msgid "Extra _Quality"
-msgstr "Plus de_Qualité"
+msgstr "Qualité_supérieure"
 
 #: src/window.blp:200
 msgid "Increase image quality at the cost of compression time"
@@ -628,7 +627,7 @@ msgstr ""
 
 #: src/window.blp:256
 msgid "Toggle Settings Pane"
-msgstr "Basculer le volet Paramètres"
+msgstr "Activer/Désactiver le volet Paramètres"
 
 #. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
 #: src/window.blp:267
