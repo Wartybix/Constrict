@@ -874,10 +874,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.sources_list_box.add_sources(staged_rows)
 
-        if self.sources_list_box.any():
+        if staged_rows:
             self.view_stack.set_visible_child_name('queue_page')
             self.refresh_can_export(False)
-            self.export_button.grab_focus()
+            staged_rows[-1].grab_focus()
             self.set_queued_title(False)
 
     def open_file_dialog(
