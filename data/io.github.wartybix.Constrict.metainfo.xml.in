@@ -71,19 +71,19 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/queued.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/queued.png?raw=true</image>
       <caption>Source videos queued for compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/compressing.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/compressing.png?raw=true</image>
       <caption>The application mid-compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/queued_mobile.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/queued_mobile.png?raw=true</image>
       <caption>A mobile friendly UI</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/08b000a0131cb2fde8304494d00c28033f1b3413/screenshots/settings_mobile.png?raw=true</image>
+      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/settings_mobile.png?raw=true</image>
       <caption>Compression settings in the mobile friendly UI</caption>
     </screenshot>
   </screenshots>
