@@ -174,23 +174,28 @@ if __name__ == '__main__':
     mime_type, encoder = mimetypes.guess_type(args.file_path)
     mime_type = mime_type or ""
 
+    compression_result = None
+
     with tempfile.NamedTemporaryFile() as log_file:
-        compression_result = compress(
-            args.file_path,
-            mime_type,
-            args.output,
-            args.target_size,
-            get_fps_mode(),
-            args.extra_quality,
-            get_video_codec(),
-            not args.software_encode,
-            args.tolerance,
-            print_progress,
-            log_file.name,
-            lambda: False,
-            show_attempt_details,
-            show_attempt_fail
-        )
+        try:
+            compression_result = compress(
+                args.file_path,
+                mime_type,
+                args.output,
+                args.target_size,
+                get_fps_mode(),
+                args.extra_quality,
+                get_video_codec(),
+                not args.software_encode,
+                args.tolerance,
+                print_progress,
+                log_file.name,
+                lambda: False,
+                show_attempt_details,
+                show_attempt_fail
+            )
+        except KeyboardInterrupt as e:
+            print("\n*** Compression Cancelled ***")
 
     if type(compression_result) is str:
         print('*** COMPRESSION ERROR ***')
