@@ -46,8 +46,8 @@ if __name__ == '__main__':
         '-t',
         dest='tolerance',
         type=int,
-        default=10,
-        help='Tolerance of end file size under target in percent (default 10)'
+        default=25,
+        help='Tolerance of end file size under target in percent (default 25)'
     )
     arg_parser.add_argument(
         '-o',
