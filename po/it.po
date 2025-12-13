@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-11-23 20:35+0000\n"
+"PO-Revision-Date: 2025-12-13 17:35+0000\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -802,15 +802,14 @@ msgid "View _Details"
 msgstr "Visualizza _Dettagli"
 
 #: src/window.py:797
-#, fuzzy
 msgid "Compression complete"
-msgstr "Compressione Completata"
+msgstr "Compressione completa"
 
 #. TRANSLATORS: {} is the description of a mime type.
 #: src/window.py:869
 #, python-brace-format
 msgid "Unknown video format “{}”"
-msgstr ""
+msgstr "Formato video sconosciuto “{}”"
 
 #: src/window.py:898
 msgid "Videos"
