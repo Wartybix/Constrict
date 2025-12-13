@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-11-23 20:36+0000\n"
+"PO-Revision-Date: 2025-12-13 21:51+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -789,15 +789,14 @@ msgid "View _Details"
 msgstr "_Ayrıntıları Görüntüle"
 
 #: src/window.py:797
-#, fuzzy
 msgid "Compression complete"
-msgstr "Sıkıştırma Tamamlandı"
+msgstr "Sıkıştırma tamamlandı"
 
 #. TRANSLATORS: {} is the description of a mime type.
 #: src/window.py:869
 #, python-brace-format
 msgid "Unknown video format “{}”"
-msgstr ""
+msgstr "“{}” video biçimi bilinmiyor"
 
 #: src/window.py:898
 msgid "Videos"
@@ -806,13 +805,3 @@ msgstr "Videolar"
 #: src/window.py:901
 msgid "Pick Videos"
 msgstr "Video Seç"
-
-#~ msgid "Compression Canceled"
-#~ msgstr "Sıkıştırma İptal Edildi"
-
-#, python-brace-format
-#~ msgid "{desc} ({mime}) is not supported"
-#~ msgstr "{desc} ({mime}) desteklenmiyor"
-
-#~ msgid "Constrict: File already meets the target size."
-#~ msgstr "Constrict: Dosya zaten hedef boyutu karşılıyor."
