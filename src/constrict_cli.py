@@ -166,12 +166,14 @@ if __name__ == '__main__':
     def show_attempt_details(
         attempt: int,
         vid_bitrate: int,
-        audio_bitrate: Optional[int],
+        hq_audio: Optional[bool],
         height: int,
         fps: float
     ) -> None:
-        if audio_bitrate:
-            print(f'\n:: Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_bitrate // 1000}kbps audio)')
+        if hq_audio is not None:
+            audio_quality_str = "HQ" if hq_audio else "LQ"
+
+            print(f'\n:: Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_quality_str} audio)')
         else:
             print(f'\n:: Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))})')
 

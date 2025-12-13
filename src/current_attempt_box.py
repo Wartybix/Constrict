@@ -21,7 +21,7 @@ from gi.repository import Adw, Gtk, GLib
 from constrict.shared import update_ui
 from constrict import PREFIX
 from gettext import ngettext
-from typing import Any
+from typing import Any, Optional
 
 @Gtk.Template(resource_path=f'{PREFIX}/current_attempt_box.ui')
 class CurrentAttemptBox(Gtk.Box):
@@ -53,7 +53,7 @@ class CurrentAttemptBox(Gtk.Box):
         self,
         attempt_no: int,
         vid_bitrate: int,
-        is_hq_audio: bool,
+        is_hq_audio: Optional[bool],
         vid_height: int,
         vid_fps: float,
         daemon: bool
