@@ -26,6 +26,7 @@ import datetime
 from typing import Optional
 import mimetypes
 import tempfile
+import os
 
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser("constrict-cli")
@@ -132,11 +133,25 @@ if __name__ == '__main__':
 
         return VideoCodec.H264
 
+    def bold(text: str) -> str:
+        return f"\033[1m{text}\033[0m"
+
+    def pad_text(text: str) -> str:
+        columns, _ = os.get_terminal_size()
+
+        diff = columns - len(text)
+        spaces = " " * diff
+
+        return f"{text}{spaces}"
+
     def print_progress(fraction: float, seconds_left: Optional[int]) -> None:
         percent = int(round(fraction * 100, 0))
 
+        if percent == 0:
+            return
+
         if seconds_left is None:
-            print(f'{percent}%')
+            print(bold(pad_text(f'\r   {percent}%')), end='')
             return
 
         mins = seconds_left // 60
@@ -146,7 +161,7 @@ if __name__ == '__main__':
 
         time_str = f'ETA {hours}:{mins}:{seconds}'
 
-        print(f'{percent}% ({time_str})')
+        print(bold(pad_text(f'\r   {percent}% ({time_str})')), end='')
 
     def show_attempt_details(
         attempt: int,
@@ -156,9 +171,9 @@ if __name__ == '__main__':
         fps: float
     ) -> None:
         if audio_bitrate:
-            print(f'Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_bitrate // 1000}kbps audio)')
+            print(f'\n:: Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))}, {audio_bitrate // 1000}kbps audio)')
         else:
-            print(f'Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))})')
+            print(f'\n:: Attempt {attempt} -- {vid_bitrate // 1000}kbps ({height}p@{int(round(fps, 0))})')
 
     def show_attempt_fail(
         attempt: int,
@@ -169,12 +184,14 @@ if __name__ == '__main__':
         after_size_bytes: int,
         target_size_bytes: int
     ) -> None:
-        print(f'Attempt fail: compressed size is {round(after_size_bytes / 1024 / 1024, 1)}MiB')
+        print(f'\n   Attempt fail: compressed size is {round(after_size_bytes / 1024 / 1024, 1)}MiB')
 
     mime_type, encoder = mimetypes.guess_type(args.file_path)
     mime_type = mime_type or ""
 
     compression_result = None
+
+    print(f"Compressing {args.file_path} to {args.target_size} MiB...")
 
     with tempfile.NamedTemporaryFile() as log_file:
         try:
@@ -195,13 +212,13 @@ if __name__ == '__main__':
                 show_attempt_fail
             )
         except KeyboardInterrupt as e:
-            print("\n*** Compression Cancelled ***")
+            print("\n\n*** Compression Cancelled ***")
 
     if type(compression_result) is str:
-        print('*** COMPRESSION ERROR ***')
+        print('\n\n*** COMPRESSION ERROR ***')
         print(compression_result)
     elif type(compression_result) is int:
         end_size_bytes = compression_result
         end_size_mb = round(end_size_bytes / 1024 / 1024, 1)
-        print(f'Video compressed to {end_size_mb} MiB.')
+        print(f'\n\nVideo compressed to {end_size_mb} MiB.')
 
