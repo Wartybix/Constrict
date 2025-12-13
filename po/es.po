@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-11-23 20:35+0000\n"
+"PO-Revision-Date: 2025-12-13 16:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -797,15 +797,14 @@ msgid "View _Details"
 msgstr "Ver _Detalles"
 
 #: src/window.py:797
-#, fuzzy
 msgid "Compression complete"
-msgstr "Compresión completa"
+msgstr "Compresión completada"
 
 #. TRANSLATORS: {} is the description of a mime type.
 #: src/window.py:869
 #, python-brace-format
 msgid "Unknown video format “{}”"
-msgstr ""
+msgstr "Formato de vídeo desconocido “{}”"
 
 #: src/window.py:898
 msgid "Videos"
