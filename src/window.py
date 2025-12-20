@@ -232,7 +232,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """
         files: List[Gio.File] = value.get_files()
 
-        self.stage_videos(files)
+        self.get_application().loop.create_task(self.stage_videos(files))
 
     def set_controls_lock(self, is_locked: bool, daemon: bool) -> None:
         """ Set whether to make most of the window's controls like compression
@@ -812,7 +812,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.refresh_can_export(False)
         self.set_queued_title(False)
 
-    def stage_videos(self, video_list: List[Gio.File]) -> None:
+    async def stage_videos(self, video_list: List[Gio.File]) -> None:
         """ Add passed video files to the window's sources list box as
         sources rows.
         """
@@ -833,11 +833,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
             if not video.query_exists():
                 continue
 
-            info = video.query_info(
+            info = await video.query_info_async(
                 'standard::display-name,standard::content-type',
-                Gio.FileQueryInfoFlags.NONE
+                Gio.FileQueryInfoFlags.NONE,
+                GLib.PRIORITY_DEFAULT
             )
             mime_type = info.get_content_type()
+
+            # time.sleep(1)
 
             if not mime_type:
                 continue
@@ -925,7 +928,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             new_initial_folder_path
         )
 
-        self.stage_videos(files)
+        self.get_application().loop.create_task(self.stage_videos(files))
 
     def save_window_state(self) -> None:
         """ Write the window's various states and compression settings to the
