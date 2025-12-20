@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-11-23 20:35+0000\n"
+"PO-Revision-Date: 2025-12-20 11:09+0100\n"
 "Last-Translator: Felicitas Pojtinger <felicitas@pojtinger.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -412,9 +412,8 @@ msgid "‘{}’ repository by"
 msgstr "„{}“-Repository von"
 
 #: src/main.py:185
-#, fuzzy
 msgid "Circular progress indicator design by"
-msgstr "Kreisförmiger Fortschrittsanzeiger (C-Version) von"
+msgstr "Design für den kreisförmigen Fortschrittsanzeiger von"
 
 #: src/main.py:189
 msgid "Drag overlay design by"
@@ -796,7 +795,6 @@ msgid "View _Details"
 msgstr "_Details anzeigen"
 
 #: src/window.py:797
-#, fuzzy
 msgid "Compression complete"
 msgstr "Komprimierung abgeschlossen"
 
@@ -804,7 +802,7 @@ msgstr "Komprimierung abgeschlossen"
 #: src/window.py:869
 #, python-brace-format
 msgid "Unknown video format “{}”"
-msgstr ""
+msgstr "Unbekanntes Videoformat “{}”"
 
 #: src/window.py:898
 msgid "Videos"
