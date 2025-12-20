@@ -68,6 +68,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
     fps_help_popover = Gtk.Template.Child()
     window_breakpoint = Gtk.Template.Child()
     drop_target_queue = Gtk.Template.Child()
+    status_progress_bar = Gtk.Template.Child()
+    queue_page_progress_bar = Gtk.Template.Child()
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -812,6 +814,11 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.refresh_can_export(False)
         self.set_queued_title(False)
 
+    def set_progress(self, fraction: float) -> None:
+        """ Update the window's progress bars with the fraction """
+        self.status_progress_bar.set_fraction(fraction)
+        self.queue_page_progress_bar.set_fraction(fraction)
+
     async def stage_videos(self, video_list: List[Gio.File]) -> None:
         """ Add passed video files to the window's sources list box as
         sources rows.
@@ -824,7 +831,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
         staged_rows = []
         unsupported_mimes = set()
 
-        for video in video_list:
+        for i in range(len(video_list)):
+            video = video_list[i]
             video_path = video.get_path()
 
             if video_path in existing_paths:
@@ -839,8 +847,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 GLib.PRIORITY_DEFAULT
             )
             mime_type = info.get_content_type()
-
-            # time.sleep(1)
 
             if not mime_type:
                 continue
@@ -866,6 +872,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
             )
 
             staged_rows.append(staged_row)
+
+            self.set_progress((i + 1) / len(video_list))
+
+        self.set_progress(0.0)
 
         for mime in unsupported_mimes:
             # TRANSLATORS: {} is the description of a mime type.
