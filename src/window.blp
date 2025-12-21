@@ -51,29 +51,38 @@ template $ConstrictWindow: Adw.ApplicationWindow {
             }
           }
 
-          content: $DragOverlay {
-            drop_target: drop_target;
+          content: Overlay {
+            [overlay]
+            ProgressBar status_progress_bar {
+              valign: start;
 
-            child: Adw.StatusPage status_page {
-              styles ["drop-widget"]
+              styles ["osd"]
+            }
 
-              DropTarget drop_target {
-                formats: "GdkFileList";
-                actions: copy;
-                drop => $on_drop();
-              }
+            child: $DragOverlay {
+              drop_target: drop_target;
 
-              icon-name: "video-encoder-symbolic";
-              title: _("Compress Videos");
-              description: _("Drag and drop videos here");
-              child: Button {
-                // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-                label: _("_Open…");
-                use-underline: true;
-                action-name: "win.open";
-                can-shrink: true;
-                halign: center;
-                styles ["pill", "suggested-action"]
+              child: Adw.StatusPage status_page {
+                styles ["drop-widget"]
+
+                DropTarget drop_target {
+                  formats: "GdkFileList";
+                  actions: copy;
+                  drop => $on_drop();
+                }
+
+                icon-name: "video-encoder-symbolic";
+                title: _("Compress Videos");
+                description: _("Drag and drop videos here");
+                child: Button {
+                  // TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+                  label: _("_Open…");
+                  use-underline: true;
+                  action-name: "win.open";
+                  can-shrink: true;
+                  halign: center;
+                  styles ["pill", "suggested-action"]
+                };
               };
             };
           };
@@ -267,37 +276,46 @@ template $ConstrictWindow: Adw.ApplicationWindow {
                 title: _("Issues with video sources — fix before compressing");
               }
 
-              $DragOverlay {
-                vexpand: true;
+              Overlay {
+                [overlay]
+                ProgressBar queue_page_progress_bar {
+                  valign: start;
 
-                DropTarget drop_target_queue {
-                  formats: "GdkFileList";
-                  actions: copy;
-                  drop => $on_drop();
+                  styles ["osd"]
                 }
 
-                styles ["drop-widget"]
+                child: $DragOverlay {
+                  vexpand: true;
 
-                drop_target: drop_target_queue;
-
-                child: Adw.PreferencesPage {
-                  Adw.PreferencesGroup {
-                    title: _("Video Sources");
-
-                    [header-suffix]
-                    Button clear_all_button {
-                      label: _("_Clear All");
-                      use-underline: true;
-                      action-name: "win.clear_all";
-                      valign: center;
-
-                      styles ["flat"]
-                    }
-
-                    $SourcesListBox sources_list_box {
-                      vexpand: false;
-                    }
+                  DropTarget drop_target_queue {
+                    formats: "GdkFileList";
+                    actions: copy;
+                    drop => $on_drop();
                   }
+
+                  styles ["drop-widget"]
+
+                  drop_target: drop_target_queue;
+
+                  child: Adw.PreferencesPage {
+                    Adw.PreferencesGroup {
+                      title: _("Video Sources");
+
+                      [header-suffix]
+                      Button clear_all_button {
+                        label: _("_Clear All");
+                        use-underline: true;
+                        action-name: "win.clear_all";
+                        valign: center;
+
+                        styles ["flat"]
+                      }
+
+                      $SourcesListBox sources_list_box {
+                        vexpand: false;
+                      }
+                    }
+                  };
                 };
               }
             };

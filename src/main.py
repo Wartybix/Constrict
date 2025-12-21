@@ -29,6 +29,11 @@ from .window import ConstrictWindow
 from constrict.preferences_dialog import PreferencesDialog
 from constrict import APPLICATION_ID, VERSION, PREFIX
 from typing import List, Sequence, Callable, Any
+import asyncio
+from gi.events import GLibEventLoopPolicy
+
+policy = GLibEventLoopPolicy()
+asyncio.set_event_loop_policy(policy)
 
 # FIXME: occasional segmentation fault on compression completion? No idea what
 # the cause is yet. It's seemingly random.
@@ -48,6 +53,8 @@ class ConstrictApplication(Adw.Application):
             'Open a new window',
             None
         )
+
+        self.loop = policy.get_event_loop()
 
         self.create_action('new-window', lambda *_: self.new_window(), ['<primary>n'])
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
@@ -141,7 +148,7 @@ class ConstrictApplication(Adw.Application):
             win.get_style_context().add_class("devel")
 
         if gfiles:
-            win.stage_videos(gfiles)
+            self.loop.create_task(win.stage_videos(gfiles))
 
         win.present()
 
