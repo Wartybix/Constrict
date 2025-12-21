@@ -77,6 +77,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.compressing = False
         self.currently_processed = ''
         self.main_view_title.set_title(self.get_title())
+        self.videos_to_stage = []
 
         self.toggle_sidebar_action = Gio.SimpleAction(name="toggle-sidebar")
         self.toggle_sidebar_action.connect("activate", self.toggle_sidebar)
@@ -823,22 +824,41 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """ Add passed video files to the window's sources list box as
         sources rows.
         """
+        if self.videos_to_stage:
+            staged_paths = list(map(
+                lambda file: file.get_path(),
+                self.videos_to_stage
+            ))
+
+            filtered_files = list(filter(
+                lambda file: file.get_path() not in staged_paths,
+                video_list
+            ))
+
+            self.videos_to_stage.extend(filtered_files)
+            return
+
         existing_paths = list(map(
             lambda x: x.video_path,
             self.sources_list_box.get_all()
         ))
 
+        self.videos_to_stage = video_list
         staged_rows = []
         unsupported_mimes = set()
 
-        for i in range(len(video_list)):
-            video = video_list[i]
+        i = 0
+        while i < len(self.videos_to_stage):
+            print("looping", len(self.videos_to_stage))
+            video = self.videos_to_stage[i]
             video_path = video.get_path()
 
             if video_path in existing_paths:
+                i += 1
                 continue
 
             if not video.query_exists():
+                i += 1
                 continue
 
             info = await video.query_info_async(
@@ -849,12 +869,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
             mime_type = info.get_content_type()
 
             if not mime_type:
+                i += 1
                 continue
 
             is_video = mime_type.startswith('video/') or mime_type == 'image/gif'
 
             if not is_video:
                 unsupported_mimes.add(mime_type)
+                i += 1
                 continue
 
             display_name = info.get_display_name() if info else video.get_basename()
@@ -875,6 +897,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             self.set_progress((i + 1) / len(video_list))
 
+            i += 1
+
         self.set_progress(0.0)
 
         for mime in unsupported_mimes:
@@ -892,6 +916,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
             self.refresh_can_export(False)
             staged_rows[-1].grab_focus()
             self.set_queued_title(False)
+
+        self.videos_to_stage = []
 
     def open_file_dialog(
         self,
