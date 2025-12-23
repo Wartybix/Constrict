@@ -34,6 +34,51 @@ import os
 from typing import Any, List
 
 # TODO: future feature -- add pause button?
+# TODO: test symlinks?
+
+async def flatten_files(file_list: List[Gio.File]) -> List[Gio.File]:
+    """ Returns a list of non-directory files in a given file list. Directories
+    are recursively enumerated through, so that files inside them are added to
+    the returned list. """
+    flattened = []
+
+    for file in file_list:
+        file_type = file.query_file_type(Gio.FileQueryInfoFlags.NONE)
+
+        if file_type == Gio.FileType.DIRECTORY:
+            enumerator = await file.enumerate_children_async(
+                'standard::path',
+                Gio.FileQueryInfoFlags.NONE,
+                GLib.PRIORITY_DEFAULT
+            )
+
+            files = []
+
+            while fileinfo := enumerator.next_file():
+                files.append(enumerator.get_child(fileinfo))
+
+            files.sort(key=lambda file: file.get_basename())
+
+            flattened.extend(await flatten_files(files))
+        else:
+            flattened.append(file)
+
+    return flattened
+
+async def get_host_path(file: Gio.File) -> str:
+    """ Attempt to get the host path of a file under flatpak, not just the
+    sandboxed path. """
+    file_info = await file.query_info_async(
+        "xattr::document-portal.host-path",
+        Gio.FileQueryInfoFlags.NONE,
+        GLib.PRIORITY_DEFAULT
+    )
+
+    host_path = file_info.get_attribute_string(
+        "xattr::document-portal.host-path"
+    )
+
+    return host_path if host_path else file.get_path()
 
 @Gtk.Template(resource_path=f'{PREFIX}/window.ui')
 class ConstrictWindow(Adw.ApplicationWindow):
@@ -824,6 +869,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """ Add passed video files to the window's sources list box as
         sources rows.
         """
+        flattened_files = await flatten_files(video_list)
+
         if self.videos_to_stage:
             staged_paths = list(map(
                 lambda file: file.get_path(),
@@ -832,7 +879,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             filtered_files = list(filter(
                 lambda file: file.get_path() not in staged_paths,
-                video_list
+                flattened_files
             ))
 
             self.videos_to_stage.extend(filtered_files)
@@ -843,17 +890,20 @@ class ConstrictWindow(Adw.ApplicationWindow):
             self.sources_list_box.get_all()
         ))
 
-        self.videos_to_stage = video_list
+        existing_paths = [
+            await get_host_path(Gio.File.new_for_path(x)) for x in existing_paths
+        ]
+
+        self.videos_to_stage = flattened_files
         staged_rows = []
         unsupported_mimes = set()
 
         i = 0
         while i < len(self.videos_to_stage):
-            print("looping", len(self.videos_to_stage))
             video = self.videos_to_stage[i]
-            video_path = video.get_path()
+            host_path = await get_host_path(video)
 
-            if video_path in existing_paths:
+            if host_path in existing_paths:
                 i += 1
                 continue
 
@@ -895,7 +945,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             staged_rows.append(staged_row)
 
-            self.set_progress((i + 1) / len(video_list))
+            self.set_progress((i + 1) / len(self.videos_to_stage))
 
             i += 1
 
