@@ -383,6 +383,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             # exported to. Please use “” instead of "", if applicable to your
             # language.
             _('Exporting to “{}”').format(export_dir)
+            # TODO: change to show full path after string freeze
         )
 
     def set_queued_title(self, daemon: bool) -> None:

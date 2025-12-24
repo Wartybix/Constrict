@@ -9,7 +9,8 @@
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
-        "--socket=wayland"
+        "--socket=wayland",
+        "--require-version=1.14.5"
     ],
     "cleanup-commands" : [
         "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
