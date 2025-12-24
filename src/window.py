@@ -902,13 +902,13 @@ class ConstrictWindow(Adw.ApplicationWindow):
         i = 0
         while i < len(self.videos_to_stage):
             video = self.videos_to_stage[i]
-            host_path = await get_host_path(video)
 
-            if host_path in existing_paths:
+            if not video.query_exists():
                 i += 1
                 continue
 
-            if not video.query_exists():
+            host_path = await get_host_path(video)
+            if host_path in existing_paths:
                 i += 1
                 continue
 
