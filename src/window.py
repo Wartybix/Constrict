@@ -47,7 +47,7 @@ async def flatten_files(file_list: List[Gio.File]) -> List[Gio.File]:
 
         if file_type == Gio.FileType.DIRECTORY:
             enumerator = await file.enumerate_children_async(
-                'standard::path',
+                'standard::name',
                 Gio.FileQueryInfoFlags.NONE,
                 GLib.PRIORITY_DEFAULT
             )
@@ -55,7 +55,8 @@ async def flatten_files(file_list: List[Gio.File]) -> List[Gio.File]:
             files = []
 
             while fileinfo := enumerator.next_file():
-                files.append(enumerator.get_child(fileinfo))
+                file = enumerator.get_child(fileinfo)
+                files.append(file)
 
             files.sort(key=lambda file: file.get_basename())
 
