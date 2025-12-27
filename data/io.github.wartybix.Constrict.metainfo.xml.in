@@ -89,6 +89,19 @@
   </screenshots>
 
   <releases>
+    <release version="25.12.1" date="2025-12-27">
+      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12.1</url>
+      <description translate="no">
+        <p>A few quality of life improvements in this one:</p>
+        <ul>
+          <li>Added French translation.</li>
+          <li>Now shows a progress bar when importing many videos, improving responsiveness.</li>
+          <li>Allowed folders of videos to be recursively imported via drag-and-drop or using your file manager's ‘Open With’ dialog.</li>
+          <li>Reworded some toasts for clearer readability, among other small UI tweaks.</li>
+          <li>Updated existing translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.12" date="2025-12-04">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12</url>
       <description translate="no">
