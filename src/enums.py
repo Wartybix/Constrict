@@ -45,3 +45,4 @@ class SourceState:
 class Thumbnailer:
     TOTEM = 0
     FFMPEG = 1
+    GST = 2

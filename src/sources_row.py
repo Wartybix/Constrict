@@ -377,29 +377,37 @@ class SourcesRow(Adw.ActionRow):
         this row represents, and storing it named with the video's file hash
         in a temp directory
         """
+        bin_gst_thumbnailer = 'gst-video-thumbnailer'
         bin_totem = 'totem-video-thumbnailer'
         bin_ffmpeg = 'ffmpegthumbnailer'
 
         generic_icon = 'image-x-generic' if self.mime_type == 'image/gif' else 'video-x-generic'
 
-        # Check Totem thumbnailer is installed.
-        # Use FFMPEG thumbnailer as a fallback.
-        # Use video-x-generic icon as the fallback's fallback.
+        # Check GStreamer thumbnailer is installed.
+        # Use Totem thumbnailer as a fallback.
+        # Use FFMPEG thumbnailer as the fallback's fallback.
+        # Use video-x-generic icon as the final fallback.
 
-        totem_exists = GLib.find_program_in_path(bin_totem)
-        thumbnailer = Thumbnailer.TOTEM
+        # TODO: maybe just depend on the 1 thumbnailer for simplicity?
 
-        if not totem_exists:
-            ffmpeg_exists = GLib.find_program_in_path(bin_ffmpeg)
-            thumbnailer = Thumbnailer.FFMPEG
+        gst_thumbnailer_exists = GLib.find_program_in_path(bin_gst_thumbnailer)
+        thumbnailer = Thumbnailer.GST
 
-            if not ffmpeg_exists:
-                update_ui(
-                    self.thumbnail.set_from_icon_name,
-                    generic_icon,
-                    daemon
-                )
-                return
+        if not gst_thumbnailer_exists:
+            totem_exists = GLib.find_program_in_path(bin_totem)
+            thumbnailer = Thumbnailer.TOTEM
+
+            if not totem_exists:
+                ffmpeg_exists = GLib.find_program_in_path(bin_ffmpeg)
+                thumbnailer = Thumbnailer.FFMPEG
+
+                if not ffmpeg_exists:
+                    update_ui(
+                        self.thumbnail.set_from_icon_name,
+                        generic_icon,
+                        daemon
+                    )
+                    return
 
         # Check tmp directory is available to write.
         tmp_dir = get_tmp_dir()
@@ -414,7 +422,13 @@ class SourcesRow(Adw.ActionRow):
 
         thumb_filepath = str(tmp_dir / f'{file_hash}.jpg')
 
-        if thumbnailer == Thumbnailer.TOTEM:
+        if thumbnailer == Thumbnailer.GST:
+            subprocess.run([
+                bin_totem,
+                '-p', self.video_path,
+                '-o', thumb_filepath
+            ])
+        elif thumbnailer == Thumbnailer.TOTEM:
             subprocess.run([
                 bin_totem,
                 self.video_path,
@@ -423,10 +437,8 @@ class SourcesRow(Adw.ActionRow):
         elif thumbnailer == Thumbnailer.FFMPEG:
             subprocess.run([
                 bin_ffmpeg,
-                '-i',
-                self.video_path,
-                '-o',
-                thumb_filepath
+                '-i', self.video_path,
+                '-o', thumb_filepath
             ])
         else:
             raise Exception('Unknown thumbnailer set. Whoopsie daisies.')
