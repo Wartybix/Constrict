@@ -31,7 +31,7 @@ The app attempts to retain as much audiovisual quality as possible for the file 
 ## Install
 Constrict is officially published as a Flatpak, via Flathub. Please ensure you are using an up-to-date version of this Flatpak when filing any new bug reports.
 
-<a href='https://flathub.org/apps/org.gimp.GIMP'>
+<a href='https://flathub.org/apps/io.github.wartybix.Constrict'>
   <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en'/>
 </a>
 
