@@ -7,7 +7,7 @@
   <name xml:lang="en">Constrict</name>
   <shortdesc xml:lang="en">Compress videos to target sizes</shortdesc>
 
-  <homepage rdf:resource="https://github.com/Wartybix/Constrict/" />
+  <homepage rdf:resource="https://apps.gnome.org/Constrict/" />
   <bug-database rdf:resource="https://github.com/Wartybix/Constrict/issues/" />
 
   <programming-language>Python</programming-language>

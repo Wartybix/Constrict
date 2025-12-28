@@ -26,7 +26,7 @@
   </developer>
 
   <!-- Requered: Should be a link to the upstream homepage for the component -->
-  <url type="homepage">https://github.com/Wartybix/Constrict</url>
+  <url type="homepage">https://apps.gnome.org/Constrict</url>
   <!-- Recommended: It is highly recommended for open-source projects to display the source code repository -->
   <url type="vcs-browser">https://github.com/Wartybix/Constrict</url>
   <!-- Should point to the software's bug tracking system, for users to report new bugs -->
@@ -42,7 +42,7 @@
   <!--This could for example be an HTTPS URL to an online form or a page describing how to contact the developer -->
   <!-- <url type="contact">https://example.org/contact</url> -->
   <!--URLs of this type should point to a webpage showing information on how to contribute to the described software project -->
-  <url type="contribute">https://github.com/Wartybix/Constrict</url>
+  <url type="contribute">https://welcome.gnome.org/app/Constrict/</url>
 
   <supports>
     <control>pointing</control>
@@ -87,6 +87,8 @@
       <caption>Compression settings in the mobile friendly UI</caption>
     </screenshot>
   </screenshots>
+
+  <!-- TODO: don't forget to add l10n module here once added -->
 
   <releases>
     <release version="25.12.1" date="2025-12-27">
