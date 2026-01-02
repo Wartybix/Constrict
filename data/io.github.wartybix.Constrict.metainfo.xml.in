@@ -8,42 +8,35 @@
   <name>Constrict</name>
   <summary>Compress videos to target sizes</summary>
   <description>
-    <p>Constrict compresses your videos to your chosen file size — useful for uploading to services with specific file size limits. No more relying on online services for video compression, or the manual trial-and-error of re-encoding at various bitrates yourself.</p>
+    <p>Constrict compresses your videos to your chosen file size — useful for uploading to services with specific file size limits. 
+    No more relying on online services for video compression, or the manual trial-and-error of re-encoding at various bitrates yourself.</p>
     <p>Features include:</p>
     <ul>
       <li>An intuitive, easy to use interface.</li>
-      <li>Automatic calculation of average bitrate (ABR), resolution, framerate, and audio quality each video is re-encoded with to meet the target file size.</li>
+      <li>Automatic calculation of average bitrate (ABR), resolution, framerate, and audio quality each video is re-encoded 
+      with to meet the target file size.</li>
       <li>Bulk compression of multiple videos to one output directory.</li>
       <li>Customization of framerate limits, to ensure a clearer or smoother image.</li>
       <li>A choice of codecs to encode output files with, including H.264, HEVC, AV1, and VP9.</li>
     </ul>
-    <p>The app attempts to retain as much audiovisual quality as possible for the file size given. However, extremely steep reductions in file size can cause significant loss of quality in the output file, and sometimes compression may not be possible at all. All processing is done locally — and as such, compression speeds are only as fast as your hardware allows.</p>
+    <p>The app attempts to retain as much audiovisual quality as possible for the file size given. 
+    However, extremely steep reductions in file size can cause significant loss of quality in the output file, 
+    and sometimes compression may not be possible at all. All processing is done locally — and as such, 
+    compression speeds are only as fast as your hardware allows.</p>
   </description>
 
-  <developer id="io.github">
-    <!-- TRANSLATORS: developer name, please do not translate. -->
+  <developer id="io.github.wartybix">
     <name translate="no">Wartybix</name>
   </developer>
 
-  <!-- Requered: Should be a link to the upstream homepage for the component -->
   <url type="homepage">https://apps.gnome.org/Constrict</url>
-  <!-- Recommended: It is highly recommended for open-source projects to display the source code repository -->
   <url type="vcs-browser">https://github.com/Wartybix/Constrict</url>
-  <!-- Should point to the software's bug tracking system, for users to report new bugs -->
   <url type="bugtracker">https://github.com/Wartybix/Constrict/issues</url>
-  <!-- Should link a FAQ page for this software, to answer some of the most-asked questions in detail -->
-  <!-- <url type="faq">https://example.org/faq</url> -->
-  <!-- URLs of this type should point to a webpage where users can submit or modify translations of the upstream project -->
-  <!-- <url type="translate">https://example.org/translate</url> -->
-  <!--Sould provide a web link to an online user's reference, a software manual or help page -->
-  <!-- <url type="help">https://example.org/help</url> -->
-  <!-- URLs of this type should point to a webpage showing information on how to donate to the described software project -->
+  <url type="translate">https://github.com/Wartybix/Constrict/po</url>
   <url type="donation">https://ko-fi.com/wartybix/</url>
-  <!--This could for example be an HTTPS URL to an online form or a page describing how to contact the developer -->
-  <!-- <url type="contact">https://example.org/contact</url> -->
-  <!--URLs of this type should point to a webpage showing information on how to contribute to the described software project -->
   <url type="contribute">https://welcome.gnome.org/app/Constrict/</url>
-
+  <!-- TODO: don't forget to add l10n module here once added -->
+  
   <supports>
     <control>pointing</control>
     <control>keyboard</control>
@@ -54,16 +47,10 @@
     <display_length compare="ge">360</display_length>
   </requires>
 
-
-
   <translation type="gettext">constrict</translation>
-  <!-- All graphical applications having a desktop file must have this tag in the MetaInfo.
-     If this is present, appstreamcli compose will pull icons, keywords and categories from the desktop file. -->
   <launchable type="desktop-id">@APPLICATION_ID@.desktop</launchable>
-  <!-- Use the OARS website (https://hughsie.github.io/oars/generate.html) to generate these and make sure to use oars-1.1 -->
   <content_rating type="oars-1.1" />
 
-  <!-- Applications should set a brand color in both light and dark variants like so -->
   <branding>
     <color type="primary" scheme_preference="light">#99c1f1</color>
     <color type="primary" scheme_preference="dark">#613583</color>
@@ -88,8 +75,6 @@
     </screenshot>
   </screenshots>
 
-  <!-- TODO: don't forget to add l10n module here once added -->
-
   <releases>
     <release version="25.12.1" date="2025-12-27">
       <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12.1</url>
@@ -111,7 +96,8 @@
         <ul>
           <li>Added Spanish translation.</li>
           <li>Now using Glycin to load video thumbnails in their own sandboxes before displaying them, improving security.</li>
-          <li>Hopefully fixed an application crash that sometimes occurs after compression completes. I’m not certain though, as the problem is very inconsistent to reproduce. We will have to see…</li>
+          <li>Hopefully fixed an application crash that sometimes occurs after compression completes. 
+          I’m not certain though, as the problem is very inconsistent to reproduce. We will have to see…</li>
           <li>Fixed an application crash when attempting to import a file that doesn't exist.</li>
           <li>Fixed strange radio button focus highlights.</li>
           <li>Reduced the width of some popover messages.</li>
@@ -128,13 +114,16 @@
         <ul>
           <li>Update to GNOME 49 runtime.</li>
           <li>Updated the UI to use a split view sidebar layout, in line with other GNOME apps.</li>
-          <li>Introduced the ability to set a target size above or equal to the original file target size without the app refusing the export. In this case, the app will just transcode the video while attempting to retain quality at the original file size. This is by no means “lossless” though.</li>
+          <li>Introduced the ability to set a target size above or equal to the original file target size without 
+          the app refusing the export. In this case, the app will just transcode the video while attempting to retain quality 
+          at the original file size. This is by no means “lossless” though.</li>
           <li>Added Persian translation.</li>
           <li>Fixed videos with unconventional resolutions having their resolutions reduced unnecessarily.</li>
           <li>Fixed a crash when the framerate of a video source couldn't be determined.</li>
           <li>Will now display a toast when attempting to import unsupported files either through drag-and-drop or the ‘Open With…’ dialog.</li>
           <li>Added a drag-and-drop overlay to match that of Loupe.</li>
-          <li>Added an information popover to the ‘Hardware Acceleration’ section of the preferences, to better clarify cases where it won’t be used despite being enabled.</li>
+          <li>Added an information popover to the ‘Hardware Acceleration’ section of the preferences, to better clarify cases 
+          where it won’t be used despite being enabled.</li>
         </ul>
       </description>
     </release>
@@ -147,7 +136,8 @@
           <li>Added support for GIFs as video sources.</li>
           <li>Fixed some instances where compression progress would sometimes 'jump back' or go over 100 %.</li>
           <li>Added German translation.</li>
-          <li>Fixed an issue where the wrong resolution would be applied to portrait videos in subsequent attempts after going under target, potentially causing numerous attempt failures.</li>
+          <li>Fixed an issue where the wrong resolution would be applied to portrait videos in subsequent attempts 
+          after going under target, potentially causing numerous attempt failures.</li>
         </ul>
       </description>
     </release>
@@ -156,9 +146,12 @@
       <description translate="no">
         <p>Lots of new features and improvements in this one:</p>
         <ul>
-          <li>Added hardware acceleration for significantly faster compression speeds. Only works if your GPU supports VA-API encoding for your chosen video codec, otherwise it'll fall back to regular software encoding. 'Extra Quality' mode will still use software encoding regardless.</li>
+          <li>Added hardware acceleration for significantly faster compression speeds. Only works if your GPU 
+          supports VA-API encoding for your chosen video codec, otherwise it'll fall back to regular software encoding. 
+          'Extra Quality' mode will still use software encoding regardless.</li>
           <li>Added new app icon from the GNOME Design Team.</li>
-          <li>Compressed videos now keep all their subtitle streams/languages, if the subtitles from video sources use compatible, text-only codecs.</li>
+          <li>Compressed videos now keep all their subtitle streams/languages, if the subtitles from video sources use 
+          compatible, text-only codecs.</li>
           <li>Fixed an issue where some trimmed video sources had much longer durations when compressed.</li>
           <li>Added Turkish translation.</li>
           <li>Updated existing translations.</li>
@@ -172,8 +165,10 @@
         <ul>
           <li>Corrected some SI units, such as 'MB' to 'MiB', and 'Kbps' to 'kbps'.</li>
           <li>Added Italian and Russian translations.</li>
-          <li>Fixed unresponsiveness when clicking on an old notification from the app, or when attempting to open the app while it's already running.</li>
-          <li>The app should generally require fewer attempts to compress videos now, and should no longer get caught up in endless loops going under/over target for some videos. Increased default tolerance to 25%.</li>
+          <li>Fixed unresponsiveness when clicking on an old notification from the app, or when attempting to open 
+          the app while it's already running.</li>
+          <li>The app should generally require fewer attempts to compress videos now, and should no longer get caught 
+          up in endless loops going under/over target for some videos. Increased default tolerance to 25%.</li>
           <li>Fixed some instances of portrait videos being compressed to landscape.</li>
           <li>Fixed the app detecting the wrong frame rate from some source videos, and causing a crash.</li>
         </ul>
