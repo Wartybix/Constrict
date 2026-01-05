@@ -1,0 +1,818 @@
+# Occitan translation file.
+# Copyright (C) YEAR Wartybix
+# This file is distributed under the same license as the Constrict package.
+# Quentin PAGÈS, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict 1.0.1\n"
+"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
+"POT-Creation-Date: 2025-12-04 21:12+0000\n"
+"PO-Revision-Date: 2026-01-05 14:22+0100\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language-Team: \n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:96 src/window.py:347
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Compressor vidèo"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Compressar de vidèos a una talha cibla"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "compressar;comprimir;vidèo;film;clip;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Fenèstra novèla"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"Constrict compresses your videos to your chosen file size — useful for "
+"uploading to services with specific file size limits. No more relying on "
+"online services for video compression, or the manual trial-and-error of re-"
+"encoding at various bitrates yourself."
+msgstr ""
+"Constrict comprimís vòstras vidèos a la talha de fichièr que causissètz — "
+"util per enviar sus de servicis amb de limits de talha de fichièr "
+"especificas. Pas mai de dependéncia dels servicis en linha per la "
+"compression vidèo, o d’experiéncias d’ensag e fracàs de debits binaris "
+"diferents."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:12
+msgid "Features include:"
+msgstr "Foncionalitats inclusas :"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:14
+msgid "An intuitive, easy to use interface."
+msgstr "Interfàcia grafica simpla d’utilizacion."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid ""
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
+"audio quality each video is re-encoded with to meet the target file size."
+msgstr ""
+"Calcul automatic del debit mejan (ABR), de la resolucion, de la frequéncia "
+"d'imatges e de la qualitat àudio amb los quals cada vidèo es tornada "
+"codificar per aténher la talha de fichièr ciblada."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr ""
+"Compression en massa de mantuna vidèo cap a un repertòri de sortida unic."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:17
+msgid ""
+"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr ""
+"Personalizacion dels limits de la frequéncia d'imatges, per assegurar un "
+"imatge mai net o mai fluid."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid ""
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
+"and VP9."
+msgstr ""
+"Una seleccion de còdecs per encodar los fichièrs de sortida, en inclusent "
+"H.264, HEVC, AV1 e VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"L'aplicacion ensaja de conservar la melhora qualitat audiovisuala possibla "
+"per la talha de fichièr donada. Pasmens, de reduccions extrèmament "
+"importantas de la talha del fichièr pòdon causar una pèrda significativa de "
+"qualitat dins lo fichièr de sortida, e de còps la compression pòt èsser "
+"impossibla. Tot lo tractament se fa localament — e doncas, las velocitats de "
+"compression dependon unicament de la poténcia de vòstre material informatic."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:75
+msgid "Source videos queued for compression"
+msgstr "Vidèos font en espèra de compression"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:79
+msgid "The application mid-compression"
+msgstr "L'aplicacion a la mitat de la compression"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:83
+msgid "A mobile friendly UI"
+msgstr "Interfàcia de bon utilizar sus mobil"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:87
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Paramètres de compression dins l’interfàcia de bon utilizar sus mobil"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:124
+msgid "Framerate Limit"
+msgstr "Limit de la frequéncia d'imatges"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Limita automaticament la frequéncia d’imatges de las vidèos compressadas, o "
+"a 30 FPS o 60 FPS."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Codecs vidèo"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "Lo còdec utilizat per encodar pendent la compression"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+#, python-brace-format
+msgid "Attempt {}"
+msgstr "Ensag {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr "HQ"
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr "LQ"
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, àudio {audio_quality}"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#. Please use U+202F Narrow no-break space (' ') between video bitrate
+#. and unit.
+#: src/attempt_fail_box.py:80
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
+msgid "kbps"
+msgstr "Kbps"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MB'. Please use U+202F Narrow no-break space
+#. (' ') between size and unit.
+#: src/attempt_fail_box.py:95
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "La talha del fichièr compressat èra tròp granda ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:98 src/attempt_fail_box.py:109
+#: src/sources_row.py:528 src/sources_row.py:558 src/sources_row.py:561
+#: src/sources_row.py:578 src/window.py:200
+msgid "MiB"
+msgstr "Mio"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MB'. Please use U+202F Narrow no-break space
+#. (' ') between size and unit.
+#: src/attempt_fail_box.py:106
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "La talha del fichièr compressat èra tròp pichona ({size} {unit})"
+
+#: src/constrict_utils.py:781
+msgid ""
+"Constrict: Could not read input file. Was it moved or deleted before "
+"compression?"
+msgstr ""
+"Constrict : impossible de legir lo fichièr d'entrada. Foguèt desplaçat o "
+"suprimit abans la compression ?"
+
+#: src/constrict_utils.py:804
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict : impossible de recuperar las proprietats de la vidèo. La vidèo "
+"font pòt mancar o èsser corrompuda."
+
+#: src/constrict_utils.py:811
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+"Constrict : impossible de crear lo fichièr exportat. Un fichièr amb lo nom "
+"reservat existís ja."
+
+#: src/constrict_utils.py:813
+msgid ""
+"Constrict: Could not create exported file. There are insufficient "
+"permissions to create a file at the requested export path."
+msgstr ""
+"Constrict : impossible de crear lo fichièr exportat. I a pas pro de "
+"permissions per crear un fichièr al camin d'exportacion demandat."
+
+#: src/constrict_utils.py:879
+msgid ""
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
+"low for this file."
+msgstr ""
+"Constrict : lo debit vidèo es vengut tròp bas (<5 kbps). La talha cibla es "
+"benlèu tròp pichona per aqueste fichièr."
+
+#: src/constrict_utils.py:924
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict : impossible de legir lo fichièr de sortida. Es estat desplaçat o "
+"suprimit durant la compression ?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Inicializacion…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#. Please use U+202F Narrow no-break space (' ') between video bitrate
+#. and unit.
+#: src/current_attempt_box.py:94
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Compression en {vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: {} represents the progress percentage value.
+#. Please use U+202F Narrow no-break space (' ') between {} and %, if
+#. applicable to your language.
+#: src/current_attempt_box.py:126
+#, python-brace-format
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#. Please use U+2014 em dash ('—'), if applicable to your language.
+#: src/current_attempt_box.py:133
+#, python-brace-format
+msgid "{} — Almost done"
+msgstr "{} — Gaireben acabat"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:141
+#, python-brace-format
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} segonda"
+msgstr[1] "{} segondas"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:149 src/current_attempt_box.py:162
+#, python-brace-format
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} minuta"
+msgstr[1] "{} minutas"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:157 src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} ora"
+msgstr[1] "{} oras"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#. Please use U+2014 em dash ('—'), if applicable to your language.
+#: src/current_attempt_box.py:178
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — Demòra {time_shown}"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Depausar las vidèos d’exportar"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Error pendent la compression"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Detalhs"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Copiar los detalhs"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error. Please use “” instead of "", if applicable to your
+#. language.
+#: src/error_dialog.py:48
+#, python-brace-format
+msgid "There was a problem compressing “{}”"
+msgstr "I a agut un problèma en compressant « {} »"
+
+#: src/error_dialog.py:70
+msgid "Details copied to clipboard"
+msgstr "Detalhs copiats al quichapapièrs"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Gestion vidèo"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Dobrir"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Exportar"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Mostrar/Amagar panèl"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afichar los acorchis"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Tampar la fenèstra"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Afichar las preferéncias"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:81
+msgid "compressed"
+msgstr "compressada"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#. Please use ‘’ characters instead of '', if applicable to your language.
+#: src/main.py:178
+#, python-brace-format
+msgid "‘{}’ repository by"
+msgstr "repertòri « {} » per"
+
+#: src/main.py:185
+msgid "Circular progress indicator design by"
+msgstr "Indicador circular de progression concebut per"
+
+#: src/main.py:189
+msgid "Drag overlay design by"
+msgstr "Subreimpression de depaus concebuda per"
+
+#: src/main.py:196
+msgid "translator-credits"
+msgstr "Quentin PAGÈS"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Preferéncias"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Acceleracion materiala"
+
+#: src/preferences_dialog.blp:11
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec, and “Extra Quality” is disabled"
+msgstr ""
+"L'acceleracion materiala s'utiliza sonque se vòstre GPU supòrta l'encodatge "
+"amb lo còdec vidèo seleccionat, e que la « Qualitat superiora » es "
+"desactivada."
+
+#: src/preferences_dialog.blp:14
+msgid "GPU Encoding"
+msgstr "Encodatge GPU"
+
+#: src/preferences_dialog.blp:15
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Utilizar lo GPU per accelerar l’encodatge se disponible"
+
+#: src/preferences_dialog.blp:20
+msgid "Exported Video Suffix"
+msgstr "Sufixe de vidèos exportadas"
+
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Sufixe personalizat"
+
+#: src/preferences_dialog.py:42
+#, python-brace-format
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Utilizat dins los noms de fichièrs per las vidèos exportadas, entre lo nom "
+"de basa e l'extension. Se lo sufixe personalizat es daissat void, lo sufixe "
+"per defaut « {} » serà utilizat."
+
+#: src/preferences_dialog.py:64
+msgid "Changes applied"
+msgstr "Modificacions aplicadas"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "Apondre de vidè_os…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "_Montar"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "_Davalar"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "_Suprimir"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:477
+msgid "View Error Details"
+msgstr "Veire los detalhs de l’error"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Cargament impossible de la vidèo. Pòt èsser absenta o corrompuda."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Veire la progression de la compression"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Mai de detalhs"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Afichar l'emplaçament del fichièr"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Ne veire mai"
+
+#: src/sources_row.py:500 src/window.blp:129 src/window.blp:210
+msgid "More Information"
+msgstr "Mai d'informacions"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MB'. Please use U+202F
+#. narrow no-break space (' ') between size and unit.
+#: src/sources_row.py:525
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Vidèo compressada a {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'. Please use U+202F Narrow no-break
+#. space (' ') between values and units.
+#: src/sources_row.py:554
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"La talha de la vidèo ({original_size} {unit_original}) complís ja la talha "
+"demandada ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#. Please use U+202F Narrow no-break space (' ') between value
+#. and unit.
+#: src/sources_row.py:576
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "La talha cibla ({size} {unit}) es tròp febla per aqueste fichièr."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "Fenèstra _novèla"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Preferéncias"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Acorchis clavièr"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_A prepaus de Constrict"
+
+#: src/window.blp:49 src/window.blp:103
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: src/window.blp:67
+msgid "Compress Videos"
+msgstr "Compressar de vidèos"
+
+#: src/window.blp:68
+msgid "Drag and drop videos here"
+msgstr "Lissar e depausar las vidèos aicí"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:71
+msgid "_Open…"
+msgstr "_Dobrir…"
+
+#: src/window.blp:150
+msgid "_Automatic"
+msgstr "_Automatic"
+
+#: src/window.blp:152
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr ""
+"Utilisatz la frequéncia d'imatges mai elevada sens sacrificar la resolucion"
+
+#: src/window.blp:164
+msgid "Ensure higher image clarity"
+msgstr "Assegurar un imatge mai clar"
+
+#: src/window.blp:176
+msgid "Ensure smoother motion"
+msgstr "Assegurar un movement mai fluid"
+
+#: src/window.blp:187
+msgid "Encoding Options"
+msgstr "Opcions d’encodatge"
+
+#: src/window.blp:190
+msgid "_Video Codec"
+msgstr "_Còdecs vidèo"
+
+#: src/window.blp:198
+msgid "Extra _Quality"
+msgstr "_Qualitat superiora"
+
+#: src/window.blp:200
+msgid "Increase image quality at the cost of compression time"
+msgstr ""
+"Aumentar la qualitat de l’imatge al despens de del temps de compression"
+
+#: src/window.blp:205
+msgid "Advanced Options"
+msgstr "Opcions avançadas"
+
+#: src/window.blp:230
+msgid "_Tolerance (%)"
+msgstr "_Tolerància (%)"
+
+#: src/window.blp:232
+msgid "How far end file sizes can be below target"
+msgstr ""
+"De quant las talhas finalas dels fichièrs pòdon èsser en dejós de la cibla"
+
+#: src/window.blp:256
+msgid "Toggle Settings Pane"
+msgstr "Mostrar/Amagar panèl de paramètres"
+
+#. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
+#: src/window.blp:267
+msgid "Issues with video sources — fix before compressing"
+msgstr "Problèmas amb las fonts vidèos — Corregir abans compression"
+
+#: src/window.blp:285
+msgid "Video Sources"
+msgstr "Fonts vidèo"
+
+#: src/window.blp:289
+msgid "_Clear All"
+msgstr "_Escafar tot"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:310
+msgid "_Export To…"
+msgstr "_Exportar cap a…"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:327
+msgid "_Cancel…"
+msgstr "_Anullar…"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#. Please use U+202F Narrow no-break space (' ') between value and unit.
+#: src/window.py:176
+#, python-brace-format
+msgid "{} FPS"
+msgstr "{} FPS"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer. Please use U+202F narrow no-break space (' ') between
+#. the {} and translated equivalent of 'FPS'.
+#: src/window.py:185
+#, python-brace-format
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+"Las vidèos compressadas a de debits basses pòdon èsser limitadas a {} "
+"imatges per segonda, quina que siá l'opcion definida."
+
+#. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
+#. no-break space (' ') between {} and '%'.
+#: src/window.py:195
+#, no-python-format, python-brace-format
+msgid ""
+"Decreasing the tolerance maximizes image quality by reducing how much "
+"compressed file sizes can be under target. However, this can increase the "
+"number of attempts needed to meet the target, increasing compression time. A "
+"tolerance of {} % or more is recommended."
+msgstr ""
+"Abaissar la tolerància maximaliza la qualitat de l'imatge en redusent lo "
+"marge per loqual la talha dels fichièrs compressats pòt èsser en deçà de la "
+"cibla. Pasmens, aquò pòt aumentar lo nombre d'ensages necessaris per aténher "
+"la cibla, çò qu'aumenta lo temps de compression. Una tolerància de {} % o "
+"mai es recomandada."
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:203
+#, python-brace-format
+msgid "Target _Size ({})"
+msgstr "Talha _cibla ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:320
+#, python-brace-format
+msgid "Processing “{}”"
+msgstr "Tractament de « {} »"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:326
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "{index}/{total} vidèos tractadas"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:337
+#, python-brace-format
+msgid "Exporting to “{}”"
+msgstr "Exportacion cap a « {} »"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued. Please use “” instead of '', if applicable to your
+#. language.
+#: src/window.py:353
+#, python-brace-format
+msgid "“{}” Queued"
+msgstr "« {} » en espèra"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:357
+#, python-brace-format
+msgid "{} Videos Queued"
+msgstr "{} vidèos en espèra"
+
+#: src/window.py:490
+msgid "Stop Compression?"
+msgstr "Arrestar la compression ?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:494
+#, python-brace-format
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr ""
+"La progression realizada pendent la compression de « {} » serà "
+"definitivament perduda"
+
+#: src/window.py:500
+msgid "_Cancel"
+msgstr "_Anullar"
+
+#: src/window.py:501
+msgid "_Stop"
+msgstr "_Arrestar"
+
+#: src/window.py:555
+msgid "Compression Complete"
+msgstr "Compression terminada"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#. Please use “” instead of "", if applicable to your language.
+#: src/window.py:563
+#, python-brace-format
+msgid "“{}” processed"
+msgstr "« {} » tractat"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:568
+#, python-brace-format
+msgid "{} files processed"
+msgstr "{} fichièrs tractats"
+
+#: src/window.py:579
+msgid "Open Export Directory"
+msgstr "Dobrir repertòri d’exportacion"
+
+#: src/window.py:641
+msgid "Videos are being compressed"
+msgstr "Las vidèos son a èsser compressadas"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
+#. instead of '...', if applicable to your language
+#: src/window.py:663
+msgid "Analyzing…"
+msgstr "Analisi en cors…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:759
+#, python-brace-format
+msgid "Error compressing “{}”"
+msgstr "Error en compressant « {} »"
+
+#: src/window.py:762
+msgid "View _Details"
+msgstr "_Veire los detalhs"
+
+#: src/window.py:797
+msgid "Compression complete"
+msgstr "Compression terminada"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:869
+#, python-brace-format
+msgid "Unknown video format “{}”"
+msgstr "Format de vidèo desconegut « {} »"
+
+#: src/window.py:898
+msgid "Videos"
+msgstr "Vidèos"
+
+#: src/window.py:901
+msgid "Pick Videos"
+msgstr "Seleccionar las vidèos"
