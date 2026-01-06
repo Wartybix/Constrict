@@ -3,6 +3,7 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "49",
     "sdk" : "org.gnome.Sdk",
+    "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "command" : "constrict",
     "tags": ["devel", "development", "nightly"],
     "finish-args" : [
