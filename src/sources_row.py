@@ -32,7 +32,7 @@ from gi.repository import Adw, Gtk, Gio, GLib, Gdk, Gly, GlyGtk4
 from pathlib import Path
 from constrict.shared import get_tmp_dir, update_ui
 from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration, get_audio_bitrate
-from constrict.enums import SourceState, Thumbnailer
+from constrict.enums import SourceState
 from constrict.progress_pie import ProgressPie
 from constrict.attempt_fail_box import AttemptFailBox
 from constrict.progress_popover_box import ProgressPopoverBox
@@ -377,59 +377,30 @@ class SourcesRow(Adw.ActionRow):
         this row represents, and storing it named with the video's file hash
         in a temp directory
         """
-        bin_totem = 'totem-video-thumbnailer'
-        bin_ffmpeg = 'ffmpegthumbnailer'
-
+        bin_gst_thumbnailer = 'gst-video-thumbnailer'
         generic_icon = 'image-x-generic' if self.mime_type == 'image/gif' else 'video-x-generic'
 
-        # Check Totem thumbnailer is installed.
-        # Use FFMPEG thumbnailer as a fallback.
-        # Use video-x-generic icon as the fallback's fallback.
+        gst_thumbnailer_exists = GLib.find_program_in_path(bin_gst_thumbnailer)
 
-        totem_exists = GLib.find_program_in_path(bin_totem)
-        thumbnailer = Thumbnailer.TOTEM
-
-        if not totem_exists:
-            ffmpeg_exists = GLib.find_program_in_path(bin_ffmpeg)
-            thumbnailer = Thumbnailer.FFMPEG
-
-            if not ffmpeg_exists:
-                update_ui(
-                    self.thumbnail.set_from_icon_name,
-                    generic_icon,
-                    daemon
-                )
-                return
+        if not gst_thumbnailer_exists:
+            update_ui(self.thumbnail.set_from_icon_name, generic_icon, daemon)
+            return
 
         # Check tmp directory is available to write.
         tmp_dir = get_tmp_dir()
 
         if not tmp_dir:
-            update_ui(
-                self.thumbnail.set_from_icon_name,
-                generic_icon,
-                daemon
-            )
+            update_ui(self.thumbnail.set_from_icon_name, generic_icon, daemon)
             return
 
         thumb_filepath = str(tmp_dir / f'{file_hash}.jpg')
 
-        if thumbnailer == Thumbnailer.TOTEM:
-            subprocess.run([
-                bin_totem,
-                self.video_path,
-                thumb_filepath
-            ])
-        elif thumbnailer == Thumbnailer.FFMPEG:
-            subprocess.run([
-                bin_ffmpeg,
-                '-i',
-                self.video_path,
-                '-o',
-                thumb_filepath
-            ])
-        else:
-            raise Exception('Unknown thumbnailer set. Whoopsie daisies.')
+        subprocess.run([
+            bin_gst_thumbnailer,
+            '-p', self.video_path,
+            '-s', '128',
+            '-o', thumb_filepath
+        ])
 
         thumb_file = Gio.File.new_for_path(thumb_filepath)
 
