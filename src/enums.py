@@ -41,7 +41,3 @@ class SourceState:
     INCOMPATIBLE = 5
     WARN = 6
 
-
-class Thumbnailer:
-    TOTEM = 0
-    FFMPEG = 1

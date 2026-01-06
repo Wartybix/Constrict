@@ -12,6 +12,10 @@
         "--socket=wayland",
         "--require-version=1.14.5"
     ],
+    "build-options" : {
+        "append-path" : "/usr/lib/sdk/rust-stable/bin",
+        "build-args": ["--share=network"]
+    },
     "cleanup-commands" : [
         "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
     ],
@@ -40,29 +44,14 @@
             ]
         },
         {
-            "name" : "totem-pl-parser",
+            "name" : "gst-thumbnailers",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/totem-pl-parser/-/archive/V_3_26_6/totem-pl-parser-V_3_26_6.tar.gz",
-                    "mirror-urls" : [
-                        "https://github.com/GNOME/totem-pl-parser/archive/refs/tags/V_3_26_6.tar.gz"
-                    ],
-                    "sha256" : "7219272a4863f823e2dd6d997e78d725de9e6071b1af1b478870f207731a8234"
-                }
-            ]
-        },
-        {
-            "name" : "totem-video-thumbnailer",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/totem-video-thumbnailer.git",
-                    "commit" : "6cb399918571a97591ff5a4a5a41d8e46b11027a"
+                    "url" : "https://gitlab.gnome.org/GNOME/gst-thumbnailers/-/archive/1.0.alpha.1/gst-thumbnailers-1.0.alpha.1.tar.gz",
+                    "sha256" : "a754bc1a21522a5315463b05fb4d3f02e7b824816b155c1826c77de8afe70e49"
                 }
             ]
         },
