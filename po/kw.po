@@ -1,0 +1,806 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Wartybix
+# This file is distributed under the same license as the Constrict package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Flynn Peck <cirilla@tuta.io>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict 1.0.1\n"
+"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
+"POT-Creation-Date: 2025-12-04 21:12+0000\n"
+"PO-Revision-Date: 2026-01-07 13:50+0000\n"
+"Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
+"Language-Team: kw\n"
+"Language: kw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:96 src/window.py:347
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Gwaskell Gwydhyowyow"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Gwaska gwydhyowyow dhe brasterow hwansys"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "Gwaska;Gwydhyow;Fylm;Klypp;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Fenester Nowydh"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"Constrict compresses your videos to your chosen file size — useful for "
+"uploading to services with specific file size limits. No more relying on "
+"online services for video compression, or the manual trial-and-error of re-"
+"encoding at various bitrates yourself."
+msgstr ""
+"Constrict gwaska dha gwydhyowyow dhe dha braster restren hwansys — gwerek "
+"rag ughkarga dhe gonisyow gans finwethow braster restrennow komparek. Fydhya "
+"nevra namoy war gonisyow warlinen rag gwaskyans, po an assay-hag-error dre "
+"dhorn a daskodenni dhe kevradhow byttys dyffrans dha honan."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:12
+msgid "Features include:"
+msgstr "Nasyow komprehendya:"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:14
+msgid "An intuitive, easy to use interface."
+msgstr "Unn ynterfas es."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid ""
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
+"audio quality each video is re-encoded with to meet the target file size."
+msgstr ""
+"Kalkyans awtomatek a kevradh byttys kresek (KBK), braster, kevradh fram, ha "
+"kwalita son rag daskodennys gwydhyow pub rag hedhes an braster restren "
+"kosten."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr "Gwaskyans kettermynyek gwydhyowyow liesek dhe unn restrenva eskorrans."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:17
+msgid ""
+"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr "Personelhe finwethow kevradh fram, rag surhe unn gwedh kler."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid ""
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
+"and VP9."
+msgstr ""
+"Unn dewis a kodekys dhe kodenni restrennow eskorrans gans, komprehendya "
+"H.264, HEVC, AVI, ha VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"An app assaya gwitha kwalita klewwelyek kekemmys galladow rag an braster "
+"restren provys. Byttegyns, leheansow purra yn braster restren gallos kawsya "
+"koll kwalita yn an restren eskorrans, ha treweythyow gwaskyans na galladow "
+"banna. Oll argerdhow happya leel — ytho tooth gwaskyans yw uskis dell dha "
+"kalesweyth alowa."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:75
+msgid "Source videos queued for compression"
+msgstr "Gwydhyowyow lostys rag gwaskyans"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:79
+msgid "The application mid-compression"
+msgstr "An app dres gwaskyans"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:83
+msgid "A mobile friendly UI"
+msgstr "Unn ynterfas kowethek dhe kellgowsoryon"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:87
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Settyansow gwaskyans yn an ynterfas kellgowser"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:124
+msgid "Framerate Limit"
+msgstr "Finweth Kevradh Fram"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Finwetha kevradhow fram a gwydhyowyow gwaskys yn awtomatek, po dhe 90 FDE po "
+"60FDE."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Kodek Gwydhyow"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "An kodec devnydhys rag kodennyans dres gwaskyans"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+#, python-brace-format
+msgid "Attempt {}"
+msgstr "Assay {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr "HQ"
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr "LQ"
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, {audio_quality} son"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#. Please use U+202F Narrow no-break space (' ') between video bitrate
+#. and unit.
+#: src/attempt_fail_box.py:80
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
+msgid "kbps"
+msgstr "kbde"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MB'. Please use U+202F Narrow no-break space
+#. (' ') between size and unit.
+#: src/attempt_fail_box.py:95
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "Braster restren gwaskys yw re bras ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:98 src/attempt_fail_box.py:109
+#: src/sources_row.py:528 src/sources_row.py:558 src/sources_row.py:561
+#: src/sources_row.py:578 src/window.py:200
+msgid "MiB"
+msgstr "MiB"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MB'. Please use U+202F Narrow no-break space
+#. (' ') between size and unit.
+#: src/attempt_fail_box.py:106
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Braster restren gwaskys yw re byghan ({size} {unit})"
+
+#: src/constrict_utils.py:781
+msgid ""
+"Constrict: Could not read input file. Was it moved or deleted before "
+"compression?"
+msgstr ""
+"Constrict: Y fyllis dhe redya restren ynworrans. Ev gways po dileys dherag "
+"gwaskyans?"
+
+#: src/constrict_utils.py:804
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict: Y fyllis dhe kerghes kudhlow gwydhyow. Gwydhyow yw martesen "
+"kellys po legrys."
+
+#: src/constrict_utils.py:811
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+"Constrict: Y fyllis dhe gulya restren esperthys. Unn restren gans an hanow "
+"ragerghys eksistya seulabrys."
+
+#: src/constrict_utils.py:813
+msgid ""
+"Constrict: Could not create exported file. There are insufficient "
+"permissions to create a file at the requested export path."
+msgstr ""
+"Constrict: Y fyllis dhe gulya restren esperthys. Yma grontys anlowr rag gul "
+"unn restren yn an tyller esperth pejys."
+
+#: src/constrict_utils.py:879
+msgid ""
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
+"low for this file."
+msgstr ""
+"Constrict: Kovradh byttys gwydhyow bos re isel (<5 kpde). An braster kosen "
+"yw martesen re isel rag an restren ma."
+
+#: src/constrict_utils.py:924
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict: Y fyllis dhe redya restren eskorrans. Ev gways po dileys dres "
+"gwaskyans?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Dalleth…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#. Please use U+202F Narrow no-break space (' ') between video bitrate
+#. and unit.
+#: src/current_attempt_box.py:94
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Gwaska dhe {vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: {} represents the progress percentage value.
+#. Please use U+202F Narrow no-break space (' ') between {} and %, if
+#. applicable to your language.
+#: src/current_attempt_box.py:126
+#, python-brace-format
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#. Please use U+2014 em dash ('—'), if applicable to your language.
+#: src/current_attempt_box.py:133
+#, python-brace-format
+msgid "{} — Almost done"
+msgstr "{} — Deu ogasti"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:141
+#, python-brace-format
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} eylen"
+msgstr[1] "{} eylennow"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:149 src/current_attempt_box.py:162
+#, python-brace-format
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} mynysen"
+msgstr[1] "{} mynysennow"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:157 src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} eur"
+msgstr[1] "{} euryow"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#. Please use U+2014 em dash ('—'), if applicable to your language.
+#: src/current_attempt_box.py:178
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — ogas ha {time_shown} remenant"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Droppya Gwydhyowyow rag Ynperthi"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Error Gwaskyans"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Manylyon"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Kopia Manylyon"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error. Please use “” instead of "", if applicable to your
+#. language.
+#: src/error_dialog.py:48
+#, python-brace-format
+msgid "There was a problem compressing “{}”"
+msgstr "Yma unn kudyn gwaska “{}”"
+
+#: src/error_dialog.py:70
+msgid "Details copied to clipboard"
+msgstr "Manylyon kopys war astel glypp"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Dyghtyans Gwydhyow"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Ygeri"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Esperthi"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ollgemmyn"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Dewis Kwarel Settyansow"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Diskwedhes Kesunyansow Bysowek"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Degea Fenester"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Kwytya"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Diskwedhes Settyansow"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:81
+msgid "compressed"
+msgstr "gwaskys"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#. Please use ‘’ characters instead of '', if applicable to your language.
+#: src/main.py:178
+#, python-brace-format
+msgid "‘{}’ repository by"
+msgstr "‘{}’ kovskrifva gans"
+
+#: src/main.py:185
+msgid "Circular progress indicator design by"
+msgstr "Desin menek avonsyans kelghek gans"
+
+#: src/main.py:189
+msgid "Drag overlay design by"
+msgstr "Desin draylyans gans"
+
+#: src/main.py:196
+msgid "translator-credits"
+msgstr "Flynn <cirilla@tuta.io>"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Settyansow"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Uskisheans Kalesweyth"
+
+#: src/preferences_dialog.blp:11
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec, and “Extra Quality” is disabled"
+msgstr ""
+"Uskisheans kalesweyth yw devnydhys hepken a dha GPU skoodhya kodenni gans an "
+"kodek gwydhyow dewisys, ha “Kwalita Moy” yw ungallosegys"
+
+#: src/preferences_dialog.blp:14
+msgid "GPU Encoding"
+msgstr "Kodennyans GPU"
+
+#: src/preferences_dialog.blp:15
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Devnydhya an GPU rag uskishe kodennyans pan kavadow"
+
+#: src/preferences_dialog.blp:20
+msgid "Exported Video Suffix"
+msgstr "Lostelven rag Gwydhyowypw Esperthys"
+
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Lostelven A-vusur"
+
+#: src/preferences_dialog.py:42
+#, python-brace-format
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Devnydhys yn henwyn restrennow rag gwydhyowyow esperthys, tredh an hanow "
+"chif hag ystynnans. A an lostelven a-vusur remaynya gwag, an lostelven "
+"defowt “{}” a vydh devnydhya."
+
+#: src/preferences_dialog.py:64
+msgid "Changes applied"
+msgstr "Chanjyow gweythys"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "Addya Gwydhy_owyow…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Gwaya War-_vann"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Gwaya War-_woles"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "_Remova"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:477
+msgid "View Error Details"
+msgstr "Gweles Manylyon Error"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Y fyllis dhe karga gwydhyow. Y'n yw martesen kellys po legrys."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Gweles Avonsys Gwaskyans"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Moy Manylyon"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Diskwedhes Tyller Restren"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Gweles Moy"
+
+#: src/sources_row.py:500 src/window.blp:129 src/window.blp:210
+msgid "More Information"
+msgstr "Kudhlow Moy"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MB'. Please use U+202F
+#. narrow no-break space (' ') between size and unit.
+#: src/sources_row.py:525
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Gwydhyow gwaskys dhe {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'. Please use U+202F Narrow no-break
+#. space (' ') between values and units.
+#: src/sources_row.py:554
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"Braster restren gwydhyow ({original_size} {unit_original}) hedhes seulabrys "
+"an braster kosten ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#. Please use U+202F Narrow no-break space (' ') between value
+#. and unit.
+#: src/sources_row.py:576
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "Braster kosten ({size} {unit}) yw re isel rag an restren ma."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "Fenester _Nowydh"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Settyansow"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Kesunyansow Bysowek"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_A-dro Constrict"
+
+#: src/window.blp:49 src/window.blp:103
+msgid "Main Menu"
+msgstr "Rol Chif"
+
+#: src/window.blp:67
+msgid "Compress Videos"
+msgstr "Gwaska Gwydhyowyow"
+
+#: src/window.blp:68
+msgid "Drag and drop videos here"
+msgstr "Draylya ha droppya gwydhyowyow omma"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:71
+msgid "_Open…"
+msgstr "_Ygeri…"
+
+#: src/window.blp:150
+msgid "_Automatic"
+msgstr "_Awtomatek"
+
+#: src/window.blp:152
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Devnydhya an kovradh fram ughella neb sakrifisa kwalita"
+
+#: src/window.blp:164
+msgid "Ensure higher image clarity"
+msgstr "Surhe klerder gweyth ughella"
+
+#: src/window.blp:176
+msgid "Ensure smoother motion"
+msgstr "Surhe gwayans smodh"
+
+#: src/window.blp:187
+msgid "Encoding Options"
+msgstr "Dewisyow Kodennyans"
+
+#: src/window.blp:190
+msgid "_Video Codec"
+msgstr "_Kodec Gwydhyow"
+
+#: src/window.blp:198
+msgid "Extra _Quality"
+msgstr "K_walita Moy"
+
+#: src/window.blp:200
+msgid "Increase image quality at the cost of compression time"
+msgstr "Ynkressya kwalita gweyth gans kost a termyn gwaskyans"
+
+#: src/window.blp:205
+msgid "Advanced Options"
+msgstr "Dewisyow Avonsys"
+
+#: src/window.blp:230
+msgid "_Tolerance (%)"
+msgstr "_Perthyans (%)"
+
+#: src/window.blp:232
+msgid "How far end file sizes can be below target"
+msgstr "Pygemmys brasterow finek restren yw alowys bos a-woles dhe kosten"
+
+#: src/window.blp:256
+msgid "Toggle Settings Pane"
+msgstr "Dewis Kwarel Settyansow"
+
+#. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
+#: src/window.blp:267
+msgid "Issues with video sources — fix before compressing"
+msgstr "Kudynnow gans gwydhyowyow — ewnhe dherag gwaskyans"
+
+#: src/window.blp:285
+msgid "Video Sources"
+msgstr "Gwydhyowyow"
+
+#: src/window.blp:289
+msgid "_Clear All"
+msgstr "_Remova Oll"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:310
+msgid "_Export To…"
+msgstr "_Esperthi Dhe…"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
+#: src/window.blp:327
+msgid "_Cancel…"
+msgstr "_Hedhi"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#. Please use U+202F Narrow no-break space (' ') between value and unit.
+#: src/window.py:176
+#, python-brace-format
+msgid "{} FPS"
+msgstr "{} FDE"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer. Please use U+202F narrow no-break space (' ') between
+#. the {} and translated equivalent of 'FPS'.
+#: src/window.py:185
+#, python-brace-format
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+"Gwydhyowyow gwaskys dhe kovradhow byttys isel yw martesen strothys dhe {} "
+"FDE, ny vern an dewis dewisys."
+
+#. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
+#. no-break space (' ') between {} and '%'.
+#: src/window.py:195
+#, no-python-format, python-brace-format
+msgid ""
+"Decreasing the tolerance maximizes image quality by reducing how much "
+"compressed file sizes can be under target. However, this can increase the "
+"number of attempts needed to meet the target, increasing compression time. A "
+"tolerance of {} % or more is recommended."
+msgstr ""
+"Iselhe an perthyans kowlvoghhe kwalita gweyth gans byghanhe pygemmys "
+"brasterow restren gwaskys yw alowys bos a-woles dhe kosten. Byttegyns, ma yw "
+"martesen kressya an niver assays rag hedhes an kosten, kressya termyn "
+"gwaskyans. Unn perthyans a {}% po my yw komendys."
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:203
+#, python-brace-format
+msgid "Target _Size ({})"
+msgstr "Bra_ster Kosten ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:320
+#, python-brace-format
+msgid "Processing “{}”"
+msgstr "Argerdhes “{}”"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:326
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "{index}/{total} Gwydhyowyow Argerdhys"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:337
+#, python-brace-format
+msgid "Exporting to “{}”"
+msgstr "Esperthi dhe “{}”"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued. Please use “” instead of '', if applicable to your
+#. language.
+#: src/window.py:353
+#, python-brace-format
+msgid "“{}” Queued"
+msgstr "“{}” Lostys"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:357
+#, python-brace-format
+msgid "{} Videos Queued"
+msgstr "{} Gwydhyowyow Lostys"
+
+#: src/window.py:490
+msgid "Stop Compression?"
+msgstr "Astel Gwaskyans?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:494
+#, python-brace-format
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr "Avonsyans gwaskyans a “{}” a wra kellys yn andileadow"
+
+#: src/window.py:500
+msgid "_Cancel"
+msgstr "_Astel"
+
+#: src/window.py:501
+msgid "_Stop"
+msgstr "_Hedhi"
+
+#: src/window.py:555
+msgid "Compression Complete"
+msgstr "Gwaskyans Deu"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#. Please use “” instead of "", if applicable to your language.
+#: src/window.py:563
+#, python-brace-format
+msgid "“{}” processed"
+msgstr "“{}” argerdhys"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:568
+#, python-brace-format
+msgid "{} files processed"
+msgstr "{} restrennow argerdhys"
+
+#: src/window.py:579
+msgid "Open Export Directory"
+msgstr "Ygeri Restrenva Esporth"
+
+#: src/window.py:641
+msgid "Videos are being compressed"
+msgstr "Gwydhyowyow gwaska"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
+#. instead of '...', if applicable to your language
+#: src/window.py:663
+msgid "Analyzing…"
+msgstr "Dielvenna…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error. Please use “” instead of "", if applicable to
+#. your language.
+#: src/window.py:759
+#, python-brace-format
+msgid "Error compressing “{}”"
+msgstr "Error dres gwaskyans “{}”"
+
+#: src/window.py:762
+msgid "View _Details"
+msgstr "Gweles _Manylyon"
+
+#: src/window.py:797
+msgid "Compression complete"
+msgstr "Gwaskyans Deu"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:869
+#, python-brace-format
+msgid "Unknown video format “{}”"
+msgstr "Furvas gwydhyow ankoth “{}”"
+
+#: src/window.py:898
+msgid "Videos"
+msgstr "Gwydhyowyow"
+
+#: src/window.py:901
+msgid "Pick Videos"
+msgstr "Dewis Gwydhyowyow"
