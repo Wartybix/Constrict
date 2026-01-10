@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Constrict 1.0.1\n"
+"Project-Id-Version: Constrict\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
 "POT-Creation-Date: 2025-12-04 21:12+0000\n"
-"PO-Revision-Date: 2025-11-23 20:36+0000\n"
-"Last-Translator: Anton Palgunov <toxblh@gmail.com>\n"
+"PO-Revision-Date: 2026-01-10 20:53+0300\n"
+"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -119,7 +119,9 @@ msgstr "Удобный для мобильных устройств пользо
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:87
 msgid "Compression settings in the mobile friendly UI"
-msgstr "Удобный для мобильных устройств пользовательский интерфейс"
+msgstr ""
+"Настройки сжатия в удобном для мобильных устройств пользовательском "
+"интерфейсе"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:124
 msgid "Framerate Limit"
@@ -129,7 +131,7 @@ msgstr "Предел частоты кадров"
 msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
 msgstr ""
-"Автоматически ограничивает частоту кадров сжатых видео до 30 FPS или 60 FPS."
+"Автоматически ограничивает частоту кадров сжатых видео до 30 FPS или 60 FPS."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
@@ -382,7 +384,7 @@ msgstr "Переключить панель настроек"
 #: src/gtk/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Горячие клавиши"
+msgstr "Показать комбинации клавиш"
 
 #: src/gtk/shortcuts-dialog.blp:33
 msgctxt "shortcut window"
@@ -397,7 +399,7 @@ msgstr "Выход"
 #: src/gtk/shortcuts-dialog.blp:43
 msgctxt "shortcut window"
 msgid "Show Preferences"
-msgstr "Показать Настройки"
+msgstr "Показать параметры"
 
 #. TRANSLATORS: used in parentheses for the default suffix of exported
 #. files.
@@ -422,11 +424,13 @@ msgstr "Дизайн перетаскиваемого слоя"
 
 #: src/main.py:196
 msgid "translator-credits"
-msgstr "Anton Palgunov https://github.com/Toxblh/"
+msgstr ""
+"Anton Palgunov https://github.com/Toxblh/\n"
+"Aleksandr Melman"
 
 #: src/preferences_dialog.blp:5
 msgid "Preferences"
-msgstr "Настройки"
+msgstr "Параметры"
 
 #: src/preferences_dialog.blp:10
 msgid "Hardware Acceleration"
@@ -438,16 +442,16 @@ msgid ""
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Аппаратное ускорение используется только в том случае, если ваш графический "
-"процессор поддерживает кодирование с выбранным видеокодеком, а опция "
-"«Дополнительное качество» отключена"
+"процессор поддерживает кодирование с выбранным видеокодеком, а параметр "
+"«Высокое качество» отключен"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
-msgstr "GPU Кодирование"
+msgstr "Кодирование видеоадаптером"
 
 #: src/preferences_dialog.blp:15
 msgid "Use the GPU to speed up encoding when available"
-msgstr "Использовать GPU для ускорения, когда доступно"
+msgstr "Использовать видеоадаптер для ускорения, когда доступно"
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
@@ -473,7 +477,7 @@ msgstr "Изменения применены"
 
 #: src/sources_list_box.blp:9
 msgid "Add Vide_os…"
-msgstr "Добавить видео…"
+msgstr "Добавить в_идео…"
 
 #: src/sources_row.blp:6
 msgid "Move _Up"
@@ -481,7 +485,7 @@ msgstr "Передвинуть _вверх"
 
 #: src/sources_row.blp:7
 msgid "Move _Down"
-msgstr "Передвинуть _вниз"
+msgstr "Передвинуть в_низ"
 
 #: src/sources_row.blp:10
 msgid "_Remove"
@@ -509,7 +513,7 @@ msgstr "Показать расположение файла"
 
 #: src/sources_row.blp:159
 msgid "View More"
-msgstr "Больше информации"
+msgstr "Показать больше"
 
 #: src/sources_row.py:500 src/window.blp:129 src/window.blp:210
 msgid "More Information"
@@ -551,19 +555,19 @@ msgstr "_Новое окно"
 
 #: src/window.blp:9
 msgid "_Preferences"
-msgstr "_Настройки"
+msgstr "_Параметры"
 
 #: src/window.blp:10
 msgid "_Keyboard Shortcuts"
-msgstr "_Горячие клавиши"
+msgstr "_Комбинации клавиш"
 
 #: src/window.blp:11
 msgid "_About Constrict"
-msgstr "О Constrict"
+msgstr "_О приложении"
 
 #: src/window.blp:49 src/window.blp:103
 msgid "Main Menu"
-msgstr "Основное Меню"
+msgstr "Главное меню"
 
 #: src/window.blp:67
 msgid "Compress Videos"
@@ -584,7 +588,7 @@ msgstr "_Автоматически"
 
 #: src/window.blp:152
 msgid "Use the highest framerate without sacrificing resolution"
-msgstr "Используйте самую высокую частоту кадров, не жертвуя разрешением"
+msgstr "Использовать самую высокую частоту кадров, не жертвуя разрешением"
 
 #: src/window.blp:164
 msgid "Ensure higher image clarity"
@@ -600,15 +604,15 @@ msgstr "Параметры кодирования"
 
 #: src/window.blp:190
 msgid "_Video Codec"
-msgstr "_Видео кодек"
+msgstr "_Видеокодек"
 
 #: src/window.blp:198
 msgid "Extra _Quality"
-msgstr "Экстра _Качество"
+msgstr "Высокое _качество"
 
 #: src/window.blp:200
 msgid "Increase image quality at the cost of compression time"
-msgstr "Повышение качества изображения за счет времени сжатия"
+msgstr "Повысить качество изображения за счет времени сжатия"
 
 #: src/window.blp:205
 msgid "Advanced Options"
@@ -637,7 +641,7 @@ msgstr "Источники видео"
 
 #: src/window.blp:289
 msgid "_Clear All"
-msgstr "Сброс"
+msgstr "О_чистить все"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
 #: src/window.blp:310
@@ -647,7 +651,7 @@ msgstr "_Экспорт в…"
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
 #: src/window.blp:327
 msgid "_Cancel…"
-msgstr "_Отмена…"
+msgstr "_Отменить…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
@@ -688,7 +692,7 @@ msgstr ""
 #: src/window.py:203
 #, python-brace-format
 msgid "Target _Size ({})"
-msgstr "Целевой _Размер ({})"
+msgstr "Целевой _размер ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed. Please use “” instead of "", if applicable to
@@ -742,11 +746,11 @@ msgstr "Достигнутый прогресс сжатия “{}” будет
 
 #: src/window.py:500
 msgid "_Cancel"
-msgstr "_Отмена"
+msgstr "_Отменить"
 
 #: src/window.py:501
 msgid "_Stop"
-msgstr "_Стоп"
+msgstr "О_становить"
 
 #: src/window.py:555
 msgid "Compression Complete"
@@ -769,7 +773,7 @@ msgstr "{} файлов обработано"
 
 #: src/window.py:579
 msgid "Open Export Directory"
-msgstr "Открыть каталог Экспорта"
+msgstr "Открыть каталог экспорта"
 
 #: src/window.py:641
 msgid "Videos are being compressed"
@@ -791,10 +795,9 @@ msgstr "Ошибка сжатия “{}”"
 
 #: src/window.py:762
 msgid "View _Details"
-msgstr "Посмотреть _Детали"
+msgstr "Посмотреть _детали"
 
 #: src/window.py:797
-#, fuzzy
 msgid "Compression complete"
 msgstr "Сжатие завершено"
 
@@ -802,7 +805,7 @@ msgstr "Сжатие завершено"
 #: src/window.py:869
 #, python-brace-format
 msgid "Unknown video format “{}”"
-msgstr ""
+msgstr "Неизвестный формат видео “{}”"
 
 #: src/window.py:898
 msgid "Videos"
