@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2025-12-04 21:12+0000\n"
+"POT-Creation-Date: 2026-01-14 03:49+0000\n"
 "PO-Revision-Date: 2025-11-23 19:42+0000\n"
 "Last-Translator: آوید <avds@disroot.org>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:96 src/window.py:347
+#: src/window.blp:42 src/window.blp:104 src/window.py:391
 msgid "Constrict"
 msgstr "هم‌فشردن"
 
@@ -53,15 +53,15 @@ msgstr ""
 "خدمت‌های برخط برای فشرده‌سازی ویدیو یا آزمون‌وخطای دستی کدگذاری دوباره با آهنگ "
 "بیت‌های گوناگون به دست خودتان نیست."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:12
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:13
 msgid "Features include:"
 msgstr "ویژگی‌ها شامل:"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:14
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
 msgid "An intuitive, easy to use interface."
 msgstr "رابط شهودی با کاربری آسان."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
 msgid ""
 "Automatic calculation of average bitrate (ABR), resolution, framerate, and "
 "audio quality each video is re-encoded with to meet the target file size."
@@ -69,23 +69,23 @@ msgstr ""
 "برآورد خودکار میانگین آهنگ بیت، تفکیک‌پذیری، آهنگ قاب و کیفیت صدا که هر ویدیو "
 "با آن کدگذاری دوباره می‌شود تا به اندازه پروندهٔ هدف برسد."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
 msgid "Bulk compression of multiple videos to one output directory."
 msgstr "فشرده‌سازی انبوه چندین ویدیو به یک شاخهٔ خروجی."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:17
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:19
 msgid ""
 "Customization of framerate limits, to ensure a clearer or smoother image."
 msgstr "سفارشی‌سازی کرانهٔ آهنگ قاب، برای اطمینان از تصویر واضح‌تر یا روان‌تر."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
 msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
 msgstr ""
 "گزینش رمزینه برای رمزگذاری پرونده‌های خروجی، شامل H.264، HEVC، AV1 و VP9."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
 msgid ""
 "The app attempts to retain as much audiovisual quality as possible for the "
 "file size given. However, extremely steep reductions in file size can cause "
@@ -99,23 +99,23 @@ msgstr ""
 "نباشد. تمام پردازش به‌صورت محلی انجام می‌شود — بنابراین سرعت فشرده‌سازی تنها به "
 "سرعتی است که سخت‌افزار شما اجازه می‌دهد."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:75
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
 msgid "Source videos queued for compression"
 msgstr "ویدئوهای مبدأ در صف فشرده‌سازی"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:79
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
 msgid "The application mid-compression"
 msgstr "برنامه در میان فشرده‌سازی"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:83
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
 msgid "A mobile friendly UI"
 msgstr "رابط کاربری دوستدار تلفن همراه"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:87
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
 msgid "Compression settings in the mobile friendly UI"
 msgstr "تنظیمات فشرده‌سازی در رابط کاربری دوستدار تلفن همراه"
 
-#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:124
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
 msgid "Framerate Limit"
 msgstr "کرانهٔ آهنگ قاب"
 
@@ -136,7 +136,6 @@ msgstr "رمزینهٔ به کار رفته برای رمزگذاری در زم�
 #. TRANSLATORS: {} represents the attempt number.
 #: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
 #: src/current_attempt_box.py:66
-#, python-brace-format
 msgid "Attempt {}"
 msgstr "تلاش {}ام"
 
@@ -162,37 +161,33 @@ msgstr "{res_fps}، صدای {audio_quality}"
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
 #. {extra_details} will either display resolution/FPS and audio quality
 #. details, or just resolution/FPS if the video has no audio streams.
-#. Please use U+202F Narrow no-break space (' ') between video bitrate
-#. and unit.
-#: src/attempt_fail_box.py:80
+#: src/attempt_fail_box.py:78
 #, python-brace-format
 msgid "{vid_br} {vid_br_unit} ({extra_details})"
 msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
-#: src/attempt_fail_box.py:83 src/current_attempt_box.py:97
+#: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
 msgid "kbps"
 msgstr "کیلوبیت بر ثانیه"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
-#. file size unit like 'MB'. Please use U+202F Narrow no-break space
-#. (' ') between size and unit.
-#: src/attempt_fail_box.py:95
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:92
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
 msgstr "اندازهٔ پروندهٔ فشرده خیلی بزرگ بود ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
-#: src/attempt_fail_box.py:98 src/attempt_fail_box.py:109
-#: src/sources_row.py:528 src/sources_row.py:558 src/sources_row.py:561
-#: src/sources_row.py:578 src/window.py:200
+#: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
+#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
+#: src/sources_row.py:545 src/window.py:246
 msgid "MiB"
 msgstr "می‌ب"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
-#. file size unit like 'MB'. Please use U+202F Narrow no-break space
-#. (' ') between size and unit.
-#: src/attempt_fail_box.py:106
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "اندازهٔ پروندهٔ فشرده خیلی کوچک بود ({size} {unit})"
@@ -253,33 +248,25 @@ msgstr "در حال راه‌اندازی…"
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
 #. {extra_details} will either display resolution/FPS and audio quality
 #. details, or just resolution/FPS if the video has no audio streams.
-#. Please use U+202F Narrow no-break space (' ') between video bitrate
-#. and unit.
-#: src/current_attempt_box.py:94
+#: src/current_attempt_box.py:92
 #, python-brace-format
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "در حال فشرده‌سازی به {vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: {} represents the progress percentage value.
-#. Please use U+202F Narrow no-break space (' ') between {} and %, if
-#. applicable to your language.
-#: src/current_attempt_box.py:126
-#, python-brace-format
+#: src/current_attempt_box.py:122
 msgid "{} %"
 msgstr "{}٪"
 
 #. TRANSLATORS: {} represents the progress percentage.
-#. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:133
-#, python-brace-format
+#: src/current_attempt_box.py:128
 msgid "{} — Almost done"
 msgstr "{} — تقریباً تمام شد"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
 #. '5% -- About 30 seconds left'
-#: src/current_attempt_box.py:141
-#, python-brace-format
+#: src/current_attempt_box.py:136
 msgid "{} second"
 msgid_plural "{} seconds"
 msgstr[0] "{} ثانیه"
@@ -291,8 +278,7 @@ msgstr[1] "{} ثانیه"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:149 src/current_attempt_box.py:162
-#, python-brace-format
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
 msgid "{} minute"
 msgid_plural "{} minutes"
 msgstr[0] "{} دقیقه"
@@ -301,8 +287,7 @@ msgstr[1] "{} دقیقه"
 #. TRANSLATORS: {} represents an integer. Used as part of a
 #. larger string, like:
 #. '10% -- About 2 hours, 30 minutes left'
-#: src/current_attempt_box.py:157 src/current_attempt_box.py:171
-#, python-brace-format
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
 msgid "{} hour"
 msgid_plural "{} hours"
 msgstr[0] "{} ساعت"
@@ -311,8 +296,7 @@ msgstr[1] "{} ساعت"
 #. TRANSLATORS: {percentage} represents the progress percentage.
 #. {time_shown} represents a string showing the estimated time to
 #. completion (like '50 minutes').
-#. Please use U+2014 em dash ('—'), if applicable to your language.
-#: src/current_attempt_box.py:178
+#: src/current_attempt_box.py:171
 #, python-brace-format
 msgid "{percentage} — About {time_shown} left"
 msgstr "{percentage} — نزدیک به {time_shown} باقی مانده"
@@ -334,14 +318,12 @@ msgid "Copy Details"
 msgstr "رونوشت از جزییات"
 
 #. TRANSLATORS: {} represents the filename of the video with the
-#. error. Please use “” instead of "", if applicable to your
-#. language.
-#: src/error_dialog.py:48
-#, python-brace-format
+#. error.
+#: src/error_dialog.py:47
 msgid "There was a problem compressing “{}”"
 msgstr "مشکلی در فشرده‌سازی «{}» رخ داد"
 
-#: src/error_dialog.py:70
+#: src/error_dialog.py:69
 msgid "Details copied to clipboard"
 msgstr "جزییات در تخته‌گیره رونوشت شد"
 
@@ -392,26 +374,24 @@ msgstr "نمایش ترجیحات"
 
 #. TRANSLATORS: used in parentheses for the default suffix of exported
 #. files.
-#: src/main.py:81
+#: src/main.py:88
 msgid "compressed"
 msgstr "فشرده"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#. Please use ‘’ characters instead of '', if applicable to your language.
-#: src/main.py:178
-#, python-brace-format
+#: src/main.py:184
 msgid "‘{}’ repository by"
 msgstr "مخزن «{}» به دست"
 
-#: src/main.py:185
+#: src/main.py:191
 msgid "Circular progress indicator design by"
 msgstr "نشانگر پیشرفت دایره‌ای به دست"
 
-#: src/main.py:189
+#: src/main.py:195
 msgid "Drag overlay design by"
 msgstr "لغزش پوششی به دست"
 
-#: src/main.py:196
+#: src/main.py:202
 msgid "translator-credits"
 msgstr "آوید <avds@disroot.org>"
 
@@ -449,7 +429,6 @@ msgid "Custom Suffix"
 msgstr "پسوند سفارشی"
 
 #: src/preferences_dialog.py:42
-#, python-brace-format
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
@@ -477,7 +456,7 @@ msgstr "جابه‌جایی به _پایین"
 msgid "_Remove"
 msgstr "_برداشتن"
 
-#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:477
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
 msgid "View Error Details"
 msgstr "دیدن جزییات خطا"
 
@@ -501,23 +480,21 @@ msgstr "نمایش مکان پرونده"
 msgid "View More"
 msgstr "بیشتر ببینید"
 
-#: src/sources_row.py:500 src/window.blp:129 src/window.blp:210
+#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
 msgid "More Information"
 msgstr "اطّلاعات بیشتر"
 
 #. TRANSLATORS: {size} represents a file size value in MB.
-#. {unit} represents a file size unit, like 'MB'. Please use U+202F
-#. narrow no-break space (' ') between size and unit.
-#: src/sources_row.py:525
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:495
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr "ویدیو به {size} {unit} فشرده شد."
 
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
-#. size units, like 'MB'. Please use U+202F Narrow no-break
-#. space (' ') between values and units.
-#: src/sources_row.py:554
+#. size units, like 'MB'.
+#: src/sources_row.py:523
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -528,9 +505,7 @@ msgstr ""
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
-#. Please use U+202F Narrow no-break space (' ') between value
-#. and unit.
-#: src/sources_row.py:576
+#: src/sources_row.py:543
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "اندازهٔ هدف ({size} {unit}) برای این پرونده خیلی کم است."
@@ -551,107 +526,99 @@ msgstr "میان‌برهای _صفحه‌کلید"
 msgid "_About Constrict"
 msgstr "_دربارهٔ هم‌فشردن"
 
-#: src/window.blp:49 src/window.blp:103
+#: src/window.blp:49 src/window.blp:111
 msgid "Main Menu"
 msgstr "فهرست اصلی"
 
-#: src/window.blp:67
+#: src/window.blp:75
 msgid "Compress Videos"
 msgstr "فشرده‌سازی ویدیوها"
 
-#: src/window.blp:68
+#: src/window.blp:76
 msgid "Drag and drop videos here"
 msgstr "کشیدن و رها کردن تصویرها در این‌جا"
 
-#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:71
+#: src/window.blp:78
 msgid "_Open…"
 msgstr "_گشودن…"
 
-#: src/window.blp:150
+#: src/window.blp:158
 msgid "_Automatic"
 msgstr "_خودکار"
 
-#: src/window.blp:152
+#: src/window.blp:160
 msgid "Use the highest framerate without sacrificing resolution"
 msgstr "استفاده از بالاترین آهنگ قاب بدون فدا کردن تفکیک‌پذیری"
 
-#: src/window.blp:164
+#: src/window.blp:172
 msgid "Ensure higher image clarity"
 msgstr "اطمینان از وضوح بالاتر تصویر"
 
-#: src/window.blp:176
+#: src/window.blp:184
 msgid "Ensure smoother motion"
 msgstr "اطمینان از حرکت روان‌تر"
 
-#: src/window.blp:187
+#: src/window.blp:195
 msgid "Encoding Options"
 msgstr "گزینه‌های کدگذاری"
 
-#: src/window.blp:190
+#: src/window.blp:198
 msgid "_Video Codec"
 msgstr "_رمزینهٔ ویدیویی"
 
-#: src/window.blp:198
+#: src/window.blp:206
 msgid "Extra _Quality"
 msgstr "_کیفیت اضافی"
 
-#: src/window.blp:200
+#: src/window.blp:208
 msgid "Increase image quality at the cost of compression time"
 msgstr "افزایش کیفیت تصویر به قیمت زمان فشرده‌سازی"
 
-#: src/window.blp:205
+#: src/window.blp:213
 msgid "Advanced Options"
 msgstr "گزینه‌های پیشرفته"
 
-#: src/window.blp:230
+#: src/window.blp:238
 msgid "_Tolerance (%)"
 msgstr "_تاب‌آوری (٪)"
 
-#: src/window.blp:232
+#: src/window.blp:240
 msgid "How far end file sizes can be below target"
 msgstr "تا چه میزان اندازهٔ پرونده‌های نهایی می‌تواند کمتر از هدف باشد"
 
-#: src/window.blp:256
+#: src/window.blp:264
 msgid "Toggle Settings Pane"
 msgstr "تغییر وضعیت پنل تنظیمات"
 
-#. TRANSLATORS: Please use U+2014 em dash ('—') instead of '-', if applicable to your language.
-#: src/window.blp:267
+#: src/window.blp:274
 msgid "Issues with video sources — fix before compressing"
 msgstr "مشکل با مبدأ — پیش از فشرده‌سازی رفع کنید"
 
-#: src/window.blp:285
+#: src/window.blp:300
 msgid "Video Sources"
 msgstr "ویدیو مبدأ"
 
-#: src/window.blp:289
+#: src/window.blp:304
 msgid "_Clear All"
 msgstr "_پاک‌سازی همه"
 
-#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:310
+#: src/window.blp:325
 msgid "_Export To…"
 msgstr "_برون‌ریزی به…"
 
-#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language
-#: src/window.blp:327
+#: src/window.blp:341
 msgid "_Cancel…"
 msgstr "_لغو…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#. Please use U+202F Narrow no-break space (' ') between value and unit.
-#: src/window.py:176
-#, python-brace-format
+#: src/window.py:224
 msgid "{} FPS"
 msgstr "{} ق‌د‌ث"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
-#. integer. Please use U+202F narrow no-break space (' ') between
-#. the {} and translated equivalent of 'FPS'.
-#: src/window.py:185
-#, python-brace-format
+#. integer.
+#: src/window.py:232
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -659,10 +626,9 @@ msgstr ""
 "ویدیوهای فشرده‌شده به آهنگ بیت پایین شاید با چشم‌پوشی از گزینهٔ تنظیم‌شده، به "
 "{} ق‌د‌ث محدود شوند."
 
-#. TRANSLATORS: {} represents an integer. Please use U+202F Narrow
-#. no-break space (' ') between {} and '%'.
-#: src/window.py:195
-#, no-python-format, python-brace-format
+#. TRANSLATORS: {} represents an integer.
+#: src/window.py:241
+#, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
 "compressed file sizes can be under target. However, this can increase the "
@@ -675,130 +641,113 @@ msgstr ""
 "دهد. تاب‌آوری ٪ {} یا بیشتر سفارش می‌شود."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:203
-#, python-brace-format
+#: src/window.py:249
 msgid "Target _Size ({})"
 msgstr "_اندازهٔ هدف ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
-#. being processed. Please use “” instead of "", if applicable to
-#. your language.
-#: src/window.py:320
-#, python-brace-format
+#. being processed.
+#: src/window.py:365
 msgid "Processing “{}”"
 msgstr "در حال پردازش «{}»"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:326
+#: src/window.py:371
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} ویدیو پردازش شد"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to. Please use “” instead of "", if applicable to your
-#. language.
-#: src/window.py:337
-#, python-brace-format
-msgid "Exporting to “{}”"
+#. exported to.
+#: src/window.py:381
+#, fuzzy
+msgid "Exporting to {}"
 msgstr "در حال برون‌ریزی به «{}»"
 
 #. TRANSLATORS: {} represents the filename of the video currently
-#. queued. Please use “” instead of '', if applicable to your
-#. language.
-#: src/window.py:353
-#, python-brace-format
+#. queued.
+#: src/window.py:396
 msgid "“{}” Queued"
 msgstr "«{}» در صف"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:357
-#, python-brace-format
+#: src/window.py:400
 msgid "{} Videos Queued"
 msgstr "{} ویدیو در صف"
 
-#: src/window.py:490
+#: src/window.py:533
 msgid "Stop Compression?"
 msgstr "توقّف فشرده‌سازی؟"
 
 #. TRANSLATORS: {} represents the filename of the video currently
-#. being compressed. Please use “” instead of "", if applicable to
-#. your language.
-#: src/window.py:494
-#, python-brace-format
+#. being compressed.
+#: src/window.py:536
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "پیشرفت انجام‌شده در فشرده‌سازی «{}» برای همیشه از دست خواهد رفت."
 
-#: src/window.py:500
+#: src/window.py:542
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: src/window.py:501
+#: src/window.py:543
 msgid "_Stop"
 msgstr "_توقّف"
 
-#: src/window.py:555
+#: src/window.py:597
 msgid "Compression Complete"
 msgstr "فشرده‌سازی کامل شد"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#. Please use “” instead of "", if applicable to your language.
-#: src/window.py:563
-#, python-brace-format
+#: src/window.py:604
 msgid "“{}” processed"
 msgstr "«{}» پردازش شد"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:568
-#, python-brace-format
+#: src/window.py:609
 msgid "{} files processed"
 msgstr "«{}» پرونده پردازش شد"
 
-#: src/window.py:579
+#: src/window.py:620
 msgid "Open Export Directory"
 msgstr "گشودن شاخهٔ برون‌ریزی"
 
-#: src/window.py:641
+#: src/window.py:700
 msgid "Videos are being compressed"
 msgstr "ویدیوها در حال فشرده‌سازی هستند"
 
-#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
-#. instead of '...', if applicable to your language
-#: src/window.py:663
+#: src/window.py:720
 msgid "Analyzing…"
 msgstr "در حال تحلیل…"
 
 #. TRANSLATORS: {} represents the filename of the video with
-#. the error. Please use “” instead of "", if applicable to
-#. your language.
-#: src/window.py:759
-#, python-brace-format
+#. the error.
+#: src/window.py:815
 msgid "Error compressing “{}”"
 msgstr "خطا هنگام فشرده‌سازی «{}»"
 
-#: src/window.py:762
+#: src/window.py:818
 msgid "View _Details"
 msgstr "دیدن _جزییات"
 
-#: src/window.py:797
+#: src/window.py:853
 #, fuzzy
 msgid "Compression complete"
 msgstr "فشرده‌سازی کامل شد"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:869
-#, python-brace-format
+#: src/window.py:964
 msgid "Unknown video format “{}”"
 msgstr ""
 
-#: src/window.py:898
+#: src/window.py:995
 msgid "Videos"
 msgstr "ویدیوها"
 
-#: src/window.py:901
+#: src/window.py:998
 msgid "Pick Videos"
 msgstr "گزینش ویدیوها"
 
