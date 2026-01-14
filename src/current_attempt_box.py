@@ -89,8 +89,6 @@ class CurrentAttemptBox(Gtk.Box):
         # {vid_br_unit} represents a bitrate unit, like 'kbps'.
         # {extra_details} will either display resolution/FPS and audio quality
         # details, or just resolution/FPS if the video has no audio streams.
-        # Please use U+202F Narrow no-break space (' ') between video bitrate
-        # and unit.
         target_str = _('Compressing to {vid_br} {vid_br_unit} ({extra_details})').format(
             vid_br = f'{vid_bitrate // 1000}',
             # TRANSLATORS: This is the SI unit for 'kilobits per second'.
@@ -121,15 +119,12 @@ class CurrentAttemptBox(Gtk.Box):
         # https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 
         # TRANSLATORS: {} represents the progress percentage value.
-        # Please use U+202F Narrow no-break space (' ') between {} and %, if
-        # applicable to your language.
         percentage_text = _('{} %').format(progress_percent)
 
         if seconds_left is None:
             progress_text = percentage_text
         elif seconds_left == -1:
             # TRANSLATORS: {} represents the progress percentage.
-            # Please use U+2014 em dash ('—'), if applicable to your language.
             progress_text = _('{} — Almost done').format(percentage_text)
         else:
             time_shown = ''
@@ -139,7 +134,6 @@ class CurrentAttemptBox(Gtk.Box):
                 # Used as part of a larger string, like:
                 # '5% -- About 30 seconds left'
                 time_shown = ngettext('{} second', '{} seconds', seconds_left).format(seconds_left)
-                # time_shown.format(seconds_left)
             elif seconds_left < (60 * 60):
                 minutes = seconds_left // 60
 
@@ -174,7 +168,6 @@ class CurrentAttemptBox(Gtk.Box):
             # TRANSLATORS: {percentage} represents the progress percentage.
             # {time_shown} represents a string showing the estimated time to
             # completion (like '50 minutes').
-            # Please use U+2014 em dash ('—'), if applicable to your language.
             progress_text = _('{percentage} — About {time_shown} left').format(
                 percentage = percentage_text,
                 time_shown = time_shown

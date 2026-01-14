@@ -491,8 +491,7 @@ class SourcesRow(Adw.ActionRow):
         update_ui(
             self.complete_label.set_label,
             # TRANSLATORS: {size} represents a file size value in MB.
-            # {unit} represents a file size unit, like 'MB'. Please use U+202F
-            # narrow no-break space (' ') between size and unit.
+            # {unit} represents a file size unit, like 'MiB'.
             _('Video compressed to {size} {unit}.').format(
                 size = compressed_size_mb,
                 # TRANSLATORS: this is the SI unit for 'mebibyte'.
@@ -520,8 +519,7 @@ class SourcesRow(Adw.ActionRow):
             self.set_warning(
                 # TRANSLATORS: {original_size} and {target_size} represent
                 # integers. {unit_original} and {unit_target} represent file
-                # size units, like 'MB'. Please use U+202F Narrow no-break
-                # space (' ') between values and units.
+                # size units, like 'MB'.
                 _('Video file size ({original_size} {unit_original}) already meets the target size ({target_size} {unit_target}).')
                     .format(
                         original_size = size_mb,
@@ -542,8 +540,6 @@ class SourcesRow(Adw.ActionRow):
             self.set_incompatible(
                 # TRANSLATORS: {size} represents an integer. {unit} represents
                 # a file size unit like 'MB'.
-                # Please use U+202F Narrow no-break space (' ') between value
-                # and unit.
                 _('Target size ({size} {unit}) is too low for this file.')
                     # TRANSLATORS: this is the SI unit for 'mebibyte'.
                     .format(size = target_size, unit = _('MiB')),

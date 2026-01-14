@@ -221,7 +221,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         # TRANSLATORS: 'FPS' meaning 'frames per second'.
         # {} represents the FPS value, for example 30 or 60.
-        # Please use U+202F Narrow no-break space (' ') between value and unit.
         fps_label = _('{} FPS')
 
         self.clear_row.set_title(fps_label.format('_30'))
@@ -229,8 +228,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.fps_help_label.set_label(
             # TRANSLATORS: FPS meaning 'frames per second'. {} represents an
-            # integer. Please use U+202F narrow no-break space (' ') between
-            # the {} and translated equivalent of 'FPS'.
+            # integer.
             _('Videos compressed to low bitrates may be capped to {} FPS, regardless of the option set.')
                 .format('24')
         )
@@ -238,8 +236,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         default_tolerance = self.settings.get_default_value('tolerance')
 
         self.adv_options_help_label.set_label(
-            # TRANSLATORS: {} represents an integer. Please use U+202F Narrow
-            # no-break space (' ') between {} and '%'.
+            # TRANSLATORS: {} represents an integer.
             # xgettext:no-python-format
             _('Decreasing the tolerance maximizes image quality by reducing how much compressed file sizes can be under target. However, this can increase the number of attempts needed to meet the target, increasing compression time. A tolerance of {} % or more is recommended.')
                 .format(default_tolerance)
@@ -364,8 +361,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         if len(sources) == 1:
             file_name = sources[0].display_name
             # TRANSLATORS: {} represents the filename of the video currently
-            # being processed. Please use “” instead of "", if applicable to
-            # your language.
+            # being processed.
             self.set_title(_('Processing “{}”').format(file_name))
         else:
             self.set_title(
@@ -396,8 +392,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         elif len(sources) == 1:
             vid_name = sources[0].display_name
             # TRANSLATORS: {} represents the filename of the video currently
-            # queued. Please use “” instead of '', if applicable to your
-            # language.
+            # queued.
             self.set_title(_('“{}” Queued').format(vid_name))
         else:
             vid_count = len(sources)
@@ -537,8 +532,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         dialog = Adw.AlertDialog.new(
             _('Stop Compression?'),
             # TRANSLATORS: {} represents the filename of the video currently
-            # being compressed. Please use “” instead of "", if applicable to
-            # your language.
+            # being compressed.
             _('Progress made compressing “{}” will be permanently lost')
                 .format(self.currently_processed)
         )
@@ -607,7 +601,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
             video_name = sources_list[0].display_name
             # TRANSLATORS: {} represents the filename of the video that has
             # been processed.
-            # Please use “” instead of "", if applicable to your language.
             notification.set_body(_('“{}” processed').format(video_name))
         else:
             notification.set_body(
@@ -724,8 +717,6 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
             def update_progress(fraction, seconds_left):
                 if fraction == 0.0 and codec == VideoCodec.VP9:
-                    # TRANSLATORS: please use U+2026 Horizontal ellipsis (…)
-                    # instead of '...', if applicable to your language
                     progress_box.set_progress_text(_('Analyzing…'), daemon)
                     video.enable_spinner(True, daemon)
                     progress_box.pulse_progress(daemon)
@@ -820,8 +811,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
                 toast = Adw.Toast.new(
                     # TRANSLATORS: {} represents the filename of the video with
-                    # the error. Please use “” instead of "", if applicable to
-                    # your language.
+                    # the error.
                     _('Error compressing “{}”').format(video.display_name)
                 )
                 toast.set_use_markup(False)

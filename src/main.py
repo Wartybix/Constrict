@@ -181,7 +181,6 @@ class ConstrictApplication(Adw.Application):
 
         about.add_acknowledgement_section(
             # TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-            # Please use ‘’ characters instead of '', if applicable to your language.
             _('‘{}’ repository by').format('8mb'),
             [
                 'Matthew Baggett https://github.com/matthewbaggett/',

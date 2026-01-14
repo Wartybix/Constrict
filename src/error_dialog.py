@@ -43,8 +43,7 @@ class ErrorDialog(Adw.Dialog):
 
         self.preference_page.set_description(
             # TRANSLATORS: {} represents the filename of the video with the
-            # error. Please use “” instead of "", if applicable to your
-            # language.
+            # error.
             _('There was a problem compressing “{}”').format(safe_video_name)
         )
         buffer = self.text_view.get_buffer()

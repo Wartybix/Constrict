@@ -75,8 +75,6 @@ class AttemptFailBox(Gtk.Box):
         # {vid_br_unit} represents a bitrate unit, like 'kbps'.
         # {extra_details} will either display resolution/FPS and audio quality
         # details, or just resolution/FPS if the video has no audio streams.
-        # Please use U+202F Narrow no-break space (' ') between video bitrate
-        # and unit.
         target_str = _("{vid_br} {vid_br_unit} ({extra_details})").format(
             vid_br = f'{str(vid_bitrate // 1000)}',
             # TRANSLATORS: This is the SI unit for 'kilobits per second'.
@@ -90,8 +88,7 @@ class AttemptFailBox(Gtk.Box):
         if compressed_size_bytes >= target_size_bytes:
             self.failure_icon.set_from_icon_name('arrow2-up-symbolic')
             # TRANSLATORS: {size} represents an integer. {unit} represents a
-            # file size unit like 'MB'. Please use U+202F Narrow no-break space
-            # (' ') between size and unit.
+            # file size unit like 'MiB'.
             fail_msg = _('Compressed file size was too large ({size} {unit})').format(
                 size = f'{compressed_size_mb}',
                 # TRANSLATORS: this is the SI unit for 'mebibyte'.
@@ -101,8 +98,7 @@ class AttemptFailBox(Gtk.Box):
         else:
             self.failure_icon.set_from_icon_name('arrow2-down-symbolic')
             # TRANSLATORS: {size} represents an integer. {unit} represents a
-            # file size unit like 'MB'. Please use U+202F Narrow no-break space
-            # (' ') between size and unit.
+            # file size unit like 'MiB'.
             fail_msg = _('Compressed file size was too small ({size} {unit})').format(
                 size = f'{compressed_size_mb}',
                 # TRANSLATORS: this is the SI unit for 'mebibyte'.
