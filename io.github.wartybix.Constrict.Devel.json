@@ -17,9 +17,6 @@
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
         "build-args": ["--share=network"]
     },
-    "cleanup-commands" : [
-        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
-    ],
     "cleanup" : [
         "/include",
         "/lib/pkgconfig",
