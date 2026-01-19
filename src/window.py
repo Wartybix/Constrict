@@ -682,11 +682,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
             home_path = GLib.get_home_dir()
 
             if host_path[:len(home_path)] == home_path:
-                displayed_dest_path = host_path.replace(
-                    home_path,
-                    '~',
-                    1
-                )
+                displayed_dest_path = host_path.replace(home_path, '~', 1)
             else:
                 displayed_dest_path = host_path
         else:
