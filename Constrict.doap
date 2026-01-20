@@ -8,7 +8,7 @@
   <shortdesc xml:lang="en">Compress videos to target sizes</shortdesc>
 
   <homepage rdf:resource="https://apps.gnome.org/Constrict/" />
-  <bug-database rdf:resource="https://github.com/Wartybix/Constrict/issues/" />
+  <bug-database rdf:resource="https://gitlab.gnome.org/World/Constrict/-/issues" />
 
   <programming-language>Python</programming-language>
   <platform>GTK 4</platform>
@@ -19,14 +19,14 @@
       <foaf:name>Wartybix</foaf:name>
       <foaf:account>
         <foaf:OnlineAccount>
-          <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
-          <foaf:accountName>Wartybix</foaf:accountName>
+          <foaf:accountServiceHomepage rdf:resource="https://gitlab.gnome.org"/>
+          <foaf:accountName>wartybix</foaf:accountName>
         </foaf:OnlineAccount>
       </foaf:account>
       <foaf:account>
         <foaf:OnlineAccount>
-          <foaf:accountServiceHomepage rdf:resource="https://gitlab.gnome.org"/>
-          <foaf:accountName>wartybix</foaf:accountName>
+          <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
+          <foaf:accountName>Wartybix</foaf:accountName>
         </foaf:OnlineAccount>
       </foaf:account>
     </foaf:Person>

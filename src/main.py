@@ -171,7 +171,7 @@ class ConstrictApplication(Adw.Application):
         about.set_version(VERSION)
 
         about.set_developers([
-            'Wartybix https://github.com/Wartybix/',
+            'Wartybix https://gitlab.gnome.org/wartybix',
             'Philipp Kosarev https://github.com/PhilippKosarev'
         ])
 

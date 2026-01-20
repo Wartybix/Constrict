@@ -30,12 +30,11 @@
   </developer>
 
   <url type="homepage">https://apps.gnome.org/Constrict</url>
-  <url type="vcs-browser">https://github.com/Wartybix/Constrict</url>
-  <url type="bugtracker">https://github.com/Wartybix/Constrict/issues</url>
-  <url type="translate">https://github.com/Wartybix/Constrict/po</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/World/Constrict</url>
+  <url type="bugtracker">https://gitlab.gnome.org/World/Constrict/-/issues</url>
+  <url type="translate">https://l10n.gnome.org/module/Constrict/</url>
   <url type="donation">https://ko-fi.com/wartybix/</url>
   <url type="contribute">https://welcome.gnome.org/app/Constrict/</url>
-  <!-- TODO: don't forget to add l10n module here once added -->
   
   <supports>
     <control>pointing</control>
@@ -58,26 +57,26 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/queued.png?raw=true</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/queued.png</image>
       <caption>Source videos queued for compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/compressing.png?raw=true</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/compressing.png</image>
       <caption>The application mid-compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/queued_mobile.png?raw=true</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/queued_mobile.png</image>
       <caption>A mobile friendly UI</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Wartybix/Constrict/blob/b45242485e8dfe2cdea1d4745a9680f742bc2d0a/screenshots/settings_mobile.png?raw=true</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/settings_mobile.png</image>
       <caption>Compression settings in the mobile friendly UI</caption>
     </screenshot>
   </screenshots>
 
   <releases>
     <release version="25.12.1" date="2025-12-27">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12.1</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.12.1</url>
       <description translate="no">
         <p>A few quality of life improvements in this one:</p>
         <ul>
@@ -90,7 +89,7 @@
       </description>
     </release>
     <release version="25.12" date="2025-12-04">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.12</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.12</url>
       <description translate="no">
         <p>UI adjustments, bug fixes, and more translations.</p>
         <ul>
@@ -108,7 +107,7 @@
       </description>
     </release>
     <release version="25.10" date="2025-10-29">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.10</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.10</url>
       <description translate="no">
         <p>Some new features and UI improvements:</p>
         <ul>
@@ -128,7 +127,7 @@
       </description>
     </release>
     <release version="25.8.1" date="2025-08-22">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8.1</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.8.1</url>
       <description translate="no">
         <p>Some quality of life improvements and fixes in this release:</p>
         <ul>
@@ -142,7 +141,7 @@
       </description>
     </release>
     <release version="25.8" date="2025-08-13">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.8</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.8</url>
       <description translate="no">
         <p>Lots of new features and improvements in this one:</p>
         <ul>
@@ -159,7 +158,7 @@
       </description>
     </release>
     <release version="25.7.3" date="2025-07-24">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.7.3</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.7.3</url>
       <description translate="no">
         <p>A number of initial quality of life improvements and bug fixes in this release:</p>
         <ul>
@@ -175,19 +174,19 @@
       </description>
     </release>
     <release version="25.7.2" date="2025-07-15">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.7.2</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.7.2</url>
       <description translate="no">
         <p>Fixed a crash caused by a video being compressed significantly below target.</p>
       </description>
     </release>
     <release version="25.7.1" date="2025-07-15">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.7.1</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.7.1</url>
       <description translate="no">
         <p>Shortened the Metainfo and desktop file summary from 'Compress videos to target file sizes' to 'Compress videos to target sizes'.</p>
       </description>
     </release>
     <release version="25.7" date="2025-07-15">
-      <url type="details">https://github.com/Wartybix/Constrict/releases/tag/25.7</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.7</url>
       <description translate="no">
         <p>Initial release.</p>
       </description>
