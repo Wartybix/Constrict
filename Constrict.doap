@@ -17,6 +17,7 @@
   <maintainer>
     <foaf:Person>
       <foaf:name>Wartybix</foaf:name>
+      <foaf:mbox rdf:resource="mailto:lauriet@gnome.org" />
       <foaf:account>
         <foaf:OnlineAccount>
           <foaf:accountServiceHomepage rdf:resource="https://gitlab.gnome.org"/>
