@@ -1,14 +1,14 @@
 # PERSIAN TRANSLATION.
 # Copyright (C) YEAR Wartybix
 # This file is distributed under the same license as the Constrict package.
-# آوید <avds@disroot.org>, 2025.
+# آوید <avds@disroot.org>, 2025-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2025-11-23 19:42+0000\n"
+"POT-Creation-Date: 2026-01-21 18:24+0000\n"
+"PO-Revision-Date: 2026-01-21 18:34+0000\n"
 "Last-Translator: آوید <avds@disroot.org>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:393
 msgid "Constrict"
 msgstr "هم‌فشردن"
 
@@ -99,19 +99,19 @@ msgstr ""
 "نباشد. تمام پردازش به‌صورت محلی انجام می‌شود — بنابراین سرعت فشرده‌سازی تنها به "
 "سرعتی است که سخت‌افزار شما اجازه می‌دهد."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "ویدئوهای مبدأ در صف فشرده‌سازی"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "برنامه در میان فشرده‌سازی"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "رابط کاربری دوستدار تلفن همراه"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr "تنظیمات فشرده‌سازی در رابط کاربری دوستدار تلفن همراه"
 
@@ -660,94 +660,94 @@ msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} ویدیو پردازش شد"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to.
-#: src/window.py:381
-#, fuzzy
-msgid "Exporting to {}"
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:382
+msgid "Exporting to “{}”"
 msgstr "در حال برون‌ریزی به «{}»"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:398
 msgid "“{}” Queued"
 msgstr "«{}» در صف"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:402
 msgid "{} Videos Queued"
 msgstr "{} ویدیو در صف"
 
-#: src/window.py:533
+#: src/window.py:535
 msgid "Stop Compression?"
 msgstr "توقّف فشرده‌سازی؟"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:538
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "پیشرفت انجام‌شده در فشرده‌سازی «{}» برای همیشه از دست خواهد رفت."
 
-#: src/window.py:542
+#: src/window.py:544
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: src/window.py:543
+#: src/window.py:545
 msgid "_Stop"
 msgstr "_توقّف"
 
-#: src/window.py:597
+#: src/window.py:599
 msgid "Compression Complete"
 msgstr "فشرده‌سازی کامل شد"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:606
 msgid "“{}” processed"
 msgstr "«{}» پردازش شد"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:611
 msgid "{} files processed"
 msgstr "«{}» پرونده پردازش شد"
 
-#: src/window.py:620
+#: src/window.py:622
 msgid "Open Export Directory"
 msgstr "گشودن شاخهٔ برون‌ریزی"
 
-#: src/window.py:700
+#: src/window.py:684
 msgid "Videos are being compressed"
 msgstr "ویدیوها در حال فشرده‌سازی هستند"
 
-#: src/window.py:720
+#: src/window.py:704
 msgid "Analyzing…"
 msgstr "در حال تحلیل…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:799
 msgid "Error compressing “{}”"
 msgstr "خطا هنگام فشرده‌سازی «{}»"
 
-#: src/window.py:818
+#: src/window.py:802
 msgid "View _Details"
 msgstr "دیدن _جزییات"
 
-#: src/window.py:853
+#: src/window.py:837
 #, fuzzy
 msgid "Compression complete"
 msgstr "فشرده‌سازی کامل شد"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:948
 msgid "Unknown video format “{}”"
 msgstr ""
 
-#: src/window.py:995
+#: src/window.py:979
 msgid "Videos"
 msgstr "ویدیوها"
 
-#: src/window.py:998
+#: src/window.py:982
 msgid "Pick Videos"
 msgstr "گزینش ویدیوها"
 

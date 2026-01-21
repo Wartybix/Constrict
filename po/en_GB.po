@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
+"POT-Creation-Date: 2026-01-21 18:24+0000\n"
 "PO-Revision-Date: 2025-11-23 20:36+0000\n"
 "Last-Translator: Wartybix <34974060+Wartybix@users.noreply.github.com>\n"
 "Language-Team: English\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:393
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -102,19 +102,19 @@ msgstr ""
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Source videos queued for compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "The application mid-compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "A mobile friendly UI"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr "Compression settings in the mobile friendly UI"
 
@@ -661,94 +661,95 @@ msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Videos Processed"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to.
-#: src/window.py:381
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:382
 #, fuzzy
-msgid "Exporting to {}"
+msgid "Exporting to “{}”"
 msgstr "Exporting to “{}”"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:398
 msgid "“{}” Queued"
 msgstr "“{}” Queued"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:402
 msgid "{} Videos Queued"
 msgstr "{} Videos Queued"
 
-#: src/window.py:533
+#: src/window.py:535
 msgid "Stop Compression?"
 msgstr "Stop Compression?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:538
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Progress made compressing “{}” will be permanently lost"
 
-#: src/window.py:542
+#: src/window.py:544
 msgid "_Cancel"
 msgstr "_Cancel"
 
-#: src/window.py:543
+#: src/window.py:545
 msgid "_Stop"
 msgstr "_Stop"
 
-#: src/window.py:597
+#: src/window.py:599
 msgid "Compression Complete"
 msgstr "Compression Complete"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:606
 msgid "“{}” processed"
 msgstr "“{}” processed"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:611
 msgid "{} files processed"
 msgstr "{} files processed"
 
-#: src/window.py:620
+#: src/window.py:622
 msgid "Open Export Directory"
 msgstr "Open Export Directory"
 
-#: src/window.py:700
+#: src/window.py:684
 msgid "Videos are being compressed"
 msgstr "Videos are being compressed"
 
-#: src/window.py:720
+#: src/window.py:704
 msgid "Analyzing…"
 msgstr "Analysing…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:799
 msgid "Error compressing “{}”"
 msgstr "Error compressing “{}”"
 
-#: src/window.py:818
+#: src/window.py:802
 msgid "View _Details"
 msgstr "View _Details"
 
-#: src/window.py:853
+#: src/window.py:837
 #, fuzzy
 msgid "Compression complete"
 msgstr "Compression Complete"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:948
 msgid "Unknown video format “{}”"
 msgstr ""
 
-#: src/window.py:995
+#: src/window.py:979
 msgid "Videos"
 msgstr "Videos"
 
-#: src/window.py:998
+#: src/window.py:982
 msgid "Pick Videos"
 msgstr "Pick Videos"
 

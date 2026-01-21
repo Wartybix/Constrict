@@ -1,12 +1,12 @@
 #
-#  <>, YEAR-2025.
+#  <>, YEAR-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2025-12-07 09:39+0100\n"
+"POT-Creation-Date: 2026-01-21 18:24+0000\n"
+"PO-Revision-Date: 2026-01-21 18:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:393
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -105,19 +105,19 @@ msgstr ""
 "localement. Par conséquent, la vitesse de compression dépend uniquement des "
 "capacités de votre matériel."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Sources vidéos en attente de compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "L'application en cours de compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Une interface utilisateur adaptée aux appareils mobiles"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 "Paramètres de compression dans l'interface utilisateur adaptée aux mobiles"
@@ -674,92 +674,92 @@ msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Vidéos traitées"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to.
-#: src/window.py:381
-#, fuzzy
-msgid "Exporting to {}"
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:382
+msgid "Exporting to “{}”"
 msgstr "Exportation vers “{}”"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:398
 msgid "“{}” Queued"
 msgstr "“{}” en attente"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:402
 msgid "{} Videos Queued"
 msgstr "{} vidéos en attente"
 
-#: src/window.py:533
+#: src/window.py:535
 msgid "Stop Compression?"
 msgstr "Arrêter la compression ?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:538
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "La progression de la compression de \"{}\" sera définitivement perdue."
 
-#: src/window.py:542
+#: src/window.py:544
 msgid "_Cancel"
 msgstr "_Annuler"
 
-#: src/window.py:543
+#: src/window.py:545
 msgid "_Stop"
 msgstr "_Arrêter"
 
-#: src/window.py:597
+#: src/window.py:599
 msgid "Compression Complete"
 msgstr "Compression terminée"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:606
 msgid "“{}” processed"
 msgstr "\"{}\" traité"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:611
 msgid "{} files processed"
 msgstr "{} Fichiers traités"
 
-#: src/window.py:620
+#: src/window.py:622
 msgid "Open Export Directory"
 msgstr "Ouvrir le répertoire d'exportation"
 
-#: src/window.py:700
+#: src/window.py:684
 msgid "Videos are being compressed"
 msgstr "Les vidéos sont en cours de compression"
 
-#: src/window.py:720
+#: src/window.py:704
 msgid "Analyzing…"
 msgstr "Analyse en cours"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:799
 msgid "Error compressing “{}”"
 msgstr "Erreur lors de la compression de \"{}\""
 
-#: src/window.py:818
+#: src/window.py:802
 msgid "View _Details"
 msgstr "Afficher les détails"
 
-#: src/window.py:853
+#: src/window.py:837
 msgid "Compression complete"
 msgstr "Compression terminée"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:948
 msgid "Unknown video format “{}”"
 msgstr "Format vidéo inconnu \"{}\""
 
-#: src/window.py:995
+#: src/window.py:979
 msgid "Videos"
 msgstr "Vidéos"
 
-#: src/window.py:998
+#: src/window.py:982
 msgid "Pick Videos"
 msgstr "Sélectionner les vidéos"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2026-01-07 13:50+0000\n"
+"POT-Creation-Date: 2026-01-21 18:24+0000\n"
+"PO-Revision-Date: 2026-01-21 18:35+0000\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:393
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -102,19 +102,19 @@ msgstr ""
 "banna. Oll argerdhow happya leel — ytho tooth gwaskyans yw uskis dell dha "
 "kalesweyth alowa."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Gwydhyowyow lostys rag gwaskyans"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "An app dres gwaskyans"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Unn ynterfas kowethek dhe kellgowsoryon"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr "Settyansow gwaskyans yn an ynterfas kellgowser"
 
@@ -664,92 +664,92 @@ msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Gwydhyowyow Argerdhys"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to.
-#: src/window.py:381
-#, fuzzy
-msgid "Exporting to {}"
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:382
+msgid "Exporting to “{}”"
 msgstr "Esperthi dhe “{}”"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:398
 msgid "“{}” Queued"
 msgstr "“{}” Lostys"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:402
 msgid "{} Videos Queued"
 msgstr "{} Gwydhyowyow Lostys"
 
-#: src/window.py:533
+#: src/window.py:535
 msgid "Stop Compression?"
 msgstr "Astel Gwaskyans?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:538
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Avonsyans gwaskyans a “{}” a wra kellys yn andileadow"
 
-#: src/window.py:542
+#: src/window.py:544
 msgid "_Cancel"
 msgstr "_Astel"
 
-#: src/window.py:543
+#: src/window.py:545
 msgid "_Stop"
 msgstr "_Hedhi"
 
-#: src/window.py:597
+#: src/window.py:599
 msgid "Compression Complete"
 msgstr "Gwaskyans Deu"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:606
 msgid "“{}” processed"
 msgstr "“{}” argerdhys"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:611
 msgid "{} files processed"
 msgstr "{} restrennow argerdhys"
 
-#: src/window.py:620
+#: src/window.py:622
 msgid "Open Export Directory"
 msgstr "Ygeri Restrenva Esporth"
 
-#: src/window.py:700
+#: src/window.py:684
 msgid "Videos are being compressed"
 msgstr "Gwydhyowyow gwaska"
 
-#: src/window.py:720
+#: src/window.py:704
 msgid "Analyzing…"
 msgstr "Dielvenna…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:799
 msgid "Error compressing “{}”"
 msgstr "Error dres gwaskyans “{}”"
 
-#: src/window.py:818
+#: src/window.py:802
 msgid "View _Details"
 msgstr "Gweles _Manylyon"
 
-#: src/window.py:853
+#: src/window.py:837
 msgid "Compression complete"
 msgstr "Gwaskyans Deu"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:948
 msgid "Unknown video format “{}”"
 msgstr "Furvas gwydhyow ankoth “{}”"
 
-#: src/window.py:995
+#: src/window.py:979
 msgid "Videos"
 msgstr "Gwydhyowyow"
 
-#: src/window.py:998
+#: src/window.py:982
 msgid "Pick Videos"
 msgstr "Dewis Gwydhyowyow"

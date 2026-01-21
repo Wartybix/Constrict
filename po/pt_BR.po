@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-01-20 15:27+0000\n"
-"PO-Revision-Date: 2026-01-21 12:33-0300\n"
+"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
+"POT-Creation-Date: 2026-01-21 18:24+0000\n"
+"PO-Revision-Date: 2026-01-21 18:35+0000\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:393
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -215,8 +215,6 @@ msgstr ""
 "Constrict: Não foi possível recuperar as propriedades do vídeo. O vídeo de "
 "origem pode estar ausente ou corrompido."
 
-#. This should never happen if a unique file name has been passed to
-#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -262,10 +260,6 @@ msgstr "Inicializando…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Comprimindo para {vid_br} {vid_br_unit} ({extra_details})"
 
-#. Acknowledgements: thank you to Nautilus for the ideas on where to set
-#. different thresholds for which time unit(s) to display. Particularly
-#. the 4 hour mark where minutes should no longer be displayed.
-#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -404,7 +398,6 @@ msgstr "Design do indicador de progresso circular por"
 msgid "Drag overlay design by"
 msgstr "Design da sobreposição de arrastar por"
 
-#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
 msgstr ""
@@ -678,91 +671,92 @@ msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} vídeos processados"
 
 #. TRANSLATORS: {} represents the path of the directory being
-#. exported to.
-#: src/window.py:381
-msgid "Exporting to {}"
-msgstr "Exportando para {}"
+#. exported to. Please use “” instead of "", if applicable to your
+#. language.
+#: src/window.py:382
+msgid "Exporting to “{}”"
+msgstr "Exportando para “{}”"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:398
 msgid "“{}” Queued"
 msgstr "“{}” na fila"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:402
 msgid "{} Videos Queued"
 msgstr "{} vídeos na fila"
 
-#: src/window.py:533
+#: src/window.py:535
 msgid "Stop Compression?"
 msgstr "Parar compressão?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:538
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "O progresso feito ao comprimir “{}” será perdido permanentemente"
 
-#: src/window.py:542
+#: src/window.py:544
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/window.py:543
+#: src/window.py:545
 msgid "_Stop"
 msgstr "_Parar"
 
-#: src/window.py:597
+#: src/window.py:599
 msgid "Compression Complete"
 msgstr "Compressão concluída"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:606
 msgid "“{}” processed"
 msgstr "“{}” processado"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:611
 msgid "{} files processed"
 msgstr "{} arquivos processados"
 
-#: src/window.py:620
+#: src/window.py:622
 msgid "Open Export Directory"
 msgstr "Abrir diretório de exportação"
 
-#: src/window.py:696
+#: src/window.py:684
 msgid "Videos are being compressed"
 msgstr "Os vídeos estão sendo comprimidos"
 
-#: src/window.py:716
+#: src/window.py:704
 msgid "Analyzing…"
 msgstr "Analisando…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:811
+#: src/window.py:799
 msgid "Error compressing “{}”"
 msgstr "Erro ao comprimir “{}”"
 
-#: src/window.py:814
+#: src/window.py:802
 msgid "View _Details"
 msgstr "Ver _detalhes"
 
-#: src/window.py:849
+#: src/window.py:837
 msgid "Compression complete"
 msgstr "Compressão concluída"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:960
+#: src/window.py:948
 msgid "Unknown video format “{}”"
 msgstr "Formato de vídeo desconhecido “{}”"
 
-#: src/window.py:991
+#: src/window.py:979
 msgid "Videos"
 msgstr "Vídeos"
 
-#: src/window.py:994
+#: src/window.py:982
 msgid "Pick Videos"
 msgstr "Selecionar vídeos"
