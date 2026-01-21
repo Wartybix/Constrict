@@ -377,8 +377,10 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.main_view_title.set_title(self.get_title())
         self.main_view_title.set_subtitle(
             # TRANSLATORS: {} represents the path of the directory being
-            # exported to.
-            _('Exporting to {}').format(export_dir)
+            # exported to. Please use “” instead of "", if applicable to your
+            # language.
+            _('Exporting to “{}”').format(export_dir)
+            # TODO: change to show full path after string freeze
         )
 
     def set_queued_title(self, daemon: bool) -> None:
@@ -667,18 +669,12 @@ class ConstrictWindow(Adw.ApplicationWindow):
         tolerance = self.get_tolerance()
 
         dest_file = Gio.File.new_for_path(destination_dir)
-
         dest_info = dest_file.query_info(
-            'xattr::document-portal.host-path',
+            'standard::display-name',
             Gio.FileQueryInfoFlags.NONE,
             None
         )
-
-        host_path = dest_info.get_attribute_string(
-           "xattr::document-portal.host-path"
-        )
-
-        displayed_dest_path = host_path if host_path else dest_file.get_path()
+        dest_display_name = dest_info.get_display_name()
 
         source_list = self.sources_list_box.get_all()
 
@@ -689,7 +685,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
         )
 
         for i in range(len(source_list)):
-            self.set_compressing_title(i, displayed_dest_path)
+            self.set_compressing_title(i, dest_display_name)
 
             video = source_list[i]
 
