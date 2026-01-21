@@ -678,11 +678,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
            "xattr::document-portal.host-path"
         )
 
-        if host_path:
-            home_path = GLib.get_home_dir()
-            displayed_dest_path = host_path.replace(home_path, '~')
-        else:
-            displayed_dest_path = dest_file.get_path()
+        displayed_dest_path = host_path if host_path else dest_file.get_path()
 
         source_list = self.sources_list_box.get_all()
 
