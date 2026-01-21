@@ -49,6 +49,9 @@
                 {
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/GNOME/gst-thumbnailers/-/archive/1.0.alpha.3/gst-thumbnailers-1.0.alpha.3.tar.gz",
+                    "mirror-urls": [
+                        "https://github.com/GNOME/gst-thumbnailers/archive/refs/tags/1.0.alpha.3.tar.gz"
+                    ],
                     "sha256" : "2b510602bbee6b92473b084abecd84f1f5ca2ec0079c2dfaa3d08f08e42b8b37"
                 }
             ]
