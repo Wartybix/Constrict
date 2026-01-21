@@ -1,29 +1,28 @@
-# SOME DESCRIPTIVE TITLE.
+# Brazilian Portuguese translation for Constrict.
 # Copyright (C) YEAR Wartybix
 # This file is distributed under the same license as the Constrict package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Constrict 1.0.1\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2025-12-30 17:01-0300\n"
-"Last-Translator: john peter sa <johnppetersa@gmail.com>\n"
-"Language-Team: \n"
+"Project-Id-Version: Constrict main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-01-20 15:27+0000\n"
+"PO-Revision-Date: 2026-01-21 12:33-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
 #: src/window.blp:42 src/window.blp:104 src/window.py:391
 msgid "Constrict"
-msgstr "Restringir"
+msgstr "Constrict"
 
 #: data/io.github.wartybix.Constrict.desktop.in:3
 msgid "Video Compressor"
@@ -36,7 +35,7 @@ msgstr "Comprima vídeos para tamanhos específicos"
 
 #: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
-msgstr "Comprimir;Vídeo;Filme;Clip;"
+msgstr "Comprimir;Compressão;Vídeo;Filme;Clipe;"
 
 #: data/io.github.wartybix.Constrict.desktop.in:20
 msgid "New Window"
@@ -49,10 +48,10 @@ msgid ""
 "online services for video compression, or the manual trial-and-error of re-"
 "encoding at various bitrates yourself."
 msgstr ""
-"O Restringir comprime seus vídeos para o tamanho de arquivo escolhido — útil "
-"para enviar a serviços com limites específicos de tamanho de arquivo. Chega "
-"de depender de serviços online para compressão de vídeo ou de tentativas e "
-"erros manuais para recodificar em diferentes taxas de bits."
+"O Constrict comprime seus vídeos para o tamanho de arquivo escolhido — é "
+"útil para enviar a serviços com limites específicos de tamanho de arquivo. "
+"Chega de depender de serviços online para compressão de vídeo ou de "
+"tentativas e erros manuais para recodificar em diferentes taxas de bits."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:13
 msgid "Features include:"
@@ -105,19 +104,19 @@ msgstr ""
 "localmente — e, como tal, as velocidades de compressão dependem apenas do "
 "seu hardware."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
-msgstr "Vídeos de origem na fila para compressão"
+msgstr "Vídeos originais na fila para compressão"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "O aplicativo em meio à compressão"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Uma interface amigável para dispositivos móveis"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 "Configurações de compressão na interface amigável para dispositivos móveis"
@@ -205,7 +204,7 @@ msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr ""
-"Restringir: Não foi possível ler o arquivo de entrada. Ele foi movido ou "
+"Constrict: Não foi possível ler o arquivo de entrada. Ele foi movido ou "
 "excluído antes da compressão?"
 
 #: src/constrict_utils.py:804
@@ -213,23 +212,25 @@ msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
 msgstr ""
-"Restringir: Não foi possível recuperar as propriedades do vídeo. O vídeo de "
+"Constrict: Não foi possível recuperar as propriedades do vídeo. O vídeo de "
 "origem pode estar ausente ou corrompido."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr ""
-"Restringir: Não foi possível criar o arquivo exportado. Um arquivo com o "
-"nome reservado já existe."
+"Constrict: Não foi possível criar o arquivo exportado. Um arquivo com o nome "
+"reservado já existe."
 
 #: src/constrict_utils.py:813
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
-"Restringir: Não foi possível criar o arquivo exportado. Não há permissões "
+"Constrict: Não foi possível criar o arquivo exportado. Não há permissões "
 "suficientes para criar um arquivo no caminho de exportação solicitado."
 
 #: src/constrict_utils.py:879
@@ -237,15 +238,15 @@ msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr ""
-"Restringir: A taxa de bits do vídeo ficou muito baixa (<5 kbps). O tamanho "
+"Constrict: A taxa de bits do vídeo ficou muito baixa (<5 kbps). O tamanho "
 "alvo pode ser muito baixo para este arquivo."
 
 #: src/constrict_utils.py:924
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
-"Restringir: Não é possível ler o arquivo de saída. Ele foi movido ou "
-"excluído durante a compressão?"
+"Constrict: Não é possível ler o arquivo de saída. Ele foi movido ou excluído "
+"durante a compressão?"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
@@ -261,6 +262,10 @@ msgstr "Inicializando…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Comprimindo para {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -343,12 +348,12 @@ msgstr "Gerenciamento de vídeo"
 #: src/gtk/shortcuts-dialog.blp:9
 msgctxt "shortcut window"
 msgid "Open"
-msgstr "Abrir"
+msgstr "Abre"
 
 #: src/gtk/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Export"
-msgstr "Exportar"
+msgstr "Exporta"
 
 #: src/gtk/shortcuts-dialog.blp:20
 msgctxt "shortcut window"
@@ -358,27 +363,27 @@ msgstr "Geral"
 #: src/gtk/shortcuts-dialog.blp:23
 msgctxt "shortcut window"
 msgid "Toggle Settings Pane"
-msgstr "Alternar painel de configurações"
+msgstr "Alterna o painel de configurações"
 
 #: src/gtk/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Mostrar atalhos"
+msgstr "Mostra os atalhos"
 
 #: src/gtk/shortcuts-dialog.blp:33
 msgctxt "shortcut window"
 msgid "Close Window"
-msgstr "Fechar janela"
+msgstr "Fecha a janela"
 
 #: src/gtk/shortcuts-dialog.blp:38
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Sair"
+msgstr "Sai"
 
 #: src/gtk/shortcuts-dialog.blp:43
 msgctxt "shortcut window"
 msgid "Show Preferences"
-msgstr "Mostrar preferências"
+msgstr "Mostra as preferências"
 
 #. TRANSLATORS: used in parentheses for the default suffix of exported
 #. files.
@@ -399,9 +404,12 @@ msgstr "Design do indicador de progresso circular por"
 msgid "Drag overlay design by"
 msgstr "Design da sobreposição de arrastar por"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
-msgstr "john peter sa "
+msgstr ""
+"john peter sa\n"
+"Rafael Fontenelle <rafaelff@gnome.org>"
 
 #: src/preferences_dialog.blp:5
 msgid "Preferences"
@@ -417,7 +425,7 @@ msgid ""
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "A aceleração de hardware só é usada se sua GPU suportar codificação com o "
-"codec de vídeo selecionado e a “Qualidade Extra” estiver desativada"
+"codec de vídeo selecionado e a “Qualidade extra” estiver desativada"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
@@ -425,7 +433,7 @@ msgstr "Codificação via GPU"
 
 #: src/preferences_dialog.blp:15
 msgid "Use the GPU to speed up encoding when available"
-msgstr "Use a GPU para acelerar a codificação quando disponível"
+msgstr "Usa a GPU para acelerar a codificação quando disponível"
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
@@ -533,7 +541,7 @@ msgstr "_Atalhos de teclado"
 
 #: src/window.blp:11
 msgid "_About Constrict"
-msgstr "_Sobre o Restringir"
+msgstr "_Sobre o Constrict"
 
 #: src/window.blp:49 src/window.blp:111
 msgid "Main Menu"
@@ -672,9 +680,8 @@ msgstr "{index}/{total} vídeos processados"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
 #: src/window.py:381
-#, fuzzy
 msgid "Exporting to {}"
-msgstr "Exportando para “{}”"
+msgstr "Exportando para {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
@@ -725,37 +732,37 @@ msgstr "{} arquivos processados"
 msgid "Open Export Directory"
 msgstr "Abrir diretório de exportação"
 
-#: src/window.py:700
+#: src/window.py:696
 msgid "Videos are being compressed"
 msgstr "Os vídeos estão sendo comprimidos"
 
-#: src/window.py:720
+#: src/window.py:716
 msgid "Analyzing…"
 msgstr "Analisando…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:811
 msgid "Error compressing “{}”"
 msgstr "Erro ao comprimir “{}”"
 
-#: src/window.py:818
+#: src/window.py:814
 msgid "View _Details"
 msgstr "Ver _detalhes"
 
-#: src/window.py:853
+#: src/window.py:849
 msgid "Compression complete"
 msgstr "Compressão concluída"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:960
 msgid "Unknown video format “{}”"
 msgstr "Formato de vídeo desconhecido “{}”"
 
-#: src/window.py:995
+#: src/window.py:991
 msgid "Videos"
 msgstr "Vídeos"
 
-#: src/window.py:998
+#: src/window.py:994
 msgid "Pick Videos"
 msgstr "Selecionar vídeos"
