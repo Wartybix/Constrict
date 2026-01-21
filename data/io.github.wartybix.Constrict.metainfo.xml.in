@@ -75,6 +75,18 @@
   </screenshots>
 
   <releases>
+    <release version="26.1" date="2026-01-21">
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.12.1</url>
+      <description translate="no">
+        <ul>
+          <li>Upgraded the thumbnailer, used to preview source videos, from Totem Video Thumbnailer to the newer GStreamer Video Thumbnailer.</li>
+          <li>Added Brazilian Portuguese translation.</li>
+          <li>Added Occitan translation.</li>
+          <li>Added Cornish translation.</li>
+          <li>Updated the app's metadata to point to the new code repository, issue tracker, translation platform, homepage, and contribution guide.</li>
+        </ul>
+      </description>
+    </release>
     <release version="25.12.1" date="2025-12-27">
       <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.12.1</url>
       <description translate="no">
