@@ -48,8 +48,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/gst-thumbnailers/-/archive/1.0.alpha.1/gst-thumbnailers-1.0.alpha.1.tar.gz",
-                    "sha256" : "a754bc1a21522a5315463b05fb4d3f02e7b824816b155c1826c77de8afe70e49"
+                    "url" : "https://gitlab.gnome.org/GNOME/gst-thumbnailers/-/archive/1.0.alpha.3/gst-thumbnailers-1.0.alpha.3.tar.gz",
+                    "sha256" : "2b510602bbee6b92473b084abecd84f1f5ca2ec0079c2dfaa3d08f08e42b8b37"
                 }
             ]
         },
