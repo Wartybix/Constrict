@@ -76,7 +76,7 @@
 
   <releases>
     <release version="26.1" date="2026-01-21">
-      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/25.12.1</url>
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.1</url>
       <description translate="no">
         <ul>
           <li>Upgraded the thumbnailer, used to preview source videos, from Totem Video Thumbnailer to the newer GStreamer Video Thumbnailer.</li>
