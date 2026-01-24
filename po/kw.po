@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2026-01-07 13:50+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-01-22 20:09+0000\n"
+"PO-Revision-Date: 2026-01-24 18:47+0000\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 49.0\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/World/Constrict\n"
+"X-DL-Lang: kw\n"
+"X-DL-Module: Constrict\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -102,19 +108,19 @@ msgstr ""
 "banna. Oll argerdhow happya leel — ytho tooth gwaskyans yw uskis dell dha "
 "kalesweyth alowa."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Gwydhyowyow lostys rag gwaskyans"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "An app dres gwaskyans"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Unn ynterfas kowethek dhe kellgowsoryon"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr "Settyansow gwaskyans yn an ynterfas kellgowser"
 
@@ -212,6 +218,8 @@ msgstr ""
 "Constrict: Y fyllis dhe kerghes kudhlow gwydhyow. Gwydhyow yw martesen "
 "kellys po legrys."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -257,6 +265,10 @@ msgstr "Dalleth…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Gwaska dhe {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -395,6 +407,7 @@ msgstr "Desin menek avonsyans kelghek gans"
 msgid "Drag overlay design by"
 msgstr "Desin draylyans gans"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
 msgstr "Flynn <cirilla@tuta.io>"
@@ -666,9 +679,8 @@ msgstr "{index}/{total} Gwydhyowyow Argerdhys"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
 #: src/window.py:381
-#, fuzzy
 msgid "Exporting to {}"
-msgstr "Esperthi dhe “{}”"
+msgstr "Owth Esperthi dhe “{}”"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
@@ -719,37 +731,37 @@ msgstr "{} restrennow argerdhys"
 msgid "Open Export Directory"
 msgstr "Ygeri Restrenva Esporth"
 
-#: src/window.py:700
+#: src/window.py:696
 msgid "Videos are being compressed"
 msgstr "Gwydhyowyow gwaska"
 
-#: src/window.py:720
+#: src/window.py:716
 msgid "Analyzing…"
 msgstr "Dielvenna…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:811
 msgid "Error compressing “{}”"
 msgstr "Error dres gwaskyans “{}”"
 
-#: src/window.py:818
+#: src/window.py:814
 msgid "View _Details"
 msgstr "Gweles _Manylyon"
 
-#: src/window.py:853
+#: src/window.py:849
 msgid "Compression complete"
 msgstr "Gwaskyans Deu"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:960
 msgid "Unknown video format “{}”"
 msgstr "Furvas gwydhyow ankoth “{}”"
 
-#: src/window.py:995
+#: src/window.py:991
 msgid "Videos"
 msgstr "Gwydhyowyow"
 
-#: src/window.py:998
+#: src/window.py:994
 msgid "Pick Videos"
 msgstr "Dewis Gwydhyowyow"
