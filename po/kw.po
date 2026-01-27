@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-01-22 20:09+0000\n"
-"PO-Revision-Date: 2026-01-24 18:47+0000\n"
+"POT-Creation-Date: 2026-01-27 08:08+0000\n"
+"PO-Revision-Date: 2026-01-27 13:08+0000\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:394
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -191,7 +191,7 @@ msgstr "Braster restren gwaskys yw re bras ({size} {unit})"
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
-#: src/sources_row.py:545 src/window.py:246
+#: src/sources_row.py:545 src/window.py:249
 msgid "MiB"
 msgstr "MiB"
 
@@ -629,13 +629,13 @@ msgstr "_Hedhi"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:224
+#: src/window.py:227
 msgid "{} FPS"
 msgstr "{} FDE"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:232
+#: src/window.py:235
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -644,7 +644,7 @@ msgstr ""
 "FDE, ny vern an dewis dewisys."
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:241
+#: src/window.py:244
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -658,110 +658,110 @@ msgstr ""
 "gwaskyans. Unn perthyans a {}% po my yw komendys."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:249
+#: src/window.py:252
 msgid "Target _Size ({})"
 msgstr "Bra_ster Kosten ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
-#: src/window.py:365
+#: src/window.py:368
 msgid "Processing “{}”"
 msgstr "Argerdhes “{}”"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:371
+#: src/window.py:374
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Gwydhyowyow Argerdhys"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:381
+#: src/window.py:384
 msgid "Exporting to {}"
-msgstr "Owth Esperthi dhe “{}”"
+msgstr "Owth Esperthi dhe {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:399
 msgid "“{}” Queued"
 msgstr "“{}” Lostys"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:403
 msgid "{} Videos Queued"
 msgstr "{} Gwydhyowyow Lostys"
 
-#: src/window.py:533
+#: src/window.py:536
 msgid "Stop Compression?"
 msgstr "Astel Gwaskyans?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:539
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Avonsyans gwaskyans a “{}” a wra kellys yn andileadow"
 
-#: src/window.py:542
+#: src/window.py:545
 msgid "_Cancel"
 msgstr "_Astel"
 
-#: src/window.py:543
+#: src/window.py:546
 msgid "_Stop"
 msgstr "_Hedhi"
 
-#: src/window.py:597
+#: src/window.py:600
 msgid "Compression Complete"
 msgstr "Gwaskyans Deu"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:607
 msgid "“{}” processed"
 msgstr "“{}” argerdhys"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:612
 msgid "{} files processed"
 msgstr "{} restrennow argerdhys"
 
-#: src/window.py:620
+#: src/window.py:623
 msgid "Open Export Directory"
 msgstr "Ygeri Restrenva Esporth"
 
-#: src/window.py:696
+#: src/window.py:699
 msgid "Videos are being compressed"
 msgstr "Gwydhyowyow gwaska"
 
-#: src/window.py:716
+#: src/window.py:719
 msgid "Analyzing…"
 msgstr "Dielvenna…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:811
+#: src/window.py:814
 msgid "Error compressing “{}”"
 msgstr "Error dres gwaskyans “{}”"
 
-#: src/window.py:814
+#: src/window.py:817
 msgid "View _Details"
 msgstr "Gweles _Manylyon"
 
-#: src/window.py:849
+#: src/window.py:852
 msgid "Compression complete"
 msgstr "Gwaskyans Deu"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:960
+#: src/window.py:963
 msgid "Unknown video format “{}”"
 msgstr "Furvas gwydhyow ankoth “{}”"
 
-#: src/window.py:991
+#: src/window.py:994
 msgid "Videos"
 msgstr "Gwydhyowyow"
 
-#: src/window.py:994
+#: src/window.py:997
 msgid "Pick Videos"
 msgstr "Dewis Gwydhyowyow"
