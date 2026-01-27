@@ -120,6 +120,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
 
+        gtk_settings = self.get_settings()
+        gtk_settings.set_property('gtk-icon-theme-name', 'Adwaita')
+
         self.compressing = False
         self.currently_processed = ''
         self.main_view_title.set_title(self.get_title())
