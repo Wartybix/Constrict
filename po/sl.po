@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
 "POT-Creation-Date: 2026-01-27 08:08+0000\n"
-"PO-Revision-Date: 2026-01-27 09:44+0100\n"
+"PO-Revision-Date: 2026-01-28 17:33+0100\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -24,9 +24,8 @@ msgstr ""
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
 #: src/window.blp:42 src/window.blp:104 src/window.py:394
-#, fuzzy
 msgid "Constrict"
-msgstr "Stisni"
+msgstr "Zameji"
 
 #: data/io.github.wartybix.Constrict.desktop.in:3
 msgid "Video Compressor"
@@ -46,16 +45,15 @@ msgid "New Window"
 msgstr "Novo okno"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:11
-#, fuzzy
 msgid ""
 "Constrict compresses your videos to your chosen file size — useful for "
 "uploading to services with specific file size limits. No more relying on "
 "online services for video compression, or the manual trial-and-error of re-"
 "encoding at various bitrates yourself."
 msgstr ""
-"Constrict stisne vaše videoposnetke na izbrano velikost datoteke — kar je "
+"Zameji stisne vaše videoposnetke na izbrano velikost datoteke — kar je "
 "uporabno za nalaganje na storitve z določenimi omejitvami velikosti datotek. "
-"Ni več zanašanja na spletne storitve za video kompresijo ali ročnega poskusa "
+"Ni več zanašanja na spletne storitve za video stiskanje ali ročnega poskusa "
 "in napake pri ponovnem kodiranju pri različnih bitnih hitrostih."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:13
@@ -76,12 +74,10 @@ msgstr ""
 "ustreza ciljni velikosti datoteke."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:18
-#, fuzzy
 msgid "Bulk compression of multiple videos to one output directory."
-msgstr "Množično stiskanje več videov v eno izhodno imenik."
+msgstr "Množično stiskanje več videoposnetkov v eno izhodno mapo."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:19
-#, fuzzy
 msgid ""
 "Customization of framerate limits, to ensure a clearer or smoother image."
 msgstr ""
@@ -89,16 +85,14 @@ msgstr ""
 "bolj gladka slika."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
-#, fuzzy
 msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
 msgstr ""
-"Izbira kodekov za kodiranje izhodnih datotek, vključno s H.264, HEVC, AV1 in "
+"Izbor kodekov za kodiranje izhodnih datotek, vključno s H.264, HEVC, AV1 in "
 "VP9."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:22
-#, fuzzy
 msgid ""
 "The app attempts to retain as much audiovisual quality as possible for the "
 "file size given. However, extremely steep reductions in file size can cause "
@@ -106,16 +100,15 @@ msgid ""
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
 msgstr ""
-"Aplikacija skuša ohraniti čim več avdiovizualne kakovosti glede na dano "
+"Program skuša ohraniti čim več avdiovizualne kakovosti glede na dano "
 "velikost datoteke. Vendar pa lahko izjemno strma zmanjšanja velikosti "
 "datoteke povzročijo znatno izgubo kakovosti izhodne datoteke, včasih pa "
 "stiskanje sploh ni mogoče. Vsa obdelava poteka lokalno — zato so hitrosti "
-"stiskanja dovoljene le toliko, kolikor to dopušča vaša strojna oprema."
+"stiskanja le tako visoke, kolikor to dopušča vaša strojna oprema."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:61
-#, fuzzy
 msgid "Source videos queued for compression"
-msgstr "Izvorni videoposnetki, uvrščeni v vrsto za stiskanje"
+msgstr "Izvorni videoposnetki so uvrščeni v vrsto za stiskanje"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 #, fuzzy
@@ -127,22 +120,19 @@ msgid "A mobile friendly UI"
 msgstr "Vmesnik, prijazen do mobilnih naprav"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:73
-#, fuzzy
 msgid "Compression settings in the mobile friendly UI"
-msgstr "Nastavitve stiskanja v mobilno prijaznem uporabniškem vmesniku"
+msgstr "Nastavitve stiskanja v mobilnikom prijaznem uporabniškem vmesniku"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
-#, fuzzy
 msgid "Framerate Limit"
 msgstr "Omejitev števila sličic na sekundo"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:32
-#, fuzzy
 msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
 msgstr ""
 "Samodejno omeji število sličic na sekundo stisnjenih videov ali na 30 "
-"oziroma 60 FPS."
+"oziroma 60 sl/s."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
@@ -162,7 +152,7 @@ msgstr "Poskus {}"
 #: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
 #, fuzzy
 msgid "HQ"
-msgstr "Visokokakovostni razšumnik 3D (frei0r)"
+msgstr "HQ"
 
 #. TRANSLATORS: this is an abbreviation of 'Low Quality'
 #: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
@@ -174,16 +164,16 @@ msgstr "LQ"
 #. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
 #. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
 #: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{res_fps}, {audio_quality} audio"
-msgstr "{res_fps}, {audio_quality} zvok"
+msgstr "{res_fps}, zvok {audio_quality}"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
 #. {extra_details} will either display resolution/FPS and audio quality
 #. details, or just resolution/FPS if the video has no audio streams.
 #: src/attempt_fail_box.py:78
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{vid_br} {vid_br_unit} ({extra_details})"
 msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
@@ -195,9 +185,9 @@ msgstr "kb/s"
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MiB'.
 #: src/attempt_fail_box.py:92
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
-msgstr "Velikost stisnjene datoteke je bila prevelika ({size} {unit})"
+msgstr "Velikost stisnjene datoteke je prevelika ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
@@ -209,63 +199,57 @@ msgstr "MiB"
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MiB'.
 #: src/attempt_fail_box.py:102
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
-msgstr "Velikost stisnjene datoteke je bila premajhna ({size} {unit})"
+msgstr "Velikost stisnjene datoteke je premajhna ({size} {unit})"
 
 #: src/constrict_utils.py:781
-#, fuzzy
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr ""
-"Omejitev: Ni bilo mogoče prebrati vhodne datoteke. Ali je bila premaknjena "
-"ali izbrisana pred stiskanjem?"
+"Zameji: Ni možnno prebrati vhodne datoteke. Ali je bila premaknjena ali "
+"izbrisana pred stiskanjem?"
 
 #: src/constrict_utils.py:804
-#, fuzzy
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
 msgstr ""
-"Constrict: Ni bilo mogoče pridobiti video lastnosti. Izvorni video je morda "
-"manjkajoč ali poškodovan."
+"Zameji: Ni možno pridobiti lastnosti videoposnetka. Izvorni video morda "
+"manjka ali je poškodovan."
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
 #: src/constrict_utils.py:811
-#, fuzzy
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr ""
-"Omejitev: Ni bilo mogoče ustvariti izvožene datoteke. Datoteka z "
-"rezerviranim imenom že obstaja."
+"Zameji: Ni možno ustvariti izvožene datoteke. Datoteka z rezerviranim imenom "
+"že obstaja."
 
 #: src/constrict_utils.py:813
-#, fuzzy
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
-"Omejitev: Ni bilo mogoče ustvariti izvožene datoteke. Ni dovolj dovoljenj za "
+"Zameji: Ni možno ustvariti izvožene datoteke. Ni zadostnih pravic za "
 "ustvarjanje datoteke na zahtevani izvozni poti."
 
 #: src/constrict_utils.py:879
-#, fuzzy
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr ""
-"Omejitev: Bitna hitrost videa je postala prenizka (<5 kbps). Velikost cilja "
-"je morda premajhna za to datoteko."
+"Zameji: Bitna hitrost videoposnetka je postala prenizka (<5 kb/s). Velikost "
+"cilja je morda premajhna za to datoteko."
 
 #: src/constrict_utils.py:924
-#, fuzzy
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
-"Omejitev: Ne morem prebrati izhodne datoteke. Je bila premaknjena ali "
+"Zameji: Ni možno prebrati izhodne datoteke. Je bila premaknjena ali "
 "izbrisana med stiskanjem?"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
@@ -278,7 +262,7 @@ msgstr "Inicializacija …"
 #. {extra_details} will either display resolution/FPS and audio quality
 #. details, or just resolution/FPS if the video has no audio streams.
 #: src/current_attempt_box.py:92
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Stiskanje v {vid_br} {vid_br_unit} ({extra_details})"
 
@@ -293,9 +277,8 @@ msgstr "{} %"
 
 #. TRANSLATORS: {} represents the progress percentage.
 #: src/current_attempt_box.py:128
-#, fuzzy
 msgid "{} — Almost done"
-msgstr "{} — Skoraj končano"
+msgstr "{} — skoraj končano"
 
 #. TRANSLATORS: {} represents an integer.
 #. Used as part of a larger string, like:
@@ -337,9 +320,9 @@ msgstr[3] "{} ure"
 #. {time_shown} represents a string showing the estimated time to
 #. completion (like '50 minutes').
 #: src/current_attempt_box.py:171
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percentage} — About {time_shown} left"
-msgstr "{percentage} — Približno {time_shown} je ostalo"
+msgstr "{percentage} — ostalo je še približno {time_shown}"
 
 #: src/drag_overlay.blp:14
 msgid "Drop Videos to Import"
@@ -368,7 +351,6 @@ msgid "Details copied to clipboard"
 msgstr "Podrobnosti so kopirane v odložišče"
 
 #: src/gtk/shortcuts-dialog.blp:6
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Video Management"
 msgstr "Upravljanje videa"
@@ -389,10 +371,9 @@ msgid "General"
 msgstr "Splošno"
 
 #: src/gtk/shortcuts-dialog.blp:23
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Toggle Settings Pane"
-msgstr "Pane za nastavitve preklopa"
+msgstr "Preklopi pult nastavitev"
 
 #: src/gtk/shortcuts-dialog.blp:28
 msgctxt "shortcut window"
@@ -424,17 +405,16 @@ msgstr "stisnjeno"
 #: src/main.py:184
 #, fuzzy
 msgid "‘{}’ repository by"
-msgstr "'{}' repozitorij avtorja"
+msgstr "Skladišče »{}« avtorja"
 
 #: src/main.py:191
-#, fuzzy
 msgid "Circular progress indicator design by"
 msgstr "Krožni kazalnik napredka je zasnoval"
 
 #: src/main.py:195
 #, fuzzy
 msgid "Drag overlay design by"
-msgstr "Načrtovanje prekrivnega vleka z uporabo"
+msgstr "Oblikovanje prekrivnega vleka:"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
@@ -450,22 +430,21 @@ msgid "Hardware Acceleration"
 msgstr "Strojno pospeševanje"
 
 #: src/preferences_dialog.blp:11
-#, fuzzy
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Strojno pospeševanje se uporablja le, če vaša grafična kartica podpira "
-"kodiranje z izbranim video kodekom, in je \"Extra Quality\" onemogočeno"
+"kodiranje z izbranim video kodekom, in možnost »Izjemna kakovost« ni "
+"omogočena"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
 msgstr "Kodiranje z GPE"
 
 #: src/preferences_dialog.blp:15
-#, fuzzy
 msgid "Use the GPU to speed up encoding when available"
-msgstr "Uporabi grafično kartico za pospešitev kodiranja, kadar je na voljo"
+msgstr "Uporabi GPE za pospešitev kodiranja, kadar je na voljo"
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
@@ -476,14 +455,12 @@ msgid "Custom Suffix"
 msgstr "Pripona po meri"
 
 #: src/preferences_dialog.py:42
-#, fuzzy
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
 msgstr ""
-"Uporablja se v imenih datotek za izvožene videe, med osnovnim imenom in "
-"končnico. Če je prilagojena pripona prazna, se uporabi privzeta pripona "
-"\"{}\"."
+"Uporablja se v imenih datotek za izvožene videoposnetke, med osnovnim imenom "
+"in končnico. Če je pripona po meri prazna, se uporabi privzeta pripona »{}«."
 
 #: src/preferences_dialog.py:64
 msgid "Changes applied"
@@ -510,9 +487,8 @@ msgid "View Error Details"
 msgstr "Pokaži podrobnosti o napakah"
 
 #: src/sources_row.blp:63
-#, fuzzy
 msgid "Cannot load video. It may be missing or corrupted."
-msgstr "Video ni mogoče naložiti. Morda manjka ali je poškodovana."
+msgstr "Videodatoteke ni možno naložiti. Morda manjka ali je poškodovana."
 
 #: src/sources_row.blp:100
 msgid "View Compression Progress"
@@ -537,15 +513,15 @@ msgstr "Več podrobnosti"
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MiB'.
 #: src/sources_row.py:495
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Video compressed to {size} {unit}."
-msgstr "Video stisnjen v {size} {unit}."
+msgstr "Video je stisnjen na {size} {unit}."
 
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'.
 #: src/sources_row.py:523
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
 "size ({target_size} {unit_target})."
@@ -556,9 +532,9 @@ msgstr ""
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
 #: src/sources_row.py:543
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
-msgstr "Velikost cilja ({size} {unit}) je za to datoteko premajhna."
+msgstr "Ciljna velikost ({size} {unit}) je za to datoteko premajhna."
 
 #: src/window.blp:6
 msgid "_New Window"
@@ -573,64 +549,54 @@ msgid "_Keyboard Shortcuts"
 msgstr "_Tipkovne bližnjice"
 
 #: src/window.blp:11
-#, fuzzy
 msgid "_About Constrict"
-msgstr "_About Constrict"
+msgstr "_O programu Zameji"
 
 #: src/window.blp:49 src/window.blp:111
 msgid "Main Menu"
 msgstr "Glavni meni"
 
 #: src/window.blp:75
-#, fuzzy
 msgid "Compress Videos"
-msgstr "Kompresijski videi"
+msgstr "Stisni videoposnetke"
 
 #: src/window.blp:76
 msgid "Drag and drop videos here"
 msgstr "Povlecite in spustite videoposnetke sem"
 
 #: src/window.blp:78
-#, fuzzy
 msgid "_Open…"
-msgstr "Odpri kot"
+msgstr "_Odpri …"
 
 #: src/window.blp:158
 msgid "_Automatic"
 msgstr "_Samodejno"
 
 #: src/window.blp:160
-#, fuzzy
 msgid "Use the highest framerate without sacrificing resolution"
-msgstr "Uporabi najvišjo hitrost sličic, ne da bi žrtvoval ločljivost"
+msgstr "Uporabi najvišjo hitrost sličic brez žrtvovanja ločljivosti"
 
 #: src/window.blp:172
-#, fuzzy
 msgid "Ensure higher image clarity"
-msgstr "Zagotovite višjo jasnost slike"
+msgstr "Zagotovi višjo jasnost slike"
 
 #: src/window.blp:184
-#, fuzzy
 msgid "Ensure smoother motion"
-msgstr "Zagotovite bolj gladko gibanje"
+msgstr "Zagotovi bolj gladko gibanje"
 
 #: src/window.blp:195
-#, fuzzy
 msgid "Encoding Options"
 msgstr "Možnosti kodiranja"
 
 #: src/window.blp:198
-#, fuzzy
 msgid "_Video Codec"
-msgstr "Video kodek"
+msgstr "_Video kodek"
 
 #: src/window.blp:206
-#, fuzzy
 msgid "Extra _Quality"
-msgstr "Dodatne _Quality"
+msgstr "Izjemna _kakovost"
 
 #: src/window.blp:208
-#, fuzzy
 msgid "Increase image quality at the cost of compression time"
 msgstr "Povečajte kakovost slike na račun časa stiskanja"
 
@@ -643,19 +609,16 @@ msgid "_Tolerance (%)"
 msgstr "_Toleranca (%)"
 
 #: src/window.blp:240
-#, fuzzy
 msgid "How far end file sizes can be below target"
 msgstr "Kako daleč so lahko končne velikosti datotek pod ciljno vrednostjo"
 
 #: src/window.blp:264
-#, fuzzy
 msgid "Toggle Settings Pane"
-msgstr "Pane za nastavitve preklopa"
+msgstr "Preklopi pult nastavitev"
 
 #: src/window.blp:274
-#, fuzzy
 msgid "Issues with video sources — fix before compressing"
-msgstr "Težave z video viri — odpravi pred stiskanjem"
+msgstr "Težave z video viri — odpravite pred stiskanjem"
 
 #: src/window.blp:300
 msgid "Video Sources"
@@ -682,48 +645,45 @@ msgstr "{} sl/s"
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
 #: src/window.py:235
-#, fuzzy
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr ""
-"Videi stisnjeni na nizke bitne hitrosti so lahko omejeni na {} FPS, ne glede "
-"na nabor nastavitev."
+"Videoposnetki, stisnjeni na nizke bitne hitrosti, so lahko omejeni na {} sl/"
+"s, ne glede na nastavitve."
 
 #. TRANSLATORS: {} represents an integer.
 #: src/window.py:244
-#, fuzzy, no-python-format
+#, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
 "compressed file sizes can be under target. However, this can increase the "
 "number of attempts needed to meet the target, increasing compression time. A "
 "tolerance of {} % or more is recommended."
 msgstr ""
-"Zmanjšanje tolerance maksimira kakovost slike, saj zmanjša, koliko "
-"stisnjenih datotek je lahko pod ciljem. Vendar pa to lahko poveča število "
-"poskusov, potrebnih za dosego cilja, kar poveča čas stiskanja. Priporočena "
-"je toleranca {} % o več."
+"Zmanjšanje tolerance maksimira kakovost slike, saj zmanjša vrednost, koliko "
+"so velikosti stisnjenih datotek je lahko pod ciljno vrednostjo. Vendar pa to "
+"lahko poveča število poskusov, potrebnih za dosego cilja, kar poveča čas "
+"stiskanja. Priporočena je toleranca {} % ali več."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:252
-#, fuzzy
 msgid "Target _Size ({})"
-msgstr "Ciljna velikost"
+msgstr "_Ciljna velikost ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
 #: src/window.py:368
-#, fuzzy
 msgid "Processing “{}”"
-msgstr "Izvajanje"
+msgstr "Obdelava »{}« poteka"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
 #: src/window.py:374
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{index}/{total} Videos Processed"
-msgstr "{index}/{total} obdelani videi"
+msgstr "{index}/{total} obdelanih videoposnetkov"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
