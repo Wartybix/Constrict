@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
 "POT-Creation-Date: 2026-01-27 08:08+0000\n"
-"PO-Revision-Date: 2026-01-28 17:33+0100\n"
+"PO-Revision-Date: 2026-01-28 17:47+0100\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +113,7 @@ msgstr "Izvorni videoposnetki so uvrščeni v vrsto za stiskanje"
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 #, fuzzy
 msgid "The application mid-compression"
-msgstr "Uporaba med stiskanjem"
+msgstr "Srednje stiskanje programa"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
@@ -403,16 +403,14 @@ msgstr "stisnjeno"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #: src/main.py:184
-#, fuzzy
 msgid "‘{}’ repository by"
-msgstr "Skladišče »{}« avtorja"
+msgstr "Skladišče »{}«:"
 
 #: src/main.py:191
 msgid "Circular progress indicator design by"
 msgstr "Krožni kazalnik napredka je zasnoval"
 
 #: src/main.py:195
-#, fuzzy
 msgid "Drag overlay design by"
 msgstr "Oblikovanje prekrivnega vleka:"
 
