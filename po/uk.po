@@ -1,0 +1,773 @@
+# Ukrainian translation for Constrict.
+# Copyright (C) 2026 Constrict's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Constrict package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>,  2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-01-27 08:08+0000\n"
+"PO-Revision-Date: 2026-01-28 05:11+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:104 src/window.py:394
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Стискання відео"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Стискати відео до цільових розмірів"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "Compress;Video;Movie;Film;Clip;стискання;відео;фільм;кліп;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Нове вікно"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"Constrict compresses your videos to your chosen file size — useful for "
+"uploading to services with specific file size limits. No more relying on "
+"online services for video compression, or the manual trial-and-error of re-"
+"encoding at various bitrates yourself."
+msgstr ""
+"Constrict стискає ваші відео до файлів вибраного вами розміру — це корисно"
+" для завантаження на служби з певними обмеженнями розміру файлів. У вас"
+" більше не буде потреби покладатися на інтернет-служби для стискання відео"
+" або самостійно перекодувати їх методом проб і помилок з різною швидкістю"
+" потоку даних."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:13
+msgid "Features include:"
+msgstr "Можливості:"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid "An intuitive, easy to use interface."
+msgstr "Інтуїтивно зрозумілий простий у використанні інтерфейс."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid ""
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
+"audio quality each video is re-encoded with to meet the target file size."
+msgstr ""
+"Автоматичний розрахунок середньої бітової швидкості (ABR), роздільної"
+" здатності, частоти кадрів та якості звуку для кожного відео, яке буде"
+" перекодовано за цільовим розміром файла."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr ""
+"Пакетне стискання декількох відео одразу до одного каталогу результатів."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:19
+msgid ""
+"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr ""
+"Налаштування обмежень частоти кадрів для забезпечення чіткішого або"
+" плавнішого зображення."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
+"and VP9."
+msgstr ""
+"Вибір кодеків для файлів результатів, зокрема H.264, HEVC, AV1, and VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"Програма намагається зберегти якомога кращу аудіовізуальну якість для"
+" заданого розміру файла. Однак надзвичайно різке зменшення розміру файла"
+" може призвести до значної втрати якості результату, а іноді стиснення може"
+" бути взагалі неможливим. Вся обробка виконується локально, тому швидкість"
+" стискання залежить від можливостей вашого обладнання."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
+msgid "Source videos queued for compression"
+msgstr "Початкові відео додано до черги стискання"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
+msgid "The application mid-compression"
+msgstr "Проміжний етап стискання у програмі"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
+msgid "A mobile friendly UI"
+msgstr "Зручний інтерфейс для мобільних пристроїв"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Параметри стискання у зручному для мобільних пристрої інтерфейсі"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
+msgid "Framerate Limit"
+msgstr "Обмеження частоти кадрів"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Автоматичне обмеження частоти кадрів стиснених відео — до 30 або 60 кадрів"
+" за секунду."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Відеокодек"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "Використаний під час стикання кодек"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+msgid "Attempt {}"
+msgstr "Спроба {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr "ВЯ"
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr "НЯ"
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, звук {audio_quality}"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/attempt_fail_box.py:78
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
+msgid "kbps"
+msgstr "кбіт/с"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:92
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "Розмір стисненого файла є надто великим ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
+#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
+#: src/sources_row.py:545 src/window.py:249
+msgid "MiB"
+msgstr "МіБ"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Розмір стиснутого файла є надто малим ({size} {unit})"
+
+#: src/constrict_utils.py:781
+msgid ""
+"Constrict: Could not read input file. Was it moved or deleted before "
+"compression?"
+msgstr ""
+"Constrict: не вдалося прочитати файл вхідних даних. Можливо, файл пересунуто"
+" або вилучено до стискання?"
+
+#: src/constrict_utils.py:804
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict: не вдалося отримати властивості відео. Можливо, немає доступу до"
+" початкового відео або відеодані пошкоджено."
+
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
+#: src/constrict_utils.py:811
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+"Constrict: не вдалося створити експортований файл. Файл із зарезервованою"
+" назвою вже існує."
+
+#: src/constrict_utils.py:813
+msgid ""
+"Constrict: Could not create exported file. There are insufficient "
+"permissions to create a file at the requested export path."
+msgstr ""
+"Constrict: не вдалося створити експортований файл. Недостатні права доступу"
+" для створення файла за вказаним шляхом експортування."
+
+#: src/constrict_utils.py:879
+msgid ""
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
+"low for this file."
+msgstr ""
+"Constrict: надто низька бітова швидкість відео (<5 кбіт/с). Можливо, надто"
+" низький цільовий розмір для цього файла."
+
+#: src/constrict_utils.py:924
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict: не вдалося прочитати файл результатів. Його було пересунуто або"
+" вилучено під час стискання?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Ініціалізація…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/current_attempt_box.py:92
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Стискаємо до {vid_br} {vid_br_unit} ({extra_details})"
+
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
+#. TRANSLATORS: {} represents the progress percentage value.
+#: src/current_attempt_box.py:122
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#: src/current_attempt_box.py:128
+msgid "{} — Almost done"
+msgstr "{} — майже готово"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:136
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} секунда"
+msgstr[1] "{} секунди"
+msgstr[2] "{} секунд"
+msgstr[3] "{} секунда"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} хвилина"
+msgstr[1] "{} хвилини"
+msgstr[2] "{} хвилин"
+msgstr[3] "{} хвилина"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} година"
+msgstr[1] "{} години"
+msgstr[2] "{} годин"
+msgstr[3] "{} година"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#: src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — лишилося приблизно {time_shown}"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Скиньте відео для імпортування"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Помилка стиснення"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Подробиці"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Копіювати подробиці"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error.
+#: src/error_dialog.py:47
+msgid "There was a problem compressing “{}”"
+msgstr "Проблема із стисканням «{}»"
+
+#: src/error_dialog.py:69
+msgid "Details copied to clipboard"
+msgstr "Подробиці скопійовано до буфера"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Керування відео"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Відкрити"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Експортувати"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Загальне"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Увімкнути або вимкнути панель параметрів"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Показати клавіатурні скорочення"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Закрити вікно"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Вийти"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Показати налаштування"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:88
+msgid "compressed"
+msgstr "стиснено"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#: src/main.py:184
+msgid "‘{}’ repository by"
+msgstr "Сховище «{}» —"
+
+#: src/main.py:191
+msgid "Circular progress indicator design by"
+msgstr "Дизайн кругового індикатора поступу —"
+
+#: src/main.py:195
+msgid "Drag overlay design by"
+msgstr "Дизайн накладки перетягування —"
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.py:202
+msgid "translator-credits"
+msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2026"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Налаштування"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Апаратне прискорення"
+
+#: src/preferences_dialog.blp:11
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec, and “Extra Quality” is disabled"
+msgstr ""
+"Апаратне прискорення буде використано, лише якщо для вашого графічного"
+" процесора передбачено підтримку кодування відео для вибраного кодека, і не"
+" позначено пункт «Висока якість»"
+
+#: src/preferences_dialog.blp:14
+msgid "GPU Encoding"
+msgstr "Кодування на графічному процесорі"
+
+#: src/preferences_dialog.blp:15
+msgid "Use the GPU to speed up encoding when available"
+msgstr ""
+"Якщо можна, скористатися графічним процесором для пришвидшення кодування"
+
+#: src/preferences_dialog.blp:20
+msgid "Exported Video Suffix"
+msgstr "Суфікс експортованого відео"
+
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Нетиповий суфікс"
+
+#: src/preferences_dialog.py:42
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Буде використано у назвах файлів експортованих відео, між базовою назвою та"
+" суфіксом. Якщо лишити поле нетипового суфікса порожнім, буде використано"
+" типовий суфікс «{}»."
+
+#: src/preferences_dialog.py:64
+msgid "Changes applied"
+msgstr "Зміни застосовано"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "Додати від_ео…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Пересунути _вище"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Пересунути _нижче"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "Ви_лучити"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+msgid "View Error Details"
+msgstr "Переглянути подробиці щодо помилки"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr ""
+"Не вдалося завантажити відео. Можливо, воно недоступне або пошкоджене."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Переглянути поступ стискання"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Подробиці"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Показати місце зберігання файла"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Докладніше"
+
+#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+msgid "More Information"
+msgstr "Докладніше"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:495
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Відео стиснуто до {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'.
+#: src/sources_row.py:523
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"Розмір файла відео ({original_size} {unit_original}) вже відповідає"
+" цільовому розміру ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#: src/sources_row.py:543
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "Цільовий розмір ({size} {unit}) є надто малим для цього файла."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "_Створити вікно"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Налаштування"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Клавіатурні скорочення"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_Про Constrict"
+
+#: src/window.blp:49 src/window.blp:111
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: src/window.blp:75
+msgid "Compress Videos"
+msgstr "Стискання відео"
+
+#: src/window.blp:76
+msgid "Drag and drop videos here"
+msgstr "Перетягніть сюди відео і скиньте їх"
+
+#: src/window.blp:78
+msgid "_Open…"
+msgstr "_Відкрити…"
+
+#: src/window.blp:158
+msgid "_Automatic"
+msgstr "_Автоматично"
+
+#: src/window.blp:160
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Використати найвищу частоту кадрів без втрати роздільності"
+
+#: src/window.blp:172
+msgid "Ensure higher image clarity"
+msgstr "Забезпечити вищу чіткість зображення"
+
+#: src/window.blp:184
+msgid "Ensure smoother motion"
+msgstr "Забезпечити плавний рух"
+
+#: src/window.blp:195
+msgid "Encoding Options"
+msgstr "Параметри кодування"
+
+#: src/window.blp:198
+msgid "_Video Codec"
+msgstr "_Відеокодек"
+
+#: src/window.blp:206
+msgid "Extra _Quality"
+msgstr "Висока _якість"
+
+#: src/window.blp:208
+msgid "Increase image quality at the cost of compression time"
+msgstr "Поліпшити зображення за рахунок збільшення часу стискання"
+
+#: src/window.blp:213
+msgid "Advanced Options"
+msgstr "Додаткові параметри"
+
+#: src/window.blp:238
+msgid "_Tolerance (%)"
+msgstr "_Допуск (%)"
+
+#: src/window.blp:240
+msgid "How far end file sizes can be below target"
+msgstr "Наскільки меншим за цільовий може бути розмір кінцевого файла"
+
+#: src/window.blp:264
+msgid "Toggle Settings Pane"
+msgstr "Увімкнути або вимкнути панель параметрів"
+
+#: src/window.blp:274
+msgid "Issues with video sources — fix before compressing"
+msgstr "Проблеми з джерелами відео — виправте до стискання"
+
+#: src/window.blp:300
+msgid "Video Sources"
+msgstr "Джерела відео"
+
+#: src/window.blp:304
+msgid "_Clear All"
+msgstr "Ви_лучити все"
+
+#: src/window.blp:325
+msgid "_Export To…"
+msgstr "_Експортувати до…"
+
+#: src/window.blp:341
+msgid "_Cancel…"
+msgstr "_Скасувати…"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#: src/window.py:227
+msgid "{} FPS"
+msgstr "{} кд/с"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer.
+#: src/window.py:235
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+"Відео з низькою бітовою швидкістю може бути обмежено до {} кадрів за"
+" секунду, незалежно від встановлених параметрів."
+
+#. TRANSLATORS: {} represents an integer.
+#: src/window.py:244
+#, no-python-format
+msgid ""
+"Decreasing the tolerance maximizes image quality by reducing how much "
+"compressed file sizes can be under target. However, this can increase the "
+"number of attempts needed to meet the target, increasing compression time. A "
+"tolerance of {} % or more is recommended."
+msgstr ""
+"Зменшення допуску підвищує якість зображення, зменшуючи різницю між цільовим"
+" розміром і кінцевим розміром. Однак це може збільшити кількість спроб,"
+" необхідних для досягнення цільового показника, збільшуючи час стискання."
+" Рекомендуємо допуск {}% або більший."
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:252
+msgid "Target _Size ({})"
+msgstr "Цільовий _розмір ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed.
+#: src/window.py:368
+msgid "Processing “{}”"
+msgstr "Обробка «{}»"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:374
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "Оброблено {index} з {total} відео"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to.
+#: src/window.py:384
+msgid "Exporting to {}"
+msgstr "Експортування до {}"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued.
+#: src/window.py:399
+msgid "“{}” Queued"
+msgstr "«{}» додано до черги"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:403
+msgid "{} Videos Queued"
+msgstr "Додано до черги {} відео"
+
+#: src/window.py:536
+msgid "Stop Compression?"
+msgstr "Припинити стискання?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed.
+#: src/window.py:539
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr "Поступ стикання «{}» буде втрачено"
+
+#: src/window.py:545
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: src/window.py:546
+msgid "_Stop"
+msgstr "З_упинити"
+
+#: src/window.py:600
+msgid "Compression Complete"
+msgstr "Стискання завершено"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#: src/window.py:607
+msgid "“{}” processed"
+msgstr "Оброблено «{}»"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:612
+msgid "{} files processed"
+msgstr "Оброблено {} файлів"
+
+#: src/window.py:623
+msgid "Open Export Directory"
+msgstr "Відкрити каталог експортування"
+
+#: src/window.py:699
+msgid "Videos are being compressed"
+msgstr "Виконуємо стискання відео"
+
+#: src/window.py:719
+msgid "Analyzing…"
+msgstr "Аналізування…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error.
+#: src/window.py:814
+msgid "Error compressing “{}”"
+msgstr "Помилка під час стискання «{}»"
+
+#: src/window.py:817
+msgid "View _Details"
+msgstr "Пере_глянути подробиці"
+
+#: src/window.py:852
+msgid "Compression complete"
+msgstr "Стискання завершено"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:963
+msgid "Unknown video format “{}”"
+msgstr "Невідомий формат відео — «{}»"
+
+#: src/window.py:994
+msgid "Videos"
+msgstr "Відео"
+
+#: src/window.py:997
+msgid "Pick Videos"
+msgstr "Виберіть відео"
