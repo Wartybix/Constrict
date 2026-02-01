@@ -678,7 +678,7 @@ msgstr "{index}/{total} Vidéos traitées"
 #: src/window.py:381
 #, fuzzy
 msgid "Exporting to {}"
-msgstr "Exportation vers “{}”"
+msgstr "Exportation vers {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
