@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2026-01-10 20:53+0300\n"
-"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-01-27 08:08+0000\n"
+"PO-Revision-Date: 2026-01-27 17:06+0300\n"
+"Last-Translator: Artur So <arturios2005@mail.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:394
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -105,19 +105,19 @@ msgstr ""
 "обработка выполняется локально, поэтому скорость сжатия ограничена "
 "возможностями вашего оборудования."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Исходные видео поставлены в очередь на сжатие"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "Приложение среднего сжатия"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Удобный для мобильных устройств пользовательский интерфейс"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 "Настройки сжатия в удобном для мобильных устройств пользовательском "
@@ -189,7 +189,7 @@ msgstr "Размер сжатого файла слишком большой ({s
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
-#: src/sources_row.py:545 src/window.py:246
+#: src/sources_row.py:545 src/window.py:249
 msgid "MiB"
 msgstr "МиБ"
 
@@ -216,6 +216,8 @@ msgstr ""
 "Constrict: Не удалось получить свойства видео. Исходное видео может "
 "отсутствовать или быть повреждено."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -261,6 +263,10 @@ msgstr "Инициализация…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Сжатие в {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -402,6 +408,7 @@ msgstr "Дизайн кругового индикатора прогресса"
 msgid "Drag overlay design by"
 msgstr "Дизайн перетаскиваемого слоя"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
 msgstr ""
@@ -626,13 +633,13 @@ msgstr "_Отменить…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:224
+#: src/window.py:227
 msgid "{} FPS"
 msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:232
+#: src/window.py:235
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -641,7 +648,7 @@ msgstr ""
 "от установленной опции."
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:241
+#: src/window.py:244
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -655,112 +662,111 @@ msgstr ""
 "значения, что увеличит время сжатия. Рекомендуется допуск {} % или более."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:249
+#: src/window.py:252
 msgid "Target _Size ({})"
 msgstr "Целевой _размер ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
-#: src/window.py:365
+#: src/window.py:368
 msgid "Processing “{}”"
 msgstr "Обработка “{}”"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:371
+#: src/window.py:374
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} Обработано видео"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:381
-#, fuzzy
+#: src/window.py:384
 msgid "Exporting to {}"
-msgstr "Экспорт в “{}”"
+msgstr "Экспорт в {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:399
 msgid "“{}” Queued"
 msgstr "“{}” В очереди"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:403
 msgid "{} Videos Queued"
 msgstr "{} Видео в очереди"
 
-#: src/window.py:533
+#: src/window.py:536
 msgid "Stop Compression?"
 msgstr "Остановить сжатие?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:539
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Достигнутый прогресс сжатия “{}” будет безвозвратно утерян."
 
-#: src/window.py:542
+#: src/window.py:545
 msgid "_Cancel"
 msgstr "_Отменить"
 
-#: src/window.py:543
+#: src/window.py:546
 msgid "_Stop"
 msgstr "О_становить"
 
-#: src/window.py:597
+#: src/window.py:600
 msgid "Compression Complete"
 msgstr "Сжатие завершено"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:607
 msgid "“{}” processed"
 msgstr "“{}” обработано"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:612
 msgid "{} files processed"
 msgstr "{} файлов обработано"
 
-#: src/window.py:620
+#: src/window.py:623
 msgid "Open Export Directory"
 msgstr "Открыть каталог экспорта"
 
-#: src/window.py:700
+#: src/window.py:699
 msgid "Videos are being compressed"
 msgstr "Видео сжимаются"
 
-#: src/window.py:720
+#: src/window.py:719
 msgid "Analyzing…"
 msgstr "Анализ…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:814
 msgid "Error compressing “{}”"
 msgstr "Ошибка сжатия “{}”"
 
-#: src/window.py:818
+#: src/window.py:817
 msgid "View _Details"
 msgstr "Посмотреть _детали"
 
-#: src/window.py:853
+#: src/window.py:852
 msgid "Compression complete"
 msgstr "Сжатие завершено"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:963
 msgid "Unknown video format “{}”"
 msgstr "Неизвестный формат видео “{}”"
 
-#: src/window.py:995
+#: src/window.py:994
 msgid "Videos"
 msgstr "Видео"
 
-#: src/window.py:998
+#: src/window.py:997
 msgid "Pick Videos"
 msgstr "Выберите видео"
 
