@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2026-01-05 14:22+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-02-01 15:08+0000\n"
+"PO-Revision-Date: 2026-02-02 17:58+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
@@ -107,19 +107,19 @@ msgstr ""
 "impossibla. Tot lo tractament se fa localament — e doncas, las velocitats de "
 "compression dependon unicament de la poténcia de vòstre material informatic."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Vidèos font en espèra de compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "L'aplicacion a la mitat de la compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Interfàcia de bon utilizar sus mobil"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr "Paramètres de compression dins l’interfàcia de bon utilizar sus mobil"
 
@@ -217,6 +217,8 @@ msgstr ""
 "Constrict : impossible de recuperar las proprietats de la vidèo. La vidèo "
 "font pòt mancar o èsser corrompuda."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -262,6 +264,10 @@ msgstr "Inicializacion…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Compression en {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -400,6 +406,7 @@ msgstr "Indicador circular de progression concebut per"
 msgid "Drag overlay design by"
 msgstr "Subreimpression de depaus concebuda per"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
 msgstr "Quentin PAGÈS"
@@ -419,7 +426,7 @@ msgid ""
 msgstr ""
 "L'acceleracion materiala s'utiliza sonque se vòstre GPU supòrta l'encodatge "
 "amb lo còdec vidèo seleccionat, e que la « Qualitat superiora » es "
-"desactivada."
+"desactivada"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
@@ -676,9 +683,8 @@ msgstr "{index}/{total} vidèos tractadas"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
 #: src/window.py:381
-#, fuzzy
 msgid "Exporting to {}"
-msgstr "Exportacion cap a « {} »"
+msgstr "Exportacion cap a {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
@@ -731,37 +737,37 @@ msgstr "{} fichièrs tractats"
 msgid "Open Export Directory"
 msgstr "Dobrir repertòri d’exportacion"
 
-#: src/window.py:700
+#: src/window.py:696
 msgid "Videos are being compressed"
 msgstr "Las vidèos son a èsser compressadas"
 
-#: src/window.py:720
+#: src/window.py:716
 msgid "Analyzing…"
 msgstr "Analisi en cors…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:811
 msgid "Error compressing “{}”"
 msgstr "Error en compressant « {} »"
 
-#: src/window.py:818
+#: src/window.py:814
 msgid "View _Details"
 msgstr "_Veire los detalhs"
 
-#: src/window.py:853
+#: src/window.py:849
 msgid "Compression complete"
 msgstr "Compression terminada"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:960
 msgid "Unknown video format “{}”"
 msgstr "Format de vidèo desconegut « {} »"
 
-#: src/window.py:995
+#: src/window.py:991
 msgid "Videos"
 msgstr "Vidèos"
 
-#: src/window.py:998
+#: src/window.py:994
 msgid "Pick Videos"
 msgstr "Seleccionar las vidèos"
