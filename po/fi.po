@@ -1,0 +1,749 @@
+# Finnish translation for Constrict.
+# Copyright (C) 2026 Constrict's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Constrict package.
+# Jiri Grönroos <jiri.gronroos@iki.fi>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-02-01 15:08+0000\n"
+"PO-Revision-Date: 2026-02-08 12:21+0200\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Language-Team: Finnish <Finnish>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:104 src/window.py:391
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Videopakkaaja"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Pakkaa videot haluttuun kokoon"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "Compress;Video;Movie;Film;Clip;pakkaa;pakkaus;leike;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Uusi ikkuna"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"Constrict compresses your videos to your chosen file size — useful for "
+"uploading to services with specific file size limits. No more relying on "
+"online services for video compression, or the manual trial-and-error of re-"
+"encoding at various bitrates yourself."
+msgstr ""
+"Constrict pakkaa videot valitsemaasi tiedostokokoon — hyödyllistä kun video "
+"on tarkoitus lähettää tiedostokokoa rajoittavaan palveluun. Ei enää tarvetta "
+"suorittaa videon pakkaamista verkkopalveluissa, tai manuaalista yritysten ja "
+"erehdysten toistamista."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:13
+msgid "Features include:"
+msgstr "Ominaisuuksia:"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid "An intuitive, easy to use interface."
+msgstr "Helppokäyttöinen käyttöliittymä."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid ""
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
+"audio quality each video is re-encoded with to meet the target file size."
+msgstr ""
+"Keskimääräisen bittinopeuden (ABR), resolution, kuvanopeuden ja äänenlaadun "
+"laskeminen, jotta uudelleenkäsiteltävä tiedosto saavuttaa tavoiteltavan "
+"tiedostokoon."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr "Useiden videoiden massapakkaaminen yhteen kansioon."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:19
+msgid ""
+"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr ""
+"Kuvanopeuden rajan mukauttaminen, näin taaten joko paremman kuvanlaadun tai "
+"sulavamman liikkeen."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
+"and VP9."
+msgstr ""
+"Lukuisia koodekkja käytettäväksi, mukaan lukien H.264, HEVC, AV1 ja VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"Sovellus yrittää säilyttää mahdollisimman paljon äänivisuaalista laatua "
+"ottaen huomioon halutun tiedostokoon. Erityisen suuret pienennykset "
+"tiedostokoossa voivat aiheuttaa merkittävää laadun heikentymistä valmiissa "
+"tiedostossa, ja toisinaan pakkaaminen ei ole lainkaan mahdollista. Kaikki "
+"käsittely tehdään paikallisesti, joten pakkausnopeus riippuu laitteistostasi."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
+msgid "Source videos queued for compression"
+msgstr "Lähdevideoita asetettuna pakkausjonoon"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
+msgid "The application mid-compression"
+msgstr "Sovellus suorittamassa pakkaamista"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
+msgid "A mobile friendly UI"
+msgstr "Mobiililaitteille soveltuva käyttöliittymä"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Pakkausasetukset mobiililaitteille soveltuvassa käyttöliittymässä"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
+msgid "Framerate Limit"
+msgstr "Kuvanopeuden raja"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Rajoittaa pakattujen videoiden kuvanopeutta automaattisesti, tai asettaa sen "
+"arvoksi 30 tai 60."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Videokoodekki"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "Pakkaamiseen käytettävä koodekki"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+msgid "Attempt {}"
+msgstr "Yritys {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr ""
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr ""
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, {audio_quality} ääni"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/attempt_fail_box.py:78
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
+msgid "kbps"
+msgstr "kbps"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:92
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "Pakattu tiedosto oli liian suuri ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
+#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
+#: src/sources_row.py:545 src/window.py:246
+msgid "MiB"
+msgstr "MiB"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Pakattu tiedostokoko oli liian pieni ({size} {unit})"
+
+#: src/constrict_utils.py:781
+msgid ""
+"Constrict: Could not read input file. Was it moved or deleted before "
+"compression?"
+msgstr ""
+
+#: src/constrict_utils.py:804
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict: Videon ominaisuuksia ei voitu noutaa. Lähdevideo saattaa puuttua "
+"tai olla rikkoutunut."
+
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
+#: src/constrict_utils.py:811
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+
+#: src/constrict_utils.py:813
+msgid ""
+"Constrict: Could not create exported file. There are insufficient "
+"permissions to create a file at the requested export path."
+msgstr ""
+
+#: src/constrict_utils.py:879
+msgid ""
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
+"low for this file."
+msgstr ""
+"Constrict: Video bittinopeus muuttui liian pieneksi (<5 kbps). Tavoiteltu "
+"koko saattaa olla liian pieni tälle tiedostolle."
+
+#: src/constrict_utils.py:924
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict: Tulostetiedosdtoa ei voi lukea. Siirrettiinkö tai poistettiinko "
+"se kesken pakkauksen?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Alustetaan…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/current_attempt_box.py:92
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Pakataan ja tavoitellaan {vid_br} {vid_br_unit} ({extra_details})"
+
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
+#. TRANSLATORS: {} represents the progress percentage value.
+#: src/current_attempt_box.py:122
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#: src/current_attempt_box.py:128
+msgid "{} — Almost done"
+msgstr "{} — Melkein valmis"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:136
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} sekunti"
+msgstr[1] "{} sekuntia"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} minuutti"
+msgstr[1] "{} minuuttia"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} tunti"
+msgstr[1] "{} tuntia"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#: src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — Noin {time_shown} jäljellä"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Pudota videoita tuodaksesi ne"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Pakkausvirhe"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Tiedot"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Kopioi tiedot"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error.
+#: src/error_dialog.py:47
+msgid "There was a problem compressing “{}”"
+msgstr "Ongelma pakatessa “{}”"
+
+#: src/error_dialog.py:69
+msgid "Details copied to clipboard"
+msgstr "Tiedot kopioitu leikepöydälle"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Videon hallinta"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Avaa"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Vie"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Yleiset"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Näytä/piilota asetukset"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Näytä pikanäppäimet"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Sulje ikkuna"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Lopeta"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Näytä asetukset"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:88
+msgid "compressed"
+msgstr "pakattu"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#: src/main.py:184
+msgid "‘{}’ repository by"
+msgstr ""
+
+#: src/main.py:191
+msgid "Circular progress indicator design by"
+msgstr ""
+
+#: src/main.py:195
+msgid "Drag overlay design by"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.py:202
+msgid "translator-credits"
+msgstr "Jiri Grönroos"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Laitteistokiihdytys"
+
+#: src/preferences_dialog.blp:11
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec, and “Extra Quality” is disabled"
+msgstr ""
+"Laitteistokiihdytystä käytetään vain, jos näytönohjaimesi tukee pakkaamista "
+"valitulla videokoodekilla, ja \"Lisälaatu\" on poistettu käytöstä"
+
+#: src/preferences_dialog.blp:14
+msgid "GPU Encoding"
+msgstr "Näytönohjaimella pakkaaminen"
+
+#: src/preferences_dialog.blp:15
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Käytä näytönohjainta pakkaamisen nopeuttamiseksi kun mahdollista"
+
+#: src/preferences_dialog.blp:20
+msgid "Exported Video Suffix"
+msgstr "Viedyn videon pääte"
+
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Mukautettu pääte"
+
+#: src/preferences_dialog.py:42
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Käytetään vietävien videoiden tiedostonimissä, tiedoston nimen ja "
+"tiedostopäätteen välissä. Jos mukautettu pääte on jätetty tyhjäksi, "
+"käytetään oletuspäätettä “{}”."
+
+#: src/preferences_dialog.py:64
+msgid "Changes applied"
+msgstr "Muutokset toteutettu"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "Lisää vide_oita…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Siirrä _ylös"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Siirrä _alas"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "_Poista"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+msgid "View Error Details"
+msgstr "Näytä virheen yksityiskohdat"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Videota ei voi ladata. Se saattaa olla kadonnut tai rikkoutunut."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Näytä pakkaamisen edistyminen"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Lisää tietoja"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Näytä tiedoston sijainti"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Näytä lisää"
+
+#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+msgid "More Information"
+msgstr "Lisätiedot"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:495
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Video pakattu kokoon {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'.
+#: src/sources_row.py:523
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"Videotiedoston koko ({original_size} {unit_original}) täyttää jo "
+"tavoiteltavan koon ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#: src/sources_row.py:543
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "Tavoiteltava koko ({size} {unit}) on liian alhainen tälle tiedostolle."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "_Uusi ikkuna"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Pikanäppäimet"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_Tietoja - Constrict"
+
+#: src/window.blp:49 src/window.blp:111
+msgid "Main Menu"
+msgstr "Päävalikko"
+
+#: src/window.blp:75
+msgid "Compress Videos"
+msgstr "Pakkaa videoita"
+
+#: src/window.blp:76
+msgid "Drag and drop videos here"
+msgstr "Vedä ja pudota videot tähän"
+
+#: src/window.blp:78
+msgid "_Open…"
+msgstr "_Avaa…"
+
+#: src/window.blp:158
+msgid "_Automatic"
+msgstr "_Automaattinen"
+
+#: src/window.blp:160
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Käytä korkeinta kuvanopeutta resoluutiosta tinkimättä"
+
+#: src/window.blp:172
+msgid "Ensure higher image clarity"
+msgstr "Takaa korkeampi kuvan tarkkuus"
+
+#: src/window.blp:184
+msgid "Ensure smoother motion"
+msgstr "Takaa sulavampi liike"
+
+#: src/window.blp:195
+msgid "Encoding Options"
+msgstr "Koodausvalinnat"
+
+#: src/window.blp:198
+msgid "_Video Codec"
+msgstr "_Videokoodekki"
+
+#: src/window.blp:206
+msgid "Extra _Quality"
+msgstr "_Lisälaatu"
+
+#: src/window.blp:208
+msgid "Increase image quality at the cost of compression time"
+msgstr "Paranna kuvanlaatua pakkausajan kustannuksella"
+
+#: src/window.blp:213
+msgid "Advanced Options"
+msgstr "Lisäasetukset"
+
+#: src/window.blp:238
+msgid "_Tolerance (%)"
+msgstr "_Toleranssi (%)"
+
+#: src/window.blp:240
+msgid "How far end file sizes can be below target"
+msgstr "Kuinka paljon lopullinen koko voi olla tavoiteltavan tason alapuolella"
+
+#: src/window.blp:264
+msgid "Toggle Settings Pane"
+msgstr "Näytä/piilota asetukset"
+
+#: src/window.blp:274
+msgid "Issues with video sources — fix before compressing"
+msgstr "Ongelmia videolähteissä — korjaa ennen pakkaamista"
+
+#: src/window.blp:300
+msgid "Video Sources"
+msgstr "Videolähteet"
+
+#: src/window.blp:304
+msgid "_Clear All"
+msgstr "_Tyhjennä kaikki"
+
+#: src/window.blp:325
+msgid "_Export To…"
+msgstr "_Vie…"
+
+#: src/window.blp:341
+msgid "_Cancel…"
+msgstr "_Peru…"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#: src/window.py:224
+msgid "{} FPS"
+msgstr ""
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer.
+#: src/window.py:232
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+
+#. TRANSLATORS: {} represents an integer.
+#: src/window.py:241
+#, no-python-format
+msgid ""
+"Decreasing the tolerance maximizes image quality by reducing how much "
+"compressed file sizes can be under target. However, this can increase the "
+"number of attempts needed to meet the target, increasing compression time. A "
+"tolerance of {} % or more is recommended."
+msgstr ""
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:249
+msgid "Target _Size ({})"
+msgstr "Tavoiteltava _koko ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed.
+#: src/window.py:365
+msgid "Processing “{}”"
+msgstr "Käsitellään “{}”"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:371
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "{index}/{total} videota käsitelty"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to.
+#: src/window.py:381
+msgid "Exporting to {}"
+msgstr "Viedään polkuun {}"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued.
+#: src/window.py:396
+msgid "“{}” Queued"
+msgstr "“{}” asetettu jonoon"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:400
+msgid "{} Videos Queued"
+msgstr "{} videota jonossa"
+
+#: src/window.py:533
+msgid "Stop Compression?"
+msgstr "Pysäytetäänkö pakkaaminen?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed.
+#: src/window.py:536
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr "Videon “{}” pakkaamisessa tehty edistyminen menetetään"
+
+#: src/window.py:542
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: src/window.py:543
+msgid "_Stop"
+msgstr "_Pysäytä"
+
+#: src/window.py:597
+msgid "Compression Complete"
+msgstr "Pakkaaminen valmistui"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#: src/window.py:604
+msgid "“{}” processed"
+msgstr "“{}” käsitelty"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:609
+msgid "{} files processed"
+msgstr "{} tiedostoa käsitelty"
+
+#: src/window.py:620
+msgid "Open Export Directory"
+msgstr "Avaa vientikansio"
+
+#: src/window.py:696
+msgid "Videos are being compressed"
+msgstr "Videoita pakataan"
+
+#: src/window.py:716
+msgid "Analyzing…"
+msgstr "Analysoidaan…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error.
+#: src/window.py:811
+msgid "Error compressing “{}”"
+msgstr "Virhe pakatessa “{}”"
+
+#: src/window.py:814
+msgid "View _Details"
+msgstr "Näytä yk_sityiskohdat"
+
+#: src/window.py:849
+msgid "Compression complete"
+msgstr "Pakkaaminen valmistui"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:960
+msgid "Unknown video format “{}”"
+msgstr "Tuntematon videomuoto “{}”"
+
+#: src/window.py:991
+msgid "Videos"
+msgstr "Videot"
+
+#: src/window.py:994
+msgid "Pick Videos"
+msgstr "Valitse videot"
