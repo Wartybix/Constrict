@@ -11,10 +11,6 @@
     <file preprocess="xml-stripblanks" alias="arrow2-up-symbolic.svg">../data/icons/scalable/actions/arrow2-up-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="list-drag-handle-symbolic.svg">../data/icons/scalable/actions/list-drag-handle-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="help-about-symbolic.svg">../data/icons/scalable/actions/help-about-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="view-more-symbolic.svg">../data/icons/scalable/actions/view-more-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="list-add-symbolic.svg">../data/icons/scalable/actions/list-add-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="edit-copy-symbolic.svg">../data/icons/scalable/actions/edit-copy-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="open-menu-symbolic.svg">../data/icons/scalable/actions/open-menu-symbolic.svg</file>
   </gresource>
   <gresource prefix="@PREFIX@">
     <file preprocess="xml-stripblanks">window.ui</file>
