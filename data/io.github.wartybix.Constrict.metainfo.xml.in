@@ -57,24 +57,40 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/queued.png</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/cbad53c23f7c950cd14a0da93951f2bb419ff1b6/screenshots/queued.png</image>
       <caption>Source videos queued for compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/compressing.png</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/cbad53c23f7c950cd14a0da93951f2bb419ff1b6/screenshots/compressing.png</image>
       <caption>The application mid-compression</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/queued_mobile.png</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/cbad53c23f7c950cd14a0da93951f2bb419ff1b6/screenshots/queued_mobile.png</image>
       <caption>A mobile friendly UI</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.gnome.org/World/Constrict/-/raw/57f6ae95ecd2194a103c851a365ea7c29f71025d/screenshots/settings_mobile.png</image>
+      <image>https://gitlab.gnome.org/World/Constrict/-/raw/cbad53c23f7c950cd14a0da93951f2bb419ff1b6/screenshots/settings_mobile.png</image>
       <caption>Compression settings in the mobile friendly UI</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="26.2" date="2026-02-11">
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.2</url>
+      <description translate="no">
+        <ul>
+          <li>Now shows the full export path when compressing videos, rather than only the export folder name.</li>
+          <li>Bundled more icons, so that they may load even if they aren't included in the user's current icon theme.</li>
+          <li>Added Slovenian translation.</li>
+          <li>Added Swedish translation.</li>
+          <li>Added Ukrainian translation.</li>
+          <li>Added Kazakh translation.</li>
+          <li>Added Georgian translation.</li>
+          <li>Added Bulgarian translation.</li>
+          <li>Added Finnish translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="26.1" date="2026-01-21">
       <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.1</url>
       <description translate="no">
@@ -206,3 +222,4 @@
   </releases>
 
 </component>
+
