@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the Constrict package.
 # Automatically generated, 2025.
 # Felicitas Pojtinger <felicitas@pojtinger.com>, 2025.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2025-12-20 11:09+0100\n"
-"Last-Translator: Felicitas Pojtinger <felicitas@pojtinger.com>\n"
-"Language-Team: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-02-01 15:08+0000\n"
+"PO-Revision-Date: 2026-02-09 22:04+0100\n"
+"Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
@@ -97,26 +98,26 @@ msgid ""
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
 msgstr ""
-"Die App versucht, so viel audiovisuelle Qualität wie möglich für die "
+"Die Anwendung versucht, so viel audiovisuelle Qualität wie möglich für die "
 "gegebene Dateigröße zu erhalten. Jedoch können extrem starke Reduzierungen "
 "der Dateigröße zu erheblichem Qualitätsverlust in der Ausgabedatei führen, "
 "und manchmal ist eine Komprimierung überhaupt nicht möglich. Die gesamte "
 "Verarbeitung erfolgt lokal — daher sind die Komprimierungsgeschwindigkeiten "
 "nur so schnell, wie Ihre Hardware es erlaubt."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Quellvideos in der Warteschlange zur Komprimierung"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
 msgstr "Die Anwendung während der Komprimierung"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Eine mobilfreundliche Benutzeroberfläche"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 "Komprimierungseinstellungen in der mobilfreundlichen Benutzeroberfläche"
@@ -215,6 +216,8 @@ msgstr ""
 "Constrict: Videoeigenschaften konnten nicht abgerufen werden. Das Quellvideo "
 "fehlt möglicherweise oder ist beschädigt."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -237,7 +240,7 @@ msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr ""
-"Constrict: Video-Bitrate wurde zu niedrig (<5 kbps). Die Zielgröße ist "
+"Constrict: Video-Bitrate wurde zu niedrig (< 5 kbps). Die Zielgröße ist "
 "möglicherweise zu niedrig für diese Datei."
 
 #: src/constrict_utils.py:924
@@ -250,7 +253,7 @@ msgstr ""
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
 msgid "Initializing…"
-msgstr "Initialisiert…"
+msgstr "Initialisiert …"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
@@ -261,6 +264,10 @@ msgstr "Initialisiert…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Komprimierung auf {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -329,7 +336,7 @@ msgstr "Details kopieren"
 #. error.
 #: src/error_dialog.py:47
 msgid "There was a problem compressing “{}”"
-msgstr "Es gab ein Problem beim Komprimieren von „{}“"
+msgstr "Es gab ein Problem beim Komprimieren von »{}«"
 
 #: src/error_dialog.py:69
 msgid "Details copied to clipboard"
@@ -389,7 +396,7 @@ msgstr "komprimiert"
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #: src/main.py:184
 msgid "‘{}’ repository by"
-msgstr "„{}“-Repository von"
+msgstr "»{}«-Repository von"
 
 #: src/main.py:191
 msgid "Circular progress indicator design by"
@@ -399,9 +406,12 @@ msgstr "Design für den kreisförmigen Fortschrittsanzeiger von"
 msgid "Drag overlay design by"
 msgstr "Drag-Overlay-Design von"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
-msgstr "Felicitas Pojtinger <felicitas@pojtinger.com>"
+msgstr ""
+"Felicitas Pojtinger <felicitas@pojtinger.com>\n"
+"Jürgen Benvenuti <gastornis@posteo.org>"
 
 #: src/preferences_dialog.blp:5
 msgid "Preferences"
@@ -417,7 +427,7 @@ msgid ""
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Hardware-Beschleunigung wird nur verwendet, wenn Ihre GPU die Codierung mit "
-"dem ausgewählten Video-Codec unterstützt und „Extra Qualität“ deaktiviert ist"
+"dem ausgewählten Video-Codec unterstützt und »Extra Qualität« deaktiviert ist"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
@@ -442,7 +452,7 @@ msgid ""
 msgstr ""
 "Wird in Dateinamen für exportierte Videos verwendet, zwischen dem Basisnamen "
 "und der Erweiterung. Wenn das benutzerdefinierte Suffix leer gelassen wird, "
-"wird das Standardsuffix „{}“ verwendet."
+"wird das Standardsuffix »{}« verwendet."
 
 #: src/preferences_dialog.py:64
 msgid "Changes applied"
@@ -450,7 +460,7 @@ msgstr "Änderungen angewendet"
 
 #: src/sources_list_box.blp:9
 msgid "Add Vide_os…"
-msgstr "Vide_os hinzufügen…"
+msgstr "Vide_os hinzufügen …"
 
 #: src/sources_row.blp:6
 msgid "Move _Up"
@@ -533,7 +543,7 @@ msgstr "_Tastenkürzel"
 
 #: src/window.blp:11
 msgid "_About Constrict"
-msgstr "_Über Constrict"
+msgstr "_Info zu Constrict"
 
 #: src/window.blp:49 src/window.blp:111
 msgid "Main Menu"
@@ -549,7 +559,7 @@ msgstr "Videos hier hineinziehen"
 
 #: src/window.blp:78
 msgid "_Open…"
-msgstr "Ö_ffnen…"
+msgstr "Ö_ffnen …"
 
 #: src/window.blp:158
 msgid "_Automatic"
@@ -613,11 +623,11 @@ msgstr "Alle _löschen"
 
 #: src/window.blp:325
 msgid "_Export To…"
-msgstr "_Exportieren nach…"
+msgstr "_Exportieren nach …"
 
 #: src/window.blp:341
 msgid "_Cancel…"
-msgstr "_Abbrechen…"
+msgstr "_Abbrechen …"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
@@ -659,7 +669,7 @@ msgstr "Ziel_größe ({})"
 #. being processed.
 #: src/window.py:365
 msgid "Processing “{}”"
-msgstr "„{}“ wird verarbeitet"
+msgstr "»{}« wird verarbeitet"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
@@ -672,15 +682,14 @@ msgstr "{index}/{total} Videos verarbeitet"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
 #: src/window.py:381
-#, fuzzy
 msgid "Exporting to {}"
-msgstr "Export nach „{}“"
+msgstr "Nach {} exportieren"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
 #: src/window.py:396
 msgid "“{}” Queued"
-msgstr "„{}“ in Warteschlange"
+msgstr "»{}« in Warteschlange"
 
 #. TRANSLATORS: {} represents the number of files queued.
 #: src/window.py:400
@@ -696,7 +705,7 @@ msgstr "Komprimierung stoppen?"
 #: src/window.py:536
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr ""
-"Der Fortschritt bei der Komprimierung von „{}“ wird dauerhaft verloren gehen"
+"Der Fortschritt bei der Komprimierung von »{}« wird dauerhaft verloren gehen"
 
 #: src/window.py:542
 msgid "_Cancel"
@@ -714,7 +723,7 @@ msgstr "Komprimierung abgeschlossen"
 #. been processed.
 #: src/window.py:604
 msgid "“{}” processed"
-msgstr "„{}“ verarbeitet"
+msgstr "»{}« wurde verarbeitet"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
@@ -724,40 +733,40 @@ msgstr "{} Dateien verarbeitet"
 
 #: src/window.py:620
 msgid "Open Export Directory"
-msgstr "Export-Ordner öffnen"
+msgstr "Exportordner öffnen"
 
-#: src/window.py:700
+#: src/window.py:696
 msgid "Videos are being compressed"
 msgstr "Videos werden komprimiert"
 
-#: src/window.py:720
+#: src/window.py:716
 msgid "Analyzing…"
-msgstr "Analysiert…"
+msgstr "Analysiert …"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:811
 msgid "Error compressing “{}”"
-msgstr "Fehler beim Komprimieren von „{}“"
+msgstr "Fehler beim Komprimieren von »{}«"
 
-#: src/window.py:818
+#: src/window.py:814
 msgid "View _Details"
 msgstr "_Details anzeigen"
 
-#: src/window.py:853
+#: src/window.py:849
 msgid "Compression complete"
 msgstr "Komprimierung abgeschlossen"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:960
 msgid "Unknown video format “{}”"
-msgstr "Unbekanntes Videoformat “{}”"
+msgstr "Unbekanntes Videoformat »{}«"
 
-#: src/window.py:995
+#: src/window.py:991
 msgid "Videos"
 msgstr "Videos"
 
-#: src/window.py:998
+#: src/window.py:994
 msgid "Pick Videos"
 msgstr "Videos auswählen"
 
