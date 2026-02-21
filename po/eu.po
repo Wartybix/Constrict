@@ -45,7 +45,7 @@ msgid ""
 "uploading to services with specific file size limits. No more relying on "
 "online services for video compression, or the manual trial-and-error of re-"
 "encoding at various bitrates yourself."
-msgstr ""
+msgstr "Constrict aplikazioak bideoak konprimatzen ditu nahi duzun fitxategi-tamainara iritsi arte — erabilgarria da fitxategi-tamainaren muga jakin bat duten zerbitzuetara bideoak kargatzeko. Ez duzu berriro lineako zerbitzurik erabili beharko bideoak konprimatzeko, eta ezta eskuz \"proba eta errorea\"metodorik erabili beharko ere."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:13
 msgid "Features include:"
@@ -59,22 +59,22 @@ msgstr "Erraz erabiltzen den interfazea."
 msgid ""
 "Automatic calculation of average bitrate (ABR), resolution, framerate, and "
 "audio quality each video is re-encoded with to meet the target file size."
-msgstr ""
+msgstr "Batez besteko bit-emariaren (ABR), bereizmenaren, fotograma-tasaren eta audio-kalitatearen kalkulu automatikoa, bideo bakoitza nahi duzun fitxategi-tamainara murriztu dadin."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:18
 msgid "Bulk compression of multiple videos to one output directory."
-msgstr ""
+msgstr "Bideo anitzen sortakako konpresioa irteerako direktorio batera."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:19
 msgid ""
 "Customization of framerate limits, to ensure a clearer or smoother image."
-msgstr ""
+msgstr "Fotograma-tasaren mugen pertsonalizazioa, irudia garbiagoa edo leunagoa ikus dadin ziurtatzeko."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
 msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
-msgstr ""
+msgstr "Irteerako fitxategia kodetzeko kodeken aukera zabala, H.264, HEVC, AV1 eta VP9 barne."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:22
 msgid ""
@@ -83,32 +83,32 @@ msgid ""
 "significant loss of quality in the output file, and sometimes compression "
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
-msgstr ""
+msgstr "Aplikazioa saiatuko da ikus-entzunezkoaren kalitaterik gehiena mantentzen nahi den fitxategi-tamainarako. Hala ere, tamaina asko murriztu nahi bada, irteerako fitxategiak kalitatea nabarmen galdu dezake, eta batzuetan konprimatzea ezinezkoa da. Prozesatze osoa lokalean egiten denez, abiadura zure hardwareak ahal duen azkarrena izango da."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
-msgstr ""
+msgstr "Konprimatzeko ilaran jarritako iturburu-bideoak"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
-msgstr ""
+msgstr "Aplikazioaren konpresio ertaina"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
-msgstr ""
+msgstr "Mugikorretan erabili ahal izateko moduko interfazea"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
-msgstr ""
+msgstr "Konpresio-ezarpenak mugikorretarako interfazean"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
 msgid "Framerate Limit"
-msgstr ""
+msgstr "Fotograma-tasaren muga"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:32
 msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
-msgstr ""
+msgstr "Konprimatutako bideoen fotograma-tasa automatikoki mugatzen du edo, bestela, 30 FPS edo 60 FPS-ko tasa ezartzen du."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
@@ -116,23 +116,23 @@ msgstr "Bideo-kodeka"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:39
 msgid "The codec used to encode with during compression"
-msgstr ""
+msgstr "Konpresioan kodeketarako erabiliko den kodeka"
 
 #. TRANSLATORS: {} represents the attempt number.
 #: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
 #: src/current_attempt_box.py:66
 msgid "Attempt {}"
-msgstr ""
+msgstr "{} saiakera"
 
 #. TRANSLATORS: this is an abbreviation of 'High Quality'
 #: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
 msgid "HQ"
-msgstr ""
+msgstr "HQ"
 
 #. TRANSLATORS: this is an abbreviation of 'Low Quality'
 #: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
 msgid "LQ"
-msgstr ""
+msgstr "LQ"
 
 #. TRANSLATORS:
 #. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
@@ -140,7 +140,7 @@ msgstr ""
 #: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
 #, python-brace-format
 msgid "{res_fps}, {audio_quality} audio"
-msgstr ""
+msgstr "{res_fps}, {audio_quality} audioa"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
@@ -149,7 +149,7 @@ msgstr ""
 #: src/attempt_fail_box.py:78
 #, python-brace-format
 msgid "{vid_br} {vid_br_unit} ({extra_details})"
-msgstr ""
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
@@ -161,7 +161,7 @@ msgstr "kbps"
 #: src/attempt_fail_box.py:92
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
-msgstr ""
+msgstr "Konprimatutako fitxategi-tamaina handiegia zen ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
@@ -175,19 +175,19 @@ msgstr "MiB"
 #: src/attempt_fail_box.py:102
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
-msgstr ""
+msgstr "Konprimatutako fitxategi-tamaina txikiegia zen ({size} {unit})"
 
 #: src/constrict_utils.py:781
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
-msgstr ""
+msgstr "Constrict: Ezin da sarrerako fitxategia irakurri. Lekuz aldatu edo ezabatu da konprimatu baino lehen?"
 
 #: src/constrict_utils.py:804
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
-msgstr ""
+msgstr "Constrict: Ezin dira bideoaren propietateak atzitu. Iturburuko bideoa falta da edo hondatuta egon daiteke."
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
@@ -195,24 +195,24 @@ msgstr ""
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
-msgstr ""
+msgstr "Constrict: Ezin da esportatutako fitxategia sortu. Erreserbatutako izena duen fitxategi bat dago lehendik."
 
 #: src/constrict_utils.py:813
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
-msgstr ""
+msgstr "Constrict: Ezin da esportatutako fitxategia sortu. Ez duzu aski baimenik fitxategia eskatutako bide-izenean sortzeko."
 
 #: src/constrict_utils.py:879
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
-msgstr ""
+msgstr "Constrict: Bideoaren bit-emaria baxuegia da (<5kbps). Helburuko tamaina txikiegia izan daiteke fitxategi honetarako."
 
 #: src/constrict_utils.py:924
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
-msgstr ""
+msgstr "Constrict: Ezin da irteerako fitxategia irakurri. Lekuz aldatu edo ezabatu al da konpresioa abian zegoen bitartean?"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
@@ -226,7 +226,7 @@ msgstr "Hasieratzen…"
 #: src/current_attempt_box.py:92
 #, python-brace-format
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
-msgstr ""
+msgstr "Konpresioaren ezaugarriak: {vid_br} {vid_br_unit} ({extra_details})"
 
 #. Acknowledgements: thank you to Nautilus for the ideas on where to set
 #. different thresholds for which time unit(s) to display. Particularly
@@ -278,7 +278,7 @@ msgstr[1] "{} ordu"
 #: src/current_attempt_box.py:171
 #, python-brace-format
 msgid "{percentage} — About {time_shown} left"
-msgstr ""
+msgstr "{percentage} — {time_shown} falta da gutxi gorabehera"
 
 #: src/drag_overlay.blp:14
 msgid "Drop Videos to Import"
@@ -355,20 +355,20 @@ msgstr "Erakutsi hobespenak"
 #. files.
 #: src/main.py:88
 msgid "compressed"
-msgstr ""
+msgstr "konprimatua"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
 #: src/main.py:184
 msgid "‘{}’ repository by"
-msgstr ""
+msgstr "‘{}’ biltegiaren egilea"
 
 #: src/main.py:191
 msgid "Circular progress indicator design by"
-msgstr ""
+msgstr "Aurrerapen-adierazle zirkularraren egilea"
 
 #: src/main.py:195
 msgid "Drag overlay design by"
-msgstr ""
+msgstr "Arrastatzeko gainjartzearen diseinuaren egilea"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
@@ -387,7 +387,7 @@ msgstr "Hardware bidezko azelerazioa"
 msgid ""
 "Hardware acceleration is only used if your GPU supports encoding with the "
 "selected video codec, and “Extra Quality” is disabled"
-msgstr ""
+msgstr "Hardware bidezko azelerazioa erabiltzeko, zure PUZak hautatutako bideo-kodekaren kodeketa onartu behar du eta \"Kalitate estra\" aukerak desgaituta egon behar du"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
@@ -395,7 +395,7 @@ msgstr "PUG kodeketa"
 
 #: src/preferences_dialog.blp:15
 msgid "Use the GPU to speed up encoding when available"
-msgstr ""
+msgstr "Erabili PUZa kodeketa azkartzeko, posible denean"
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
@@ -409,7 +409,7 @@ msgstr "Atzizki pertsonalizatua"
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
-msgstr ""
+msgstr "Esportatutako bideoen fitxategi-izenetan erabiliko da, oinarri-izenaren eta luzapenaren artean. Atzizki pertsonalizatua hutsik uzten bada, “{}” atzizki lehenetsia erabiliko da."
 
 #: src/preferences_dialog.py:64
 msgid "Changes applied"
@@ -464,7 +464,7 @@ msgstr "Informazio gehiago"
 #: src/sources_row.py:495
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
-msgstr ""
+msgstr "Bideoa {size} {unit} tamainarekin konprimatu da."
 
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
@@ -474,14 +474,14 @@ msgstr ""
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
 "size ({target_size} {unit_target})."
-msgstr ""
+msgstr "Bideo-fitxategiaren tamainak ({original_size} {unit_original}) jadanik betetzen du helburuko tamaina ({target_size} {unit_target})."
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
 #: src/sources_row.py:543
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
-msgstr ""
+msgstr "Helburuko tamaina ({size} {unit}) txikiegia da fitxategi honetarako."
 
 #: src/window.blp:6
 msgid "_New Window"
@@ -521,7 +521,7 @@ msgstr "_Automatikoa"
 
 #: src/window.blp:160
 msgid "Use the highest framerate without sacrificing resolution"
-msgstr ""
+msgstr "Erabili fotograma-tasarik txikiena bereizmena galdu gabe"
 
 #: src/window.blp:172
 msgid "Ensure higher image clarity"
@@ -545,7 +545,7 @@ msgstr "_Kalitate gehigarria"
 
 #: src/window.blp:208
 msgid "Increase image quality at the cost of compression time"
-msgstr ""
+msgstr "Hobetu irudiaren kalitatea konpresio-denbora luzatuz"
 
 #: src/window.blp:213
 msgid "Advanced Options"
@@ -557,7 +557,7 @@ msgstr "_Tolerantzia (%)"
 
 #: src/window.blp:240
 msgid "How far end file sizes can be below target"
-msgstr ""
+msgstr "Noraino egon daitezkeen amaierako fitxategi-tamainak helburuaren azpitik"
 
 #: src/window.blp:264
 msgid "Toggle Settings Pane"
@@ -565,7 +565,7 @@ msgstr "Txandakatu ezarpenen panela"
 
 #: src/window.blp:274
 msgid "Issues with video sources — fix before compressing"
-msgstr ""
+msgstr "Arazoak bideo-iturburuekin — konpondu konprimatu baino lehen"
 
 #: src/window.blp:300
 msgid "Video Sources"
@@ -595,7 +595,7 @@ msgstr "{} FPS"
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
-msgstr ""
+msgstr "Bit-emari txikiekin konprimatutako bideoak {} FPS-etara mugatu daitezke, ezarritako aukera beste bat izan arren."
 
 #. TRANSLATORS: {} represents an integer.
 #: src/window.py:241
@@ -605,12 +605,12 @@ msgid ""
 "compressed file sizes can be under target. However, this can increase the "
 "number of attempts needed to meet the target, increasing compression time. A "
 "tolerance of {} % or more is recommended."
-msgstr ""
+msgstr "Tolerantzia txikitzen denean irudiaren kalitatea maximizatzen da, horretarako konprimatutako fitxategi-tamainak helburuaren azpitik noraino egon daitezkeen ezarriz. Hala ere, horrek helburua betetzeko beharko den saiakera kopurua eta konpresio-denbora handitu dezake. Tolerantzia % {} edo gehiagokoa izatea gomendatzen da."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:249
 msgid "Target _Size ({})"
-msgstr ""
+msgstr "Helburuko _tamaina ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
@@ -651,7 +651,7 @@ msgstr "Gelditu konpresioa?"
 #. being compressed.
 #: src/window.py:536
 msgid "Progress made compressing “{}” will be permanently lost"
-msgstr ""
+msgstr "“{}” konprimatzean egindako aurrerapena galduko da"
 
 #: src/window.py:542
 msgid "_Cancel"
