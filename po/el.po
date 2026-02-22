@@ -76,7 +76,8 @@ msgstr "Μαζική συμπίεση πολλαπλών βίντεο σε έν�
 msgid ""
 "Customization of framerate limits, to ensure a clearer or smoother image."
 msgstr ""
-"Προσαρμογή ορίων ρυθμού καρέ, για εξασφάλιση καθαρότερης ή ομαλότερης εικόνας."
+"Προσαρμογή ορίων ρυθμού καρέ, για εξασφάλιση καθαρότερης ή ομαλότερης "
+"εικόνας."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
 msgid ""
@@ -86,9 +87,25 @@ msgstr ""
 "Επιλογή κωδικοποιητών (codecs) για τα αρχεία εξόδου, συμπεριλαμβανομένων των "
 "H.264, HEVC, AV1 και VP9."
 
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"Η εφαρμογή επιχειρεί να διατηρήσει όσο το δυνατόν υψηλότερη οπτικοακουστική "
+"ποιότητα για το δεδομένο μέγεθος αρχείου. Ωστόσο, οι εξαιρετικά απότομες "
+"μειώσεις στο μέγεθος του αρχείου μπορεί να προκαλέσουν σημαντική απώλεια "
+"ποιότητας στο τελικό αποτέλεσμα, ενώ μερικές φορές η συμπίεση μπορεί να μην "
+"είναι καθόλου εφικτή. Όλη η επεξεργασία γίνεται τοπικά — και ως εκ τούτου, "
+"οι ταχύτητες συμπίεσης εξαρτώνται αποκλειστικά από τις δυνατότητες του "
+"υλικού σας."
+
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
-msgstr "Πηγαία βίντεο σε ουρά για συμπίεση"
+msgstr "Πηγαία βίντεο στην ουρά για συμπίεση"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
@@ -96,15 +113,29 @@ msgstr "Η εφαρμογή κατά τη διάρκεια της συμπίεσ
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
-msgstr "Διεπαφή φιλική προς κινητά"
+msgstr "Μια διεπαφή φιλική προς κινητά"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Ρυθμίσεις συμπίεσης στη διεπαφή για κινητά"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
 msgid "Framerate Limit"
 msgstr "Όριο ρυθμού καρέ"
 
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Περιορίζει αυτόματα τον ρυθμό καρέ των συμπιεσμένων βίντεο ή στα 30 FPS ή 60 FPS."
+
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
 msgstr "Κωδικοποιητής βίντεο"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "Ο κωδικοποιητής που χρησιμοποιείται κατά τη συμπίεση"
 
 #. TRANSLATORS: {} represents the attempt number.
 #: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
@@ -122,12 +153,22 @@ msgstr "HQ"
 msgid "LQ"
 msgstr "LQ"
 
-#. TRANSLATORS: {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
 #. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
 #: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
 #, python-brace-format
 msgid "{res_fps}, {audio_quality} audio"
 msgstr "{res_fps}, ήχος {audio_quality}"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/attempt_fail_box.py:78
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
@@ -148,21 +189,46 @@ msgstr "Το μέγεθος του συμπιεσμένου αρχείου ήτ�
 msgid "MiB"
 msgstr "MiB"
 
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Το μέγεθος του συμπιεσμένου αρχείου ήταν πολύ μικρό ({size} {unit})"
+
 #: src/constrict_utils.py:781
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr ""
-"Constrict: Αδυναμία ανάγνωσης αρχείου εισόδου. Μετακινήθηκε ή διαγράφηκε "
-"πριν τη συμπίεση;"
+"Constrict: Αδυναμία ανάγνωσης του αρχείου εισόδου. Μήπως μετακινήθηκε ή "
+"διαγράφηκε πριν τη συμπίεση;"
+
+#: src/constrict_utils.py:804
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict: Αδυναμία ανάκτησης ιδιοτήτων βίντεο. Το αρχείο πηγής ενδέχεται "
+"να λείπει ή να είναι κατεστραμμένο."
+
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
+#: src/constrict_utils.py:811
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+"Constrict: Αδυναμία δημιουργίας του εξαγόμενου αρχείου. Υπάρχει ήδη ένα "
+"αρχείο με το δεσμευμένο όνομα."
 
 #: src/constrict_utils.py:813
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
-"Constrict: Αδυναμία δημιουργίας εξαγόμενου αρχείου. Ανεπαρκή δικαιώματα "
-"για τη δημιουργία αρχείου στην επιλεγμένη διαδρομή εξαγωγής."
+"Constrict: Αδυναμία δημιουργίας εξαγόμενου αρχείου. Ανεπαρκή δικαιώματα για "
+"τη δημιουργία αρχείου στην επιλεγμένη διαδρομή εξαγωγής."
 
 #: src/constrict_utils.py:879
 msgid ""
@@ -172,10 +238,57 @@ msgstr ""
 "Constrict: Ο ρυθμός bit του βίντεο έγινε πολύ χαμηλός (<5 kbps). Το μέγεθος "
 "στόχος ίσως είναι πολύ μικρό για αυτό το αρχείο."
 
+#: src/constrict_utils.py:924
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict: Αδυναμία ανάγνωσης του αρχείου εξόδου. Μήπως μετακινήθηκε ή "
+"διαγράφηκε κατά τη διάρκεια της συμπίεσης;"
+
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
 msgid "Initializing…"
 msgstr "Αρχικοποίηση…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/current_attempt_box.py:92
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Συμπίεση στα {vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: {} represents the progress percentage value.
+#: src/current_attempt_box.py:122
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#: src/current_attempt_box.py:128
+msgid "{} — Almost done"
+msgstr "{} — Σχεδόν έτοιμο"
+
+#. TRANSLATORS: {} represents an integer.
+#: src/current_attempt_box.py:136
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} δευτερόλεπτο"
+msgstr[1] "{} δευτερόλεπτα"
+
+#. TRANSLATORS: {} represents an integer.
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} λεπτό"
+msgstr[1] "{} λεπτά"
+
+#. TRANSLATORS: {} represents an integer.
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} ώρα"
+msgstr[1] "{} ώρες"
 
 #. TRANSLATORS: {percentage} represents the progress percentage.
 #. {time_shown} represents a string showing the estimated time to
@@ -193,25 +306,94 @@ msgstr "Αφήστε τα βίντεο εδώ για εισαγωγή"
 msgid "Compression Error"
 msgstr "Σφάλμα συμπίεσης"
 
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
 #: src/error_dialog.blp:19
 msgid "Copy Details"
 msgstr "Αντιγραφή λεπτομερειών"
+
+#. TRANSLATORS: {} represents the filename of the video with the error.
+#: src/error_dialog.py:47
+msgid "There was a problem compressing “{}”"
+msgstr "Παρουσιάστηκε πρόβλημα κατά τη συμπίεση του «{}»"
+
+#: src/error_dialog.py:69
+msgid "Details copied to clipboard"
+msgstr "Οι λεπτομέρειες αντιγράφηκαν στο πρόχειρο"
 
 #: src/gtk/shortcuts-dialog.blp:6
 msgctxt "shortcut window"
 msgid "Video Management"
 msgstr "Διαχείριση βίντεο"
 
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Γενικά"
+
 #: src/gtk/shortcuts-dialog.blp:23
 msgctxt "shortcut window"
 msgid "Toggle Settings Pane"
-msgstr "Εναλλαγή παραθύρου ρυθμίσεων"
+msgstr "Εναλλαγή πλευρικού πλαισίου ρυθμίσεων"
 
-#. TRANSLATORS: used in parentheses for the default suffix of exported
-#. files.
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Εμφάνιση συντομεύσεων"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Κλείσιμο παραθύρου"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Εμφάνιση προτιμήσεων"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported files.
 #: src/main.py:88
 msgid "compressed"
 msgstr "συμπιεσμένο"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#: src/main.py:184
+msgid "‘{}’ repository by"
+msgstr "Αποθετήριο «{}» από"
+
+#: src/main.py:191
+msgid "Circular progress indicator design by"
+msgstr "Σχεδιασμός κυκλικού δείκτη προόδου από"
+
+#: src/main.py:195
+msgid "Drag overlay design by"
+msgstr "Σχεδιασμός επικάλυψης μεταφοράς από"
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.py:202
+msgid "translator-credits"
+msgstr "Marios K. <mariosk@example.gr>"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Προτιμήσεις"
 
 #: src/preferences_dialog.blp:10
 msgid "Hardware Acceleration"
@@ -238,6 +420,19 @@ msgstr "Χρήση της GPU για επιτάχυνση της κωδικοπ�
 msgid "Exported Video Suffix"
 msgstr "Επίθεμα εξαγόμενου βίντεο"
 
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Προσαρμοσμένη κατάληξη"
+
+#: src/preferences_dialog.py:42
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Χρησιμοποιείται στα ονόματα αρχείων των εξαγόμενων βίντεο, μεταξύ του κύριου "
+"ονόματος και της επέκτασης. Αν η προσαρμοσμένη κατάληξη παραμείνει κενή, θα "
+"χρησιμοποιηθεί η προεπιλεγμένη «{}»."
+
 #: src/preferences_dialog.py:64
 msgid "Changes applied"
 msgstr "Οι αλλαγές εφαρμόστηκαν"
@@ -246,18 +441,91 @@ msgstr "Οι αλλαγές εφαρμόστηκαν"
 msgid "Add Vide_os…"
 msgstr "Προσθήκη βίντε_ο…"
 
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Μετακίνηση προς τα _πάνω"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Μετακίνηση προς τα _κάτω"
+
 #: src/sources_row.blp:10
 msgid "_Remove"
 msgstr "_Αφαίρεση"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+msgid "View Error Details"
+msgstr "Προβολή λεπτομερειών σφάλματος"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Αδυναμία φόρτωσης βίντεο. Ενδέχεται να λείπει ή να είναι κατεστραμμένο."
 
 #: src/sources_row.blp:100
 msgid "View Compression Progress"
 msgstr "Προβολή προόδου συμπίεσης"
 
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Περισσότερες λεπτομέρειες"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Εμφάνιση τοποθεσίας αρχείου"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Προβολή περισσότερων"
+
+#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+msgid "More Information"
+msgstr "Περισσότερες πληροφορίες"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:495
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Το βίντεο συμπιέστηκε στα {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'.
+#: src/sources_row.py:523
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"Το μέγεθος του βίντεο ({original_size} {unit_original}) καλύπτει ήδη το "
+"μέγεθος στόχο ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
 #: src/sources_row.py:543
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "Το μέγεθος στόχος ({size} {unit}) είναι πολύ μικρό για αυτό το αρχείο."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "_Νέο παράθυρο"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Προτιμήσεις"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "Συντομεύσεις _πληκτρολογίου"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_Περί του Constrict"
+
+#: src/window.blp:49 src/window.blp:111
+msgid "Main Menu"
+msgstr "Κύριο μενού"
 
 #: src/window.blp:75
 msgid "Compress Videos"
@@ -267,9 +535,17 @@ msgstr "Συμπίεση βίντεο"
 msgid "Drag and drop videos here"
 msgstr "Σύρετε και αφήστε βίντεο εδώ"
 
+#: src/window.blp:78
+msgid "_Open…"
+msgstr "Άν_οιγμα…"
+
 #: src/window.blp:158
 msgid "_Automatic"
 msgstr "_Αυτόματα"
+
+#: src/window.blp:160
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Χρήση του υψηλότερου ρυθμού καρέ χωρίς θυσία στην ανάλυση"
 
 #: src/window.blp:172
 msgid "Ensure higher image clarity"
@@ -307,6 +583,10 @@ msgstr "Ανο_χή (%)"
 msgid "How far end file sizes can be below target"
 msgstr "Πόσο πολύ μπορεί το τελικό μέγεθος να υπολείπεται του στόχου"
 
+#: src/window.blp:264
+msgid "Toggle Settings Pane"
+msgstr "Εναλλαγή πλευρικού πλαισίου ρυθμίσεων"
+
 #: src/window.blp:274
 msgid "Issues with video sources — fix before compressing"
 msgstr "Προβλήματα με τις πηγές βίντεο — διορθώστε τα πριν τη συμπίεση"
@@ -328,9 +608,20 @@ msgid "_Cancel…"
 msgstr "_Ακύρωση…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
 #: src/window.py:224
 msgid "{} FPS"
 msgstr "{} FPS"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer.
+#: src/window.py:232
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+"Βίντεο που συμπιέζονται σε χαμηλούς ρυθμούς μετάδοσης ενδέχεται να "
+"περιοριστούν στα {} FPS, ανεξάρτητα από την επιλεγμένη ρύθμιση."
 
 #. TRANSLATORS: {} represents an integer.
 #: src/window.py:241
@@ -341,30 +632,57 @@ msgid ""
 "number of attempts needed to meet the target, increasing compression time. A "
 "tolerance of {} % or more is recommended."
 msgstr ""
-"Η μείωση της ανοχής μεγιστοποιεί την ποιότητα της εικόνας περιορίζοντας "
-"πόσο πολύ μπορεί το συμπιεσμένο αρχείο να είναι μικρότερο από τον στόχο. "
-"Ωστόσο, αυτό μπορεί να αυξήσει τον αριθμό των προσπαθειών, αυξάνοντας τον "
-"χρόνο συμπίεσης. Συνιστάται ανοχή {} % ή μεγαλύτερη."
+"Η μείωση της ανοχής μεγιστοποιεί την ποιότητα της εικόνας περιορίζοντας πόσο "
+"πολύ μπορεί το συμπιεσμένο αρχείο να είναι μικρότερο από τον στόχο. Ωστόσο, "
+"αυτό μπορεί να αυξήσει τον αριθμό των προσπαθειών, αυξάνοντας τον χρόνο "
+"συμπίεσης. Συνιστάται ανοχή {} % ή μεγαλύτερη."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:249
 msgid "Target _Size ({})"
 msgstr "Μέγεθος _στόχος ({})"
 
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed.
+#: src/window.py:365
+msgid "Processing “{}”"
+msgstr "Επεξεργασία του «{}»"
+
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
+#. number of videos being processed.
 #: src/window.py:371
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "{index}/{total} βίντεο επεξεργάστηκαν"
 
+#. TRANSLATORS: {} represents the path of the directory being exported to.
+#: src/window.py:381
+msgid "Exporting to {}"
+msgstr "Εξαγωγή στο {}"
+
+#. TRANSLATORS: {} represents the filename of the video currently queued.
+#: src/window.py:396
+msgid "“{}” Queued"
+msgstr "Το «{}» μπήκε στην ουρά"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:400
+msgid "{} Videos Queued"
+msgstr "{} βίντεο στην ουρά"
+
 #: src/window.py:533
 msgid "Stop Compression?"
 msgstr "Διακοπή συμπίεσης;"
 
+#. TRANSLATORS: {} represents the filename of the video currently being compressed.
 #: src/window.py:536
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Η πρόοδος της συμπίεσης για το «{}» θα χαθεί οριστικά"
+
+#: src/window.py:542
+msgid "_Cancel"
+msgstr "_Ακύρωση"
 
 #: src/window.py:543
 msgid "_Stop"
@@ -374,17 +692,49 @@ msgstr "_Διακοπή"
 msgid "Compression Complete"
 msgstr "Η συμπίεση ολοκληρώθηκε"
 
+#. TRANSLATORS: {} represents the filename of the video that has been processed.
+#: src/window.py:604
+msgid "“{}” processed"
+msgstr "Το «{}» επεξεργάστηκε"
+
+#. TRANSLATORS: {} represents the number of files that have been processed.
+#: src/window.py:609
+msgid "{} files processed"
+msgstr "{} αρχεία επεξεργάστηκαν"
+
 #: src/window.py:620
 msgid "Open Export Directory"
 msgstr "Άνοιγμα καταλόγου εξαγωγής"
+
+#: src/window.py:696
+msgid "Videos are being compressed"
+msgstr "Τα βίντεο συμπιέζονται"
 
 #: src/window.py:716
 msgid "Analyzing…"
 msgstr "Ανάλυση…"
 
+#. TRANSLATORS: {} represents the filename of the video with the error.
+#: src/window.py:811
+msgid "Error compressing “{}”"
+msgstr "Σφάλμα κατά τη συμπίεση του «{}»"
+
 #: src/window.py:814
 msgid "View _Details"
 msgstr "Προβολή _λεπτομερειών"
+
+#: src/window.py:849
+msgid "Compression complete"
+msgstr "Η συμπίεση ολοκληρώθηκε"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:960
+msgid "Unknown video format “{}”"
+msgstr "Άγνωστη μορφή βίντεο «{}»"
+
+#: src/window.py:991
+msgid "Videos"
+msgstr "Βίντεο"
 
 #: src/window.py:994
 msgid "Pick Videos"
