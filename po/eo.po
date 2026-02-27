@@ -1,0 +1,766 @@
+# Esperanto translations for PACKAGE package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-02-13 14:25+0000\n"
+"PO-Revision-Date: 2026-02-27 14:59+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:104 src/window.py:391
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Videa kunpremilo"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Kunpremi videojn al celo-grandecoj"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "Compress;Video;Movie;Film;Clip;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Nova fenestro"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"\"\"Constrict compresses your videos to your chosen file size — useful for "
+"\"\"uploading to services with specific file size limits. No more relying on "
+"\"\"online services for video compression, or the manual trial-and-error of "
+"re-\"\"encoding at various bitrates yourself."
+msgstr ""
+"Constrict kunpremas viajn videojn al via elektita dosiero-grandeco — utila "
+"por alŝuti al servoj kun specifaj dosiero-grandec-limigoj. Ne plu dependu de "
+"interretaj servoj por vida kunpremado aŭ de la mana provo-kaj-eraro de re-"
+"kodumado per diversaj bitrapidecoj mem."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:13
+msgid "Features include:"
+msgstr "Funkcioj inkludas:"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid "An intuitive, easy to use interface."
+msgstr "Intuicia, facile uzebla interfaco."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid ""
+"\"\"Automatic calculation of average bitrate (ABR), resolution, framerate, "
+"and \"\"audio quality each video is re-encoded with to meet the target file "
+"size."
+msgstr ""
+"Aŭtomata kalkulo de meza bitrapideco (ABR), rezolucio, kadro-rapideco kaj "
+"aŭdi-kvalito ĉe kiu ĉiu video re-kodumiĝas por atingi la cel-dosiero-"
+"grandecon."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr "Amasa kunpremado de pluraj videoj al unu eligo-dosierujo."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:19
+msgid ""
+"\"\"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr ""
+"Ŝanĝigo de kadro-rapidec-limigoj por certigi pli klaran aŭ pli glategan "
+"bildon."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"\"\"A choice of codecs to encode output files with, including H.264, HEVC, "
+"AV1, \"\"and VP9."
+msgstr ""
+"Elekto de kodekojn por kodi eligajn dosierojn, inklude H.264, HEVC, AV1 kaj "
+"VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
+msgid ""
+"\"\"The app attempts to retain as much audiovisual quality as possible for "
+"the \"\"file size given. However, extremely steep reductions in file size "
+"can cause \"\"significant loss of quality in the output file, and sometimes "
+"compression \"\"may not be possible at all. All processing is done locally — "
+"and as such, \"\"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"La programo penas konservi kiel eble plej multe da aŭdia-vida kvalito por la "
+"donita dosiero-grandeco. Tamen, ekstreme krutaj malpliiĝoj de dosiero-"
+"grandeco povas kaŭzi signifan kvaliton-malpliiĝon en la eligdosiero, kaj "
+"foje kunpremado eble ne eblas tute. Ĉia pritraktado estas farita loke — kaj "
+"do, kunpremaj rapidecoj estas nur tiom rapidaj kiom via aparataro permesas."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
+msgid "Source videos queued for compression"
+msgstr "Fontaj videoj en vico por kunpremado"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
+msgid "The application mid-compression"
+msgstr "La programo dum kunpremado"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
+msgid "A mobile friendly UI"
+msgstr "Portelefona uzanto-interfaco"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
+msgid "Compression settings in the mobile friendly UI"
+msgstr "Kunpremaj agordoj en portelefona uzanto-interfaco"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
+msgid "Framerate Limit"
+msgstr "Kadr-oft-limo"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"\"\"Limits framerates of compressed videos automatically, or to 30 FPS or "
+"60 FPS."
+msgstr ""
+"Limigas kadro-rapidecon de kunpremitaj videoj aŭtomate, aŭ al 30 KS aŭ 60 KS."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Vida kodeko"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "La kodeko uzata por kodi dum kunpremado"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+msgid "Attempt {}"
+msgstr "Provo {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr "HK"
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr "MK"
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, {audio_quality} audio"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/attempt_fail_box.py:78
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
+msgid "kbps"
+msgstr "kbps"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:92
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "Kunpremita dosiero-grandeco estis tro granda ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
+#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
+#: src/sources_row.py:545 src/window.py:246
+msgid "MiB"
+msgstr "MiB"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Kunpremita dosiero-grandeco estis tro malgranda ({size} {unit})"
+
+#: src/constrict_utils.py:781
+msgid ""
+"\"\"Constrict: Could not read input file. Was it moved or deleted before "
+"\"\"compression?"
+msgstr ""
+"Constrict: Ne povis legi enigdosieron. Ĉu ĝi estis movita aŭ forigita antaŭ "
+"kunpremado?"
+
+#: src/constrict_utils.py:804
+msgid ""
+"\"\"Constrict: Could not retrieve video properties. Source video may be "
+"missing \"\"or corrupted."
+msgstr ""
+"Constrict: Ne povis ricevi videajn ecojn. La fontvideo eble mankas aŭ estas "
+"koruptita."
+
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
+#: src/constrict_utils.py:811
+msgid ""
+"\"\"Constrict: Could not create exported file. A file with the reserved name "
+"\"\"already exists."
+msgstr ""
+"Constrict: Ne povis krei eksportitan dosieron. Dosiero kun la rezervita nomo "
+"jam ekzistas."
+
+#: src/constrict_utils.py:813
+msgid ""
+"\"\"Constrict: Could not create exported file. There are insufficient "
+"\"\"permissions to create a file at the requested export path."
+msgstr ""
+"Constrict: Ne povis krei eksportitan dosieron. Oni ne havas sufiĉajn "
+"permesojn por krei dosieron ĉe la petita eksportovojo."
+
+#: src/constrict_utils.py:879
+msgid ""
+"\"\"Constrict: Video bitrate got too low (<5 kbps). The target size may be "
+"too \"\"low for this file."
+msgstr ""
+"Constrict: Vida bitrapideco fariĝis tro malalta (<5 kbps). La cel-grandeco "
+"eble estas tro malgranda por ĉi tiu dosiero."
+
+#: src/constrict_utils.py:924
+msgid ""
+"\"\"Constrict: Cannot read output file. Was it moved or deleted mid-"
+"compression?"
+msgstr ""
+"Constrict: Ne povas legi eligdosieron. Ĉu ĝi estis movita aŭ forigita dum "
+"kunpremado?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Inicialigante…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/current_attempt_box.py:92
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Kunpremante al {vid_br} {vid_br_unit} ({extra_details})"
+
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
+#. TRANSLATORS: {} represents the progress percentage value.
+#: src/current_attempt_box.py:122
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#: src/current_attempt_box.py:128
+msgid "{} — Almost done"
+msgstr "{} — Preskaŭ finita"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:136
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} sekundo"
+msgstr[1] "{} sekundoj"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} minuto"
+msgstr[1] "{} minutoj"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} horo"
+msgstr[1] "{} horoj"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#: src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — Ĉirkaŭ {time_shown} restante"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Faligu videojn por importi"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Kunprema eraro"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Detaloj"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Kopii detalojn"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error.
+#: src/error_dialog.py:47
+msgid "There was a problem compressing “{}”"
+msgstr "Estis problemo kunpremante “{}”"
+
+#: src/error_dialog.py:69
+msgid "Details copied to clipboard"
+msgstr "Detaloj kopiitaj al tondujo"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Vida administrado"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Malfermi"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Eksporti"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ĝenerala"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Ŝalti agord-panelon"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Montri klav-mallongigojn"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Fermi fenestron"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Forlasi"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Montri agordojn"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:88
+msgid "compressed"
+msgstr "kunpremita"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#: src/main.py:184
+msgid "‘{}’ repository by"
+msgstr "‘{}’ deponejo de"
+
+#: src/main.py:191
+msgid "Circular progress indicator design by"
+msgstr "Ronda progreso-indikatora dezajno de"
+
+#: src/main.py:195
+msgid "Drag overlay design by"
+msgstr "Tren-kovril-dezajno de"
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.py:202
+msgid "translator-credits"
+msgstr "Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Agordoj"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Aparataro-akcelado"
+
+#: src/preferences_dialog.blp:11
+msgid ""
+"\"\"Hardware acceleration is only used if your GPU supports encoding with "
+"the \"\"selected video codec, and “Extra Quality” is disabled"
+msgstr ""
+"Aparataro-akcelado estas uzata nur se via GPU subtenas kodumado kun la "
+"elektita vida kodeko, kaj “Ekstra Kvalito” estas malŝaltita"
+
+#: src/preferences_dialog.blp:14
+msgid "GPU Encoding"
+msgstr "GPU-kodumado"
+
+#: src/preferences_dialog.blp:15
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Uzi la GPU por akceli kodadon kiam disponebla"
+
+#: src/preferences_dialog.blp:20
+msgid "Exported Video Suffix"
+msgstr "Eksportita vida sufikso"
+
+#: src/preferences_dialog.blp:23
+msgid "Custom Suffix"
+msgstr "Propra sufikso"
+
+#: src/preferences_dialog.py:42
+msgid ""
+"\"\"Used in file names for exported videos, between the base name and "
+"extension. \"\"If the custom suffix is left empty, the default suffix of "
+"“{}” will be used."
+msgstr ""
+"Uzata en dosiero-nomoj por eksportitaj videoj, inter la baza nomo kaj "
+"etendaĵo. Se la propra sufikso estas lasita malplena, la defaŭlta sufikso "
+"“{}” estos uzata."
+
+#: src/preferences_dialog.py:64
+msgid "Changes applied"
+msgstr "Ŝanĝoj aplikitaj"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "Aldoni vide_ojn…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Movi _supren"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Movi _malsupren"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "_Forigi"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+msgid "View Error Details"
+msgstr "Vidi eraro-detalojn"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Ne povas ŝargi videon. Ĝi eble mankas aŭ estas koruptita."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Vidi kunpreman progreson"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Pli da detaloj"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Montri dosiero-lokon"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Vidi pli"
+
+#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+msgid "More Information"
+msgstr "Pli da informo"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:495
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Video kunpremita al {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'.
+#: src/sources_row.py:523
+#, python-brace-format
+msgid ""
+"\"\"Video file size ({original_size} {unit_original}) already meets the "
+"target \"\"size ({target_size} {unit_target})."
+msgstr ""
+"Vida dosiero-grandeco ({original_size} {unit_original}) jam atingas la cel-"
+"grandecon ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#: src/sources_row.py:543
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "Cel-grandeco ({size} {unit}) estas tro malgranda por ĉi tiu dosiero."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "_Nova fenestro"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Agordoj"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Klav-mallongigoj"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "_Pri Constrict"
+
+#: src/window.blp:49 src/window.blp:111
+msgid "Main Menu"
+msgstr "Ĉefa menuo"
+
+#: src/window.blp:75
+msgid "Compress Videos"
+msgstr "Kunpremi videojn"
+
+#: src/window.blp:76
+msgid "Drag and drop videos here"
+msgstr "Trenu kaj faligu videojn ĉi tien"
+
+#: src/window.blp:78
+msgid "_Open…"
+msgstr "_Malfermi…"
+
+#: src/window.blp:158
+msgid "_Automatic"
+msgstr "_Aŭtomate"
+
+#: src/window.blp:160
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Uzi la plej altan kadro-rapidecon sen oferti rezolucion"
+
+#: src/window.blp:172
+msgid "Ensure higher image clarity"
+msgstr "Certigi pli altan bildan klartecon"
+
+#: src/window.blp:184
+msgid "Ensure smoother motion"
+msgstr "Certigi pli glategan movadon"
+
+#: src/window.blp:195
+msgid "Encoding Options"
+msgstr "Kodumaj opcioj"
+
+#: src/window.blp:198
+msgid "_Video Codec"
+msgstr "_Vida kodeko"
+
+#: src/window.blp:206
+msgid "Extra _Quality"
+msgstr "Ekstra _Kvalito"
+
+#: src/window.blp:208
+msgid "Increase image quality at the cost of compression time"
+msgstr "Pliigi bildan kvaliton je la kosto de kunprema tempo"
+
+#: src/window.blp:213
+msgid "Advanced Options"
+msgstr "Progresintaj opcioj"
+
+#: src/window.blp:238
+msgid "_Tolerance (%)"
+msgstr "_Tolereco (%)"
+
+#: src/window.blp:240
+msgid "How far end file sizes can be below target"
+msgstr "Kiom da dosiero-grandecoj povas esti sub la celo"
+
+#: src/window.blp:264
+msgid "Toggle Settings Pane"
+msgstr "Ŝalti agord-panelon"
+
+#: src/window.blp:274
+msgid "Issues with video sources — fix before compressing"
+msgstr "Problemoj kun videaj fontoj — riparu antaŭ kunpremado"
+
+#: src/window.blp:300
+msgid "Video Sources"
+msgstr "Videoj fontoj"
+
+#: src/window.blp:304
+msgid "_Clear All"
+msgstr "_Viŝi ĉion"
+
+#: src/window.blp:325
+msgid "_Export To…"
+msgstr "_Eksporti al…"
+
+#: src/window.blp:341
+msgid "_Cancel…"
+msgstr "_Nuligi…"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#: src/window.py:224
+msgid "{} FPS"
+msgstr "{} KS"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer.
+#: src/window.py:232
+msgid ""
+"\"\"Videos compressed to low bitrates may be capped to {} FPS, regardless of "
+"the \"\"option set."
+msgstr ""
+"Videoj kunpremitaj al malaltaj bitrapidecoj eble estos limitigitaj al {} KS, "
+"sendepende de la agordita opcio."
+
+#. TRANSLATORS: {} represents an integer.
+#: src/window.py:241
+#, no-python-format
+msgid ""
+"\"\"Decreasing the tolerance maximizes image quality by reducing how much "
+"\"\"compressed file sizes can be under target. However, this can increase "
+"the \"\"number of attempts needed to meet the target, increasing compression "
+"time. A \"\"tolerance of {} % or more is recommended."
+msgstr ""
+"Malpliigi la tolerecen maksimumigas bildan kvaliton per redukto de kiom "
+"kunpremitaj dosiero-grandecoj povas esti sub celo. Tamen, ĉi tio povas "
+"pliigi la nombron de provoj bezonataj por atingi la celon, pliigante "
+"kunpreman tempon. Tolereco de {} % aŭ pli estas rekomendita."
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:249
+msgid "Target _Size ({})"
+msgstr "Cel-_grandeco ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed.
+#: src/window.py:365
+msgid "Processing “{}”"
+msgstr "Pretraktante “{}”"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:371
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "{index}/{total} videoj pretraktitaj"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to.
+#: src/window.py:381
+msgid "Exporting to {}"
+msgstr "Eksportante al {}"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued.
+#: src/window.py:396
+msgid "“{}” Queued"
+msgstr "“{}” en vico"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:400
+msgid "{} Videos Queued"
+msgstr "{} videoj en vico"
+
+#: src/window.py:533
+msgid "Stop Compression?"
+msgstr "Ĉesigi kunpremado?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed.
+#: src/window.py:536
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr "Progreso dum kunpremado de “{}” estos daŭre perdita"
+
+#: src/window.py:542
+msgid "_Cancel"
+msgstr "_Nuligi"
+
+#: src/window.py:543
+msgid "_Stop"
+msgstr "_Ĉesigi"
+
+#: src/window.py:597
+msgid "Compression Complete"
+msgstr "Kunpremado kompleta"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#: src/window.py:604
+msgid "“{}” processed"
+msgstr "“{}” pretraktita"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:609
+msgid "{} files processed"
+msgstr "{} dosieroj pretraktitaj"
+
+#: src/window.py:620
+msgid "Open Export Directory"
+msgstr "Malfermi eksportodosierujon"
+
+#: src/window.py:696
+msgid "Videos are being compressed"
+msgstr "Videoj estas kunpremitaj"
+
+#: src/window.py:716
+msgid "Analyzing…"
+msgstr "Analizante…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error.
+#: src/window.py:811
+msgid "Error compressing “{}”"
+msgstr "Eraro dum kunpremado de “{}”"
+
+#: src/window.py:814
+msgid "View _Details"
+msgstr "Vidi _detalojn"
+
+#: src/window.py:849
+msgid "Compression complete"
+msgstr "Kunpremado kompleta"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:960
+msgid "Unknown video format “{}”"
+msgstr "Nekonata vida formato “{}”"
+
+#: src/window.py:991
+msgid "Videos"
+msgstr "Videoj"
+
+#: src/window.py:994
+msgid "Pick Videos"
+msgstr "Elekti videojn"
