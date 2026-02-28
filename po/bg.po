@@ -1,14 +1,14 @@
-# Bulgarian translation for Constrict.
-# Copyright (C) 2026 Constrict's COPYRIGHT HOLDER
+# Bulgarian translation of constrict po-file.
+# Copyright (C) 2026 twlvnn kraftwerk.
 # This file is distributed under the same license as the Constrict package.
 # twlvnn kraftwerk <kraft_werk@tutanota.com>,  2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Constrict main\n"
+"Project-Id-Version: constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-02-01 15:08+0000\n"
-"PO-Revision-Date: 2026-02-06 20:29+0100\n"
+"POT-Creation-Date: 2026-02-13 14:25+0000\n"
+"PO-Revision-Date: 2026-02-28 21:42+0100\n"
 "Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <Bulgarian>\n"
 "Language: bg\n"
@@ -35,7 +35,7 @@ msgstr "Компресирайте видео клипове до размери
 
 #: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
-msgstr "Компресиране;Видео;Филм;Клип;"
+msgstr "компресиране;видео;филм;клип;compress;video;movie;film;clip;"
 
 #: data/io.github.wartybix.Constrict.desktop.in:20
 msgid "New Window"
@@ -48,11 +48,10 @@ msgid ""
 "online services for video compression, or the manual trial-and-error of re-"
 "encoding at various bitrates yourself."
 msgstr ""
-"„Constrict“ компресира вашите видео клипове до избрания от вас размер на "
-"файла — полезно за качване в услуги с конкретни ограничения за размера на "
-"файловете. Вече не е нужно да разчитате на Интернет услуги за компресиране "
-"на видео клипове или да се опитвате ръчно да кодирате с различни побитови "
-"скорости."
+"„Constrict“ компресира видео клипове до избрания от вас размер на файла — "
+"полезно за качване в услуги с конкретни ограничения за размера на файловете. "
+"Вече не е нужно да разчитате на Интернет услуги за компресиране на видео "
+"клипове или да се опитвате ръчно да кодирате с различни побитови скорости."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:13
 msgid "Features include:"
@@ -149,12 +148,12 @@ msgstr "Опит №{}"
 #. TRANSLATORS: this is an abbreviation of 'High Quality'
 #: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
 msgid "HQ"
-msgstr "HQ"
+msgstr "ВК"
 
 #. TRANSLATORS: this is an abbreviation of 'Low Quality'
 #: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
 msgid "LQ"
-msgstr "LQ"
+msgstr "НК"
 
 #. TRANSLATORS:
 #. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
@@ -176,44 +175,44 @@ msgstr "{vid_br} {vid_br_unit} ({extra_details})"
 #. TRANSLATORS: This is the SI unit for 'kilobits per second'.
 #: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
 msgid "kbps"
-msgstr "кб/с"
+msgstr "kbps"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MiB'.
 #: src/attempt_fail_box.py:92
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
-msgstr "Размерът на компресирания файл беше прекалено голям ({size} {unit})"
+msgstr "Размерът на компресирания файл бе прекалено голям ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
 #: src/sources_row.py:545 src/window.py:246
 msgid "MiB"
-msgstr "Миб"
+msgstr "MiB"
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents a
 #. file size unit like 'MiB'.
 #: src/attempt_fail_box.py:102
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
-msgstr "Размерът на компресирания файл беше твърде малък ({size} {unit})"
+msgstr "Размерът на компресирания файл бе твърде малък ({size} {unit})"
 
 #: src/constrict_utils.py:781
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr ""
-"Constrict: Входният файл не може да бъде прочетен. Да не би да е преместен "
-"или изтрит преди компресирането?"
+"Constrict: Входният файл не може да се прочете. Да не би да е преместен или "
+"изтрит преди компресирането?"
 
 #: src/constrict_utils.py:804
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
 msgstr ""
-"Constrict: Свойствата на видеото не може да бъдат извлечени. Оригиналният "
-"видео файл може да липсва или да е повреден."
+"Constrict: Свойствата на видеото не може да се получат. Оригиналният видео "
+"файл може да липсва или да е повреден."
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
@@ -222,15 +221,15 @@ msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr ""
-"Constrict: Изходният файл не може да бъде създаден. Вече съществува файл със "
-"запазеното име."
+"Constrict: Изходният файл не може да се създаде. Вече съществува файл със "
+"съответното име."
 
 #: src/constrict_utils.py:813
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
-"Constrict: Изходният файл не може да бъде създаден. Няма достатъчно права̀ за "
+"Constrict: Изходният файл не може да се създаде. Няма достатъчно права̀ за "
 "създаване на файл в заявеното местоположението за изнасяне."
 
 #: src/constrict_utils.py:879
@@ -238,15 +237,15 @@ msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr ""
-"Constrict: Побитовата скорост на видеото стана твърде ниска (<5 кб/с). "
+"Constrict: Побитовата скорост на видеото стана твърде ниска (<5 kbps). "
 "Целевият размер може би е твърде малък за този файл."
 
 #: src/constrict_utils.py:924
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
-"Constrict: Изходният файл не може да бъде прочетен. Да не би да е преместен "
-"или изтрит по време на компресирането?"
+"Constrict: Изходният файл не може да се прочете. Да не би да е преместен или "
+"изтрит по време на компресирането?"
 
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
@@ -316,7 +315,7 @@ msgstr "{percentage} — остава около {time_shown}"
 
 #: src/drag_overlay.blp:14
 msgid "Drop Videos to Import"
-msgstr "Пуснете видеа за внасяне"
+msgstr "Пуснете видео клипове за внасяне"
 
 #: src/error_dialog.blp:5
 msgid "Compression Error"
@@ -334,7 +333,7 @@ msgstr "Копиране на подробностите"
 #. error.
 #: src/error_dialog.py:47
 msgid "There was a problem compressing “{}”"
-msgstr "Имаше проблем при компресирането на „{}“"
+msgstr "Проблем при компресирането на „{}“"
 
 #: src/error_dialog.py:69
 msgid "Details copied to clipboard"
@@ -343,7 +342,7 @@ msgstr "Подробностите бяха копирани в буфера з�
 #: src/gtk/shortcuts-dialog.blp:6
 msgctxt "shortcut window"
 msgid "Video Management"
-msgstr "Управление на видеа"
+msgstr "Управление на видео"
 
 #: src/gtk/shortcuts-dialog.blp:9
 msgctxt "shortcut window"
@@ -408,7 +407,8 @@ msgstr "Страница за изтегляне и пускане на файл
 #: src/main.py:202
 msgid "translator-credits"
 msgstr ""
-"twlvnn kraftwerk <kraft_werk@tutanota.com>, 2026\n"
+"twlvnn kraftwerk &lt;<a "
+"href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
 "\n"
 "\n"
 "Проектът за превод на GNOME има нужда от подкрепа.\n"
@@ -444,11 +444,11 @@ msgstr ""
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
-msgstr "Наставка на изнесените видеа"
+msgstr "Суфикс за изнесените видео клипове"
 
 #: src/preferences_dialog.blp:23
 msgid "Custom Suffix"
-msgstr "Друга наставка"
+msgstr "Друг суфикс"
 
 #: src/preferences_dialog.py:42
 msgid ""
@@ -485,7 +485,7 @@ msgstr "Вижте подробностите за грешката"
 
 #: src/sources_row.blp:63
 msgid "Cannot load video. It may be missing or corrupted."
-msgstr "Видеото не може да бъде заредено. Може да липсва или да е повредено."
+msgstr "Видеото не може да се зареди. Може да липсва или да е повредено."
 
 #: src/sources_row.blp:100
 msgid "View Compression Progress"
@@ -555,7 +555,7 @@ msgstr "Основно меню"
 
 #: src/window.blp:75
 msgid "Compress Videos"
-msgstr "Компресиране на видеа"
+msgstr "Компресиране на видео"
 
 #: src/window.blp:76
 msgid "Drag and drop videos here"
@@ -580,7 +580,7 @@ msgstr "По-висока яснота на картината"
 
 #: src/window.blp:184
 msgid "Ensure smoother motion"
-msgstr "По-плано движение"
+msgstr "По-плавно движение"
 
 #: src/window.blp:195
 msgid "Encoding Options"
@@ -592,7 +592,7 @@ msgstr "_Видео кодер"
 
 #: src/window.blp:206
 msgid "Extra _Quality"
-msgstr "Допълнително _Качество"
+msgstr "Допълнително _качество"
 
 #: src/window.blp:208
 msgid "Increase image quality at the cost of compression time"
@@ -605,7 +605,7 @@ msgstr "Допълнителни настройки"
 
 #: src/window.blp:238
 msgid "_Tolerance (%)"
-msgstr "_Поносимост (%)"
+msgstr "_Допуск (%)"
 
 #: src/window.blp:240
 msgid "How far end file sizes can be below target"
@@ -617,7 +617,8 @@ msgstr "Превключване на панела с настройки"
 
 #: src/window.blp:274
 msgid "Issues with video sources — fix before compressing"
-msgstr "Проблеми с оригиналните видеа — поправете ги преди компресиране"
+msgstr ""
+"Проблеми с оригиналните видео клипове — поправете ги преди компресиране"
 
 #: src/window.blp:300
 msgid "Video Sources"
@@ -648,8 +649,8 @@ msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr ""
-"Видео клиповете, компресирани до ниски побитови скорости, могат да бъдат "
-"ограничени до {} кадъра в секунда, независимо от настроената опция."
+"Видео клиповете, компресирани до ниски побитови скорости, може да се "
+"ограничат до {} кадъра в секунда, независимо от настроената опция."
 
 #. TRANSLATORS: {} represents an integer.
 #: src/window.py:241
@@ -660,11 +661,10 @@ msgid ""
 "number of attempts needed to meet the target, increasing compression time. A "
 "tolerance of {} % or more is recommended."
 msgstr ""
-"Намаляването на поносимостта максимизира качеството на картината, като "
-"намалява колко компресираните файлове могат да бъдат под целевото ниво. Това "
-"обаче може да увеличи броя на опитите, необходими за достигане на целта, "
-"като по този начин се увеличава времето за компресиране. Препоръчва се "
-"поносимост от {} % или повече."
+"Намаляването на до̀пуска максимизира качеството на картината, като намалява "
+"колко компресираните файлове може да са под целта. Това обаче може да "
+"увеличи броя на опитите, необходими за достигането ѝ, като по този начин се "
+"увеличава времето за компресиране. Препоръчва се допуск от {} % или повече."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:249
