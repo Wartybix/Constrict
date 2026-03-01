@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
-"Report-Msgid-Bugs-To: 34974060+Wartybix@users.noreply.github.com\n"
-"POT-Creation-Date: 2026-01-14 03:49+0000\n"
-"PO-Revision-Date: 2025-12-07 09:39+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-02-13 14:25+0000\n"
+"PO-Revision-Date: 2026-02-03 10:42-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -33,7 +33,7 @@ msgstr "Compresser les vidéos pour atteindre la taille souhaitée"
 
 #: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
-msgstr "Compresser ; Vidéo ; Film ; Clip ;"
+msgstr "Compresser;Vidéo;Film;Clip;"
 
 #: data/io.github.wartybix.Constrict.desktop.in:20
 msgid "New Window"
@@ -105,19 +105,19 @@ msgstr ""
 "localement. Par conséquent, la vitesse de compression dépend uniquement des "
 "capacités de votre matériel."
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:62
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
 msgstr "Sources vidéos en attente de compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:66
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
 msgid "The application mid-compression"
-msgstr "L'application en cours de compression"
+msgstr "L'application est en cours de compression"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:70
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
 msgstr "Une interface utilisateur adaptée aux appareils mobiles"
 
-#: data/io.github.wartybix.Constrict.metainfo.xml.in:74
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
 msgstr ""
 "Paramètres de compression dans l'interface utilisateur adaptée aux mobiles"
@@ -131,7 +131,7 @@ msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
 msgstr ""
 "Limite automatiquement la fréquence d'images des vidéos compressées, ou à 30 "
-"images par seconde ou 60 images par seconde."
+"FPS ou 60 FPS."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
 msgid "Video Codec"
@@ -216,6 +216,8 @@ msgstr ""
 "Constrict : Impossible de récupérer les propriétés de la vidéo. La vidéo "
 "source est peut-être manquante ou endommagée."
 
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
 #: src/constrict_utils.py:811
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
@@ -261,6 +263,10 @@ msgstr "Initialisation en cours…"
 msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
 msgstr "Compression à {vid_br} {vid_br_unit} ({extra_details})"
 
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
 #. TRANSLATORS: {} represents the progress percentage value.
 #: src/current_attempt_box.py:122
 msgid "{} %"
@@ -338,7 +344,7 @@ msgstr "Détails copiés dans le presse-papiers"
 #: src/gtk/shortcuts-dialog.blp:6
 msgctxt "shortcut window"
 msgid "Video Management"
-msgstr "Gestion vidéo"
+msgstr "Gestion Vidéo"
 
 #: src/gtk/shortcuts-dialog.blp:9
 msgctxt "shortcut window"
@@ -399,6 +405,7 @@ msgstr "Conception d'un indicateur de progression circulaire par"
 msgid "Drag overlay design by"
 msgstr "Conception du glisser-déposer par"
 
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
 #: src/main.py:202
 msgid "translator-credits"
 msgstr "jpiebrig"
@@ -455,11 +462,11 @@ msgstr "Ajouter des vidéos…"
 
 #: src/sources_row.blp:6
 msgid "Move _Up"
-msgstr "Déplacer vers le_haut"
+msgstr "Déplacer vers le haut"
 
 #: src/sources_row.blp:7
 msgid "Move _Down"
-msgstr "Déplacer vers le_bas"
+msgstr "Déplacer vers le bas"
 
 #: src/sources_row.blp:10
 msgid "_Remove"
@@ -579,7 +586,7 @@ msgstr "_Codec vidéo"
 
 #: src/window.blp:206
 msgid "Extra _Quality"
-msgstr "Qualité_supérieure"
+msgstr "Qualité supérieure"
 
 #: src/window.blp:208
 msgid "Increase image quality at the cost of compression time"
@@ -657,7 +664,7 @@ msgstr ""
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:249
 msgid "Target _Size ({})"
-msgstr "Taille_cible ({})"
+msgstr "Taille cible ({})"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
@@ -676,9 +683,8 @@ msgstr "{index}/{total} Vidéos traitées"
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
 #: src/window.py:381
-#, fuzzy
 msgid "Exporting to {}"
-msgstr "Exportation vers “{}”"
+msgstr "Exportation vers {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
@@ -729,37 +735,37 @@ msgstr "{} Fichiers traités"
 msgid "Open Export Directory"
 msgstr "Ouvrir le répertoire d'exportation"
 
-#: src/window.py:700
+#: src/window.py:696
 msgid "Videos are being compressed"
 msgstr "Les vidéos sont en cours de compression"
 
-#: src/window.py:720
+#: src/window.py:716
 msgid "Analyzing…"
-msgstr "Analyse en cours"
+msgstr "Analyse en cours…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:815
+#: src/window.py:811
 msgid "Error compressing “{}”"
 msgstr "Erreur lors de la compression de \"{}\""
 
-#: src/window.py:818
+#: src/window.py:814
 msgid "View _Details"
 msgstr "Afficher les détails"
 
-#: src/window.py:853
+#: src/window.py:849
 msgid "Compression complete"
 msgstr "Compression terminée"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:964
+#: src/window.py:960
 msgid "Unknown video format “{}”"
 msgstr "Format vidéo inconnu \"{}\""
 
-#: src/window.py:995
+#: src/window.py:991
 msgid "Videos"
 msgstr "Vidéos"
 
-#: src/window.py:998
+#: src/window.py:994
 msgid "Pick Videos"
 msgstr "Sélectionner les vidéos"
