@@ -111,6 +111,7 @@ def get_res_preset(
 
 def get_encoding_speed(
     frame_height: int,
+    low_bitrate: bool,
     codec: int,
     extra_quality: bool
 ) -> str:
@@ -122,7 +123,9 @@ def get_encoding_speed(
 
     match codec:
         case VideoCodec.H264:
-            if extra_quality:
+            if extra_quality and low_bitrate:
+                return 'placebo'
+            elif extra_quality or low_bitrate:
                 return 'veryslow'
             else:
                 return 'medium' if hd else 'slower'
@@ -132,7 +135,7 @@ def get_encoding_speed(
             else:
                 return 'medium' if hd else 'slow'
         case VideoCodec.AV1:
-            if extra_quality:
+            if extra_quality or low_bitrate:
                 return '4'
             else:
                 return '10' if hd else '8'
@@ -307,8 +310,10 @@ def transcode(
     portrait = height > width
     frame_height = width if portrait else height
 
+    low_bitrate = True if video_bitrate <= 300000 else False
+
     preset_name = '-cpu-used' if codec == VideoCodec.VP9 else '-preset'
-    preset = get_encoding_speed(frame_height, codec, extra_quality)
+    preset = get_encoding_speed(frame_height, low_bitrate, codec, extra_quality)
 
     gpu_filters = ',format=nv12,hwupload' if use_ha else ''
 
