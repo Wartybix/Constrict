@@ -636,7 +636,15 @@ def get_encode_settings(
     '''
     crush_mode = (target_bitrate / 1000) < 150 + 96 or force_crush
 
-    max_bitrate = 12000 if crush_mode else 96000
+    if crush_mode:
+        max_bitrate = 12000
+    elif target_bitrate <= 96000 * 20:
+        max_bitrate = 96000
+    elif target_bitrate > 96000 * 20 and target_bitrate < 192000 * 20:
+        max_bitrate = target_bitrate * 0.05
+    else:
+        max_bitrate = 192000
+
     target_audio_bitrate = min(audio_bitrate, max_bitrate)
 
     target_video_bitrate = target_bitrate - target_audio_bitrate
