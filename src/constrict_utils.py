@@ -556,14 +556,14 @@ def get_audio_bitrate(file_input: str) -> int:
     elif bitrate_str == "N/A":
         # Audio stream is using variable bitrate.
         # Return a high bitrate to be safe.
-        return 96000
+        return 192000
     else:
         try:
             return int(bitrate_str)
         except ValueError:
             # Error converting the bitrate to an integer.
             # Return a high bitrate to be safe.
-            return 96000
+            return 192000
 
 def get_audio_channel_count(file_input: str) -> int:
     """ Gets the audio channel-count of the input file """
