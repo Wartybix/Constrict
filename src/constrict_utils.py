@@ -310,10 +310,13 @@ def transcode(
     portrait = height > width
     frame_height = width if portrait else height
 
-    low_bitrate = True if video_bitrate <= 300000 else False
+    low_bitrate = True if video_bitrate < 276000 else False
 
     preset_name = '-cpu-used' if codec == VideoCodec.VP9 else '-preset'
     preset = get_encoding_speed(frame_height, low_bitrate, codec, extra_quality)
+
+    if low_bitrate:
+        use_ha = False
 
     gpu_filters = ',format=nv12,hwupload' if use_ha else ''
 
