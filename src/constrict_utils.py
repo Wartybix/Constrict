@@ -632,8 +632,8 @@ def get_encode_settings(
 
     Total target bitrate = 200kbps
     Bitrate less than threshold, therefore apply crush mode.
-    Target audio bitrate set to 12kbps (rather than 96kbps) due to crush mode.
-    Therefore, video bitrate is 188kbps
+    Target audio bitrate set to 32kbps (rather than 96kbps) due to crush mode.
+    Therefore, video bitrate is 168kbps
     This is *above* 150kbps, therefore preset resolution is 240p@24
 
     And if there was no crush mode:
@@ -645,7 +645,7 @@ def get_encode_settings(
     crush_mode = (target_bitrate / 1000) < 150 + 96 or force_crush
 
     if crush_mode:
-        max_bitrate = 12000
+        max_bitrate = 32000
     elif target_bitrate <= 96000 * 20:
         max_bitrate = 96000
     elif target_bitrate > 96000 * 20 and target_bitrate < 192000 * 20:
@@ -895,7 +895,7 @@ def compress(
 
         target_video_bitrate, target_audio_bitrate, target_height, target_fps, res_reduction_applied = encode_settings
 
-        is_hq_audio = target_audio_bitrate > 12000 if target_audio_bitrate > 0 else None
+        is_hq_audio = target_audio_bitrate > 32000 if target_audio_bitrate > 0 else None
 
         if is_hq_audio == False:
             force_crush = True
