@@ -374,7 +374,7 @@ def transcode(
     if progress_error != None:
         return progress_error
 
-    audio_channels = 1 if audio_bitrate < 12000 else 2
+    audio_channels = min(get_audio_channel_count(file_input), 2)
 
     pass2_cmd = [
         'ffmpeg',
@@ -565,6 +565,24 @@ def get_audio_bitrate(file_input: str) -> int:
             # Return a high bitrate to be safe.
             return 96000
 
+def get_audio_channel_count(file_input: str) -> int:
+    """ Gets the audio channel-count of the input file """
+    cmd = [
+        'ffprobe',
+        '-loglevel', 'error',
+        '-select_streams', 'a:0',
+        '-show_entries', 'stream=channels',
+        '-of', 'csv=p=0',
+        file_input
+    ]
+
+    channel_count_str = subprocess.check_output(cmd).decode('utf-8').strip()
+
+    try:
+        return int(channel_count_str)
+    except ValueError:
+        return 1
+
 def get_encode_settings(
     target_size_MiB: float,
     fps_mode: int,
@@ -573,6 +591,7 @@ def get_encode_settings(
     fps: float,
     duration: float,
     audio_bitrate: int,
+    audio_channel_count: int,
     factor: float = 1.0,
     force_crush: bool = False,
     locked_in_height: Optional[int] = None,
@@ -800,6 +819,7 @@ def compress(
         rotation = get_rotation(file_input)
         sub_streams = get_subtitle_streams(file_input)
         audio_bitrate = get_audio_bitrate(file_input)
+        audio_channel_count = get_audio_channel_count(file_input)
     except subprocess.CalledProcessError:
         return _("Constrict: Could not retrieve video properties. Source video may be missing or corrupted.")
 
@@ -850,6 +870,7 @@ def compress(
             source_fps,
             duration_seconds,
             audio_bitrate,
+            audio_channel_count,
             factor,
             force_crush,
             lowest_res,
