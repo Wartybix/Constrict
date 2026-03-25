@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Constrict 1.0.1\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
 "POT-Creation-Date: 2026-02-13 14:25+0000\n"
-"PO-Revision-Date: 2026-02-13 20:39+0000\n"
+"PO-Revision-Date: 2026-03-25 14:49+0000\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 "X-DL-VCS-Web: https://gitlab.gnome.org/World/Constrict\n"
 "X-DL-Lang: kw\n"
 "X-DL-Module: Constrict\n"
@@ -38,7 +38,7 @@ msgstr "Gwaskell Gwydhyowyow"
 #: data/io.github.wartybix.Constrict.desktop.in:4
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:9
 msgid "Compress videos to target sizes"
-msgstr "Gwaska gwydhyowyow dhe brasterow hwansys"
+msgstr "Gwaska gwydhyowyow dhe vrasterow hwansys"
 
 #: data/io.github.wartybix.Constrict.desktop.in:10
 msgid "Compress;Video;Movie;Film;Clip;"
@@ -56,43 +56,43 @@ msgid ""
 "encoding at various bitrates yourself."
 msgstr ""
 "Gwaskell gwaska dha gwydhyowyow dhe dha braster restren hwansys — gwerek rag "
-"ughkarga dhe gonisyow gans finwethow braster restrennow komparek. Fydhya "
-"nevra namoy war gonisyow warlinen rag gwaskyans, po an assay-hag-error dre "
-"dhorn a daskodenni dhe kevradhow byttys dyffrans dha honan."
+"ughkarga dhe wonisyow gans finwethow braster restrennow komparek. Fydhya "
+"nevra namoy war wonisyow warlinen rag gwaskyans, po an assay-hag-error dre "
+"dhorn a dhaskodenni dhe gevradhow byttys dyffrans dha honan."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:13
 msgid "Features include:"
-msgstr "Nasyow komprehendya:"
+msgstr "Nasyow synsi:"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:15
 msgid "An intuitive, easy to use interface."
-msgstr "Unn ynterfas es."
+msgstr "Ynterfas es."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:16
 msgid ""
 "Automatic calculation of average bitrate (ABR), resolution, framerate, and "
 "audio quality each video is re-encoded with to meet the target file size."
 msgstr ""
-"Kalkyans awtomatek a kevradh byttys kresek (KBK), braster, kevradh fram, ha "
+"Kalkyans awtomatek a gevradh byttys kresek (KBK), braster, kevradh fram, ha "
 "kwalita son rag daskodennys gwydhyow pub rag hedhes an braster restren "
 "kosten."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:18
 msgid "Bulk compression of multiple videos to one output directory."
-msgstr "Gwaskyans kettermynyek gwydhyowyow liesek dhe unn restrenva eskorrans."
+msgstr "Gwaskyans kettermynyek gwydhyowyow liesek dhe restrenva eskorrans."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:19
 msgid ""
 "Customization of framerate limits, to ensure a clearer or smoother image."
-msgstr "Personelhe finwethow kevradh fram, rag surhe unn gwedh kler."
+msgstr "Personelhe finwethow kevradh fram, rag surhe gwedh kler."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:20
 msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
 msgstr ""
-"Unn dewis a kodekys dhe kodenni restrennow eskorrans gans, komprehendya "
-"H.264, HEVC, AVI, ha VP9."
+"Dewis a godekys rag kodenni restrennow eskorrans, ow synsi H.264, HEVC, AVI, "
+"ha VP9."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:22
 msgid ""
@@ -102,9 +102,9 @@ msgid ""
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
 msgstr ""
-"An app assaya gwitha kwalita klewwelyek kekemmys galladow rag an braster "
-"restren provys. Byttegyns, leheansow purra yn braster restren gallos kawsya "
-"koll kwalita yn an restren eskorrans, ha treweythyow gwaskyans na galladow "
+"An app a wra assaya gwitha kwalita klewwelyek kekemmys galladow rag an "
+"braster restren provys. Byttegyns, leheansow purra yn braster restren a yll "
+"kawsya koll kwalita y'n restren eskorrans, ha treweythyow gwaskyans ny yllir "
 "banna. Oll argerdhow happya leel — ytho tooth gwaskyans yw uskis dell dha "
 "kalesweyth alowa."
 
@@ -118,11 +118,11 @@ msgstr "An app dres gwaskyans"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:69
 msgid "A mobile friendly UI"
-msgstr "Unn ynterfas kowethek dhe kellgowsoryon"
+msgstr "Ynterfas kowethek dhe glapkodhow"
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:73
 msgid "Compression settings in the mobile friendly UI"
-msgstr "Settyansow gwaskyans yn an ynterfas kellgowser"
+msgstr "Settyansow gwaskyans y'n ynterfas klapkodh"
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
 msgid "Framerate Limit"
@@ -132,7 +132,7 @@ msgstr "Finweth Kevradh Fram"
 msgid ""
 "Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
 msgstr ""
-"Finwetha kevradhow fram a gwydhyowyow gwaskys yn awtomatek, po dhe 90 FDE po "
+"Finwetha kevradhow fram a wydhyowyow gwaskys yn awtomatek, po dhe 90 FDE po "
 "60FDE."
 
 #: data/io.github.wartybix.Constrict.gschema.xml.in:38
@@ -186,7 +186,7 @@ msgstr "kbde"
 #: src/attempt_fail_box.py:92
 #, python-brace-format
 msgid "Compressed file size was too large ({size} {unit})"
-msgstr "Braster restren gwaskys yw re bras ({size} {unit})"
+msgstr "Braster restren gwaskys yw re vras ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
@@ -200,7 +200,7 @@ msgstr "MiB"
 #: src/attempt_fail_box.py:102
 #, python-brace-format
 msgid "Compressed file size was too small ({size} {unit})"
-msgstr "Braster restren gwaskys yw re byghan ({size} {unit})"
+msgstr "Braster restren gwaskys yw re vyghan ({size} {unit})"
 
 #: src/constrict_utils.py:781
 msgid ""
@@ -225,16 +225,16 @@ msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr ""
-"Gwaskell: Ny yllir gul restren esperthys. Unn restren gans an hanow "
-"ragerghys eksistya seulabrys."
+"Gwaskell: Ny yllir gul restren esperthys. Yma restren gans an hanow "
+"ragerghys seulabrys."
 
 #: src/constrict_utils.py:813
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr ""
-"Gwaskell: Ny yllir gul restren esperthys. Yma grontys anlowr rag gul unn "
-"restren yn an tyller esperth pejys."
+"Gwaskell: Ny yllir gul restren esperthys. Yma grontys anlowr rag gul restren "
+"y'n tyller esperth pejys."
 
 #: src/constrict_utils.py:879
 msgid ""
@@ -254,7 +254,7 @@ msgstr ""
 #. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
 #: src/current_attempt_box.blp:24
 msgid "Initializing…"
-msgstr "Dalleth…"
+msgstr "Ow Dalleth…"
 
 #. TRANSLATORS: {vid_br} represents an integer.
 #. {vid_br_unit} represents a bitrate unit, like 'kbps'.
@@ -337,7 +337,7 @@ msgstr "Kopia Manylyon"
 #. error.
 #: src/error_dialog.py:47
 msgid "There was a problem compressing “{}”"
-msgstr "Yma unn kudyn gwaska “{}”"
+msgstr "Yma kudyn ow gwaska “{}”"
 
 #: src/error_dialog.py:69
 msgid "Details copied to clipboard"
@@ -426,15 +426,15 @@ msgid ""
 "selected video codec, and “Extra Quality” is disabled"
 msgstr ""
 "Uskisheans kalesweyth yw devnydhys hepken a dha GPU skoodhya kodenni gans an "
-"kodek gwydhyow dewisys, ha “Kwalita Moy” yw ungallosegys"
+"kodek gwydhyow dewisys, ha “Kwalita Moy” yw marowhys"
 
 #: src/preferences_dialog.blp:14
 msgid "GPU Encoding"
-msgstr "Kodennyans GPU"
+msgstr "Kodennans GPU"
 
 #: src/preferences_dialog.blp:15
 msgid "Use the GPU to speed up encoding when available"
-msgstr "Devnydhya an GPU rag uskishe kodennyans pan kavadow"
+msgstr "Devnydhya an GPU rag uskishe kodennans pan gavadow"
 
 #: src/preferences_dialog.blp:20
 msgid "Exported Video Suffix"
@@ -450,8 +450,8 @@ msgid ""
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
 msgstr ""
 "Devnydhys yn henwyn restrennow rag gwydhyowyow esperthys, tredh an hanow "
-"chif hag ystynnans. A an lostelven a-vusur remaynya gwag, an lostelven "
-"defowt “{}” a vydh devnydhya."
+"chif hag ystynnans. Mars an lostelven a-vusur remaynya gwag, an lostelven "
+"defowt “{}” a vydh bos devnydhys."
 
 #: src/preferences_dialog.py:64
 msgid "Changes applied"
@@ -479,7 +479,7 @@ msgstr "Gweles Manylyon Error"
 
 #: src/sources_row.blp:63
 msgid "Cannot load video. It may be missing or corrupted."
-msgstr "Y fyllis dhe karga gwydhyow. Y'n yw martesen kellys po legrys."
+msgstr "Y fyllis karga gwydhyow. Martesen kellys po legrys yw."
 
 #: src/sources_row.blp:100
 msgid "View Compression Progress"
@@ -541,7 +541,7 @@ msgstr "_Kesunyansow Bysowek"
 
 #: src/window.blp:11
 msgid "_About Constrict"
-msgstr "_A-dro Gwaskell"
+msgstr "_A-dro dhe Waskell"
 
 #: src/window.blp:49 src/window.blp:111
 msgid "Main Menu"
@@ -565,7 +565,7 @@ msgstr "_Awtomatek"
 
 #: src/window.blp:160
 msgid "Use the highest framerate without sacrificing resolution"
-msgstr "Devnydhya an kovradh fram ughella neb sakrifisa kwalita"
+msgstr "Devnydhya an kevradh fram ughella heb ow sakrifisa kwalita"
 
 #: src/window.blp:172
 msgid "Ensure higher image clarity"
@@ -589,7 +589,7 @@ msgstr "K_walita Moy"
 
 #: src/window.blp:208
 msgid "Increase image quality at the cost of compression time"
-msgstr "Ynkressya kwalita gweyth gans kost a termyn gwaskyans"
+msgstr "Ynkressya kwalita gweyth gans kost a dermyn gwaskyans"
 
 #: src/window.blp:213
 msgid "Advanced Options"
@@ -601,7 +601,7 @@ msgstr "_Perthyans (%)"
 
 #: src/window.blp:240
 msgid "How far end file sizes can be below target"
-msgstr "Pygemmys brasterow finek restren yw alowys bos a-woles dhe kosten"
+msgstr "Pygemmys brasterow finek restren a yll bos a-woles dhe gosten"
 
 #: src/window.blp:264
 msgid "Toggle Settings Pane"
@@ -613,7 +613,7 @@ msgstr "Kudynnow gans gwydhyowyow — ewnhe dherag gwaskyans"
 
 #: src/window.blp:300
 msgid "Video Sources"
-msgstr "Gwydhyowyow"
+msgstr "Devedhyansow Gwydhyowyow"
 
 #: src/window.blp:304
 msgid "_Clear All"
@@ -640,7 +640,7 @@ msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr ""
-"Gwydhyowyow gwaskys dhe kovradhow byttys isel yw martesen strothys dhe {} "
+"Gwydhyowyow gwaskys dhe gevradhow byttys isel yw martesen strothys dhe {} "
 "FDE, ny vern an dewis dewisys."
 
 #. TRANSLATORS: {} represents an integer.
@@ -653,9 +653,9 @@ msgid ""
 "tolerance of {} % or more is recommended."
 msgstr ""
 "Iselhe an perthyans kowlvoghhe kwalita gweyth gans byghanhe pygemmys "
-"brasterow restren gwaskys yw alowys bos a-woles dhe kosten. Byttegyns, ma yw "
-"martesen kressya an niver assays rag hedhes an kosten, kressya termyn "
-"gwaskyans. Unn perthyans a {}% po my yw komendys."
+"brasterow restren gwaskys yw alowys bos a-woles dhe gosten. Byttegyns, hemma "
+"a yll kressya an niver a assays rag hedhes an gosten, ow kressya termyn "
+"gwaskyans. Perthyans a {}% po moy yw komendys."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
 #: src/window.py:249
@@ -666,7 +666,7 @@ msgstr "Bra_ster Kosten ({})"
 #. being processed.
 #: src/window.py:365
 msgid "Processing “{}”"
-msgstr "Argerdhes “{}”"
+msgstr "Owth Argerdhes “{}”"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
