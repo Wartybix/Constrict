@@ -110,6 +110,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
     main_view_title = Gtk.Template.Child()
     adv_options_help_label = Gtk.Template.Child()
     adv_options_help_popover = Gtk.Template.Child()
+    enc_options_help_label = Gtk.Template.Child()
+    enc_options_help_popover = Gtk.Template.Child()
     fps_help_label = Gtk.Template.Child()
     fps_help_popover = Gtk.Template.Child()
     window_breakpoint = Gtk.Template.Child()
@@ -170,6 +172,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
         self.tolerance_input.connect("value-changed", self.refresh_previews)
 
         self.fps_help_popover.connect("show", self.read_fps_popover)
+        self.enc_options_help_popover.connect(
+            "show",
+            self.read_enc_options_popover)
         self.adv_options_help_popover.connect(
             "show",
             self.read_adv_options_popover
@@ -233,6 +238,13 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 .format('24')
         )
 
+        self.enc_options_help_label.set_label(
+            # TRANSLATORS: This is about video-encoding-formats.
+            # {value} represents an integer
+            # {unit} represents a bitrate unit, i.e. 'kbps'
+            _('H.264 is recommended for resolutions up to 1080p.\n\nH.265 (HEVC), AV1, and VP9, are optimized for resolutions of 1080p and higher.')
+        )
+
         default_tolerance = self.settings.get_default_value('tolerance')
 
         self.adv_options_help_label.set_label(
@@ -253,6 +265,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
         'FPS limit help' popover.
         """
         message = self.fps_help_label.get_text()
+
+        self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
+
+    def read_enc_options_popover(self, widget: Gtk.Widget, *args: Any):
+        """ Use the screen reader to announce the contents of the
+        'encoding options help' popover.
+        """
+        message = self.enc_options_help_label.get_text()
 
         self.announce(message, Gtk.AccessibleAnnouncementPriority.MEDIUM)
 

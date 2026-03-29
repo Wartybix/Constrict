@@ -38,6 +38,13 @@ class PreferencesDialog(Adw.PreferencesDialog):
     def __init__(self, application: Adw.Application, **kwargs: Any) -> None:
         super().__init__(**kwargs)
 
+        self.hw_accel_group.set_description(
+            # TRANSLATORS: {} represents a resolution, like '360p'.
+            _('Hardware acceleration is only used if your GPU supports encoding with the selected video codec. Additionally, it’s only used when compressing to {} or higher, with “Extra Quality” disabled.'
+                .format('360p')
+            )
+        )
+
         self.suffix_group.set_description(
             _('Used in file names for exported videos, between the base name and extension. If the custom suffix is left empty, the default suffix of “{}” will be used.')
                 .format(application.default_suffix)

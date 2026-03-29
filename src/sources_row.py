@@ -31,7 +31,7 @@ gi.require_version('GlyGtk4', '2')
 from gi.repository import Adw, Gtk, Gio, GLib, Gdk, Gly, GlyGtk4
 from pathlib import Path
 from constrict.shared import get_tmp_dir, update_ui
-from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration, get_audio_bitrate
+from constrict.constrict_utils import get_encode_settings, get_resolution, get_framerate, get_duration, get_audio_bitrate, get_audio_channel_count
 from constrict.enums import SourceState
 from constrict.progress_pie import ProgressPie
 from constrict.attempt_fail_box import AttemptFailBox
@@ -92,6 +92,7 @@ class SourcesRow(Adw.ActionRow):
         self.fps = None
         self.duration = None
         self.audio_bitrate = None
+        self.audio_channel_count = None
         self.state = SourceState.PENDING
         self.error_details = ""
         self.error_action = error_action
@@ -372,6 +373,15 @@ class SourcesRow(Adw.ActionRow):
 
         return self.audio_bitrate
 
+    def get_audio_channel_count(self) -> int:
+        """ Get the audio-channel-count of the video represented by the row. This
+        value is cached within the object after first fetching it.
+        """
+        if self.audio_channel_count is None:
+            self.audio_channel_count = get_audio_channel_count(self.video_path)
+
+        return self.audio_channel_count
+
     def set_thumbnail(self, file_hash: int, daemon: bool) -> None:
         """ Set a thumbnail for the row, by running a thumbnailer on the video
         this row represents, and storing it named with the video's file hash
@@ -567,6 +577,7 @@ class SourcesRow(Adw.ActionRow):
             fps = self.get_fps()
             duration = self.get_duration()
             audio_bitrate = self.get_audio_bitrate()
+            audio_channel_count = self.get_audio_channel_count()
         except subprocess.CalledProcessError:
             self.set_state(SourceState.BROKEN, daemon)
             return
@@ -587,6 +598,7 @@ class SourcesRow(Adw.ActionRow):
             assumed_fps,
             duration,
             audio_bitrate,
+            audio_channel_count,
             1.0,
             False,
             None,

@@ -194,6 +194,28 @@ template $ConstrictWindow: Adw.ApplicationWindow {
               Adw.PreferencesGroup {
                 title: _("Encoding Options");
 
+                [header-suffix]
+                MenuButton {
+                  icon-name: "help-about-symbolic";
+                  tooltip-text: _("More Information");
+                  popover: Popover enc_options_help_popover {
+                    child: Label enc_options_help_label {
+                      halign: center;
+                      margin-start: 6;
+                      margin-end: 6;
+                      margin-top: 6;
+                      margin-bottom: 6;
+                      wrap: true;
+                      max-width-chars: 30;
+                      valign: center;
+                    };
+                  };
+
+                  styles [
+                    "flat"
+                  ]
+                }
+
                 Adw.ComboRow codec_dropdown {
                   title: _("_Video Codec");
                   use-underline: true;
