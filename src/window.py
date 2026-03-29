@@ -240,7 +240,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         self.enc_options_help_label.set_label(
             # TRANSLATORS: This is about video-encoding-formats.
-            _('H.264 is recommended for resolutions up to 1080p.\nH.265 (HEVC), AV1, and VP9, are optimised for resolutions of 1080p and higher.\n\nWhen encoding to a low video-bitrate (< 276kbps), additional time will be used for encoding.')
+            # {value} represents an integer
+            # {unit} represents a bitrate unit, i.e. 'kbps'
+            _('H.264 is recommended for resolutions up to 1080p.\n\nH.265 (HEVC), AV1, and VP9, are optimized for resolutions of 1080p and higher.')
         )
 
         default_tolerance = self.settings.get_default_value('tolerance')

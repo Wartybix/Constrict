@@ -3,12 +3,11 @@ using Adw 1;
 
 template $PreferencesDialog: Adw.PreferencesDialog {
   title: _("Preferences");
-  content-height: 410; // TODO: remove when fixed upstream
+  content-height: 425; // TODO: remove when fixed upstream
 
   Adw.PreferencesPage {
     Adw.PreferencesGroup hw_accel_group {
       title: _("Hardware Acceleration");
-      description: _("Hardware acceleration is only used if your GPU supports encoding with the selected video codec, and “Extra Quality” is disabled");
 
       Adw.SwitchRow gpu_encoding_row {
         title: _("GPU Encoding");
