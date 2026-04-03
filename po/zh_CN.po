@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-02-13 14:25+0000\n"
-"PO-Revision-Date: 2026-02-24 12:54+0800\n"
+"POT-Creation-Date: 2026-03-30 19:15+0000\n"
+"PO-Revision-Date: 2026-04-03 08:08+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:408
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -175,8 +175,8 @@ msgstr "压缩的文件尺寸太大了（{size} {unit}）"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
-#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
-#: src/sources_row.py:545 src/window.py:246
+#: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
+#: src/sources_row.py:555 src/window.py:255
 msgid "MiB"
 msgstr "MiB"
 
@@ -187,13 +187,13 @@ msgstr "MiB"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "压缩的文件尺寸太小了（{size} {unit}）"
 
-#: src/constrict_utils.py:781
+#: src/constrict_utils.py:814
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr "Constrict：无法读取输入文件。其是否在压缩前被移动或删除了？"
 
-#: src/constrict_utils.py:804
+#: src/constrict_utils.py:838
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -201,25 +201,25 @@ msgstr "Constrict：无法获取视频属性。源视频可能缺失或已损坏
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:811
+#: src/constrict_utils.py:845
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr "Constrict：无法创建导出文件。同名文件已经存在。"
 
-#: src/constrict_utils.py:813
+#: src/constrict_utils.py:847
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr "Constrict：无法创建导出文件。没有在请求的导出路径创建文件的权限。"
 
-#: src/constrict_utils.py:879
+#: src/constrict_utils.py:914
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr "Constrict：视频比特率太低了（<5 kbps）。目标大小对于此文件太小了。"
 
-#: src/constrict_utils.py:924
+#: src/constrict_utils.py:959
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr "Constrict：无法读取输出文件。其是否在压缩中被移动或删除了？"
@@ -390,29 +390,33 @@ msgstr "首选项"
 msgid "Hardware Acceleration"
 msgstr "硬件加速"
 
-#: src/preferences_dialog.blp:11
-msgid ""
-"Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality” is disabled"
-msgstr "硬件加速仅在您的显卡支持使用选中编码器编码且禁用“额外质量”时可用"
-
-#: src/preferences_dialog.blp:14
+#: src/preferences_dialog.blp:13
 msgid "GPU Encoding"
 msgstr "显卡编码"
 
-#: src/preferences_dialog.blp:15
+#: src/preferences_dialog.blp:14
 msgid "Use the GPU to speed up encoding when available"
 msgstr "当可用时使用显卡加速编码"
 
-#: src/preferences_dialog.blp:20
+#: src/preferences_dialog.blp:19
 msgid "Exported Video Suffix"
 msgstr "导出视频的后缀"
 
-#: src/preferences_dialog.blp:23
+#: src/preferences_dialog.blp:22
 msgid "Custom Suffix"
 msgstr "自定义后缀"
 
-#: src/preferences_dialog.py:42
+#. TRANSLATORS: {} represents a resolution, like '360p'.
+#: src/preferences_dialog.py:43
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec. Additionally, it’s only used when compressing to {} or "
+"higher, with “Extra Quality” disabled."
+msgstr ""
+"硬件加速仅在您的显卡支持使用选中编码器编码时可用。另外，仅当压缩至 {} 或更高"
+"且禁用“额外质量”时可用。"
+
+#: src/preferences_dialog.py:49
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
@@ -420,7 +424,7 @@ msgstr ""
 "用于导出视频的文件名，位于基础名和扩展名之间。如果自定义后缀留空，则会使用默"
 "认的后缀“{}”。"
 
-#: src/preferences_dialog.py:64
+#: src/preferences_dialog.py:71
 msgid "Changes applied"
 msgstr "更改已应用"
 
@@ -440,7 +444,7 @@ msgstr "下移(_D)"
 msgid "_Remove"
 msgstr "移除(_R)"
 
-#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:458
 msgid "View Error Details"
 msgstr "查看错误详情"
 
@@ -464,13 +468,14 @@ msgstr "显示文件位置"
 msgid "View More"
 msgstr "查看更多"
 
-#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+#: src/sources_row.py:481 src/window.blp:137 src/window.blp:200
+#: src/window.blp:240
 msgid "More Information"
 msgstr "更多信息"
 
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MiB'.
-#: src/sources_row.py:495
+#: src/sources_row.py:505
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr "视频压缩至 {size} {unit}。"
@@ -478,7 +483,7 @@ msgstr "视频压缩至 {size} {unit}。"
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'.
-#: src/sources_row.py:523
+#: src/sources_row.py:533
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -489,7 +494,7 @@ msgstr ""
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
-#: src/sources_row.py:543
+#: src/sources_row.py:553
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "目标大小（{size} {unit}）对于此文件太小了。"
@@ -546,70 +551,81 @@ msgstr "确保更流畅的动效"
 msgid "Encoding Options"
 msgstr "编码选项"
 
-#: src/window.blp:198
+#: src/window.blp:220
 msgid "_Video Codec"
 msgstr "视频编码(_V)"
 
-#: src/window.blp:206
+#: src/window.blp:228
 msgid "Extra _Quality"
 msgstr "额外质量(_Q)"
 
-#: src/window.blp:208
+#: src/window.blp:230
 msgid "Increase image quality at the cost of compression time"
 msgstr "花费更多压缩时间以增强图像质量"
 
-#: src/window.blp:213
+#: src/window.blp:235
 msgid "Advanced Options"
 msgstr "高级选项"
 
-#: src/window.blp:238
+#: src/window.blp:260
 msgid "_Tolerance (%)"
 msgstr "公差（%）(_T)"
 
-#: src/window.blp:240
+#: src/window.blp:262
 msgid "How far end file sizes can be below target"
 msgstr "输出文件大小可小于目标多少"
 
-#: src/window.blp:264
+#: src/window.blp:286
 msgid "Toggle Settings Pane"
 msgstr "开关设置面板"
 
-#: src/window.blp:274
+#: src/window.blp:296
 msgid "Issues with video sources — fix before compressing"
 msgstr "视频源存在问题 — 在压缩前修复"
 
-#: src/window.blp:300
+#: src/window.blp:322
 msgid "Video Sources"
 msgstr "视频源"
 
-#: src/window.blp:304
+#: src/window.blp:326
 msgid "_Clear All"
 msgstr "全部清除(_C)"
 
-#: src/window.blp:325
+#: src/window.blp:347
 msgid "_Export To…"
 msgstr "导出至(_E)…"
 
-#: src/window.blp:341
+#: src/window.blp:363
 msgid "_Cancel…"
 msgstr "取消(_C)…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:224
+#: src/window.py:229
 msgid "{} FPS"
 msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:232
+#: src/window.py:237
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr "视频压缩至低比特率可能会限制为 {} FPS，与选项设置无关。"
 
+#: src/window.py:242
+msgid ""
+"H.264 is recommended for resolutions up to 1080p.\n"
+"\n"
+"H.265 (HEVC), AV1, and VP9, are optimized for resolutions of 1080p and "
+"higher."
+msgstr ""
+"推荐对至高 1080p 的分辨率使用 H.264。\n"
+"\n"
+"对 1080p 和更高分辨率使用 H.265（HEVC）、AV1 和 VP9"
+
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:241
+#: src/window.py:250
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -621,110 +637,110 @@ msgstr ""
 "加满足目标的尝试次数，增加压缩时间。推荐 {} % 或更大的公差。"
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:249
+#: src/window.py:258
 msgid "Target _Size ({})"
 msgstr "目标大小（{}）(_S)"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being processed.
-#: src/window.py:365
+#: src/window.py:382
 msgid "Processing “{}”"
 msgstr "正在处理“{}”"
 
 #. TRANSLATORS: {index} represents the index of the video
 #. currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:371
+#: src/window.py:388
 #, python-brace-format
 msgid "{index}/{total} Videos Processed"
 msgstr "已处理 {index}/{total} 个视频"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:381
+#: src/window.py:398
 msgid "Exporting to {}"
 msgstr "正在导出至 {}"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. queued.
-#: src/window.py:396
+#: src/window.py:413
 msgid "“{}” Queued"
 msgstr "“{}”已排队"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
+#: src/window.py:417
 msgid "{} Videos Queued"
 msgstr "{} 个视频已排队"
 
-#: src/window.py:533
+#: src/window.py:550
 msgid "Stop Compression?"
 msgstr "停止压缩吗？"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:553
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}”的压缩进度将会永久丢失"
 
-#: src/window.py:542
+#: src/window.py:559
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/window.py:543
+#: src/window.py:560
 msgid "_Stop"
 msgstr "停止(_S)"
 
-#: src/window.py:597
+#: src/window.py:614
 msgid "Compression Complete"
 msgstr "压缩完成"
 
 #. TRANSLATORS: {} represents the filename of the video that has
 #. been processed.
-#: src/window.py:604
+#: src/window.py:621
 msgid "“{}” processed"
 msgstr "已处理“{}”"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
+#: src/window.py:626
 msgid "{} files processed"
 msgstr "已处理 {} 个文件"
 
-#: src/window.py:620
+#: src/window.py:637
 msgid "Open Export Directory"
 msgstr "打开导出目录"
 
-#: src/window.py:696
+#: src/window.py:713
 msgid "Videos are being compressed"
 msgstr "正在压缩视频"
 
-#: src/window.py:716
+#: src/window.py:733
 msgid "Analyzing…"
 msgstr "正在分析…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:811
+#: src/window.py:828
 msgid "Error compressing “{}”"
 msgstr "压缩“{}”时出错"
 
-#: src/window.py:814
+#: src/window.py:831
 msgid "View _Details"
 msgstr "查看详情(_D)"
 
-#: src/window.py:849
+#: src/window.py:866
 msgid "Compression complete"
 msgstr "压缩完成"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:960
+#: src/window.py:977
 msgid "Unknown video format “{}”"
 msgstr "未知视频格式“{}”"
 
-#: src/window.py:991
+#: src/window.py:1008
 msgid "Videos"
 msgstr "视频"
 
-#: src/window.py:994
+#: src/window.py:1011
 msgid "Pick Videos"
 msgstr "拾取视频"
