@@ -172,7 +172,8 @@ class ConstrictApplication(Adw.Application):
 
         about.set_developers([
             'Wartybix https://gitlab.gnome.org/wartybix',
-            'Philipp Kosarev https://github.com/PhilippKosarev'
+            'Philipp Kosarev https://github.com/PhilippKosarev',
+            'MoonlightWave-12 https://gitlab.gnome.org/MoonlightWave-12'
         ])
 
         about.set_artists(['Jakub Steiner <jimmac@gmail.com>'])
