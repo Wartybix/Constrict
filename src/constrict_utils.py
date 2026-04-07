@@ -64,8 +64,15 @@ def get_res_preset(
     resolution (i.e. an upscaled or stretched resolution).
     """
 
+    if source_width % 2:
+        source_width += 1
+
+    if source_height % 2:
+        source_height += 1
+
     source_pixels = source_width * source_height  # Get pixel count
     bitrate_kbps = bitrate / 1000  # Convert to kilobits
+
     """
     Bitrate-resolution recommendations are taken from:
     https://developers.google.com/media/vp9/settings/vod
