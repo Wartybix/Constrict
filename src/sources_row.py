@@ -677,6 +677,20 @@ class SourcesRow(Adw.ActionRow):
         """
         row.complete_popover.popdown()
         compressed_file = Gio.File.new_for_path(row.compressed_path)
+
+        compressed_info = compressed_file.query_info(
+            'xattr::document-portal.host-path',
+            Gio.FileQueryInfoFlags.NONE,
+            None
+        )
+
+        host_path = compressed_info.get_attribute_string(
+           "xattr::document-portal.host-path"
+        )
+
+        if host_path:
+            compressed_file = Gio.File.new_for_path(host_path)
+
         file_launcher = Gtk.FileLauncher.new(compressed_file)
         file_launcher.open_containing_folder()
 
