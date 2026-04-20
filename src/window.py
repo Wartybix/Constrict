@@ -840,7 +840,11 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 continue
 
             if not self.compressing:
-                video.set_state(SourceState.PENDING, daemon)
+                video.set_preview(
+                    self.get_target_size,
+                    self.get_fps_mode,
+                    daemon
+                )
 
                 trash_video()
 
