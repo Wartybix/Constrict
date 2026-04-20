@@ -182,6 +182,7 @@ class ConstrictApplication(Adw.Application):
 
         about.add_acknowledgement_section(
             # TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+            # This string is a heading of a list of names (i.e. credits section)
             _('‘{}’ repository by').format('8mb'),
             [
                 'Matthew Baggett https://github.com/matthewbaggett/',
@@ -189,10 +190,12 @@ class ConstrictApplication(Adw.Application):
             ]
         )
         about.add_acknowledgement_section(
+            # TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
             _('Circular progress indicator design by'),
             ['Christian Hergert https://gitlab.gnome.org/chergert']
         )
         about.add_acknowledgement_section(
+            # TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
             _('Drag overlay design by'),
             [
                 'Sophie Herold https://gitlab.gnome.org/sophie-h',
