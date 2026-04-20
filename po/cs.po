@@ -1,0 +1,781 @@
+# Czech translation for Constrict.
+# Copyright (C) 2026 Constrict's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Constrict package.
+# Seja Studio <seja.czstudio@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Constrict main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
+"POT-Creation-Date: 2026-04-07 05:56+0000\n"
+"PO-Revision-Date: 2026-04-20 14:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: Czech <Czech>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 3.8\n"
+
+#: data/io.github.wartybix.Constrict.desktop.in:2
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
+#: src/window.blp:42 src/window.blp:104 src/window.py:408
+msgid "Constrict"
+msgstr "Constrict"
+
+#: data/io.github.wartybix.Constrict.desktop.in:3
+msgid "Video Compressor"
+msgstr "Kompresor videí"
+
+#: data/io.github.wartybix.Constrict.desktop.in:4
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:9
+msgid "Compress videos to target sizes"
+msgstr "Komprimujte videa na cílovou velikost"
+
+#: data/io.github.wartybix.Constrict.desktop.in:10
+msgid "Compress;Video;Movie;Film;Clip;"
+msgstr "Komprese;Komprimovat;Video;Film;Klip;"
+
+#: data/io.github.wartybix.Constrict.desktop.in:20
+msgid "New Window"
+msgstr "Nové okno"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:11
+msgid ""
+"Constrict compresses your videos to your chosen file size — useful for "
+"uploading to services with specific file size limits. No more relying on "
+"online services for video compression, or the manual trial-and-error of re-"
+"encoding at various bitrates yourself."
+msgstr ""
+"Constrict komprimuje vaše videa na vámi zvolenou velikost souboru — to je "
+"užitečné při nahrávání na služby se specifickými limity velikosti souboru. "
+"Už nemusíte spoléhat na online služby pro kompresi videí nebo opakované "
+"ruční kódování v různých datových tocích stylem pokus/omyl."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:13
+msgid "Features include:"
+msgstr "Funkce zahrnují:"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:15
+msgid "An intuitive, easy to use interface."
+msgstr "Intuitivní, snadno použitelné rozhraní."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:16
+msgid ""
+"Automatic calculation of average bitrate (ABR), resolution, framerate, and "
+"audio quality each video is re-encoded with to meet the target file size."
+msgstr ""
+"Automatický výpočet průměrného datového toku, rozlišení, snímkové frekvence "
+"a kvality zvuku pro každé video tak, aby byla splněna cílová velikost "
+"souboru."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:18
+msgid "Bulk compression of multiple videos to one output directory."
+msgstr "Hromadná komprese více videí do jedné výstupní složky."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:19
+msgid ""
+"Customization of framerate limits, to ensure a clearer or smoother image."
+msgstr ""
+"Možnost přizpůsobení limitů snímkové frekvence, k zajištění čistšího nebo "
+"plynulejšího obrazu."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:20
+msgid ""
+"A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
+"and VP9."
+msgstr ""
+"Nabídka kodeků pro kódování výstupních souborů, zahrnující H.264, HEVC, AV1 "
+"a VP9."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:22
+msgid ""
+"The app attempts to retain as much audiovisual quality as possible for the "
+"file size given. However, extremely steep reductions in file size can cause "
+"significant loss of quality in the output file, and sometimes compression "
+"may not be possible at all. All processing is done locally — and as such, "
+"compression speeds are only as fast as your hardware allows."
+msgstr ""
+"Aplikace se pokusí zachovat co nejlepší audiovizuální kvalitu pro uvedenou "
+"velikost. Příliš velká redukce velikosti souboru však může způsobit výraznou "
+"ztrátu kvality ve výstupu a v některých případech nemusí být komprese možná. "
+"Všechno zpracovávání je prováděno lokálně — to znamená, že rychlost komprese "
+"je přímo závislá na schopnostech vašeho hardwaru."
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:61
+msgid "Source videos queued for compression"
+msgstr "Zdrojová videa připravená ke kompresi"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:65
+msgid "The application mid-compression"
+msgstr "Aplikace v průběhu komprese"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:69
+msgid "A mobile friendly UI"
+msgstr "Uživatelské rozhraní vhodné pro mobilní zařízení"
+
+#: data/io.github.wartybix.Constrict.metainfo.xml.in:73
+msgid "Compression settings in the mobile friendly UI"
+msgstr ""
+"Nastavení komprese v uživatelském rozhraní vhodném pro mobilní zařízení"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:31 src/window.blp:132
+msgid "Framerate Limit"
+msgstr "Limit snímkové frekvence"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:32
+msgid ""
+"Limits framerates of compressed videos automatically, or to 30 FPS or 60 FPS."
+msgstr ""
+"Omezuje snímkové frekvence komprimovaných videí automaticky, na 30 FPS nebo "
+"na 60 FPS."
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:38
+msgid "Video Codec"
+msgstr "Video kodek"
+
+#: data/io.github.wartybix.Constrict.gschema.xml.in:39
+msgid "The codec used to encode with during compression"
+msgstr "Kodek použitý pro kódování v průběhu komprese"
+
+#. TRANSLATORS: {} represents the attempt number.
+#: src/attempt_fail_box.py:52 src/current_attempt_box.py:42
+#: src/current_attempt_box.py:66
+msgid "Attempt {}"
+msgstr "Pokus č. {}"
+
+#. TRANSLATORS: this is an abbreviation of 'High Quality'
+#: src/attempt_fail_box.py:55 src/current_attempt_box.py:70
+msgid "HQ"
+msgstr "HQ"
+
+#. TRANSLATORS: this is an abbreviation of 'Low Quality'
+#: src/attempt_fail_box.py:58 src/current_attempt_box.py:73
+msgid "LQ"
+msgstr "LQ"
+
+#. TRANSLATORS:
+#. {res_fps} represents a resolution + framerate (e.g. '1080p@30').
+#. {audio_quality} represents audio quality (i.e. 'HQ' or 'LQ').
+#: src/attempt_fail_box.py:68 src/current_attempt_box.py:83
+#, python-brace-format
+msgid "{res_fps}, {audio_quality} audio"
+msgstr "{res_fps}, {audio_quality} zvuk"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/attempt_fail_box.py:78
+#, python-brace-format
+msgid "{vid_br} {vid_br_unit} ({extra_details})"
+msgstr "{vid_br} {vid_br_unit} ({extra_details})"
+
+#. TRANSLATORS: This is the SI unit for 'kilobits per second'.
+#: src/attempt_fail_box.py:81 src/current_attempt_box.py:95
+msgid "kbps"
+msgstr "kb/s"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:92
+#, python-brace-format
+msgid "Compressed file size was too large ({size} {unit})"
+msgstr "Velikost komprimovaného souboru byla příliš velká ({size} {unit})"
+
+#. TRANSLATORS: this is the SI unit for 'mebibyte'.
+#: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
+#: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
+#: src/sources_row.py:555 src/window.py:255
+msgid "MiB"
+msgstr "MiB"
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents a
+#. file size unit like 'MiB'.
+#: src/attempt_fail_box.py:102
+#, python-brace-format
+msgid "Compressed file size was too small ({size} {unit})"
+msgstr "Velikost komprimovaného souboru byla příliš malá ({size} {unit})"
+
+#: src/constrict_utils.py:821
+msgid ""
+"Constrict: Could not read input file. Was it moved or deleted before "
+"compression?"
+msgstr ""
+"Constrict: Nebylo možné přečíst vstupní soubor. Možná byl před kompresí "
+"přesunut nebo odstraněn?"
+
+#: src/constrict_utils.py:845
+msgid ""
+"Constrict: Could not retrieve video properties. Source video may be missing "
+"or corrupted."
+msgstr ""
+"Constrict: Nebylo možné získat vlastnosti videa. Zdrojové video může chybět "
+"nebo být poškozené."
+
+#. This should never happen if a unique file name has been passed to
+#. this function as file_output.
+#: src/constrict_utils.py:852
+msgid ""
+"Constrict: Could not create exported file. A file with the reserved name "
+"already exists."
+msgstr ""
+"Constrict: Nebylo možné vytvořit výsledný soubor. Soubor se zvoleným jménem "
+"již existuje."
+
+#: src/constrict_utils.py:854
+msgid ""
+"Constrict: Could not create exported file. There are insufficient "
+"permissions to create a file at the requested export path."
+msgstr ""
+"Constrict: Nebylo možné vytvořit výsledný soubor. Oprávnění pro vytvoření "
+"souboru na určeném umístění jsou nedostatečná."
+
+#: src/constrict_utils.py:921
+msgid ""
+"Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
+"low for this file."
+msgstr ""
+"Constrict: Datový tok videa je příliš nízký (<5 kb/s). Cílová velikost je "
+"pro tento soubor příliš nízká."
+
+#: src/constrict_utils.py:966
+msgid ""
+"Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
+msgstr ""
+"Constrict: Není možné přečíst výstupní soubor. Možná byl přesunut nebo "
+"vymazán v průběhu komprese?"
+
+#. TRANSLATORS: please use U+2026 Horizontal ellipsis (…) instead of '...', if applicable to your language.
+#: src/current_attempt_box.blp:24
+msgid "Initializing…"
+msgstr "Inicializace…"
+
+#. TRANSLATORS: {vid_br} represents an integer.
+#. {vid_br_unit} represents a bitrate unit, like 'kbps'.
+#. {extra_details} will either display resolution/FPS and audio quality
+#. details, or just resolution/FPS if the video has no audio streams.
+#: src/current_attempt_box.py:92
+#, python-brace-format
+msgid "Compressing to {vid_br} {vid_br_unit} ({extra_details})"
+msgstr "Komprimování na {vid_br} {vid_br_unit} ({extra_details})"
+
+#. Acknowledgements: thank you to Nautilus for the ideas on where to set
+#. different thresholds for which time unit(s) to display. Particularly
+#. the 4 hour mark where minutes should no longer be displayed.
+#. https://gitlab.gnome.org/GNOME/nautilus/-/blob/af7e419eaa7e167ecbc059d51e06e72e11a2f1c8/src/nautilus-file-operations.c
+#. TRANSLATORS: {} represents the progress percentage value.
+#: src/current_attempt_box.py:122
+msgid "{} %"
+msgstr "{} %"
+
+#. TRANSLATORS: {} represents the progress percentage.
+#: src/current_attempt_box.py:128
+msgid "{} — Almost done"
+msgstr "{} — Téměř hotovo"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '5% -- About 30 seconds left'
+#: src/current_attempt_box.py:136
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} sekunda"
+msgstr[1] "{} sekundy"
+msgstr[2] "{} sekund"
+
+#. TRANSLATORS: {} represents an integer.
+#. Used as part of a larger string, like:
+#. '10% -- About 30 minutes left'
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:143 src/current_attempt_box.py:156
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} minuta"
+msgstr[1] "{} minuty"
+msgstr[2] "{} minut"
+
+#. TRANSLATORS: {} represents an integer. Used as part of a
+#. larger string, like:
+#. '10% -- About 2 hours, 30 minutes left'
+#: src/current_attempt_box.py:151 src/current_attempt_box.py:165
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} hodina"
+msgstr[1] "{} hodiny"
+msgstr[2] "{} hodin"
+
+#. TRANSLATORS: {percentage} represents the progress percentage.
+#. {time_shown} represents a string showing the estimated time to
+#. completion (like '50 minutes').
+#: src/current_attempt_box.py:171
+#, python-brace-format
+msgid "{percentage} — About {time_shown} left"
+msgstr "{percentage} — Zbývá přibližně {time_shown}"
+
+#: src/drag_overlay.blp:14
+msgid "Drop Videos to Import"
+msgstr "Pusťte videa k importování"
+
+#: src/error_dialog.blp:5
+msgid "Compression Error"
+msgstr "Chyba při kompresi"
+
+#: src/error_dialog.blp:16
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: src/error_dialog.blp:19
+msgid "Copy Details"
+msgstr "Zkopírovat podrobnosti"
+
+#. TRANSLATORS: {} represents the filename of the video with the
+#. error.
+#: src/error_dialog.py:47
+msgid "There was a problem compressing “{}”"
+msgstr "Při kompresi „{}“ se vyskytly problémy"
+
+#: src/error_dialog.py:69
+msgid "Details copied to clipboard"
+msgstr "Podrobnosti zkopírovány do schránky"
+
+#: src/gtk/shortcuts-dialog.blp:6
+msgctxt "shortcut window"
+msgid "Video Management"
+msgstr "Správa videí"
+
+#: src/gtk/shortcuts-dialog.blp:9
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Otevřít"
+
+#: src/gtk/shortcuts-dialog.blp:14
+msgctxt "shortcut window"
+msgid "Export"
+msgstr "Exportovat"
+
+#: src/gtk/shortcuts-dialog.blp:20
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Obecné"
+
+#: src/gtk/shortcuts-dialog.blp:23
+msgctxt "shortcut window"
+msgid "Toggle Settings Pane"
+msgstr "Přepnout panel nastavení"
+
+#: src/gtk/shortcuts-dialog.blp:28
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Zobrazit klávesové zkratky"
+
+#: src/gtk/shortcuts-dialog.blp:33
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Zavřít okno"
+
+#: src/gtk/shortcuts-dialog.blp:38
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "U_končit"
+
+#: src/gtk/shortcuts-dialog.blp:43
+msgctxt "shortcut window"
+msgid "Show Preferences"
+msgstr "Ukázat předvolby"
+
+#. TRANSLATORS: used in parentheses for the default suffix of exported
+#. files.
+#: src/main.py:88
+msgid "compressed"
+msgstr "komprimováno"
+
+#. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
+#: src/main.py:185
+msgid "‘{}’ repository by"
+msgstr "Repozitář „{}“ od"
+
+#: src/main.py:192
+msgid "Circular progress indicator design by"
+msgstr "Návrh kruhového indikátoru postupu od"
+
+#: src/main.py:196
+msgid "Drag overlay design by"
+msgstr "Návrh překrytí přetažení od"
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.py:203
+msgid "translator-credits"
+msgstr "Seja Studio <seja.czstudio@gmail.com>"
+
+#: src/preferences_dialog.blp:5
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: src/preferences_dialog.blp:10
+msgid "Hardware Acceleration"
+msgstr "Hardwarová akcelerace"
+
+#: src/preferences_dialog.blp:13
+msgid "GPU Encoding"
+msgstr "Kódování na GPU"
+
+#: src/preferences_dialog.blp:14
+msgid "Use the GPU to speed up encoding when available"
+msgstr "Použít grafickou kartu ke zrychlení kódování, pokud je to možné"
+
+#: src/preferences_dialog.blp:19
+msgid "Exported Video Suffix"
+msgstr "Přípona výstupního videa"
+
+#: src/preferences_dialog.blp:22
+msgid "Custom Suffix"
+msgstr "Vlastní přípona"
+
+#. TRANSLATORS: {} represents a resolution, like '360p'.
+#: src/preferences_dialog.py:43
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec. Additionally, it’s only used when compressing to {} or "
+"higher, with “Extra Quality” disabled."
+msgstr ""
+"Hardwarová akcelerace je použita jen v případě, že vaše grafická karta "
+"podporuje kódování ve zvoleném kodeku. Dále bude použita jen, pokud "
+"komprimujete na {} nebo vyšší, se zakázanou možností „Extra kvalita“."
+
+#: src/preferences_dialog.py:49
+msgid ""
+"Used in file names for exported videos, between the base name and extension. "
+"If the custom suffix is left empty, the default suffix of “{}” will be used."
+msgstr ""
+"Použita ve názvech souborů u výstupních videí, mezi původním názvem a "
+"příponou. Pokud je pole pro vlastní příponu ponecháno prázdné, bude použita "
+"výchozí přípona „{}“."
+
+#: src/preferences_dialog.py:71
+msgid "Changes applied"
+msgstr "Změny uplatněny"
+
+#: src/sources_list_box.blp:9
+msgid "Add Vide_os…"
+msgstr "_Přidat videa…"
+
+#: src/sources_row.blp:6
+msgid "Move _Up"
+msgstr "Přesunout _výše"
+
+#: src/sources_row.blp:7
+msgid "Move _Down"
+msgstr "Přesunout _níže"
+
+#: src/sources_row.blp:10
+msgid "_Remove"
+msgstr "_Odebrat"
+
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:458
+msgid "View Error Details"
+msgstr "Zobrazit podrobnosti chyby"
+
+#: src/sources_row.blp:63
+msgid "Cannot load video. It may be missing or corrupted."
+msgstr "Nelze načíst video. Může chybět nebo být poškozené."
+
+#: src/sources_row.blp:100
+msgid "View Compression Progress"
+msgstr "Zobrazit postup komprese"
+
+#: src/sources_row.blp:128
+msgid "More Details"
+msgstr "Více podrobností"
+
+#: src/sources_row.blp:147
+msgid "Show File Location"
+msgstr "Ukázat umístění souboru"
+
+#: src/sources_row.blp:159
+msgid "View More"
+msgstr "Zobrazit více"
+
+#: src/sources_row.py:481 src/window.blp:137 src/window.blp:200
+#: src/window.blp:240
+msgid "More Information"
+msgstr "Více informací"
+
+#. TRANSLATORS: {size} represents a file size value in MB.
+#. {unit} represents a file size unit, like 'MiB'.
+#: src/sources_row.py:505
+#, python-brace-format
+msgid "Video compressed to {size} {unit}."
+msgstr "Video bylo komprimováno na {size} {unit}."
+
+#. TRANSLATORS: {original_size} and {target_size} represent
+#. integers. {unit_original} and {unit_target} represent file
+#. size units, like 'MB'.
+#: src/sources_row.py:533
+#, python-brace-format
+msgid ""
+"Video file size ({original_size} {unit_original}) already meets the target "
+"size ({target_size} {unit_target})."
+msgstr ""
+"Velikost souboru videa ({original_size} {unit_original}) již splňuje limit "
+"na cílovou velikost ({target_size} {unit_target})."
+
+#. TRANSLATORS: {size} represents an integer. {unit} represents
+#. a file size unit like 'MB'.
+#: src/sources_row.py:553
+#, python-brace-format
+msgid "Target size ({size} {unit}) is too low for this file."
+msgstr "Cílová velikost ({size} {unit}) je pro tento soubor příliš nízká."
+
+#: src/window.blp:6
+msgid "_New Window"
+msgstr "_Nové okno"
+
+#: src/window.blp:9
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: src/window.blp:10
+msgid "_Keyboard Shortcuts"
+msgstr "_Klávesové zkratky"
+
+#: src/window.blp:11
+msgid "_About Constrict"
+msgstr "O _aplikaci Constrict"
+
+#: src/window.blp:49 src/window.blp:111
+msgid "Main Menu"
+msgstr "Hlavní nabídka"
+
+#: src/window.blp:75
+msgid "Compress Videos"
+msgstr "Komprimovat videa"
+
+#: src/window.blp:76
+msgid "Drag and drop videos here"
+msgstr "Sem přetáhněte videa"
+
+#: src/window.blp:78
+msgid "_Open…"
+msgstr "_Otevřít…"
+
+#: src/window.blp:158
+msgid "_Automatic"
+msgstr "_Automaticky"
+
+#: src/window.blp:160
+msgid "Use the highest framerate without sacrificing resolution"
+msgstr "Použít nejvyšší možnou snímkovou frekvenci bez snižování rozlišení"
+
+#: src/window.blp:172
+msgid "Ensure higher image clarity"
+msgstr "Zajistit vyšší čistotu obrazu"
+
+#: src/window.blp:184
+msgid "Ensure smoother motion"
+msgstr "Zajistit plynulejší pohyb"
+
+#: src/window.blp:195
+msgid "Encoding Options"
+msgstr "Nastavení kódování"
+
+#: src/window.blp:220
+msgid "_Video Codec"
+msgstr "Video _kodek"
+
+#: src/window.blp:228
+msgid "Extra _Quality"
+msgstr "E_xtra kvalita"
+
+#: src/window.blp:230
+msgid "Increase image quality at the cost of compression time"
+msgstr "Zvýšit kvalitu obrazu za cenu času komprese"
+
+#: src/window.blp:235
+msgid "Advanced Options"
+msgstr "Pokročilé možnosti"
+
+#: src/window.blp:260
+msgid "_Tolerance (%)"
+msgstr "_Tolerance (%)"
+
+#: src/window.blp:262
+msgid "How far end file sizes can be below target"
+msgstr "Jak moc mohou být velikosti souborů pod cílovou velikostí"
+
+#: src/window.blp:286
+msgid "Toggle Settings Pane"
+msgstr "Přepnout panel nastavení"
+
+#: src/window.blp:296
+msgid "Issues with video sources — fix before compressing"
+msgstr "Potíže se zdrojovými videi — před kompresí je opravte"
+
+#: src/window.blp:322
+msgid "Video Sources"
+msgstr "Zdrojová videa"
+
+#: src/window.blp:326
+msgid "_Clear All"
+msgstr "_Vymazat vše"
+
+#: src/window.blp:347
+msgid "_Export To…"
+msgstr "_Exportovat do…"
+
+#: src/window.blp:363
+msgid "_Cancel…"
+msgstr "_Zrušit…"
+
+#. TRANSLATORS: 'FPS' meaning 'frames per second'.
+#. {} represents the FPS value, for example 30 or 60.
+#: src/window.py:229
+msgid "{} FPS"
+msgstr "{} FPS"
+
+#. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
+#. integer.
+#: src/window.py:237
+msgid ""
+"Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
+"option set."
+msgstr ""
+"Videa komprimovaná na nízké datové toky mohou být omezena na {} FPS bez "
+"ohledu na nastavenou hodnotu."
+
+#: src/window.py:242
+msgid ""
+"H.264 is recommended for resolutions up to 1080p.\n"
+"\n"
+"H.265 (HEVC), AV1, and VP9, are optimized for resolutions of 1080p and "
+"higher."
+msgstr ""
+"H.264 je doporučen pro rozlišení až 1080p.\n"
+"\n"
+"H.265 (HEVC), AV1 a VP9 jsou optimalizované pro rozlišení 1080p a vyšší."
+
+#. TRANSLATORS: {} represents an integer.
+#: src/window.py:250
+#, no-python-format
+msgid ""
+"Decreasing the tolerance maximizes image quality by reducing how much "
+"compressed file sizes can be under target. However, this can increase the "
+"number of attempts needed to meet the target, increasing compression time. A "
+"tolerance of {} % or more is recommended."
+msgstr ""
+"Snížení tolerance určuje, jak moc mohou být velikosti souborů pod stanoveným "
+"cílem, a zvyšuje tím kvalitu. Může však dojít ke zvýšení pokusů potřebných "
+"ke splnění cíle, což zvyšuje dobu trvání komprese. Doporučená hodnota "
+"tolerance je {} % nebo víc."
+
+#. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
+#: src/window.py:258
+msgid "Target _Size ({})"
+msgstr "_Cílová velikost ({})"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being processed.
+#: src/window.py:382
+msgid "Processing “{}”"
+msgstr "Zpracovává se „{}“"
+
+#. TRANSLATORS: {index} represents the index of the video
+#. currently being processed. {total} represents the total
+#. number of videos being processed.
+#: src/window.py:388
+#, python-brace-format
+msgid "{index}/{total} Videos Processed"
+msgstr "{index}/{total} zpracovaných videí"
+
+#. TRANSLATORS: {} represents the path of the directory being
+#. exported to.
+#: src/window.py:398
+msgid "Exporting to {}"
+msgstr "Export do {}"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. queued.
+#: src/window.py:413
+msgid "“{}” Queued"
+msgstr "„{}“ je ve frontě"
+
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:417
+msgid "{} Videos Queued"
+msgstr "{} videí ve frontě"
+
+#: src/window.py:550
+msgid "Stop Compression?"
+msgstr "Zastavit kompresi?"
+
+#. TRANSLATORS: {} represents the filename of the video currently
+#. being compressed.
+#: src/window.py:553
+msgid "Progress made compressing “{}” will be permanently lost"
+msgstr "Postup při kompresi „{}“ bude navždy ztracen"
+
+#: src/window.py:559
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: src/window.py:560
+msgid "_Stop"
+msgstr "Za_stavit"
+
+#: src/window.py:614
+msgid "Compression Complete"
+msgstr "Komprese dokončena"
+
+#. TRANSLATORS: {} represents the filename of the video that has
+#. been processed.
+#: src/window.py:621
+msgid "“{}” processed"
+msgstr "„{}“ zpracováno"
+
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:626
+msgid "{} files processed"
+msgstr "{} souborů zpracováno"
+
+#: src/window.py:637
+msgid "Open Export Directory"
+msgstr "Otevřít výstupní adresář"
+
+#: src/window.py:713
+msgid "Videos are being compressed"
+msgstr "Videa jsou komprimována"
+
+#: src/window.py:733
+msgid "Analyzing…"
+msgstr "Analýza…"
+
+#. TRANSLATORS: {} represents the filename of the video with
+#. the error.
+#: src/window.py:828
+msgid "Error compressing “{}”"
+msgstr "Problém s kompresí „{}“"
+
+#: src/window.py:831
+msgid "View _Details"
+msgstr "Zobrazit _detaily"
+
+#: src/window.py:866
+msgid "Compression complete"
+msgstr "Komprese dokončena"
+
+#. TRANSLATORS: {} is the description of a mime type.
+#: src/window.py:977
+msgid "Unknown video format “{}”"
+msgstr "Neznámý formát videa „{}“"
+
+#: src/window.py:1008
+msgid "Videos"
+msgstr "Videa"
+
+#: src/window.py:1011
+msgid "Pick Videos"
+msgstr "Zvolit videa"
