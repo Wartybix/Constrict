@@ -605,7 +605,7 @@ class SourcesRow(Adw.ActionRow):
             basic_transcode
         )
 
-        video_bitrate, _, target_pixels, target_fps, _ = encode_settings
+        video_bitrate, _, target_pixels, target_fps = encode_settings
 
         self.refresh_state(video_bitrate, target_size_mib, daemon)
 

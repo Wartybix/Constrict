@@ -611,7 +611,7 @@ def get_encode_settings(
     force_crush: bool = False,
     locked_in_height: Optional[int] = None,
     basic_transcode: bool = False
-) -> Tuple[int, int, int, float, bool]:
+) -> Tuple[int, int, int, float]:
     """ Return recommended encode settings for a given video and user
     preferences, in order to meet the target file size """
 
@@ -670,8 +670,7 @@ def get_encode_settings(
             target_video_bitrate,
             target_audio_bitrate,
             width if height > width else height,
-            fps,
-            False
+            fps
         )
 
     if crush_mode:
@@ -708,18 +707,14 @@ def get_encode_settings(
             target_fps
         )
 
-    res_reduction_applied = False
-
     if locked_in_height and preset_height >= locked_in_height:
         preset_height = locked_in_height
-        res_reduction_applied = True
 
     return (
         target_video_bitrate,
         target_audio_bitrate,
         preset_height,
-        target_fps,
-        res_reduction_applied
+        target_fps
     )
 
 def will_ha_work(codec):
@@ -898,7 +893,7 @@ def compress(
             do_basic_transcode
         )
 
-        target_video_bitrate, target_audio_bitrate, target_height, target_fps, res_reduction_applied = encode_settings
+        target_video_bitrate, target_audio_bitrate, target_height, target_fps = encode_settings
 
         is_hq_audio = target_audio_bitrate > 12000 if target_audio_bitrate > 0 else None
 
@@ -966,7 +961,7 @@ def compress(
             return _("Constrict: Cannot read output file. Was it moved or deleted mid-compression?")
         percent_of_target = (100 / target_bytes_limit) * after_size_bytes
 
-        if percent_of_target < 100 and (do_basic_transcode or res_reduction_applied):
+        if percent_of_target < 100 and (do_basic_transcode or attempt > 1):
             if do_basic_transcode:
                 percent_of_original = (100 / before_size_bytes) * after_size_bytes
                 if percent_of_original >= 100 - tolerance or attempt > 1:
