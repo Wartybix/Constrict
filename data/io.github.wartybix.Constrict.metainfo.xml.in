@@ -75,6 +75,29 @@
   </screenshots>
 
   <releases>
+    <release version="26.4" date="2026-04-27">
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.4</url>
+      <description translate="no">
+        <ul>
+          <li>Exported videos now support mono audio, if the input was also in mono.</li>
+          <li>Improved audio quality on heavy compressions.</li>
+          <li>Fixed a crash caused by videos having odd widths or heights.</li>
+          <li>Opening a compressed video in the file manager should now open in its 'real' directory; not the Flatpak sandboxed directory.</li>
+          <li>Video source warnings will now correctly show after cancelling a compression.</li>
+          <li>When a video compresses to under the file size limit outside the tolerance, it'll no longer fail if the number of compression attempts for that video is greater than 1. This is to save time, and prevent infinite attempts with exponentially increasing bitrates, which eventually cause an error.</li>
+          <li>Added Basque translation.</li>
+          <li>Added Greek translation.</li>
+          <li>Added Chinese translation.</li>
+          <li>Added Esperanto translation.</li>
+          <li>Added Hungarian translation.</li>
+          <li>Added Danish translation.</li>
+          <li>Added Serbian translation.</li>
+          <li>Added Portuguese translation.</li>
+          <li>Added Czech translation.</li>
+          <li>Added Polish translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="26.2" date="2026-02-11">
       <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.2</url>
       <description translate="no">
