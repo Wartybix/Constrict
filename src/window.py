@@ -32,6 +32,7 @@ import subprocess
 from pathlib import Path
 import os
 from typing import Any, List
+from gettext import ngettext
 
 # TODO: future feature -- add pause button?
 # TODO: test symlinks?
@@ -375,21 +376,17 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """
         sources = self.sources_list_box.get_all()
 
-        if len(sources) == 1:
-            file_name = sources[0].display_name
-            # TRANSLATORS: {} represents the filename of the video currently
-            # being processed.
-            self.set_title(_('Processing “{}”').format(file_name))
-        else:
-            self.set_title(
-                # TRANSLATORS: {index} represents the index of the video
-                # currently being processed. {total} represents the total
-                # number of videos being processed.
-                _('{index}/{total} Videos Processed').format(
-                    index = current_index,
-                    total = len(sources)
-                )
+        self.set_title(
+            # TRANSLATORS: {filename} represents the file name of the
+            # video currently being processed. {index} represents the index of
+            # the video currently being processed. {total} represents the total
+            # number of videos being processed.
+            ngettext('Processing “{filename}”', '{index}/{total} Videos Processed', len(sources)).format(
+                filename = sources[0].display_name,
+                index = current_index,
+                total = len(sources)
             )
+        )
 
         self.main_view_title.set_title(self.get_title())
         self.main_view_title.set_subtitle(
@@ -406,15 +403,15 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         if len(sources) == 0:
             self.set_title(_('Constrict'))
-        elif len(sources) == 1:
-            vid_name = sources[0].display_name
-            # TRANSLATORS: {} represents the filename of the video currently
-            # queued.
-            self.set_title(_('“{}” Queued').format(vid_name))
         else:
-            vid_count = len(sources)
-            # TRANSLATORS: {} represents the number of files queued.
-            self.set_title(_('{} Videos Queued').format(vid_count))
+            self.set_title(
+                # TRANSLATORS: {vid_name} represents the name of a video file.
+                # {vid_count} represents the number of files queued.
+                ngettext('“{vid_name}” Queued', '{vid_count} Videos Queued', len(sources)).format(
+                    vid_name = sources[0].display_name,
+                    vid_count = len(sources)
+                )
+            )
 
         update_ui(self.main_view_title.set_title, self.get_title(), daemon)
         update_ui(self.main_view_title.set_subtitle, '', daemon)
@@ -614,17 +611,15 @@ class ConstrictWindow(Adw.ApplicationWindow):
         notification = Gio.Notification.new(_('Compression Complete'))
         notification.set_category('transfer.complete')
 
-        if len(sources_list) == 1:
-            video_name = sources_list[0].display_name
-            # TRANSLATORS: {} represents the filename of the video that has
-            # been processed.
-            notification.set_body(_('“{}” processed').format(video_name))
-        else:
-            notification.set_body(
-                # TRANSLATORS: {} represents the number of files that have been
-                # processed.
-                _('{} files processed').format(len(sources_list))
+        notification.set_body(
+            # TRANSLATORS: {filename} represents the filename of the video that
+            # has been processed. {file_count} represents the number of files
+            # that have been processed.
+            ngettext('“{filename}” processed', '{file_count} files processed', len(sources_list)).format(
+                filename = sources_list[0].display_name,
+                file_count = len(sources_list)
             )
+        )
 
         window_id_gvariant = GLib.Variant.new_int32(self.get_id())
         notification.set_default_action_and_target(
