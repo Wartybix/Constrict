@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-03-30 19:15+0000\n"
+"POT-Creation-Date: 2026-05-03 22:17+0000\n"
 "PO-Revision-Date: 2026-04-04 08:00+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:408
+#: src/window.blp:42 src/window.blp:104 src/window.py:405
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -91,8 +91,8 @@ msgid ""
 "A choice of codecs to encode output files with, including H.264, HEVC, AV1, "
 "and VP9."
 msgstr ""
-"Çıktı dosyalarını H.264, HEVC, AV1 ve VP9 gibi türlü kodlayıcılarla "
-"kodlama seçeneği."
+"Çıktı dosyalarını H.264, HEVC, AV1 ve VP9 gibi türlü kodlayıcılarla kodlama "
+"seçeneği."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:22
 msgid ""
@@ -102,11 +102,11 @@ msgid ""
 "may not be possible at all. All processing is done locally — and as such, "
 "compression speeds are only as fast as your hardware allows."
 msgstr ""
-"Uygulama, verilen dosya boyutu için görsel ve işitsel kaliteyi "
-"olabildiğince korumaya çalışır. Ancak, dosya boyutunda aşırı düşüşler, çıktı "
-"dosyasında önemli kalite yitimine neden olabilir ve bazen sıkıştırılamayabilir. "
-"Tüm işlemler yerel olarak yapılır; bu nedenle sıkıştırma hızı, "
-"yalnızca donanımınızın izin verdiği kadar hızlıdır."
+"Uygulama, verilen dosya boyutu için görsel ve işitsel kaliteyi olabildiğince "
+"korumaya çalışır. Ancak, dosya boyutunda aşırı düşüşler, çıktı dosyasında "
+"önemli kalite yitimine neden olabilir ve bazen sıkıştırılamayabilir. Tüm "
+"işlemler yerel olarak yapılır; bu nedenle sıkıştırma hızı, yalnızca "
+"donanımınızın izin verdiği kadar hızlıdır."
 
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:61
 msgid "Source videos queued for compression"
@@ -191,7 +191,7 @@ msgstr "Sıkıştırılan dosya boyutu çok büyüktü ({size} {unit})"
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
-#: src/sources_row.py:555 src/window.py:255
+#: src/sources_row.py:555 src/window.py:256
 msgid "MiB"
 msgstr "MiB"
 
@@ -202,7 +202,7 @@ msgstr "MiB"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "Sıkıştırılan dosya boyutu çok küçüktü ({size} {unit})"
 
-#: src/constrict_utils.py:814
+#: src/constrict_utils.py:816
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
@@ -210,7 +210,7 @@ msgstr ""
 "Constrict: Girdi dosyası okunamadı. Sıkıştırmadan önce taşındı ya da silindi "
 "mi?"
 
-#: src/constrict_utils.py:838
+#: src/constrict_utils.py:840
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -220,7 +220,7 @@ msgstr ""
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:845
+#: src/constrict_utils.py:847
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
@@ -228,7 +228,7 @@ msgstr ""
 "Constrict: Dışa aktarılan dosya oluşturulamadı. Ayrılmış adlı bir dosya "
 "zaten var."
 
-#: src/constrict_utils.py:847
+#: src/constrict_utils.py:849
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
@@ -236,7 +236,7 @@ msgstr ""
 "Constrict: Dışa aktarılan dosya oluşturulamadı. İstenen dışa aktarma yolunda "
 "dosya oluşturmak için izinler yetersiz."
 
-#: src/constrict_utils.py:914
+#: src/constrict_utils.py:916
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
@@ -244,7 +244,7 @@ msgstr ""
 "Constrict: Video bit hızı çok düştü (<5 kbps). Hedef boyut bu dosya için çok "
 "düşük olabilir."
 
-#: src/constrict_utils.py:959
+#: src/constrict_utils.py:961
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
@@ -392,22 +392,27 @@ msgid "compressed"
 msgstr "sıkıştırılmış"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#: src/main.py:184
+#. This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:186
 msgid "‘{}’ repository by"
 msgstr "‘{}’ deposu, yazan"
 
-#: src/main.py:191
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:194
 msgid "Circular progress indicator design by"
 msgstr "Dairesel ilerleme göstergesini tasarlayan"
 
-#: src/main.py:195
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:199
 msgid "Drag overlay design by"
 msgstr "Sürükle genel tasarımı"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
-#: src/main.py:202
+#: src/main.py:206
 msgid "translator-credits"
-msgstr "erdem uygun <uygun.erdem@proton.me>"
+msgstr ""
+"erdem uygun <uygun.erdem@proton.me>\n"
+"Emin Tufan Çetin <etcetin@gmail.com>"
 
 #: src/preferences_dialog.blp:5
 msgid "Preferences"
@@ -419,7 +424,7 @@ msgstr "Donanım Hızlandırma"
 
 #: src/preferences_dialog.blp:13
 msgid "GPU Encoding"
-msgstr "Ekran Kartı İle Kodlama"
+msgstr "Ekran Kartıyla Kodlama"
 
 #: src/preferences_dialog.blp:14
 msgid "Use the GPU to speed up encoding when available"
@@ -629,13 +634,13 @@ msgstr "İ_ptal…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:229
+#: src/window.py:230
 msgid "{} FPS"
 msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:237
+#: src/window.py:238
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -643,7 +648,7 @@ msgstr ""
 "Düşük bit hızında sıkıştırılan videolar, ayarlanan seçenekten bağımsız "
 "olarak {} FPS ile sınırlanabilir."
 
-#: src/window.py:242
+#: src/window.py:243
 msgid ""
 "H.264 is recommended for resolutions up to 1080p.\n"
 "\n"
@@ -652,11 +657,10 @@ msgid ""
 msgstr ""
 "1080p çözünürlüğe dek H.264 önerilir.\n"
 "\n"
-"H.265 (HEVC), AV1 ve VP9 ise 1080p ve üstü çözünürlükler için "
-"eniyilenmiştir."
+"H.265 (HEVC), AV1 ve VP9 ise 1080p ve üstü çözünürlükler için eniyilenmiştir."
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:250
+#: src/window.py:251
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -667,113 +671,104 @@ msgstr ""
 "Toleransı düşürmek, sıkıştırılmış dosya boyutlarının hedefin ne kadar "
 "altında kalabileceğini azaltarak görüntü kalitesini en üst düzeye çıkarır. "
 "Ancak bu, hedefe ulaşmak için gereken deneme sayısını artırarak sıkıştırma "
-"süresini uzatabilir. {} ya da daha fazla tolerans önerilir."
+"süresini uzatabilir. {} ya da daha çok tolerans önerilir."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:258
+#: src/window.py:259
 msgid "Target _Size ({})"
 msgstr "Hedef _Boyut ({})"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. being processed.
-#: src/window.py:382
-msgid "Processing “{}”"
-msgstr "“{}” işleniyor"
-
-#. TRANSLATORS: {index} represents the index of the video
-#. currently being processed. {total} represents the total
+#. TRANSLATORS: {filename} represents the file name of the
+#. video currently being processed. {index} represents the index of
+#. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:388
+#: src/window.py:384
 #, python-brace-format
-msgid "{index}/{total} Videos Processed"
-msgstr "{index}/{total} video işlendi"
+msgid "Processing “{filename}”"
+msgid_plural "{index}/{total} Videos Processed"
+msgstr[0] "{index}/{total} Video İşlendi"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:398
+#: src/window.py:395
 msgid "Exporting to {}"
 msgstr "{} dizinine dışa aktarılıyor"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. queued.
-#: src/window.py:413
-msgid "“{}” Queued"
-msgstr "“{}” Kuyruğa Alındı"
+#. TRANSLATORS: {vid_name} represents the name of a video file.
+#. {vid_count} represents the number of files queued.
+#: src/window.py:410
+#, python-brace-format
+msgid "“{vid_name}” Queued"
+msgid_plural "{vid_count} Videos Queued"
+msgstr[0] "{vid_count} Video Kuyruğa Alındı"
 
-#. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:417
-msgid "{} Videos Queued"
-msgstr "{} Video Kuyruğa Alındı"
-
-#: src/window.py:550
+#: src/window.py:547
 msgid "Stop Compression?"
 msgstr "Sıkıştırma Durdurulsun mu?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:553
+#: src/window.py:550
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}” videosunu sıkıştırma sürecindeki ilerleme kalıcı olarak yitecek"
 
-#: src/window.py:559
+#: src/window.py:556
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: src/window.py:560
+#: src/window.py:557
 msgid "_Stop"
 msgstr "_Durdur"
 
-#: src/window.py:614
+#: src/window.py:611
 msgid "Compression Complete"
 msgstr "Sıkıştırma Tamamlandı"
 
-#. TRANSLATORS: {} represents the filename of the video that has
-#. been processed.
-#: src/window.py:621
-msgid "“{}” processed"
-msgstr "“{}” işlendi"
+#. TRANSLATORS: {filename} represents the filename of the video that
+#. has been processed. {file_count} represents the number of files
+#. that have been processed.
+#: src/window.py:618
+#, python-brace-format
+msgid "“{filename}” processed"
+msgid_plural "{file_count} files processed"
+msgstr[0] "{file_count} dosya işlendi"
 
-#. TRANSLATORS: {} represents the number of files that have been
-#. processed.
-#: src/window.py:626
-msgid "{} files processed"
-msgstr "{} dosya işlendi"
-
-#: src/window.py:637
+#: src/window.py:632
 msgid "Open Export Directory"
 msgstr "Dışa Aktarma Dizinini Aç"
 
-#: src/window.py:713
+#: src/window.py:708
 msgid "Videos are being compressed"
 msgstr "Videolar sıkıştırılıyor"
 
-#: src/window.py:733
+#: src/window.py:728
 msgid "Analyzing…"
 msgstr "İnceleniyor…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:828
+#: src/window.py:823
 msgid "Error compressing “{}”"
 msgstr "“{}” sıkıştırılırken hata oluştu"
 
-#: src/window.py:831
+#: src/window.py:826
 msgid "View _Details"
 msgstr "_Ayrıntıları Görüntüle"
 
-#: src/window.py:866
+#: src/window.py:865
 msgid "Compression complete"
 msgstr "Sıkıştırma tamamlandı"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:977
+#: src/window.py:976
 msgid "Unknown video format “{}”"
 msgstr "“{}” video biçimi bilinmiyor"
 
-#: src/window.py:1008
+#: src/window.py:1007
 msgid "Videos"
 msgstr "Videolar"
 
-#: src/window.py:1011
+#: src/window.py:1010
 msgid "Pick Videos"
 msgstr "Video Seç"
+
