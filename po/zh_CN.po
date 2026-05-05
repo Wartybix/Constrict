@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-03-30 19:15+0000\n"
-"PO-Revision-Date: 2026-04-03 08:08+0800\n"
+"POT-Creation-Date: 2026-05-03 22:17+0000\n"
+"PO-Revision-Date: 2026-05-05 14:53+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:408
+#: src/window.blp:42 src/window.blp:104 src/window.py:405
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -176,7 +176,7 @@ msgstr "压缩的文件尺寸太大了（{size} {unit}）"
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
-#: src/sources_row.py:555 src/window.py:255
+#: src/sources_row.py:555 src/window.py:256
 msgid "MiB"
 msgstr "MiB"
 
@@ -187,13 +187,13 @@ msgstr "MiB"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "压缩的文件尺寸太小了（{size} {unit}）"
 
-#: src/constrict_utils.py:814
+#: src/constrict_utils.py:816
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr "Constrict：无法读取输入文件。其是否在压缩前被移动或删除了？"
 
-#: src/constrict_utils.py:838
+#: src/constrict_utils.py:840
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -201,25 +201,25 @@ msgstr "Constrict：无法获取视频属性。源视频可能缺失或已损坏
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:845
+#: src/constrict_utils.py:847
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr "Constrict：无法创建导出文件。同名文件已经存在。"
 
-#: src/constrict_utils.py:847
+#: src/constrict_utils.py:849
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr "Constrict：无法创建导出文件。没有在请求的导出路径创建文件的权限。"
 
-#: src/constrict_utils.py:914
+#: src/constrict_utils.py:916
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr "Constrict：视频比特率太低了（<5 kbps）。目标大小对于此文件太小了。"
 
-#: src/constrict_utils.py:959
+#: src/constrict_utils.py:961
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr "Constrict：无法读取输出文件。其是否在压缩中被移动或删除了？"
@@ -365,20 +365,23 @@ msgid "compressed"
 msgstr "已压缩"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#: src/main.py:184
+#. This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:186
 msgid "‘{}’ repository by"
 msgstr "“{}”仓库创建者"
 
-#: src/main.py:191
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:194
 msgid "Circular progress indicator design by"
 msgstr "圆形进度指示器设计者"
 
-#: src/main.py:195
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:199
 msgid "Drag overlay design by"
 msgstr "拖放叠加层设计者"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
-#: src/main.py:202
+#: src/main.py:206
 msgid "translator-credits"
 msgstr "lumingzh <lumingzh@qq.com>, 2026"
 
@@ -601,19 +604,19 @@ msgstr "取消(_C)…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:229
+#: src/window.py:230
 msgid "{} FPS"
 msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:237
+#: src/window.py:238
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr "视频压缩至低比特率可能会限制为 {} FPS，与选项设置无关。"
 
-#: src/window.py:242
+#: src/window.py:243
 msgid ""
 "H.264 is recommended for resolutions up to 1080p.\n"
 "\n"
@@ -625,7 +628,7 @@ msgstr ""
 "对 1080p 和更高分辨率使用 H.265（HEVC）、AV1 和 VP9"
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:250
+#: src/window.py:251
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -637,110 +640,110 @@ msgstr ""
 "加满足目标的尝试次数，增加压缩时间。推荐 {} % 或更大的公差。"
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:258
+#: src/window.py:259
 msgid "Target _Size ({})"
 msgstr "目标大小（{}）(_S)"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. being processed.
-#: src/window.py:382
-msgid "Processing “{}”"
-msgstr "正在处理“{}”"
-
-#. TRANSLATORS: {index} represents the index of the video
-#. currently being processed. {total} represents the total
+#. TRANSLATORS: {filename} represents the file name of the
+#. video currently being processed. {index} represents the index of
+#. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:388
+#: src/window.py:384
 #, python-brace-format
-msgid "{index}/{total} Videos Processed"
-msgstr "已处理 {index}/{total} 个视频"
+msgid "Processing “{filename}”"
+msgid_plural "{index}/{total} Videos Processed"
+msgstr[0] "已处理 {index} 共 {total} 个视频"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:398
+#: src/window.py:395
 msgid "Exporting to {}"
 msgstr "正在导出至 {}"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. queued.
-#: src/window.py:413
-msgid "“{}” Queued"
-msgstr "“{}”已排队"
+#. TRANSLATORS: {vid_name} represents the name of a video file.
+#. {vid_count} represents the number of files queued.
+#: src/window.py:410
+#, python-brace-format
+msgid "“{vid_name}” Queued"
+msgid_plural "{vid_count} Videos Queued"
+msgstr[0] "{vid_count} 个视频待处理"
 
-#. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:417
-msgid "{} Videos Queued"
-msgstr "{} 个视频已排队"
-
-#: src/window.py:550
+#: src/window.py:547
 msgid "Stop Compression?"
 msgstr "停止压缩吗？"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:553
+#: src/window.py:550
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}”的压缩进度将会永久丢失"
 
-#: src/window.py:559
+#: src/window.py:556
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/window.py:560
+#: src/window.py:557
 msgid "_Stop"
 msgstr "停止(_S)"
 
-#: src/window.py:614
+#: src/window.py:611
 msgid "Compression Complete"
 msgstr "压缩完成"
 
-#. TRANSLATORS: {} represents the filename of the video that has
-#. been processed.
-#: src/window.py:621
-msgid "“{}” processed"
-msgstr "已处理“{}”"
+#. TRANSLATORS: {filename} represents the filename of the video that
+#. has been processed. {file_count} represents the number of files
+#. that have been processed.
+#: src/window.py:618
+#, python-brace-format
+msgid "“{filename}” processed"
+msgid_plural "{file_count} files processed"
+msgstr[0] "已处理 {file_count} 个文件"
 
-#. TRANSLATORS: {} represents the number of files that have been
-#. processed.
-#: src/window.py:626
-msgid "{} files processed"
-msgstr "已处理 {} 个文件"
-
-#: src/window.py:637
+#: src/window.py:632
 msgid "Open Export Directory"
 msgstr "打开导出目录"
 
-#: src/window.py:713
+#: src/window.py:708
 msgid "Videos are being compressed"
 msgstr "正在压缩视频"
 
-#: src/window.py:733
+#: src/window.py:728
 msgid "Analyzing…"
 msgstr "正在分析…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:828
+#: src/window.py:823
 msgid "Error compressing “{}”"
 msgstr "压缩“{}”时出错"
 
-#: src/window.py:831
+#: src/window.py:826
 msgid "View _Details"
 msgstr "查看详情(_D)"
 
-#: src/window.py:866
+#: src/window.py:865
 msgid "Compression complete"
 msgstr "压缩完成"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:977
+#: src/window.py:976
 msgid "Unknown video format “{}”"
 msgstr "未知视频格式“{}”"
 
-#: src/window.py:1008
+#: src/window.py:1007
 msgid "Videos"
 msgstr "视频"
 
-#: src/window.py:1011
+#: src/window.py:1010
 msgid "Pick Videos"
 msgstr "拾取视频"
+
+#, python-brace-format
+#~ msgid "{index}/{total} Videos Processed"
+#~ msgstr "已处理 {index}/{total} 个视频"
+
+#~ msgid "{} Videos Queued"
+#~ msgstr "{} 个视频已排队"
+
+#~ msgid "{} files processed"
+#~ msgstr "已处理 {} 个文件"
