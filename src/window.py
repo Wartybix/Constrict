@@ -376,17 +376,22 @@ class ConstrictWindow(Adw.ApplicationWindow):
         """
         sources = self.sources_list_box.get_all()
 
-        self.set_title(
-            # TRANSLATORS: {filename} represents the file name of the
-            # video currently being processed. {index} represents the index of
-            # the video currently being processed. {total} represents the total
-            # number of videos being processed.
-            ngettext('Processing “{filename}”', '{index}/{total} Videos Processed', len(sources)).format(
-                filename = sources[0].display_name,
-                index = current_index,
-                total = len(sources)
+        if len(sources) == 1:
+            # TRANSLATORS: {} represents the file name of the video currently
+            # being processed.
+            self.set_title(_('Processing “{}”').format(
+                sources[0].display_name
+            ))
+        else:
+            self.set_title(
+                # TRANSLATORS: {index} represents the index of
+                # the video currently being processed. {total} represents the total
+                # number of videos being processed.
+                ngettext('{index}/{total} Video Processed', '{index}/{total} Videos Processed', len(sources)).format(
+                    index = current_index,
+                    total = len(sources)
+                )
             )
-        )
 
         self.main_view_title.set_title(self.get_title())
         self.main_view_title.set_subtitle(
@@ -403,13 +408,14 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
         if len(sources) == 0:
             self.set_title(_('Constrict'))
+        elif len(sources) == 1:
+            # TRANSLATORS: {} represents the name of a video file.
+            self.set_title(_("“{}” Queued").format(sources[0].display_name))
         else:
             self.set_title(
-                # TRANSLATORS: {vid_name} represents the name of a video file.
-                # {vid_count} represents the number of files queued.
-                ngettext('“{vid_name}” Queued', '{vid_count} Videos Queued', len(sources)).format(
-                    vid_name = sources[0].display_name,
-                    vid_count = len(sources)
+                # TRANSLATORS: {} represents the number of files queued.
+                ngettext('{} Video Queued', '{} Videos Queued', len(sources)).format(
+                    len(sources)
                 )
             )
 
@@ -611,15 +617,18 @@ class ConstrictWindow(Adw.ApplicationWindow):
         notification = Gio.Notification.new(_('Compression Complete'))
         notification.set_category('transfer.complete')
 
-        notification.set_body(
-            # TRANSLATORS: {filename} represents the filename of the video that
-            # has been processed. {file_count} represents the number of files
-            # that have been processed.
-            ngettext('“{filename}” processed', '{file_count} files processed', len(sources_list)).format(
-                filename = sources_list[0].display_name,
-                file_count = len(sources_list)
+        if len(sources_list) == 1:
+            # TRANSLATORS: {} represents the filename of the video that
+            # has been processed.
+            notification.set_body(_('“{}” processed'))
+        else:
+            notification.set_body(
+                # TRANSLATORS: {} represents the number of files that have been
+                # processed.
+                ngettext('{} file processed', '{} files processed', len(sources_list)).format(
+                    len(sources_list)
+                )
             )
-        )
 
         window_id_gvariant = GLib.Variant.new_int32(self.get_id())
         notification.set_default_action_and_target(
