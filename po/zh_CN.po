@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-05-03 22:17+0000\n"
-"PO-Revision-Date: 2026-05-05 14:53+0800\n"
+"POT-Creation-Date: 2026-05-05 08:51+0000\n"
+"PO-Revision-Date: 2026-05-06 18:01+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:405
+#: src/window.blp:42 src/window.blp:104 src/window.py:410
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -644,106 +644,108 @@ msgstr ""
 msgid "Target _Size ({})"
 msgstr "目标大小（{}）(_S)"
 
-#. TRANSLATORS: {filename} represents the file name of the
-#. video currently being processed. {index} represents the index of
+#. TRANSLATORS: {} represents the file name of the video currently
+#. being processed.
+#: src/window.py:382
+msgid "Processing “{}”"
+msgstr "正在处理“{}”"
+
+#. TRANSLATORS: {index} represents the index of
 #. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:384
+#: src/window.py:390
 #, python-brace-format
-msgid "Processing “{filename}”"
+msgid "{index}/{total} Video Processed"
 msgid_plural "{index}/{total} Videos Processed"
-msgstr[0] "已处理 {index} 共 {total} 个视频"
+msgstr[0] "已处理 {index}/{total} 个视频"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:395
+#: src/window.py:400
 msgid "Exporting to {}"
 msgstr "正在导出至 {}"
 
-#. TRANSLATORS: {vid_name} represents the name of a video file.
-#. {vid_count} represents the number of files queued.
-#: src/window.py:410
-#, python-brace-format
-msgid "“{vid_name}” Queued"
-msgid_plural "{vid_count} Videos Queued"
-msgstr[0] "{vid_count} 个视频待处理"
+#. TRANSLATORS: {} represents the name of a video file.
+#: src/window.py:413
+msgid "“{}” Queued"
+msgstr "“{}”已排队"
 
-#: src/window.py:547
+#. TRANSLATORS: {} represents the number of files queued.
+#: src/window.py:417
+msgid "{} Video Queued"
+msgid_plural "{} Videos Queued"
+msgstr[0] "{} 个视频已排队"
+
+#: src/window.py:553
 msgid "Stop Compression?"
 msgstr "停止压缩吗？"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:550
+#: src/window.py:556
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}”的压缩进度将会永久丢失"
 
-#: src/window.py:556
+#: src/window.py:562
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/window.py:557
+#: src/window.py:563
 msgid "_Stop"
 msgstr "停止(_S)"
 
-#: src/window.py:611
+#: src/window.py:617
 msgid "Compression Complete"
 msgstr "压缩完成"
 
-#. TRANSLATORS: {filename} represents the filename of the video that
-#. has been processed. {file_count} represents the number of files
-#. that have been processed.
-#: src/window.py:618
-#, python-brace-format
-msgid "“{filename}” processed"
-msgid_plural "{file_count} files processed"
-msgstr[0] "已处理 {file_count} 个文件"
+#. TRANSLATORS: {} represents the filename of the video that
+#. has been processed.
+#: src/window.py:623
+msgid "“{}” processed"
+msgstr "已处理“{}”"
 
-#: src/window.py:632
+#. TRANSLATORS: {} represents the number of files that have been
+#. processed.
+#: src/window.py:628
+msgid "{} file processed"
+msgid_plural "{} files processed"
+msgstr[0] "已处理 {} 个文件"
+
+#: src/window.py:641
 msgid "Open Export Directory"
 msgstr "打开导出目录"
 
-#: src/window.py:708
+#: src/window.py:717
 msgid "Videos are being compressed"
 msgstr "正在压缩视频"
 
-#: src/window.py:728
+#: src/window.py:737
 msgid "Analyzing…"
 msgstr "正在分析…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:823
+#: src/window.py:832
 msgid "Error compressing “{}”"
 msgstr "压缩“{}”时出错"
 
-#: src/window.py:826
+#: src/window.py:835
 msgid "View _Details"
 msgstr "查看详情(_D)"
 
-#: src/window.py:865
+#: src/window.py:874
 msgid "Compression complete"
 msgstr "压缩完成"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:976
+#: src/window.py:985
 msgid "Unknown video format “{}”"
 msgstr "未知视频格式“{}”"
 
-#: src/window.py:1007
+#: src/window.py:1016
 msgid "Videos"
 msgstr "视频"
 
-#: src/window.py:1010
+#: src/window.py:1019
 msgid "Pick Videos"
 msgstr "拾取视频"
-
-#, python-brace-format
-#~ msgid "{index}/{total} Videos Processed"
-#~ msgstr "已处理 {index}/{total} 个视频"
-
-#~ msgid "{} Videos Queued"
-#~ msgstr "{} 个视频已排队"
-
-#~ msgid "{} files processed"
-#~ msgstr "已处理 {} 个文件"
