@@ -20,7 +20,7 @@
 from gi.repository import Adw, Gtk, GLib
 from constrict.shared import update_ui
 from constrict import PREFIX
-from typing import Optional
+from typing import Optional, Callable
 
 
 @Gtk.Template(resource_path=f'{PREFIX}/attempt_fail_box.ui')
@@ -44,6 +44,7 @@ class AttemptFailBox(Gtk.Box):
         vid_fps: float,
         compressed_size_bytes: int,
         target_size_bytes: int,
+        on_failure_keep: Callable[[], None],
         **kwargs
     ) -> None:
         super().__init__(**kwargs)
@@ -105,3 +106,15 @@ class AttemptFailBox(Gtk.Box):
                 unit = _('MiB')
             )
             self.failure_details_label.set_label(fail_msg)
+
+        self.install_action('failure.keep', None, self.keep_failure)
+        self.on_failure_keep = on_failure_keep
+        self.compressed_size_bytes = compressed_size_bytes
+
+    def keep_failure(
+        self,
+        fail: 'AttemptFailBox',
+        action_name: str,
+        parameter: GLib.Variant
+    ):
+        self.on_failure_keep(self.compressed_size_bytes)

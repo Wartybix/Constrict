@@ -718,6 +718,8 @@ class ConstrictWindow(Adw.ApplicationWindow):
         )
 
         for i in range(len(source_list)):
+            self.kept_failure_size = None # No. of bytes of kept attempt fail
+
             self.set_compressing_title(i, displayed_dest_path)
 
             video = source_list[i]
@@ -758,6 +760,9 @@ class ConstrictWindow(Adw.ApplicationWindow):
                     daemon
                 )
 
+            def set_keep_failure(fail_bytes: int):
+                self.kept_failure_size = fail_bytes
+
             def add_attempt_fail(
                 attempt,
                 target_vid_bitrate,
@@ -775,6 +780,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
                     target_fps,
                     after_size_bytes,
                     target_size_bytes,
+                    set_keep_failure,
                     daemon
                 )
 
@@ -809,7 +815,7 @@ class ConstrictWindow(Adw.ApplicationWindow):
                 tolerance,
                 update_progress,
                 log_path,
-                lambda: not self.compressing,
+                lambda: not self.compressing or self.kept_failure_bytes,
                 set_attempt_details,
                 add_attempt_fail
             )
@@ -854,8 +860,13 @@ class ConstrictWindow(Adw.ApplicationWindow):
 
                 break
 
+            if self.kept_failure_bytes:
+                video.set_complete(output_path_unique, end_size_mb, daemon)
 
-            if type(compression_result) is int:
+
+            if (type(compression_result) is int) or (self.kept_failure_bytes):
+                end_bytes = compression_
+
                 end_size_bytes = compression_result
                 end_size_mb = round(end_size_bytes / 1024 / 1024, 1)
                 video.set_complete(output_path_unique, end_size_mb, daemon)

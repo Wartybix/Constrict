@@ -204,6 +204,7 @@ class SourcesRow(Adw.ActionRow):
         vid_fps: float,
         compressed_size_bytes: int,
         target_size_bytes: int,
+        on_fail_keep: Callable[[int], None],
         daemon: bool
     ) -> None:
         """ Add attempt failure details to the source row's popover box. """
@@ -217,7 +218,8 @@ class SourcesRow(Adw.ActionRow):
             vid_height,
             vid_fps,
             compressed_size_bytes,
-            target_size_bytes
+            target_size_bytes,
+            on_fail_keep
         )
         self.popover_box.add_fail_widget(fail_box, daemon)
 
