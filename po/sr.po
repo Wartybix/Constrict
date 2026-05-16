@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-03-29 23:14+0000\n"
-"PO-Revision-Date: 2026-03-30 11:14+0200\n"
-"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
+"POT-Creation-Date: 2026-05-05 08:51+0000\n"
+"PO-Revision-Date: 2026-05-16 05:11+0200\n"
+"Last-Translator: Марко Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <Serbian>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:408
+#: src/window.blp:42 src/window.blp:104 src/window.py:410
 msgid "Constrict"
 msgstr "Стезаљка"
 
@@ -187,7 +187,7 @@ msgstr "Величина сажете датотеке је превелика (
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
 #: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
-#: src/sources_row.py:555 src/window.py:255
+#: src/sources_row.py:555 src/window.py:256
 msgid "MiB"
 msgstr "MiB"
 
@@ -198,7 +198,7 @@ msgstr "MiB"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "Величина сажете датотеке је премала ({size} {unit})"
 
-#: src/constrict_utils.py:814
+#: src/constrict_utils.py:816
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
@@ -206,7 +206,7 @@ msgstr ""
 "Стезаљка: не могу прочитати улазну датотеку. Да ли је померена или обрисана "
 "пре сажимања?"
 
-#: src/constrict_utils.py:838
+#: src/constrict_utils.py:840
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -216,7 +216,7 @@ msgstr ""
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:845
+#: src/constrict_utils.py:847
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
@@ -224,7 +224,7 @@ msgstr ""
 "Стезаљка: не могу да направим извезену датотеку. Датотека са резервисаним "
 "именом већ постоји."
 
-#: src/constrict_utils.py:847
+#: src/constrict_utils.py:849
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
@@ -232,7 +232,7 @@ msgstr ""
 "Стезаљка: не могу да направим извезену датотеку. Нема довољно овлашћења за "
 "прављење датотеке на захтеваној путањи извоза."
 
-#: src/constrict_utils.py:914
+#: src/constrict_utils.py:916
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
@@ -240,7 +240,7 @@ msgstr ""
 "Стезаљка: битски проток видео снимка је постао пренизак (<5 kbps). Циљна "
 "величина је можда премала за ову датотеку."
 
-#: src/constrict_utils.py:959
+#: src/constrict_utils.py:961
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
@@ -397,20 +397,23 @@ msgid "compressed"
 msgstr "запаковано"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#: src/main.py:184
+#. This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:186
 msgid "‘{}’ repository by"
 msgstr "ризница „{}“, аутор"
 
-#: src/main.py:191
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:194
 msgid "Circular progress indicator design by"
 msgstr "Дизајн кружног показатеља напретка"
 
-#: src/main.py:195
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:199
 msgid "Drag overlay design by"
 msgstr "Дизајн прекривања при превлачењу"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
-#: src/main.py:202
+#: src/main.py:206
 msgid "translator-credits"
 msgstr ""
 "Марко М. Костић <marko.m.kostic@gmail.com>\n"
@@ -637,13 +640,13 @@ msgstr "_Откажи…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:229
+#: src/window.py:230
 msgid "{} FPS"
 msgstr "{} к/с"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:237
+#: src/window.py:238
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
@@ -651,7 +654,7 @@ msgstr ""
 "Видео снимци сажети на мале протоке могу бити ограничени на {} к/с, без "
 "обзира на постављену опцију."
 
-#: src/window.py:242
+#: src/window.py:243
 msgid ""
 "H.264 is recommended for resolutions up to 1080p.\n"
 "\n"
@@ -663,7 +666,7 @@ msgstr ""
 "H.265 (HEVC), AV1, и VP9, су оптимизовани за резолуције од 1080p па нагоре."
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:250
+#: src/window.py:251
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -677,110 +680,124 @@ msgstr ""
 "Препоручује се толеранција од {} % или више."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:258
+#: src/window.py:259
 msgid "Target _Size ({})"
 msgstr "Циљана _величина ({})"
 
-#. TRANSLATORS: {} represents the filename of the video currently
+#. TRANSLATORS: {} represents the file name of the video currently
 #. being processed.
 #: src/window.py:382
 msgid "Processing “{}”"
 msgstr "Обрађујем „{}“"
 
-#. TRANSLATORS: {index} represents the index of the video
-#. currently being processed. {total} represents the total
+#. TRANSLATORS: {index} represents the index of
+#. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:388
+#: src/window.py:390
 #, python-brace-format
-msgid "{index}/{total} Videos Processed"
-msgstr "{index}/{total} видео снимака обрађено"
+#| msgid "{index}/{total} Videos Processed"
+msgid "{index}/{total} Video Processed"
+msgid_plural "{index}/{total} Videos Processed"
+msgstr[0] "{index}/{total} видео снимак обрађен"
+msgstr[1] "{index}/{total} видео снимака обрађено"
+msgstr[2] "{index}/{total} видео снимака обрађено"
+msgstr[3] "{index}/{total} видео снимак обрађен"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:398
+#: src/window.py:400
 msgid "Exporting to {}"
 msgstr "Извозим у {}"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. queued.
+#. TRANSLATORS: {} represents the name of a video file.
 #: src/window.py:413
 msgid "“{}” Queued"
 msgstr "„{}“ је на чекању"
 
 #. TRANSLATORS: {} represents the number of files queued.
 #: src/window.py:417
-msgid "{} Videos Queued"
-msgstr "{} видео снимака на чекању"
+#| msgid "{} Videos Queued"
+msgid "{} Video Queued"
+msgid_plural "{} Videos Queued"
+msgstr[0] "{} видео снимак заказан"
+msgstr[1] "{} видео снимка заказано"
+msgstr[2] "{} видео снимака заказано"
+msgstr[3] "{} видео снимак заказан"
 
-#: src/window.py:550
+#: src/window.py:553
 msgid "Stop Compression?"
 msgstr "Зауставити сажимање?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:553
+#: src/window.py:556
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "Напредак остварен при сажимању „{}“ ће бити трајно изгубљен"
 
-#: src/window.py:559
+#: src/window.py:562
 msgid "_Cancel"
 msgstr "_Откажи"
 
-#: src/window.py:560
+#: src/window.py:563
 msgid "_Stop"
 msgstr "_Заустави"
 
-#: src/window.py:614
+#: src/window.py:617
 msgid "Compression Complete"
 msgstr "Сажимање је завршено"
 
-#. TRANSLATORS: {} represents the filename of the video that has
-#. been processed.
-#: src/window.py:621
+#. TRANSLATORS: {} represents the filename of the video that
+#. has been processed.
+#: src/window.py:623
 msgid "“{}” processed"
 msgstr "„{}“ је обрађен"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:626
-msgid "{} files processed"
-msgstr "Обрађено је датотека: {}"
+#: src/window.py:628
+#| msgid "{} files processed"
+msgid "{} file processed"
+msgid_plural "{} files processed"
+msgstr[0] "{} датотека обрађена"
+msgstr[1] "{} датотеке обрађене"
+msgstr[2] "{} датотека обрађено"
+msgstr[3] "{} датотека обрађена"
 
-#: src/window.py:637
+#: src/window.py:641
 msgid "Open Export Directory"
 msgstr "Отвори фасциклу извоза"
 
-#: src/window.py:713
+#: src/window.py:717
 msgid "Videos are being compressed"
 msgstr "Видео снимци се сажимају"
 
-#: src/window.py:733
+#: src/window.py:737
 msgid "Analyzing…"
 msgstr "Анализирам…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:828
+#: src/window.py:832
 msgid "Error compressing “{}”"
 msgstr "Грешка при сажимању „{}“"
 
-#: src/window.py:831
+#: src/window.py:835
 msgid "View _Details"
 msgstr "П_рикажи детаље"
 
-#: src/window.py:866
+#: src/window.py:874
 msgid "Compression complete"
 msgstr "Паковање је завршено"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:977
+#: src/window.py:985
 msgid "Unknown video format “{}”"
 msgstr "Непознат формат видео снимка „{}“"
 
-#: src/window.py:1008
+#: src/window.py:1016
 msgid "Videos"
 msgstr "Видео снимци"
 
-#: src/window.py:1011
+#: src/window.py:1019
 msgid "Pick Videos"
 msgstr "Изаберите видео снимке"
