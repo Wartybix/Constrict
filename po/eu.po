@@ -6,8 +6,8 @@
 msgid ""
 msgstr "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-02-13 14:25+0000\n"
-"PO-Revision-Date: 2026-02-21 14:25+0000\n"
+"POT-Creation-Date: 2026-05-05 08:51+0000\n"
+"PO-Revision-Date: 2026-06-05 14:25+0000\n"
 "Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr "Project-Id-Version: Constrict main\n"
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:391
+#: src/window.blp:42 src/window.blp:104 src/window.py:410
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -165,8 +165,8 @@ msgstr "Konprimatutako fitxategi-tamaina handiegia zen ({size} {unit})"
 
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105
-#: src/sources_row.py:498 src/sources_row.py:527 src/sources_row.py:530
-#: src/sources_row.py:545 src/window.py:246
+#: src/sources_row.py:508 src/sources_row.py:537 src/sources_row.py:540
+#: src/sources_row.py:555 src/window.py:256
 msgid "MiB"
 msgstr "MiB"
 
@@ -177,13 +177,13 @@ msgstr "MiB"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "Konprimatutako fitxategi-tamaina txikiegia zen ({size} {unit})"
 
-#: src/constrict_utils.py:781
+#: src/constrict_utils.py:816
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before "
 "compression?"
 msgstr "Constrict: Ezin da sarrerako fitxategia irakurri. Lekuz aldatu edo ezabatu da konprimatu baino lehen?"
 
-#: src/constrict_utils.py:804
+#: src/constrict_utils.py:840
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing "
 "or corrupted."
@@ -191,25 +191,25 @@ msgstr "Constrict: Ezin dira bideoaren propietateak atzitu. Iturburuko bideoa fa
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:811
+#: src/constrict_utils.py:847
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name "
 "already exists."
 msgstr "Constrict: Ezin da esportatutako fitxategia sortu. Erreserbatutako izena duen fitxategi bat dago lehendik."
 
-#: src/constrict_utils.py:813
+#: src/constrict_utils.py:849
 msgid ""
 "Constrict: Could not create exported file. There are insufficient "
 "permissions to create a file at the requested export path."
 msgstr "Constrict: Ezin da esportatutako fitxategia sortu. Ez duzu aski baimenik fitxategia eskatutako bide-izenean sortzeko."
 
-#: src/constrict_utils.py:879
+#: src/constrict_utils.py:916
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too "
 "low for this file."
 msgstr "Constrict: Bideoaren bit-emaria baxuegia da (<5kbps). Helburuko tamaina txikiegia izan daiteke fitxategi honetarako."
 
-#: src/constrict_utils.py:924
+#: src/constrict_utils.py:961
 msgid ""
 "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr "Constrict: Ezin da irteerako fitxategia irakurri. Lekuz aldatu edo ezabatu al da konpresioa abian zegoen bitartean?"
@@ -358,20 +358,23 @@ msgid "compressed"
 msgstr "konprimatua"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#: src/main.py:184
+#. This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:186
 msgid "‘{}’ repository by"
 msgstr "‘{}’ biltegiaren egilea"
 
-#: src/main.py:191
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:194
 msgid "Circular progress indicator design by"
 msgstr "Aurrerapen-adierazle zirkularraren egilea"
 
-#: src/main.py:195
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:199
 msgid "Drag overlay design by"
 msgstr "Arrastatzeko gainjartzearen diseinuaren egilea"
 
 #. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
-#: src/main.py:202
+#: src/main.py:206
 msgid "translator-credits"
 msgstr "Asier Saratsua Garmendia <asiersarasua@ni.eus>, 2026"
 
@@ -383,35 +386,40 @@ msgstr "Hobespenak"
 msgid "Hardware Acceleration"
 msgstr "Hardware bidezko azelerazioa"
 
-#: src/preferences_dialog.blp:11
-msgid ""
-"Hardware acceleration is only used if your GPU supports encoding with the "
-"selected video codec, and “Extra Quality” is disabled"
-msgstr "Hardware bidezko azelerazioa erabiltzeko, zure PUZak hautatutako bideo-kodekaren kodeketa onartu behar du eta \"Kalitate estra\" aukerak desgaituta egon behar du"
-
-#: src/preferences_dialog.blp:14
+#: src/preferences_dialog.blp:13
 msgid "GPU Encoding"
 msgstr "PUG kodeketa"
 
-#: src/preferences_dialog.blp:15
+#: src/preferences_dialog.blp:14
 msgid "Use the GPU to speed up encoding when available"
 msgstr "Erabili PUZa kodeketa azkartzeko, posible denean"
 
-#: src/preferences_dialog.blp:20
+#: src/preferences_dialog.blp:19
 msgid "Exported Video Suffix"
 msgstr "Esportatutako bideoaren atzizkia"
 
-#: src/preferences_dialog.blp:23
+#: src/preferences_dialog.blp:22
 msgid "Custom Suffix"
 msgstr "Atzizki pertsonalizatua"
 
-#: src/preferences_dialog.py:42
+#. TRANSLATORS: {} represents a resolution, like '360p'.
+#: src/preferences_dialog.py:43
+#| msgid ""
+#| "Hardware acceleration is only used if your GPU supports encoding with the "
+#| "selected video codec, and “Extra Quality” is disabled"
+msgid ""
+"Hardware acceleration is only used if your GPU supports encoding with the "
+"selected video codec. Additionally, it’s only used when compressing to {} or "
+"higher, with “Extra Quality” disabled."
+msgstr "Hardware bidezko azelerazioa erabiltzeko, zure PUZak hautatutako bideo-kodekaren kodeketa onartu behar du, {} edo handiagoa den konpresioan soilik erabiliko da eta \"Kalitate estra\" aukerak desgaituta egon behar du"
+
+#: src/preferences_dialog.py:49
 msgid ""
 "Used in file names for exported videos, between the base name and extension. "
 "If the custom suffix is left empty, the default suffix of “{}” will be used."
 msgstr "Esportatutako bideoen fitxategi-izenetan erabiliko da, oinarri-izenaren eta luzapenaren artean. Atzizki pertsonalizatua hutsik uzten bada, “{}” atzizki lehenetsia erabiliko da."
 
-#: src/preferences_dialog.py:64
+#: src/preferences_dialog.py:71
 msgid "Changes applied"
 msgstr "Aldaketak aplikatu dira"
 
@@ -431,7 +439,7 @@ msgstr "Eraman _behera"
 msgid "_Remove"
 msgstr "_Kendu"
 
-#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:448
+#: src/sources_row.blp:44 src/sources_row.blp:57 src/sources_row.py:458
 msgid "View Error Details"
 msgstr "Ikusi errorearen xehetasunak"
 
@@ -455,13 +463,14 @@ msgstr "Erakutsi fitxategi-kokalekua"
 msgid "View More"
 msgstr "Ikusi gehiago"
 
-#: src/sources_row.py:471 src/window.blp:137 src/window.blp:218
+#: src/sources_row.py:481 src/window.blp:137 src/window.blp:200
+#: src/window.blp:240
 msgid "More Information"
 msgstr "Informazio gehiago"
 
 #. TRANSLATORS: {size} represents a file size value in MB.
 #. {unit} represents a file size unit, like 'MiB'.
-#: src/sources_row.py:495
+#: src/sources_row.py:505
 #, python-brace-format
 msgid "Video compressed to {size} {unit}."
 msgstr "Bideoa {size} {unit} tamainarekin konprimatu da."
@@ -469,7 +478,7 @@ msgstr "Bideoa {size} {unit} tamainarekin konprimatu da."
 #. TRANSLATORS: {original_size} and {target_size} represent
 #. integers. {unit_original} and {unit_target} represent file
 #. size units, like 'MB'.
-#: src/sources_row.py:523
+#: src/sources_row.py:533
 #, python-brace-format
 msgid ""
 "Video file size ({original_size} {unit_original}) already meets the target "
@@ -478,7 +487,7 @@ msgstr "Bideo-fitxategiaren tamainak ({original_size} {unit_original}) jadanik
 
 #. TRANSLATORS: {size} represents an integer. {unit} represents
 #. a file size unit like 'MB'.
-#: src/sources_row.py:543
+#: src/sources_row.py:553
 #, python-brace-format
 msgid "Target size ({size} {unit}) is too low for this file."
 msgstr "Helburuko tamaina ({size} {unit}) txikiegia da fitxategi honetarako."
@@ -535,70 +544,80 @@ msgstr "Ziurtatu mugimendu leunagoa"
 msgid "Encoding Options"
 msgstr "Kodeketa-aukerak"
 
-#: src/window.blp:198
+#: src/window.blp:220
 msgid "_Video Codec"
 msgstr "_Bideo-kodeka"
 
-#: src/window.blp:206
+#: src/window.blp:228
 msgid "Extra _Quality"
 msgstr "_Kalitate gehigarria"
 
-#: src/window.blp:208
+#: src/window.blp:230
 msgid "Increase image quality at the cost of compression time"
 msgstr "Hobetu irudiaren kalitatea konpresio-denbora luzatuz"
 
-#: src/window.blp:213
+#: src/window.blp:235
 msgid "Advanced Options"
 msgstr "Aukera aurreratuak"
 
-#: src/window.blp:238
+#: src/window.blp:260
 msgid "_Tolerance (%)"
 msgstr "_Tolerantzia (%)"
 
-#: src/window.blp:240
+#: src/window.blp:262
 msgid "How far end file sizes can be below target"
 msgstr "Noraino egon daitezkeen amaierako fitxategi-tamainak helburuaren azpitik"
 
-#: src/window.blp:264
+#: src/window.blp:286
 msgid "Toggle Settings Pane"
 msgstr "Txandakatu ezarpenen panela"
 
-#: src/window.blp:274
+#: src/window.blp:296
 msgid "Issues with video sources — fix before compressing"
 msgstr "Arazoak bideo-iturburuekin — konpondu konprimatu baino lehen"
 
-#: src/window.blp:300
+#: src/window.blp:322
 msgid "Video Sources"
 msgstr "Bideo-iturburuak"
 
-#: src/window.blp:304
+#: src/window.blp:326
 msgid "_Clear All"
 msgstr "Garbitu _denak"
 
-#: src/window.blp:325
+#: src/window.blp:347
 msgid "_Export To…"
 msgstr "E_sportatu hona…"
 
-#: src/window.blp:341
+#: src/window.blp:363
 msgid "_Cancel…"
 msgstr "_Utzi…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:224
+#: src/window.py:230
 msgid "{} FPS"
 msgstr "{} FPS"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:232
+#: src/window.py:238
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the "
 "option set."
 msgstr "Bit-emari txikiekin konprimatutako bideoak {} FPS-etara mugatu daitezke, ezarritako aukera beste bat izan arren."
 
+#: src/window.py:243
+msgid ""
+"H.264 is recommended for resolutions up to 1080p.\n"
+"\n"
+"H.265 (HEVC), AV1, and VP9, are optimized for resolutions of 1080p and "
+"higher."
+msgstr "H.264 gomendatzen da 1080 pixeleko bereizmena baino txikiagoetarako.\n"
+"\n"
+"H.265 (HEVC), AV1 eta VP9 kodekak 1080 pixeleko bereizmena edo handiagoetarako optimizatuta daude."
+
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:241
+#: src/window.py:251
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much "
@@ -608,110 +627,118 @@ msgid ""
 msgstr "Tolerantzia txikitzen denean irudiaren kalitatea maximizatzen da, horretarako konprimatutako fitxategi-tamainak helburuaren azpitik noraino egon daitezkeen ezarriz. Hala ere, horrek helburua betetzeko beharko den saiakera kopurua eta konpresio-denbora handitu dezake. Tolerantzia % {} edo gehiagokoa izatea gomendatzen da."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:249
+#: src/window.py:259
 msgid "Target _Size ({})"
 msgstr "Helburuko _tamaina ({})"
 
-#. TRANSLATORS: {} represents the filename of the video currently
+#. TRANSLATORS: {} represents the file name of the video currently
 #. being processed.
-#: src/window.py:365
+#: src/window.py:382
 msgid "Processing “{}”"
 msgstr "“{}” prozesatzen"
 
-#. TRANSLATORS: {index} represents the index of the video
-#. currently being processed. {total} represents the total
+#. TRANSLATORS: {index} represents the index of
+#. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:371
+#: src/window.py:390
 #, python-brace-format
-msgid "{index}/{total} Videos Processed"
-msgstr "{index}/{total} bideo prozesatu dira"
+#| msgid "{index}/{total} Videos Processed"
+msgid "{index}/{total} Video Processed"
+msgid_plural "{index}/{total} Videos Processed"
+msgstr[0] "{index}/{total} bideo prozesatuta"
+msgstr[1] "{index}/{total} bideo prozesatuta"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:381
+#: src/window.py:400
 msgid "Exporting to {}"
 msgstr "Hona esportatzen: {}"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. queued.
-#: src/window.py:396
+#. TRANSLATORS: {} represents the name of a video file.
+#: src/window.py:413
 msgid "“{}” Queued"
 msgstr "“{}” ilaran"
 
 #. TRANSLATORS: {} represents the number of files queued.
-#: src/window.py:400
-msgid "{} Videos Queued"
-msgstr "{} bideo ilaran"
+#: src/window.py:417
+#| msgid "{} Videos Queued"
+msgid "{} Video Queued"
+msgid_plural "{} Videos Queued"
+msgstr[0] "{} bideo ilaran"
+msgstr[1] "{} bideo ilaran"
 
-#: src/window.py:533
+#: src/window.py:553
 msgid "Stop Compression?"
 msgstr "Gelditu konpresioa?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:536
+#: src/window.py:556
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}” konprimatzean egindako aurrerapena galduko da"
 
-#: src/window.py:542
+#: src/window.py:562
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: src/window.py:543
+#: src/window.py:563
 msgid "_Stop"
 msgstr "_Gelditu"
 
-#: src/window.py:597
+#: src/window.py:617
 msgid "Compression Complete"
 msgstr "Konpresioa osatu da"
 
-#. TRANSLATORS: {} represents the filename of the video that has
-#. been processed.
-#: src/window.py:604
+#. TRANSLATORS: {} represents the filename of the video that
+#. has been processed.
+#: src/window.py:623
 msgid "“{}” processed"
 msgstr "“{}” prozesatu da"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:609
-msgid "{} files processed"
-msgstr "{} fitxategi prozesatu dira"
+#: src/window.py:628
+#| msgid "{} files processed"
+msgid "{} file processed"
+msgid_plural "{} files processed"
+msgstr[0] "{} fitxategi prozesatuta"
+msgstr[1] "{} fitxategi prozesatuta"
 
-#: src/window.py:620
+#: src/window.py:641
 msgid "Open Export Directory"
 msgstr "Ireki esportazioko direktorioa"
 
-#: src/window.py:696
+#: src/window.py:717
 msgid "Videos are being compressed"
 msgstr "Bideoak konprimatzen ari dira"
 
-#: src/window.py:716
+#: src/window.py:737
 msgid "Analyzing…"
 msgstr "Analizatzen…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:811
+#: src/window.py:832
 msgid "Error compressing “{}”"
 msgstr "Errorea “{}” konprimatzean"
 
-#: src/window.py:814
+#: src/window.py:835
 msgid "View _Details"
 msgstr "Ikusi _xehetasunak"
 
-#: src/window.py:849
+#: src/window.py:874
 msgid "Compression complete"
 msgstr "Konpresioa osatu da"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:960
+#: src/window.py:985
 msgid "Unknown video format “{}”"
 msgstr "Bideo-formatu ezezaguna: “{}”"
 
-#: src/window.py:991
+#: src/window.py:1016
 msgid "Videos"
 msgstr "Bideoak"
 
-#: src/window.py:994
+#: src/window.py:1019
 msgid "Pick Videos"
 msgstr "Aukeratu bideoak"
