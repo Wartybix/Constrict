@@ -37,6 +37,8 @@ from gettext import gettext as _
 # Module responsible for compression logic. Other scripts communicate with it
 # to provide a UI for video compression.
 
+MAX_VIDEO_BITRATE = 100000000
+MAX_FRAMERATE = 240
 
 def get_duration(file_input: str) -> float:
     """ Gets the duration of a video passed in seconds. """
@@ -660,7 +662,10 @@ def get_encode_settings(
 
     target_audio_bitrate = min(audio_bitrate, max_audio_bitrate)
 
-    target_video_bitrate = target_bitrate - target_audio_bitrate
+    target_video_bitrate = min(
+        target_bitrate - target_audio_bitrate,
+        MAX_VIDEO_BITRATE
+    )
 
     preset_height = None
     max_fps = 60.0
@@ -670,7 +675,7 @@ def get_encode_settings(
             target_video_bitrate,
             target_audio_bitrate,
             width if height > width else height,
-            fps
+            min(fps, MAX_FRAMERATE)
         )
 
     if crush_mode:
@@ -961,7 +966,10 @@ def compress(
             return _("Constrict: Cannot read output file. Was it moved or deleted mid-compression?")
         percent_of_target = (100 / target_bytes_limit) * after_size_bytes
 
-        if percent_of_target < 100 and (do_basic_transcode or attempt > 1):
+        if target_video_bitrate >= MAX_VIDEO_BITRATE:
+            # No point ever repeating if the video bitrate is already at max.
+            break
+        elif percent_of_target < 100 and (do_basic_transcode or attempt > 1):
             if do_basic_transcode:
                 percent_of_original = (100 / before_size_bytes) * after_size_bytes
                 if percent_of_original >= 100 - tolerance or attempt > 1:
