@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Constrict main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Constrict/-/issues\n"
-"POT-Creation-Date: 2026-03-30 19:15+0000\n"
-"PO-Revision-Date: 2026-03-31 07:12+0500\n"
+"POT-Creation-Date: 2026-07-01 05:48+0000\n"
+"PO-Revision-Date: 2026-07-27 16:34+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <Kazakh>\n"
 "Language: kk\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/io.github.wartybix.Constrict.desktop.in:2
 #: data/io.github.wartybix.Constrict.metainfo.xml.in:8 src/window.blp:16
-#: src/window.blp:42 src/window.blp:104 src/window.py:408
+#: src/window.blp:42 src/window.blp:104 src/window.py:410
 msgid "Constrict"
 msgstr "Constrict"
 
@@ -182,7 +182,7 @@ msgstr "Сығылған файл өлшемі тым үлкен болды ({si
 #. TRANSLATORS: this is the SI unit for 'mebibyte'.
 #: src/attempt_fail_box.py:95 src/attempt_fail_box.py:105 src/sources_row.py:508
 #: src/sources_row.py:537 src/sources_row.py:540 src/sources_row.py:555
-#: src/window.py:255
+#: src/window.py:256
 msgid "MiB"
 msgstr "МиБ"
 
@@ -193,14 +193,14 @@ msgstr "МиБ"
 msgid "Compressed file size was too small ({size} {unit})"
 msgstr "Сығылған файл өлшемі тым кішкентай болды ({size} {unit})"
 
-#: src/constrict_utils.py:814
+#: src/constrict_utils.py:821
 msgid ""
 "Constrict: Could not read input file. Was it moved or deleted before compression?"
 msgstr ""
 "Constrict: Кіріс файлын оқу мүмкін болмады. Ол сығу алдында жылжытылды немесе "
 "өшірілді ме?"
 
-#: src/constrict_utils.py:838
+#: src/constrict_utils.py:845
 msgid ""
 "Constrict: Could not retrieve video properties. Source video may be missing or "
 "corrupted."
@@ -210,7 +210,7 @@ msgstr ""
 
 #. This should never happen if a unique file name has been passed to
 #. this function as file_output.
-#: src/constrict_utils.py:845
+#: src/constrict_utils.py:852
 msgid ""
 "Constrict: Could not create exported file. A file with the reserved name already "
 "exists."
@@ -218,7 +218,7 @@ msgstr ""
 "Constrict: Экспортталған файлды жасау мүмкін болмады. Резервтелген атауы бар файл "
 "бұрыннан бар."
 
-#: src/constrict_utils.py:847
+#: src/constrict_utils.py:854
 msgid ""
 "Constrict: Could not create exported file. There are insufficient permissions to "
 "create a file at the requested export path."
@@ -226,7 +226,7 @@ msgstr ""
 "Constrict: Экспортталған файлды жасау мүмкін болмады. Сұралған экспорттау жолында "
 "файл жасау үшін рұқсаттар жеткіліксіз."
 
-#: src/constrict_utils.py:914
+#: src/constrict_utils.py:921
 msgid ""
 "Constrict: Video bitrate got too low (<5 kbps). The target size may be too low for "
 "this file."
@@ -234,7 +234,7 @@ msgstr ""
 "Constrict: Видео битрейті тым төмендеп кетті (<5 кбит/с). Бұл файл үшін мақсатты "
 "өлшем тым аз болуы мүмкін."
 
-#: src/constrict_utils.py:959
+#: src/constrict_utils.py:966
 msgid "Constrict: Cannot read output file. Was it moved or deleted mid-compression?"
 msgstr ""
 "Constrict: Шығыс файлын оқу мүмкін емес. Ол сығу кезінде жылжытылды немесе өшірілді "
@@ -383,21 +383,26 @@ msgid "compressed"
 msgstr "сығылған"
 
 #. TRANSLATORS: Braces represent the name of the repository (e.g. 8mb)
-#: src/main.py:184
+#. This string is a heading of a list of names (i.e. credits section)
+#: src/main.py:186
 msgid "‘{}’ repository by"
 msgstr "‘{}’ репозиторийі, авторы:"
 
-#: src/main.py:191
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits
+#. section)
+#: src/main.py:194
 msgid "Circular progress indicator design by"
 msgstr "Дөңгелек прогресс индикаторының дизайны, авторы:"
 
-#: src/main.py:195
+#. TRANSLATORS: This string is a heading of a list of names (i.e. credits
+#. section)
+#: src/main.py:199
 msgid "Drag overlay design by"
 msgstr "Сүйреп апару қабатының дизайны, авторы:"
 
 #. Translators: Replace "translator-credits" with your name/username, and
 #. optionally an email or URL.
-#: src/main.py:202
+#: src/main.py:206
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
@@ -621,13 +626,13 @@ msgstr "_Бас тарту…"
 
 #. TRANSLATORS: 'FPS' meaning 'frames per second'.
 #. {} represents the FPS value, for example 30 or 60.
-#: src/window.py:229
+#: src/window.py:230
 msgid "{} FPS"
 msgstr "{} кадр/сек"
 
 #. TRANSLATORS: FPS meaning 'frames per second'. {} represents an
 #. integer.
-#: src/window.py:237
+#: src/window.py:238
 msgid ""
 "Videos compressed to low bitrates may be capped to {} FPS, regardless of the option "
 "set."
@@ -635,7 +640,7 @@ msgstr ""
 "Төмен битрейтке сығылған видеолар, орнатылған опцияға қарамастан, {} кадр/сек-пен "
 "шектелуі мүмкін."
 
-#: src/window.py:242
+#: src/window.py:243
 msgid ""
 "H.264 is recommended for resolutions up to 1080p.\n"
 "\n"
@@ -646,7 +651,7 @@ msgstr ""
 "H.265 (HEVC), AV1 және VP9 1080p және одан жоғары ажыратымдылық үшін оңтайландырылған."
 
 #. TRANSLATORS: {} represents an integer.
-#: src/window.py:250
+#: src/window.py:251
 #, no-python-format
 msgid ""
 "Decreasing the tolerance maximizes image quality by reducing how much compressed file "
@@ -660,110 +665,112 @@ msgstr ""
 "ауытқу ұсынылады."
 
 #. TRANSLATORS: {} represents a file size unit (e.g. 'MiB')
-#: src/window.py:258
+#: src/window.py:259
 msgid "Target _Size ({})"
 msgstr "Мақсатты өл_шемі ({})"
 
-#. TRANSLATORS: {} represents the filename of the video currently
+#. TRANSLATORS: {} represents the file name of the video currently
 #. being processed.
 #: src/window.py:382
 msgid "Processing “{}”"
 msgstr "“{}” өңделуде"
 
-#. TRANSLATORS: {index} represents the index of the video
-#. currently being processed. {total} represents the total
+#. TRANSLATORS: {index} represents the index of
+#. the video currently being processed. {total} represents the total
 #. number of videos being processed.
-#: src/window.py:388
+#: src/window.py:390
 #, python-brace-format
-msgid "{index}/{total} Videos Processed"
-msgstr "{index}/{total} видео өңделді"
+msgid "{index}/{total} Video Processed"
+msgid_plural "{index}/{total} Videos Processed"
+msgstr[0] "{index}/{total} видео өңделді"
 
 #. TRANSLATORS: {} represents the path of the directory being
 #. exported to.
-#: src/window.py:398
+#: src/window.py:400
 msgid "Exporting to {}"
 msgstr "{} ішіне экспортталуда"
 
-#. TRANSLATORS: {} represents the filename of the video currently
-#. queued.
+#. TRANSLATORS: {} represents the name of a video file.
 #: src/window.py:413
 msgid "“{}” Queued"
 msgstr "“{}” кезекке қойылды"
 
 #. TRANSLATORS: {} represents the number of files queued.
 #: src/window.py:417
-msgid "{} Videos Queued"
-msgstr "{} видео кезекке қойылды"
+msgid "{} Video Queued"
+msgid_plural "{} Videos Queued"
+msgstr[0] "{} видео кезекке қойылды"
 
-#: src/window.py:550
+#: src/window.py:553
 msgid "Stop Compression?"
 msgstr "Сығуды тоқтату керек пе?"
 
 #. TRANSLATORS: {} represents the filename of the video currently
 #. being compressed.
-#: src/window.py:553
+#: src/window.py:556
 msgid "Progress made compressing “{}” will be permanently lost"
 msgstr "“{}” сығу кезіндегі прогресс біржола жоғалады"
 
-#: src/window.py:559
+#: src/window.py:562
 msgid "_Cancel"
 msgstr "_Бас тарту"
 
-#: src/window.py:560
+#: src/window.py:563
 msgid "_Stop"
 msgstr "_Тоқтату"
 
-#: src/window.py:614
+#: src/window.py:617
 msgid "Compression Complete"
 msgstr "Сығу аяқталды"
 
-#. TRANSLATORS: {} represents the filename of the video that has
-#. been processed.
-#: src/window.py:621
+#. TRANSLATORS: {} represents the filename of the video that
+#. has been processed.
+#: src/window.py:623
 msgid "“{}” processed"
 msgstr "“{}” өңделді"
 
 #. TRANSLATORS: {} represents the number of files that have been
 #. processed.
-#: src/window.py:626
-msgid "{} files processed"
-msgstr "{} файл өңделді"
+#: src/window.py:628
+msgid "{} file processed"
+msgid_plural "{} files processed"
+msgstr[0] "{} файл өңделді"
 
-#: src/window.py:637
+#: src/window.py:641
 msgid "Open Export Directory"
 msgstr "Экспорт бумасын ашу"
 
-#: src/window.py:713
+#: src/window.py:717
 msgid "Videos are being compressed"
 msgstr "Видеолар сығылуда"
 
-#: src/window.py:733
+#: src/window.py:737
 msgid "Analyzing…"
 msgstr "Талдау…"
 
 #. TRANSLATORS: {} represents the filename of the video with
 #. the error.
-#: src/window.py:828
+#: src/window.py:832
 msgid "Error compressing “{}”"
 msgstr "“{}” сығу кезіндегі қате"
 
-#: src/window.py:831
+#: src/window.py:835
 msgid "View _Details"
 msgstr "Мәлі_меттерді көру"
 
-#: src/window.py:866
+#: src/window.py:874
 msgid "Compression complete"
 msgstr "Сығу аяқталды"
 
 #. TRANSLATORS: {} is the description of a mime type.
-#: src/window.py:977
+#: src/window.py:985
 msgid "Unknown video format “{}”"
 msgstr "“{}” белгісіз видео пішімі"
 
-#: src/window.py:1008
+#: src/window.py:1016
 msgid "Videos"
 msgstr "Видеолар"
 
-#: src/window.py:1011
+#: src/window.py:1019
 msgid "Pick Videos"
 msgstr "Видеоларды таңдау"
