@@ -36,8 +36,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/intel/libva-utils/archive/refs/tags/2.23.0.tar.gz",
-                    "sha256" : "fa7ff29847b55010fbbb775b35382f97f29b7b97abe9a2f6fb3e22b36db5440a"
+                    "url" : "https://github.com/intel/libva-utils/archive/refs/tags/2.24.0.tar.gz",
+                    "sha256" : "bf959a1ced3cde8176a7ff50ad358ee98e93301ac068581a8b2617c5b83afcb3"
                 }
             ]
         },
@@ -48,8 +48,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gst-thumbnailers/1.0/gst-thumbnailers-1.0.0.tar.xz",
-                    "sha256" : "f2a68019d319995d20a55cf0c32db1bb248834c2300ee757b417a5337d5d6497"
+                    "url" : "https://download.gnome.org/sources/gst-thumbnailers/1.1/gst-thumbnailers-1.1.0.tar.xz",
+                    "sha256" : "d980be383088261f8bc2ec5a8953edaca7c59abcc90abf24a5052493e726bf53"
                 }
             ]
         },
