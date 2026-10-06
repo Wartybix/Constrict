@@ -75,6 +75,18 @@
   </screenshots>
 
   <releases>
+    <release version="26.10" date="2026-10-06">
+      <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.4</url>
+      <description translate="no">
+        <ul>
+          <li>Fixed a crash caused by the compressor attempting to encode some videos at extremely high bitrates and framerates.</li>
+          <li>Fixed an issue where clicking 'Show File Location' on a compressed video would not open the file manager.</li>
+          <li>Added Norwegian Bokmål translation.</li>
+          <li>Added Catalan translation.</li>
+          <li>Updated existing translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="26.4" date="2026-04-27">
       <url type="details">https://gitlab.gnome.org/World/Constrict/-/releases/26.4</url>
       <description translate="no">
